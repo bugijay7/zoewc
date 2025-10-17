@@ -13,7 +13,7 @@ export default function EventDetails() {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/events/${eventId}`);
+        const res = await fetch(`https://zoewc-1.onrender.com/api/events/${eventId}`);
         if (!res.ok) throw new Error("Failed to fetch event details.");
         const data = await res.json();
         setEvent(data);
@@ -54,7 +54,7 @@ export default function EventDetails() {
         {/* Image Section */}
         <figure className="h-80 w-full overflow-hidden">
           <img
-            src={`http://localhost:5000/${event.image}`}
+            src={`https://zoewc-1.onrender.com/${event.image}`}
             alt={event.title}
             className="object-cover w-full h-full"
           />

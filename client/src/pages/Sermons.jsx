@@ -9,7 +9,7 @@ function Sermons() {
   useEffect(() => {
     const fetchSermons = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/sermons");
+        const response = await axios.get("https://zoewc-1.onrender.com/api/sermons");
         setSermons(response.data);
       } catch (err) {
         console.error("Error fetching sermons:", err);

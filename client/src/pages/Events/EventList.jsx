@@ -8,7 +8,7 @@ function EventList() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/events");
+        const res = await fetch("https://zoewc-1.onrender.com/api/events");
         const data = await res.json();
         setEvents(data);
       } catch (error) {
@@ -36,7 +36,7 @@ function EventList() {
             >
               <figure className="h-56 w-full overflow-hidden rounded-t-xl">
                 <img
-                  src={`http://localhost:5000/${event.image}`}
+                  src={`https://zoewc-1.onrender.com/${event.image}`}
                   alt={event.title}
                   className="object-cover w-full h-full"
                 />

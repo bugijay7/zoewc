@@ -18,7 +18,7 @@ function ManageSermons() {
 
   const fetchSermons = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/sermons");
+      const res = await axios.get("https://zoewc-1.onrender.com/api/sermons");
       setSermons(res.data);
     } catch (err) {
       console.error("Error fetching sermons:", err);
@@ -29,7 +29,7 @@ function ManageSermons() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this sermon?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/sermons/${id}`);
+        await axios.delete(`https://zoewc-1.onrender.com/api/sermons/${id}`);
         setSermons(sermons.filter((s) => s._id !== id));
       } catch (err) {
         console.error("Error deleting sermon:", err);
@@ -61,7 +61,7 @@ function ManageSermons() {
     e.preventDefault();
     try {
       await axios.put(
-        `http://localhost:5000/api/sermons/${editingSermon}`,
+        `https://zoewc-1.onrender.com/api/sermons/${editingSermon}`,
         formData
       );
       setEditingSermon(null);

@@ -17,7 +17,7 @@ function ManageEvent() {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/events");
+      const res = await axios.get("https://zoewc-1.onrender.com/api/events");
       setEvents(res.data);
     } catch (err) {
       console.error("Error fetching events:", err);
@@ -27,7 +27,7 @@ function ManageEvent() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this event?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/events/${id}`);
+        await axios.delete(`https://zoewc-1.onrender.com/api/events/${id}`);
         setEvents(events.filter((event) => event._id !== id));
       } catch (err) {
         console.error("Error deleting event:", err);
@@ -62,7 +62,7 @@ function ManageEvent() {
       form.append("description", formData.description);
       if (formData.image) form.append("image", formData.image);
 
-      await axios.put(`http://localhost:5000/api/events/${editingEvent}`, form, {
+      await axios.put(`https://zoewc-1.onrender.com/api/events/${editingEvent}`, form, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
@@ -89,7 +89,7 @@ function ManageEvent() {
           >
             <div className="flex items-center gap-4">
               <img
-                src={`http://localhost:5000/${event.image}`}
+                src={`https://zoewc-1.onrender.com/${event.image}`}
                 alt={event.title}
                 className="w-28 h-20 object-cover rounded-md"
               />
