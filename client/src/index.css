@@ -1,0 +1,62 @@
+
+
+
+@import "tailwindcss";
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "mytheme";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  /* 🎨 Base tones (soft neutral whites/blues) */
+  --color-base-100: oklch(97% 0.03 260); /* soft light blue background */
+  --color-base-200: oklch(93% 0.05 260); /* slightly deeper for sections */
+  --color-base-300: oklch(90% 0.06 260);
+  --color-base-content: oklch(20% 0.05 260); /* dark navy text */
+
+  /* 🌸 Primary brand color – pink */
+  --color-primary: oklch(65% 0.25 340); /* vibrant rose pink */
+  --color-primary-content: oklch(98% 0.01 340); /* white text on pink */
+
+  /* 💙 Secondary brand color – blue */
+  --color-secondary: oklch(60% 0.20 250); /* medium blue */
+  --color-secondary-content: oklch(98% 0.01 250); /* white text on blue */
+
+  /* 💧 Accent color – lighter complementary pink-blue tone */
+  --color-accent: oklch(70% 0.20 300);
+  --color-accent-content: oklch(98% 0.01 300);
+
+  /* ⚫ Neutral for text and structure */
+  --color-neutral: oklch(40% 0.04 260); /* deep navy gray */
+  --color-neutral-content: oklch(98% 0.01 260);
+
+  /* 🩵 Info / Success / Warning / Error states */
+  --color-info: oklch(70% 0.18 250); /* soft blue info */
+  --color-info-content: oklch(98% 0.01 250);
+
+  --color-success: oklch(65% 0.25 150); /* minty green success */
+  --color-success-content: oklch(98% 0.01 150);
+
+  --color-warning: oklch(80% 0.20 85); /* soft yellow-orange */
+  --color-warning-content: oklch(25% 0.04 85);
+
+  --color-error: oklch(65% 0.25 25); /* warm coral red */
+  --color-error-content: oklch(98% 0.01 25);
+
+  /* 🧱 Border radius system */
+  --radius-selector: 1rem;
+  --radius-field: 0.375rem;
+  --radius-box: 0.75rem;
+
+  /* 🧩 Base sizes */
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  /* Borders */
+  --border: 1px;
+
+  /* 🪞 Effects */
+  --depth: 1;
+  --noise: 0;
+}
