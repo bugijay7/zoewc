@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // ✅ Import images
 import intercessoryImg from "../../assets/intercessory.jpg";
 import worshipImg from "../../assets/praise.jpg";
-import evangelismImg from "../../assets/evangelism.jpg";
+import evangelismImg from "../../assets/anagkazo.jpeg";
 import mediaImg from "../../assets/media.jpg";
 import hospitalityImg from "../../assets/hospitality.jpg";
 import usheringImg from "../../assets/ushering.jpeg";
@@ -22,8 +22,8 @@ export default function SupportiveDepartments() {
       image: worshipImg,
     },
     {
-      name: "Anakazo / Evangelism Department",
-      link: "/departments/supportive/anakazo",
+      name: "Anagkazo / Evangelism Department",
+      link: "/departments/supportive/anagkazo",
       image: evangelismImg,
     },
     {

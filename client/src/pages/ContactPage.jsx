@@ -34,7 +34,7 @@ export default function ContactPage() {
             <div className="flex items-center gap-4">
               <FaMapMarkerAlt className="text-primary text-xl" />
               <p className="text-base-content/80">
-                Zoe Worship Center, Kinoo, Nairobi, Kenya
+                zoe worship centre, Kinoo, Nairobi, Kenya
               </p>
             </div>
 
@@ -134,7 +134,7 @@ export default function ContactPage() {
        {/* 🗺️ Google Map */}
 <div className="rounded-xl overflow-hidden shadow-xl border border-base-300">
   <iframe
-    title="Zoe Worship Center Location"
+    title="zoe worship centre Location"
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.027768285977!2d36.696!3d-1.25435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f192ce507bf1f%3A0xfa7385e3b9c92e6a!2sZoe%20Worship%20Center%20Kinoo!5e0!3m2!1sen!2ske!4v1695744000000!5m2!1sen!2ske"
     width="100%"
     height="400"

@@ -26,7 +26,7 @@ export default function DonationPage() {
             <h2 className="text-2xl font-semibold text-gray-800 mb-3">
               Bank Transfer
             </h2>
-            <p className="text-gray-700 mb-2">Account Name: Zoe Worship Center</p>
+            <p className="text-gray-700 mb-2">Account Name: zoe worship centre</p>
             <p className="text-gray-700 mb-2">Bank: Equity Bank</p>
             <p className="text-gray-700 mb-2">Account Number: 1234567890</p>
             <p className="text-gray-700">Branch: Kinoo</p>

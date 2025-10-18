@@ -13,7 +13,7 @@ export default function Programs() {
     { name: "Hospitality for the Less Privileged", link: "/programs/ForTheLessPriviledged" },
     { name: "BodaBoda Empowerment", link: "/programs/BodaBodaEmpowernment" },
     { name: "Breath of Worship", link: "/programs/breathOfWorship" },
-    { name: "Anakazo Campaign", link: "/programs/AnakazoCampaign" },
+    { name: "Anagkazo Campaign", link: "/programs/anagkazoCampaign" },
   ];
 
   return (

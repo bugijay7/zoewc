@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 export default function ServicesPreview() {
   const mainServices = [
     {
-      title: "Zoe Worship Center – Minister Service",
+      title: "zoe worship centre – Minister Service",
       time: "FROM 8:00 AM TO 9:00 AM",
     },
     {
-      title: "Zoe Worship Center – First Service",
+      title: "zoe worship centre – First Service",
       time: "FROM 9:05 AM TO 10:45 AM",
     },
     {
-      title: "Zoe Worship Center – Second Service",
+      title: "zoe worship centre – Second Service",
       time: "FROM 10:50 AM TO 1:00 PM",
     },
   ];

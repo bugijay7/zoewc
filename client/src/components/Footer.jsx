@@ -71,7 +71,7 @@ export default function Footer() {
         {/* COPYRIGHT & SOCIALS */}
         <div className="px-4 py-6 bg-base-300 border-t border-base-200 md:flex md:items-center md:justify-between">
           <span className="text-sm sm:text-center">
-            © {new Date().getFullYear()} <strong>Zoe Worship Center – Kinoo</strong>. All rights reserved. | Designed by{" "}
+            © {new Date().getFullYear()} <strong>zoe worship centre – Kinoo</strong>. All rights reserved. | Designed by{" "}
             <a
               href="https://yohanlabs.dev"
               target="_blank"

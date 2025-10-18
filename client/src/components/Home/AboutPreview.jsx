@@ -12,7 +12,7 @@ export default function AboutPreview() {
 
         {/* 🔹 Subtitle */}
         <p className="text-lg md:text-xl opacity-80 mb-10 leading-relaxed">
-          Everything you need to get started at Zoe Worship Center
+          Everything you need to get started at zoe worship centre
         </p>
 
         {/* 🔹 Button */}

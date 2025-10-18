@@ -40,7 +40,7 @@ function Login() {
     <div className="flex items-center justify-center min-h-screen bg-black">
       <div className="bg-amber-600 shadow-lg rounded-2xl p-8 w-full max-w-[500px]">
         <h2 className="text-2xl font-bold text-center mb-6 text-amber-200">
-          Zoe Worship Center Admin Login
+          zoe worship centre Admin Login
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">

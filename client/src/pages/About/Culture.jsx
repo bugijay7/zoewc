@@ -48,7 +48,7 @@ function Culture() {
           {"\n\n"}Welcome to Zoe Family — Welcome to Zoe, the World of John 10:10b and
           2 Corinthians 3:18.
 
-          {"\n\n"}Welcome on board! Zoe Worship Center is the hub of divine information,
+          {"\n\n"}Welcome on board! zoe worship centre is the hub of divine information,
           where we are transformed and inspired to inspire generations.
 
           {"\n\n"}Welcome to a family where you are no longer a church member but a

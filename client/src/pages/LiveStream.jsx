@@ -34,7 +34,7 @@ function LiveStream() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center bg-base-100 text-base-content px-4 py-10">
       <h1 className="text-4xl md:text-5xl font-bold mb-6 uppercase tracking-widest text-primary">
-        Zoe Worship Center Live
+        zoe worship centre Live
       </h1>
 
       {isLive && videoId ? (
@@ -43,7 +43,7 @@ function LiveStream() {
             width="100%"
             height="100%"
             src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-            title="Zoe Worship Center Livestream"
+            title="zoe worship centre Livestream"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

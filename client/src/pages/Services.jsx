@@ -41,7 +41,7 @@ function Services() {
       <section className="max-w-5xl mx-auto px-6 md:px-12 py-16 text-center">
         <p className="text-lg md:text-xl leading-relaxed">
           Our services at{" "}
-          <strong className="text-primary">Zoe Worship Center</strong> are
+          <strong className="text-primary">zoe worship centre</strong> are
           uniquely conducted to inspire, empower, and transform lives through
           the Word of God. Each gathering is Christ-centered, time-bound, and
           full of purpose — nurturing both spiritual and personal growth.

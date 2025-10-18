@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import menImg from "../../assets/mens-conference.jpeg";
-import womenImg from "../../assets/women.jpg";
+import womenImg from "../../assets/women.jpeg";
 import youthImg from "../../assets/youths.jpeg";
-import teenImg from "../../assets/teen.jpg";
-import sundaySchoolImg from "../../assets/sunday-school.jpg";
+import teenImg from "../../assets/teen.jpeg";
+import sundaySchoolImg from "../../assets/sunday-school.jpeg";
 
 export default function MainDepartments() {
   const departments = [

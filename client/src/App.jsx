@@ -22,7 +22,7 @@ import SundaySchool from "./pages/departments/main/sundaySchool"
 import MainDepartment from './pages/departments/mainDepartments'
 import SupportiveDepartment from './pages/departments/supportiveDepartments'
 
-import Anakazo from './pages/departments/supportive/Anakazo'
+import Anagkazo from './pages/departments/supportive/Anagkazo'
 import Hospitality from './pages/departments/supportive/Hospitality'
 import IntercessoryDept from './pages/departments/supportive/IntercessoryDept'
 import MediaDept from './pages/departments/supportive/MediaDept'
@@ -46,12 +46,14 @@ import SundaySchoolVibes from './pages/programs/SundaySchoolVibes'
 import TeenVibes from './pages/programs/TeenVibes'
 import MarriageTherapy from './pages/programs/MarriageTherapy'
 import BodaBodaEmpowernment from './pages/programs/BodaBodaEmpowernment'
-import AnakazoCampaign from './pages/programs/AnakazoCampaign'
 import YouthOutreachLuncheon from './pages/programs/YouthOutreachLuncheon'
 import MensConference from './pages/programs/MensConference'
 import WomensConference from './pages/programs/WomensConference'
 import LocalInternatinalMissions from './pages/programs/LocalInternatinalMissions'
 import ForTheLessPriviledged from './pages/programs/ForTheLessPriviledged'
+import AnagkazoCampaign from './pages/programs/AnagkazoCampaign'
+
+
 
 
 
@@ -103,7 +105,7 @@ function App() {
         <Route path="/departments/main/teens" element={<TeenDepartments />} />
 
         { /* supportive Departments Routes */ }
-        <Route path="/departments/supportive/anakazo" element={<Anakazo />} />
+        <Route path="/departments/supportive/anagkazo" element={<Anagkazo />} />
         <Route path="/departments/supportive/hospitality" element={<Hospitality />} />
         <Route path="/departments/supportive/intercessory" element={<IntercessoryDept />} />
         <Route path="/departments/supportive/media" element={<MediaDept />} />
@@ -131,7 +133,7 @@ function App() {
       <Route path="/programs/teenVibes" element={<TeenVibes />} />
       <Route path="/programs/marriageTherapy" element={<MarriageTherapy />} />
       <Route path="/programs/BodaBodaEmpowernment" element={<BodaBodaEmpowernment />} />
-      <Route path="/programs/AnakazoCampaign" element={<AnakazoCampaign />} />
+      <Route path="/programs/anagkazoCampaign" element={<AnagkazoCampaign />} />
       <Route path="/programs/YouthOutreachLuncheon" element={<YouthOutreachLuncheon />} />
       <Route path="/programs/MensConference" element={<MensConference />} />
       <Route path="/programs/WomensConference" element={<WomensConference />} />

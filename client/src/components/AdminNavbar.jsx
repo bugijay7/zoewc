@@ -20,7 +20,7 @@ function AdminNavbar() {
       <nav className="max-w-[1000px] mx-auto  p-4 flex flex-col sm:flex-row sm:justify-between sm:items-center rounded-lg">
         {/* Logo / Title */}
         <h1 className="text-sm font-bold text-primary mb-3 sm:mb-0">
-          Zoe Worship Center Admin
+          zoe worship centre Admin
         </h1>
 
         {/* Navbar Links */}

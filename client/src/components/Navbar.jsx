@@ -27,11 +27,11 @@ export default function Navbar() {
         >
           <img
             src={Logo}
-            alt="Zoe Worship Center Logo"
+            alt="zoe worship centre Logo"
             className="h-10 w-auto"
           />
           <span className="text-lg md:text-2xl font-extrabold italic font-serif text-primary">
-            Zoe Worship Center
+            zoe worship centre
           </span>
         </Link>
 

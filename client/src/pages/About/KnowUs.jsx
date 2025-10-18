@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import heroImg from "../../assets/about-hero.jpeg";
 import historyImg from "../../assets/history.jpeg";
 import cultureImg from "../../assets/culture.jpeg";
-import impactImg from "../../assets/impact.jpg";
+import impactImg from "../../assets/impact.jpeg";
 import leadershipImg from "../../assets/leadership.jpg";
 import faithImg from "../../assets/faith.jpg";
 import anthemImg from "../../assets/anthem.jpg";
@@ -25,7 +25,7 @@ export default function KnowUs() {
     },
     {
       title: "Make an Impact",
-      desc: "See how Zoe Worship Center impacts lives and communities.",
+      desc: "See how zoe worship centre impacts lives and communities.",
       img: impactImg,
       link: "/about/impact",
     },

@@ -19,7 +19,7 @@ export default function HomeHero() {
       {/* 🔹 Content */}
       <div className="relative z-10 max-w-[1400px] mx-auto text-base-100 font-montserrat">
         <h1 className="mb-5 text-5xl md:text-6xl font-extrabold uppercase">
-          Zoe Worship Center
+          zoe worship centre
         </h1>
         <p className="mb-5 font-extrabold text-lg md:text-xl mt-10 max-w-[800px] mx-auto leading-tight">
           Transforming lives by the life and love of Christ
