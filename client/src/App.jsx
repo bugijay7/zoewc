@@ -41,6 +41,21 @@ import Leadership from './pages/About/Leadership'
 import FaithStatement from './pages/About/FaithStatement'
 import Anthem from './pages/About/Anthem'
 
+import BreathOfWorship from './pages/programs/BreathOfWorship'
+import SundaySchoolVibes from './pages/programs/SundaySchoolVibes'
+import TeenVibes from './pages/programs/TeenVibes'
+import MarriageTherapy from './pages/programs/MarriageTherapy'
+import BodaBodaEmpowernment from './pages/programs/BodaBodaEmpowernment'
+import AnakazoCampaign from './pages/programs/AnakazoCampaign'
+import YouthOutreachLuncheon from './pages/programs/YouthOutreachLuncheon'
+import MensConference from './pages/programs/MensConference'
+import WomensConference from './pages/programs/WomensConference'
+import LocalInternatinalMissions from './pages/programs/LocalInternatinalMissions'
+import ForTheLessPriviledged from './pages/programs/ForTheLessPriviledged'
+
+
+
+
 
 
 
@@ -85,7 +100,7 @@ function App() {
         <Route path="/departments/main/women" element={<WomenDepartment />} />
         <Route path="/departments/main/youth" element={<YouthDepartment />} />
         <Route path="/departments/main/sundaySchool" element={<SundaySchool />} />
-        <Route path="/departments/main/teen" element={<TeenDepartments />} />
+        <Route path="/departments/main/teens" element={<TeenDepartments />} />
 
         { /* supportive Departments Routes */ }
         <Route path="/departments/supportive/anakazo" element={<Anakazo />} />
@@ -109,6 +124,20 @@ function App() {
       <Route path="/about/leadership" element={<Leadership />} />
       <Route path="/about/faithStatement" element={<FaithStatement />} />
       <Route path="/about/anthem" element={<Anthem />} />
+
+      { /* Programs Routes */}
+      <Route path="/programs/breathOfWorship" element={<BreathOfWorship />} />
+      <Route path="/programs/sundaySchoolVibes" element={<SundaySchoolVibes />} />
+      <Route path="/programs/teenVibes" element={<TeenVibes />} />
+      <Route path="/programs/marriageTherapy" element={<MarriageTherapy />} />
+      <Route path="/programs/BodaBodaEmpowernment" element={<BodaBodaEmpowernment />} />
+      <Route path="/programs/AnakazoCampaign" element={<AnakazoCampaign />} />
+      <Route path="/programs/YouthOutreachLuncheon" element={<YouthOutreachLuncheon />} />
+      <Route path="/programs/MensConference" element={<MensConference />} />
+      <Route path="/programs/WomensConference" element={<WomensConference />} />
+      <Route path="/programs/LocalInternatinalMissions" element={<LocalInternatinalMissions />} />
+      <Route path="/programs/ForTheLessPriviledged" element={<ForTheLessPriviledged />} />
+
 
       { /* New Members Route */}
       <Route path="/new" element={<NewMembers />} />

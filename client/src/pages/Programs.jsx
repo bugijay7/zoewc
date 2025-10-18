@@ -3,17 +3,17 @@ import { Link } from "react-router-dom";
 
 export default function Programs() {
   const programs = [
-    { name: "Men’s Conference and Outreach", link: "/programs/men" },
-    { name: "Women’s Conference and Outreach", link: "/programs/women" },
-    { name: "Youth ITIG, Outreach and Luncheons", link: "/programs/youth" },
-    { name: "Teens Vibes", link: "/programs/teens" },
-    { name: "Sunday School Vibes", link: "/programs/sunday-school" },
-    { name: "Marriage Therapy", link: "/programs/marriage-therapy" },
-    { name: "Local and International Missions", link: "/programs/missions" },
-    { name: "Hospitality for the Less Privileged", link: "/programs/hospitality" },
-    { name: "BodaBoda Empowerment", link: "/programs/bodaboda" },
-    { name: "Breath of Worship", link: "/programs/breath-of-worship" },
-    { name: "Anakazo Campaign", link: "/programs/anakazo" },
+    { name: "Men’s Conference and Outreach", link: "/programs/MensConference" },
+    { name: "Women’s Conference and Outreach", link: "/programs/WomensConference" },
+    { name: "Youth ITIG, Outreach and Luncheons", link: "/programs/YouthOutreachLuncheon" },
+    { name: "Teens Vibes", link: "/programs/teenVibes" },
+    { name: "Sunday School Vibes", link: "/programs/sundaySchoolVibes" },
+    { name: "Marriage Therapy", link: "/programs/marriageTherapy" },
+    { name: "Local and International Missions", link: "/programs/LocalInternatinalMissions" },
+    { name: "Hospitality for the Less Privileged", link: "/programs/ForTheLessPriviledged" },
+    { name: "BodaBoda Empowerment", link: "/programs/BodaBodaEmpowernment" },
+    { name: "Breath of Worship", link: "/programs/breathOfWorship" },
+    { name: "Anakazo Campaign", link: "/programs/AnakazoCampaign" },
   ];
 
   return (
