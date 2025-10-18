@@ -43,7 +43,7 @@ export default function Footer() {
               <li><Link to="/events/eventList" className="link link-hover">Upcoming Events</Link></li>
               <li><Link to="/live" className="link link-hover">Live Stream</Link></li>
               <li><Link to="/sermons" className="link link-hover">Sermons</Link></li>
-              <li><Link to="/dashboard" className="link link-hover">Admin</Link></li>
+              <li><Link to="/login" className="link link-hover">Admin</Link></li>
             </ul>
           </div>
 
