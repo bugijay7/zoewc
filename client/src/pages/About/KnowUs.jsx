@@ -74,9 +74,11 @@ export default function KnowUs() {
             <span className="font-semibold text-primary">John 10:10</span>
           </p>
           <div>
-            <button className="btn btn-outline btn-primary mt-8">
-              Discover Our Story
-            </button>
+            <Link to="/about/history">
+  <button className="btn btn-outline btn-primary mt-8">
+    Discover Our Story
+  </button>
+</Link>
           </div>
         </div>
       </div>

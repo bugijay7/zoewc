@@ -23,12 +23,18 @@ export default function HomeHero() {
           Transforming lives by the life and love of Christ
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <button className="btn btn-outline btn-primary mt-5">
-            Sunday Service Details
-          </button>
-          <button className="btn btn-outline btn-secondary mt-5">
-            Church Online
-          </button>
+         
+<Link to="/services">
+  <button className="btn btn-outline btn-primary mt-5">
+    Sunday Service Details
+  </button>
+</Link>
+
+          <Link to="/live">
+  <button className="btn btn-outline btn-secondary mt-5">
+    Church Online
+  </button>
+</Link>
         </div>
       </div>
     </div>
