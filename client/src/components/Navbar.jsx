@@ -71,6 +71,15 @@ export default function Navbar() {
             </li>
             <li>
               <Link
+                to="/gallery"
+                onClick={closeAllMenus}
+                className="block px-3 py-2 hover:text-primary transition"
+              >
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/sermons"
                 onClick={closeAllMenus}
                 className="block px-3 py-2 hover:text-primary transition"

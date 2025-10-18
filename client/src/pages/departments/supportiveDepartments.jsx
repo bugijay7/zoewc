@@ -6,7 +6,7 @@ import intercessoryImg from "../../assets/intercessory.jpg";
 import worshipImg from "../../assets/praise.jpg";
 import evangelismImg from "../../assets/anagkazo.jpeg";
 import mediaImg from "../../assets/media.jpg";
-import hospitalityImg from "../../assets/hospitality.jpg";
+import hospitalityImg from "../../assets/hospitality.jpeg";
 import usheringImg from "../../assets/ushering.jpeg";
 
 export default function SupportiveDepartments() {

@@ -7,7 +7,7 @@ import cultureImg from "../../assets/culture.jpeg";
 import impactImg from "../../assets/impact.jpeg";
 import leadershipImg from "../../assets/leadership.jpg";
 import faithImg from "../../assets/faith.jpg";
-import anthemImg from "../../assets/anthem.jpg";
+import anthemImg from "../../assets/sunday-school.jpeg";
 
 export default function KnowUs() {
   const aboutCards = [
