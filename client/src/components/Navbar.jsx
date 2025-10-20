@@ -17,21 +17,21 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-base-100/70 backdrop-blur-md text-base-content shadow-md transition-all duration-300">
-      <div className="max-w-screen-xl mx-auto px-6 py-3 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-md text-base-content shadow-md transition-all duration-300">
+      <div className="max-w-screen-xl mx-auto px-6 py-3 flex place-items-end justify-between">
         {/* 🔹 Logo + Title */}
         <Link
           to="/"
           onClick={closeAllMenus}
-          className="flex items-center gap-3 shrink-0"
+          className="flex place-items-end gap-3 shrink-0"
         >
           <img
             src={Logo}
             alt="zoe worship centre Logo"
             className="h-10 w-auto"
           />
-          <span className="text-lg md:text-2xl font-extrabold italic font-serif text-primary">
-            zoe worship centre
+          <span className="text-lg md:text-2xl font-extrabold text-primary">
+            Zoe Worship Centre
           </span>
         </Link>
 
@@ -50,7 +50,7 @@ export default function Navbar() {
             openMenu ? "block" : "hidden"
           } absolute md:static top-full left-0 w-full md:w-auto bg-base-100 md:bg-transparent md:flex md:items-center md:space-x-6 shadow-md md:shadow-none`}
         >
-          <ul className="flex flex-col md:flex-row gap-2 md:gap-4 text-sm font-bold uppercase text-primary px-6 md:px-0 py-4 md:py-0">
+          <ul className="flex flex-col md:flex-row gap-2 md:gap-4 text-primary-content text-sm font-bold uppercase px-6 md:px-0 py-4 md:py-0">
             <li>
               <Link
                 to="/about/knowUs"
@@ -163,16 +163,7 @@ export default function Navbar() {
             </li>
           </ul>
 
-          {/* 🔹 “Are You New?” link */}
-          <div className="px-6 md:px-0 pb-4 md:pb-0">
-            <Link
-              to="/new"
-              onClick={closeAllMenus}
-              className="underline font-semibold uppercase"
-            >
-              Are You New?
-            </Link>
-          </div>
+         
         </div>
       </div>
     </nav>
