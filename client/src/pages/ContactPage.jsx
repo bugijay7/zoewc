@@ -2,12 +2,12 @@ import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
-  FaTwitter,
   FaYoutube,
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa6"; // ✅ TikTok icon
 
 export default function ContactPage() {
   return (
@@ -34,7 +34,7 @@ export default function ContactPage() {
             <div className="flex items-center gap-4">
               <FaMapMarkerAlt className="text-primary text-xl" />
               <p className="text-base-content/80">
-                zoe worship centre, Kinoo, Nairobi, Kenya
+                Zoe Worship Centre, Kinoo, Nairobi, Kenya
               </p>
             </div>
 
@@ -45,7 +45,9 @@ export default function ContactPage() {
 
             <div className="flex items-center gap-4">
               <FaEnvelope className="text-primary text-xl" />
-              <p className="text-base-content/80">zoeworshipcentrekinoo@gmail.com</p>
+              <p className="text-base-content/80">
+                zoeworshipcentrekinoo@gmail.com
+              </p>
             </div>
 
             {/* 🌐 Social Links */}
@@ -63,7 +65,7 @@ export default function ContactPage() {
                   <FaFacebookF />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/zoewoshipcentrechurch"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-base-content/60 hover:text-primary text-xl transition"
@@ -71,12 +73,12 @@ export default function ContactPage() {
                   <FaInstagram />
                 </a>
                 <a
-                  href="https://twitter.com"
+                  href="https://www.tiktok.com/@zoeworshipcentrechurch?_t=ZM-90eMtbIA7fH&_r=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-base-content/60 hover:text-primary text-xl transition"
                 >
-                  <FaTwitter />
+                  <FaTiktok />
                 </a>
                 <a
                   href="https://www.youtube.com/@ZoeWorshipCentreKinoo"
@@ -131,20 +133,19 @@ export default function ContactPage() {
           </form>
         </div>
 
-       {/* 🗺️ Google Map */}
-<div className="rounded-xl overflow-hidden shadow-xl border border-base-300">
-  <iframe
-    title="zoe worship centre Location"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.027768285977!2d36.696!3d-1.25435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f192ce507bf1f%3A0xfa7385e3b9c92e6a!2sZoe%20Worship%20Center%20Kinoo!5e0!3m2!1sen!2ske!4v1695744000000!5m2!1sen!2ske"
-    width="100%"
-    height="400"
-    style={{ border: 0 }}
-    allowFullScreen=""
-    loading="lazy"
-    referrerPolicy="no-referrer-when-downgrade"
-  ></iframe>
-</div>
-
+        {/* 🗺️ Google Map */}
+        <div className="rounded-xl overflow-hidden shadow-xl border border-base-300">
+          <iframe
+            title="Zoe Worship Centre Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.027768285977!2d36.696!3d-1.25435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f192ce507bf1f%3A0xfa7385e3b9c92e6a!2sZoe%20Worship%20Center%20Kinoo!5e0!3m2!1sen!2ske!4v1695744000000!5m2!1sen!2ske"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
