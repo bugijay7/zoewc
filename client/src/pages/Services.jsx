@@ -7,7 +7,7 @@ function Services() {
     <div className="bg-base-200 text-base-content">
       {/* 🌅 Hero Section */}
       <div
-        className="hero min-h-[80vh] flex items-center justify-center text-center px-6 md:px-20 relative overflow-hidden"
+        className="hero md:min-h-[80vh] min-h-[60vh] flex items-center justify-center text-center px-6 md:px-20 relative overflow-hidden"
         style={{
           backgroundImage: `url(${worshipImg})`,
           backgroundSize: "cover",
@@ -15,22 +15,22 @@ function Services() {
         }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-neutral/50 backdrop-blur-[1px]"></div>
+        <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px]"></div>
 
         {/* Content */}
         <div className="relative z-10 text-base-100">
-          <h1 className="text-5xl md:text-6xl  uppercase mb-4">
+          <h1 className="text-xl md:text-6xl  uppercase mb-4 text-primary font-bold">
             Our Services
           </h1>
-          <p className="text-lg md:text-xl italic mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xs md:text-xl italic mb-8 max-w-2xl mx-auto leading-relaxed">
             “Let all things be done decently and in order.” —{" "}
             <span className="text-secondary">1 Corinthians 14:40</span>
           </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+          <div className="flex flex-col md:flex-row gap-3 justify-center">
             <Link to="/live" className="btn btn-primary">
               Watch Livestream
             </Link>
-            <Link to="/contact" className="btn btn-outline btn-secondary">
+            <Link to="/contact" className="btn  btn-secondary">
               Visit Us
             </Link>
           </div>
@@ -38,8 +38,8 @@ function Services() {
       </div>
 
       {/* ✝️ Intro Section */}
-      <section className="max-w-5xl mx-auto px-6 md:px-12 py-16 text-center">
-        <p className="text-lg md:text-xl leading-relaxed">
+      <section className="max-w-5xl mx-auto px-6 md:px-12 py-16 text-left md:text-center">
+        <p className="text-sm md:text-xl leading-relaxed">
           Our services at{" "}
           <strong className="text-primary">zoe worship centre</strong> are
           uniquely conducted to inspire, empower, and transform lives through
@@ -49,19 +49,19 @@ function Services() {
       </section>
 
       {/* 🗓️ Weekly, Monthly, and Annual Services */}
-      <section className="max-w-5xl mx-auto px-6 md:px-12 py-12 flex flex-col gap-12">
+      <section className="max-w-5xl mx-auto px-6 md:px-12 md:py-12 flex flex-col gap-12">
         {/* 🕊️ Weekly Services */}
-        <div className="text-center md:text-left">
-          <h2 className="text-3xl font-medium text-primary uppercase mb-6">
+        <div className="text-left md:text-left">
+          <h2 className="text-xl md:text-3xl font-medium text-primary uppercase md:mb-6">
             Weekly Services
           </h2>
-          <ul className="space-y-4 text-lg">
+          <ul className="space-y-4 text-sm md:text-lg list-none">
             <li>
-              <strong>Sunday Service:</strong> 8:00 AM – 1:00 PM
-              <ul className="pl-4 mt-1 text-base-content">
-                <li>• Ministers Service — 8:00 AM – 9:00 AM</li>
-                <li>• First Service — 9:05 AM – 10:45 AM</li>
-                <li>• Second Service — 10:50 AM – 1:00 PM</li>
+              <strong>Sunday Service:</strong> 
+              <ul className=" mt-1 text-base-content text-sm ">
+                <li>Ministers Service — 8:00 AM – 9:00 AM</li>
+                <li>First Service — 9:05 AM – 10:45 AM</li>
+                <li>Second Service — 10:50 AM – 1:00 PM</li>
               </ul>
             </li>
             
@@ -70,12 +70,12 @@ function Services() {
         </div>
 
         {/* 🌸 Departmental Fellowships */}
-        <div className="text-center md:text-left">
-          <h2 className="text-3xl font-medium text-primary uppercase mb-6">
+        <div className="text-left md:text-left">
+          <h2 className="text-xl md:text-3xl font-medium text-primary uppercase mb-6">
             Weekly & Departmental Fellowships
           </h2>
 
-          <ul className="space-y-4 text-lg leading-relaxed">
+          <ul className="space-y-4 text-sm md:text-lg leading-relaxed">
             <li>
               <strong>Morning Devotions:</strong> Our weekly morning devotions
               run from{" "}
@@ -86,7 +86,7 @@ function Services() {
             </li>
             <li>
               <strong>Tuesday Fellowship:</strong> Our Tuesday weekly fellowship
-              takes place from{" "}
+               from{" "}
               <span className="text-secondary font-medium">
                 6:30 PM to 7:30 PM
               </span>
@@ -118,10 +118,10 @@ function Services() {
 
       {/* 🌅 Footer Accent */}
       <section className="bg-base-200 py-10 text-center">
-        <h3 className="text-2xl md:text-3xl font-medium text-primary mb-3">
-          “Christ is the Reason for Life.”
+        <h3 className="text-xl md:text-3xl font-medium text-primary mb-3">
+          “A God kind of Life.”
         </h3>
-        <p className="italic text-base-content/80">
+        <p className="italic pb-20 text-secondary text-xs md:text-lg">
           Join us this week and experience the divine life in fellowship.
         </p>
       </section>

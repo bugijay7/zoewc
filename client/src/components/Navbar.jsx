@@ -155,18 +155,34 @@ export default function Navbar() {
             </ul>
           )}
         </li>
+        <li>
+          <Link
+            to="/donate"
+            onClick={closeAllMenus}
+            className="block px-3 py-1 text-amber-500 font-bold hover:text-primary transition"
+          >
+            
+            Give
+          </Link>
+        </li>
       </ul>
+
     </div>
 
     {/* 🔹 Right Section: Contact Info */}
     <div className="hidden md:flex flex-col justify-center gap-1 h-full text-[10px] text-base-content/80">
-      <div className="flex items-center gap-1">
-        <MdEmail className="text-primary text-xs" />
-        <span>info@zoeworship.org</span>
-      </div>
+     <div className="flex items-center gap-1">
+  <MdEmail className="text-primary text-xs" />
+  <a
+    href="mailto:zoeworshipcentrekinoo@gmail.com"
+    className="underline hover:text-secondary transition"
+  >
+    zoeworshipcentrekinoo@gmail.com
+  </a>
+</div>
       <div className="flex items-center gap-1">
         <MdPhone className="text-primary text-xs" />
-        <span>+254 700 123 456</span>
+        <span>+254 722 908 733</span>
       </div>
     </div>
 

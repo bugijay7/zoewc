@@ -18,7 +18,7 @@ export default function MensDepartment() {
         <h1 className="text-xl md:text-5xl lg:text-6xl font-bold text-primary mb-1 md:mb-6 uppercase">
           Men's Ministry
         </h1>
-        <h2 className="text- md:text-xl lg:text-2xl font-medium mb-3 md:mb-4">
+        <h2 className="text-sm md:text-xl lg:text-2xl font-medium mb-3 md:mb-4">
           Strengthening Men in Faith and Purpose
         </h2>
         <p className="text-sm md:text-base lg:text-lg leading-relaxed">

@@ -32,9 +32,9 @@ function LiveStream() {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-base-100 text-base-content px-4 py-10">
-      <h1 className="text-4xl md:text-5xl font-medium mb-6 uppercase tracking-widest text-primary">
-        zoe worship centre Live
+    <section className="min-h-screen flex flex-col items-center justify-center bg-amber-500 text-base-content px-4 py-10">
+      <h1 className="text-xl md:text-5xl font-medium uppercase tracking-widest text-primary text-center">
+        zoe worship centre <br></br> Live
       </h1>
 
       {isLive && videoId ? (
@@ -52,7 +52,7 @@ function LiveStream() {
         </div>
       ) : (
         <div className="text-center mt-8">
-          <p className="text-lg opacity-70 mb-4">
+          <p className="text-sm md:text-lg opacity-70 mb-3">
             We’re not live right now. Check back soon or visit our YouTube
             channel below.
           </p>

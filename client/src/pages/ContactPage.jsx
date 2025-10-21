@@ -32,65 +32,74 @@ export default function ContactPage() {
             </h2>
 
             <div className="flex items-center gap-4">
-              <FaMapMarkerAlt className="text-primary text-xl" />
+              <FaMapMarkerAlt className="text-primary text-sm" />
               <p className="text-base-content/80">
                 Zoe Worship Centre, Kinoo, Nairobi, Kenya
               </p>
             </div>
 
             <div className="flex items-center gap-4">
-              <FaPhoneAlt className="text-primary text-xl" />
+              <FaPhoneAlt className="text-primary text-sm" />
               <p className="text-base-content/80">+254 722 908 733</p>
             </div>
 
             <div className="flex items-center gap-4">
-              <FaEnvelope className="text-primary text-xl" />
+              <FaEnvelope className="text-primary text-sm" />
               <p className="text-base-content/80">
                 zoeworshipcentrekinoo@gmail.com
               </p>
             </div>
 
             {/* 🌐 Social Links */}
-            <div className="pt-6">
-              <h3 className="text-lg font-medium text-base-content mb-2">
-                Follow Us
-              </h3>
-              <div className="flex gap-4">
-                <a
-                  href="https://www.facebook.com/ZoeWorshipCentreYouths"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary text-xl transition"
-                >
-                  <FaFacebookF />
-                </a>
-                <a
-                  href="https://www.instagram.com/zoewoshipcentrechurch"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary text-xl transition"
-                >
-                  <FaInstagram />
-                </a>
-                <a
-                  href="https://www.tiktok.com/@zoeworshipcentrechurch?_t=ZM-90eMtbIA7fH&_r=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary text-xl transition"
-                >
-                  <FaTiktok />
-                </a>
-                <a
-                  href="https://www.youtube.com/@ZoeWorshipCentreKinoo"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary text-xl transition"
-                >
-                  <FaYoutube />
-                </a>
-              </div>
-            </div>
+<div className="pt-6">
+  <h3 className="text-xs font-medium text-base-content mb-2 uppercase tracking-wide">
+    Follow Us
+  </h3>
+
+  <div className="flex flex-col gap-3 text-sm md:text-base">
+    <a
+      href="https://www.facebook.com/ZoeWorshipCentreYouths"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+    >
+      <FaFacebookF className="text-lg" />
+      <span>Follow Zoe on Facebook</span>
+    </a>
+
+    <a
+      href="https://www.instagram.com/zoewoshipcentrechurch"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+    >
+      <FaInstagram className="text-lg" />
+      <span>Like Zoe on Instagram</span>
+    </a>
+
+    <a
+      href="https://www.tiktok.com/@zoeworshipcentrechurch?_t=ZM-90eMtbIA7fH&_r=1"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+    >
+      <FaTiktok className="text-lg" />
+      <span>Join Zoe on TikTok</span>
+    </a>
+
+    <a
+      href="https://www.youtube.com/@ZoeWorshipCentreKinoo"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+    >
+      <FaYoutube className="text-lg" />
+      <span>Subscribe to Zoe On Youtube</span>
+    </a>
+  </div>
+</div>
           </div>
+
 
           {/* 📬 Contact Form */}
           <form className="bg-base-100 shadow-xl rounded-xl p-8 space-y-6 border border-base-300">

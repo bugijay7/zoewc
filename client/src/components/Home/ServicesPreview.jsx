@@ -20,35 +20,39 @@ export default function ServicesPreview() {
   const renderServiceCard = (service, i) => (
     <div
       key={i}
-      className="flex flex-col items-center border p-6 rounded-md hover:bg-base-200 transition duration-300 min-w-[250px]"
+      className="flex flex-col items-center border p-4 md:p-6 rounded-md hover:bg-base-200 transition duration-300 min-w-[220px] md:min-w-[250px]"
     >
-      <h3 className="text-lg font-medium mb-2 uppercase">{service.title}</h3>
-      <p className="text-sm opacity-80 mb-3">{service.time}</p>
-      <button className="btn btn-outline btn-primary text-sm font-medium">
+      <h3 className="text-md md:text-lg font-medium mb-2 text-center uppercase">
+        {service.title}
+      </h3>
+      <p className="text-xs md:text-sm opacity-80 mb-3 text-center">{service.time}</p>
+      <button className="btn btn-outline btn-primary text-xs md:text-sm font-medium">
         Learn More
       </button>
     </div>
   );
 
   return (
-    <section className="py-14 bg-base-100 text-base-content">
-      <div className="px-6 text-center max-w-6xl mx-auto">
+    <section className="py-10 md:py-14 bg-base-100 text-base-content">
+      <div className="px-4 md:px-6 text-center max-w-6xl mx-auto">
         {/* 🔹 Title */}
-        <h1 className="text-4xl md:text-5xl font-extrabold uppercase mb-12 tracking-wide">
+        <h1 className="text-xl md:text-4xl font-extrabold uppercase mb-8 md:mb-12 tracking-wide">
           Services
         </h1>
 
         {/* 🔸 Main Services */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-medium mb-8 uppercase">Main Services</h2>
-          <div className="flex flex-wrap justify-center gap-4">
+        <div className="mb-8 md:mb-12">
+          <h2 className="text-xl md:text-2xl font-medium mb-6 md:mb-8 uppercase">
+            Main Services
+          </h2>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             {mainServices.map(renderServiceCard)}
           </div>
         </div>
 
         {/* 🔹 Link to Full Schedule */}
-        <div className="mt-10">
-          <p className="text-lg">
+        <div className="mt-6 md:mt-10">
+          <p className="text-sm md:text-lg">
             For all our complete weekly and monthly services,&nbsp;
             <Link
               to="/services"
