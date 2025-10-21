@@ -33,7 +33,7 @@ export default function MainDepartments() {
         {departments.map((dept, index) => (
           <li key={index} className="flex flex-row md:flex-row items-start gap-4 md:gap-6 py-4">
             {/* Image */}
-            <div className=" w-400 h-20 md:w-32 md:h-32 overflow-hidden rounded-box">
+            <div className=" w-40 h-20 md:w-32 md:h-32 overflow-hidden rounded-box">
               <img src={dept.image} alt={dept.name} className="object-cover w-full h-full" />
             </div>
 
