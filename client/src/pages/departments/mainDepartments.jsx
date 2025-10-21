@@ -13,7 +13,7 @@ export default function MainDepartments() {
     { name: "Women Department", link: "/departments/main/women", image: womenImg },
     { name: "Youth Department", link: "/departments/main/youth", image: youthImg },
     { name: "Teens Department", link: "/departments/main/teens", image: teenImg },
-    { name: "Sunday School Department", link: "/departments/main/sunday-school", image: sundaySchoolImg },
+    { name: "Sunday School Department", link: "/departments/main/sundaySchool", image: sundaySchoolImg },
   ];
 
   return (
