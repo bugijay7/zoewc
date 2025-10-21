@@ -76,7 +76,7 @@ function ManageEvent() {
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
-      <h2 className="text-4xl font-bold text-center text-primary mb-10">
+      <h2 className="text-4xl font-medium text-center text-primary mb-10">
         Manage Events
       </h2>
 
@@ -94,7 +94,7 @@ function ManageEvent() {
                 className="w-28 h-20 object-cover rounded-md"
               />
               <div>
-                <h3 className="font-semibold text-lg text-base-content">
+                <h3 className="font-medium text-lg text-base-content">
                   {event.title}
                 </h3>
                 <p className="text-sm opacity-70">
@@ -124,7 +124,7 @@ function ManageEvent() {
       {editingEvent && (
         
         <div className="mt-10 bg-base-100 shadow-lg rounded-lg p-6">
-          <h3 className="text-2xl font-bold mb-4 text-primary">Edit Event</h3>
+          <h3 className="text-2xl font-medium mb-4 text-primary">Edit Event</h3>
           <form onSubmit={handleUpdate} className="space-y-4">
             <div>
               <label className="block font-medium mb-1">Title</label>

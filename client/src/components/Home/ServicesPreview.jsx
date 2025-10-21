@@ -22,9 +22,9 @@ export default function ServicesPreview() {
       key={i}
       className="flex flex-col items-center border p-6 rounded-md hover:bg-base-200 transition duration-300 min-w-[250px]"
     >
-      <h3 className="text-lg font-semibold mb-2 uppercase">{service.title}</h3>
+      <h3 className="text-lg font-medium mb-2 uppercase">{service.title}</h3>
       <p className="text-sm opacity-80 mb-3">{service.time}</p>
-      <button className="btn btn-outline btn-primary text-sm font-semibold">
+      <button className="btn btn-outline btn-primary text-sm font-medium">
         Learn More
       </button>
     </div>
@@ -40,7 +40,7 @@ export default function ServicesPreview() {
 
         {/* 🔸 Main Services */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-8 uppercase">Main Services</h2>
+          <h2 className="text-2xl font-medium mb-8 uppercase">Main Services</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {mainServices.map(renderServiceCard)}
           </div>
@@ -52,7 +52,7 @@ export default function ServicesPreview() {
             For all our complete weekly and monthly services,&nbsp;
             <Link
               to="/services"
-              className="text-primary font-semibold underline hover:text-secondary transition"
+              className="text-primary font-medium underline hover:text-secondary transition"
             >
               click here
             </Link>

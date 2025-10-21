@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-8 px-4 py-8 md:grid-cols-4 lg:py-10">
           {/* ABOUT */}
           <div>
-            <h2 className="mb-6 text-sm font-semibold uppercase text-primary-content">
+            <h2 className="mb-6 text-sm font-medium uppercase text-primary-content">
               About
             </h2>
             <ul className="font-medium space-y-3">
@@ -23,7 +23,7 @@ export default function Footer() {
 
           {/* DEPARTMENTS */}
           <div>
-            <h2 className="mb-6 text-sm font-semibold uppercase text-primary-content">
+            <h2 className="mb-6 text-sm font-medium uppercase text-primary-content">
               Departments
             </h2>
             <ul className="font-medium space-y-3">
@@ -36,7 +36,7 @@ export default function Footer() {
 
           {/* EVENTS & MEDIA */}
           <div>
-            <h2 className="mb-6 text-sm font-semibold uppercase text-primary-content">
+            <h2 className="mb-6 text-sm font-medium uppercase text-primary-content">
               Events & Media
             </h2>
             <ul className="font-medium space-y-3">
@@ -49,7 +49,7 @@ export default function Footer() {
 
           {/* CONTACT */}
           <div>
-            <h2 className="mb-6 text-sm font-semibold uppercase text-primary-content">
+            <h2 className="mb-6 text-sm font-medium uppercase text-primary-content">
               Connect
             </h2>
             <ul className="font-medium space-y-3">
@@ -76,7 +76,7 @@ export default function Footer() {
               href="https://yohanlabs.dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="link link-hover font-bold"
+              className="link link-hover font-medium"
             >
               Yohan Labs
             </a>

@@ -8,7 +8,7 @@ export default function DonationPage() {
         {/* ❤️ Title Section */}
         <div className="text-center mb-12">
           <FaHeart className="text-amber-600 text-5xl mx-auto mb-4" />
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3">
+          <h1 className="text-4xl md:text-5xl font-medium text-gray-800 mb-3">
             Support the Ministry
           </h1>
           <p className="text-[#f5f0e9] max-w-2xl mx-auto">
@@ -23,7 +23,7 @@ export default function DonationPage() {
           {/* Bank Transfer */}
           <div className="bg-[#ffcfe7] p-8 rounded-xl shadow-lg border border-gray-100">
             <FaUniversity className="text-amber-600 text-4xl mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+            <h2 className="text-2xl font-medium text-gray-800 mb-3">
               Bank Transfer
             </h2>
             <p className="text-gray-700 mb-2">Account Name: zoe worship centre</p>
@@ -35,7 +35,7 @@ export default function DonationPage() {
           {/* M-Pesa Giving */}
           <div className="bg-[#ffcfe7] p-8 rounded-xl shadow-lg border border-gray-100">
             <FaMobileAlt className="text-amber-600 text-4xl mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+            <h2 className="text-2xl font-medium text-gray-800 mb-3">
               M-Pesa Giving
             </h2>
             <p className="text-gray-700 mb-2">Paybill: 247247</p>
@@ -46,7 +46,7 @@ export default function DonationPage() {
           {/* PayPal Giving */}
           <div className="bg-[#ffcfe7] p-8 rounded-xl shadow-lg border border-gray-100">
             <FaPaypal className="text-amber-600 text-4xl mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+            <h2 className="text-2xl font-medium text-gray-800 mb-3">
               PayPal Giving
             </h2>
             <p className="text-gray-700 mb-4">
@@ -56,7 +56,7 @@ export default function DonationPage() {
               href="https://www.paypal.com/donate"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-amber-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-amber-700 transition"
+              className="inline-block bg-amber-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-amber-700 transition"
             >
               Donate via PayPal
             </a>
@@ -65,7 +65,7 @@ export default function DonationPage() {
 
         {/* 📨 Donation Form */}
         <div className="bg-[#ffcfe7] shadow-lg rounded-xl p-8 border border-gray-100 max-w-3xl mx-auto">
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          <h2 className="text-3xl font-medium text-gray-800 mb-6 text-center">
             Make a Pledge or Inquiry
           </h2>
           <form className="space-y-6">
@@ -115,7 +115,7 @@ export default function DonationPage() {
 
             <button
               type="submit"
-              className="w-full bg-amber-600 text-white font-semibold py-2 rounded-lg hover:bg-amber-700 transition"
+              className="w-full bg-amber-600 text-white font-medium py-2 rounded-lg hover:bg-amber-700 transition"
             >
               Send Message
             </button>
@@ -128,7 +128,7 @@ export default function DonationPage() {
             “Give, and it will be given to you. A good measure, pressed down,
             shaken together and running over, will be poured into your lap.”
           </p>
-          <p className="mt-2 font-semibold text-gray-800">
+          <p className="mt-2 font-medium text-gray-800">
             — Luke 6:38 (NIV)
           </p>
         </div>

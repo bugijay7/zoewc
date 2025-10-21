@@ -34,7 +34,7 @@ function FaithStatement() {
       {/* 📰 Content Section */}
       <div className="max-w-5xl mx-auto bg-base-100 shadow-lg rounded-2xl p-8 md:p-12">
         <div className="text-left mb-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 border-b-4 border-primary inline-block pb-2">
+          <h1 className="text-4xl md:text-5xl font-medium mb-8 border-b-4 border-primary inline-block pb-2">
             Faith Statement
           </h1>
         </div>

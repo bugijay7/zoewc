@@ -35,7 +35,7 @@ function Anthem() {
       <div className="max-w-5xl mx-auto bg-base-100 shadow-lg rounded-2xl p-8 md:p-12">
         {/* 🕊️ Title Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold border-b-4 border-primary inline-block pb-2">
+          <h1 className="text-4xl md:text-5xl font-medium border-b-4 border-primary inline-block pb-2">
             Our Anthem
           </h1>
         </div>
@@ -43,7 +43,7 @@ function Anthem() {
         {/* 🎶 Content Section */}
         <div className="text-lg md:text-xl space-y-6 text-center">
           <p>
-            <span className="font-semibold">We are Zoe family and one in Christ;</span>
+            <span className="font-medium">We are Zoe family and one in Christ;</span>
             <br />
             We live in the realm of the Divine Book: <em>The Bible</em>;
             <br />
@@ -54,13 +54,13 @@ function Anthem() {
             From book to book, and from testament to testament.
           </p>
 
-          <h2 className="text-2xl font-bold mb-2 text-primary">Our Vision</h2>
+          <h2 className="text-2xl font-medium mb-2 text-primary">Our Vision</h2>
           <p>We have a Christ-like vision — we win, train, and send to win.</p>
 
-          <h2 className="text-2xl font-bold mb-2 text-primary">Our Mission</h2>
+          <h2 className="text-2xl font-medium mb-2 text-primary">Our Mission</h2>
           <p>To transform lives by the life and the love of Christ.</p>
 
-          <h2 className="text-2xl font-bold mb-2 text-primary">Our Core Values</h2>
+          <h2 className="text-2xl font-medium mb-2 text-primary">Our Core Values</h2>
           <p>
             Represented by <strong>FLOWERS</strong> — 
             <span className="italic">
@@ -70,8 +70,8 @@ function Anthem() {
           </p>
 
           <div className="text-center mt-10">
-            <h2 className="text-2xl font-bold text-primary">Our Motto</h2>
-            <p className="text-xl font-semibold mt-2 italic">
+            <h2 className="text-2xl font-medium text-primary">Our Motto</h2>
+            <p className="text-xl font-medium mt-2 italic">
               “Christ is the reason for Life.”
             </p>
           </div>

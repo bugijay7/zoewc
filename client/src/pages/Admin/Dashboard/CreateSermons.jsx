@@ -81,7 +81,7 @@ function CreateSermons() {
   return (
     <div className="flex justify-center items-center min-h-[70vh] bg-base-200 p-4">
       <div className="bg-base-100 shadow-lg rounded-2xl p-8 w-full max-w-lg">
-        <h2 className="text-3xl font-bold text-center mb-6 text-primary uppercase">
+        <h2 className="text-3xl font-medium text-center mb-6 text-primary uppercase">
           Create New Sermon
         </h2>
 

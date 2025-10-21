@@ -19,7 +19,7 @@ function AdminNavbar() {
     <div className="bg-base-200 pt-20">
       <nav className="max-w-[1000px] mx-auto  p-4 flex flex-col sm:flex-row sm:justify-between sm:items-center rounded-lg">
         {/* Logo / Title */}
-        <h1 className="text-sm font-bold text-primary mb-3 sm:mb-0">
+        <h1 className="text-sm font-medium text-primary mb-3 sm:mb-0">
           zoe worship centre Admin
         </h1>
 

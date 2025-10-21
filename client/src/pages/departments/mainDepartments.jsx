@@ -26,7 +26,7 @@ export default function MainDepartments() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {/* 🌟 Unique Main Departments Intro Card */}
           <div className="card flex flex-col justify-center items-center text-left p-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
+            <h1 className="text-4xl md:text-5xl font-medium mb-4 text-primary">
               Main Departments
             </h1>
             <p className="text-base-content/70 text-sm md:text-base leading-relaxed">
@@ -50,7 +50,7 @@ export default function MainDepartments() {
                 />
               </figure>
               <div className="card-body items-center justify-center p-4">
-                <h2 className="card-title text-lg font-bold text-base-content">
+                <h2 className="card-title text-lg font-medium text-base-content">
                   {dept.name}
                 </h2>
               </div>

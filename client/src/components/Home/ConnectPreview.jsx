@@ -18,8 +18,8 @@ function ConnectPreview() {
         
         {/* 🔹 Section 1: Form */}
         <div className="flex flex-col items-center text-center gap-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary">Connect With Us</h2>
-          <p className="text-lg max-w-2xl text-primary-content font-bold">
+          <h2 className="text-4xl md:text-5xl font-medium text-primary">Connect With Us</h2>
+          <p className="text-lg max-w-2xl text-primary-content font-medium">
             We'd love to hear from you! Fill out the form below and we’ll get back to you soon.
           </p>
 

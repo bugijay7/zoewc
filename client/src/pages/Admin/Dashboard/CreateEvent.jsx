@@ -64,7 +64,7 @@ function CreateEvent() {
   return (
     <div className="flex justify-center items-center min-h-[70vh] bg-base-200 p-6">
       <div className="bg-base-100 shadow-xl rounded-2xl p-8 w-full max-w-lg">
-        <h2 className="text-2xl font-bold text-center mb-6 text-primary">
+        <h2 className="text-2xl font-medium text-center mb-6 text-primary">
           Create New Event
         </h2>
 
@@ -72,7 +72,7 @@ function CreateEvent() {
           {/* Event Title */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold">Event Title</span>
+              <span className="label-text font-medium">Event Title</span>
             </label>
             <input
               type="text"
@@ -88,7 +88,7 @@ function CreateEvent() {
           {/* Event Date */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold">Event Date</span>
+              <span className="label-text font-medium">Event Date</span>
             </label>
             <input
               type="date"
@@ -103,7 +103,7 @@ function CreateEvent() {
           {/* Event Description */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold">Description</span>
+              <span className="label-text font-medium">Description</span>
             </label>
             <textarea
               name="description"
@@ -119,7 +119,7 @@ function CreateEvent() {
           {/* Event Image */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-semibold">Event Image</span>
+              <span className="label-text font-medium">Event Image</span>
             </label>
             <input
               type="file"

@@ -19,7 +19,7 @@ export default function ProgrammsPreview() {
         </p>
         <Link
           to="/programs"
-          className="btn btn-primary px-8 py-3 rounded-lg font-semibold text-sm md:text-base"
+          className="btn btn-primary px-8 py-3 rounded-lg font-medium text-sm md:text-base"
         >
           Find a Program
         </Link>

@@ -39,7 +39,7 @@ function Login() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-black">
       <div className="bg-amber-600 shadow-lg rounded-2xl p-8 w-full max-w-[500px]">
-        <h2 className="text-2xl font-bold text-center mb-6 text-amber-200">
+        <h2 className="text-2xl font-medium text-center mb-6 text-amber-200">
           zoe worship centre Admin Login
         </h2>
 
@@ -78,7 +78,7 @@ function Login() {
           <button
             type="submit"
             disabled={loading}
-            className={`w-full bg-amber-500 text-white py-2 rounded-lg font-semibold hover:bg-amber-600 transition ${
+            className={`w-full bg-amber-500 text-white py-2 rounded-lg font-medium hover:bg-amber-600 transition ${
               loading && "opacity-70 cursor-not-allowed"
             }`}
           >

@@ -4,7 +4,7 @@ import worshipImg from "../assets/her01.jpg";
 
 function Services() {
   return (
-    <div className="bg-base-200 text-base-content font-serif">
+    <div className="bg-base-200 text-base-content">
       {/* 🌅 Hero Section */}
       <div
         className="hero min-h-[80vh] flex items-center justify-center text-center px-6 md:px-20 relative overflow-hidden"
@@ -18,8 +18,8 @@ function Services() {
         <div className="absolute inset-0 bg-neutral/50 backdrop-blur-[1px]"></div>
 
         {/* Content */}
-        <div className="relative z-10 text-base-100 font-montserrat">
-          <h1 className="text-5xl md:text-6xl font-extrabold uppercase mb-4">
+        <div className="relative z-10 text-base-100">
+          <h1 className="text-5xl md:text-6xl  uppercase mb-4">
             Our Services
           </h1>
           <p className="text-lg md:text-xl italic mb-8 max-w-2xl mx-auto leading-relaxed">
@@ -52,7 +52,7 @@ function Services() {
       <section className="max-w-5xl mx-auto px-6 md:px-12 py-12 flex flex-col gap-12">
         {/* 🕊️ Weekly Services */}
         <div className="text-center md:text-left">
-          <h2 className="text-3xl font-bold text-primary uppercase mb-6">
+          <h2 className="text-3xl font-medium text-primary uppercase mb-6">
             Weekly Services
           </h2>
           <ul className="space-y-4 text-lg">
@@ -71,7 +71,7 @@ function Services() {
 
         {/* 🌸 Departmental Fellowships */}
         <div className="text-center md:text-left">
-          <h2 className="text-3xl font-bold text-primary uppercase mb-6">
+          <h2 className="text-3xl font-medium text-primary uppercase mb-6">
             Weekly & Departmental Fellowships
           </h2>
 
@@ -79,7 +79,7 @@ function Services() {
             <li>
               <strong>Morning Devotions:</strong> Our weekly morning devotions
               run from{" "}
-              <span className="text-secondary font-semibold">
+              <span className="text-secondary font-medium">
                 5:30 AM to 7:50 AM
               </span>
               .
@@ -87,7 +87,7 @@ function Services() {
             <li>
               <strong>Tuesday Fellowship:</strong> Our Tuesday weekly fellowship
               takes place from{" "}
-              <span className="text-secondary font-semibold">
+              <span className="text-secondary font-medium">
                 6:30 PM to 7:30 PM
               </span>
               .
@@ -95,7 +95,7 @@ function Services() {
             <li>
               <strong>Thursday Bodaboda Outreach:</strong> Every Thursday
               beginning at{" "}
-              <span className="text-secondary font-semibold">
+              <span className="text-secondary font-medium">
                 3:00 PM to 4:00 PM
               </span>
               .
@@ -103,7 +103,7 @@ function Services() {
             <li>
               <strong>Friday Mini-Vigil:</strong> Our Friday mini-vigil runs
               from{" "}
-              <span className="text-secondary font-semibold">
+              <span className="text-secondary font-medium">
                 9:00 PM to midnight
               </span>
               .
@@ -118,7 +118,7 @@ function Services() {
 
       {/* 🌅 Footer Accent */}
       <section className="bg-base-200 py-10 text-center">
-        <h3 className="text-2xl md:text-3xl font-bold text-primary mb-3">
+        <h3 className="text-2xl md:text-3xl font-medium text-primary mb-3">
           “Christ is the Reason for Life.”
         </h3>
         <p className="italic text-base-content/80">

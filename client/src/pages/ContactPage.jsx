@@ -15,7 +15,7 @@ export default function ContactPage() {
       <div className="max-w-6xl mx-auto">
         {/* 🕊 Title */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-primary mb-3">
+          <h1 className="text-4xl md:text-5xl font-medium text-primary mb-3">
             Get in Touch
           </h1>
           <p className="text-base-content/70">
@@ -27,7 +27,7 @@ export default function ContactPage() {
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           {/* Contact Info */}
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-base-content">
+            <h2 className="text-2xl font-medium text-base-content">
               Contact Information
             </h2>
 
@@ -52,7 +52,7 @@ export default function ContactPage() {
 
             {/* 🌐 Social Links */}
             <div className="pt-6">
-              <h3 className="text-lg font-semibold text-base-content mb-2">
+              <h3 className="text-lg font-medium text-base-content mb-2">
                 Follow Us
               </h3>
               <div className="flex gap-4">

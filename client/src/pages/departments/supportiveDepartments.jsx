@@ -47,7 +47,7 @@ export default function SupportiveDepartments() {
     <div className="bg-base-200 pt-40 py-16 px-6 md:px-20 font-montserrat">
       <div className="max-w-6xl mx-auto text-center space-y-12">
         {/* 🌟 Title */}
-        <h1 className="text-4xl md:text-5xl font-bold text-primary">
+        <h1 className="text-4xl md:text-5xl font-medium text-primary">
           Supportive Departments
         </h1>
 
@@ -68,7 +68,7 @@ export default function SupportiveDepartments() {
               </figure>
 
               <div className="card-body text-center items-center justify-center p-4">
-                <h2 className="card-title text-lg font-bold text-base-content">
+                <h2 className="card-title text-lg font-medium text-base-content">
                   {dept.name}
                 </h2>
               </div>

@@ -79,7 +79,7 @@ function ManageSermons() {
 
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h2 className="text-4xl font-bold text-center text-primary mb-6">
+      <h2 className="text-4xl font-medium text-center text-primary mb-6">
         Manage Sermons
       </h2>
 
@@ -91,7 +91,7 @@ function ManageSermons() {
             className="flex flex-col sm:flex-row sm:items-center justify-between border border-base-300 rounded-lg p-4 shadow-sm bg-base-100"
           >
             <div className="flex-2/4">
-              <h3 className="text-lg font-semibold">{sermon.title}</h3>
+              <h3 className="text-lg font-medium">{sermon.title}</h3>
               <p className="text-sm opacity-70">
                 {new Date(sermon.date).toDateString()}
               </p>
@@ -127,10 +127,10 @@ function ManageSermons() {
       {/* Edit form */}
       {editingSermon && (
         <div className="mt-10 bg-base-100 shadow-lg rounded-lg p-6">
-          <h3 className="text-2xl font-bold mb-4 text-primary">Edit Sermon</h3>
+          <h3 className="text-2xl font-medium mb-4 text-primary">Edit Sermon</h3>
           <form onSubmit={handleUpdate} className="space-y-4">
             <div className="form-control">
-              <label className="label font-semibold">Title</label>
+              <label className="label font-medium">Title</label>
               <input
                 type="text"
                 name="title"
@@ -142,7 +142,7 @@ function ManageSermons() {
             </div>
 
             <div className="form-control">
-              <label className="label font-semibold">Date</label>
+              <label className="label font-medium">Date</label>
               <input
                 type="date"
                 name="date"
@@ -154,7 +154,7 @@ function ManageSermons() {
             </div>
 
             <div className="form-control">
-              <label className="label font-semibold">Description</label>
+              <label className="label font-medium">Description</label>
               <textarea
                 name="description"
                 value={formData.description}
@@ -166,7 +166,7 @@ function ManageSermons() {
             </div>
 
             <div className="form-control">
-              <label className="label font-semibold">YouTube Embed Link</label>
+              <label className="label font-medium">YouTube Embed Link</label>
               <input
                 type="text"
                 name="youtubeLink"

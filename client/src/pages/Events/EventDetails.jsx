@@ -62,7 +62,7 @@ export default function EventDetails() {
 
         {/* Content Section */}
         <div className="p-8 md:p-10">
-          <h1 className="text-4xl font-bold text-primary mb-4 text-center">
+          <h1 className="text-4xl font-medium text-primary mb-4 text-center">
             {event.title}
           </h1>
           <p className="text-sm text-base-content/70 text-center mb-6">

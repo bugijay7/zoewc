@@ -48,7 +48,7 @@ function AdminDashboard() {
               className="bg-base-100 w-52 h-44 shadow-md rounded-2xl flex flex-col items-center justify-center hover:shadow-lg transition transform hover:-translate-y-1"
             >
               {card.icon}
-              <p className="mt-3 text-lg font-semibold text-base-content">
+              <p className="mt-3 text-lg font-medium text-base-content">
                 {card.name}
               </p>
             </Link>

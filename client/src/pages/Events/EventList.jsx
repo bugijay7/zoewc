@@ -22,7 +22,7 @@ function EventList() {
   return (
     <div className="min-h-screen bg-base-200 pt-30 py-16 px-6 md:px-20 font-montserrat">
       {/* 🌟 Title */}
-      <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-12">
+      <h1 className="text-4xl md:text-5xl font-medium text-center text-primary mb-12">
         Upcoming Events
       </h1>
 
@@ -43,7 +43,7 @@ function EventList() {
               </figure>
 
               <div className="card-body text-left">
-                <h2 className="card-title text-lg font-bold text-base-content">
+                <h2 className="card-title text-lg font-medium text-base-content">
                   {event.title}
                 </h2>
 

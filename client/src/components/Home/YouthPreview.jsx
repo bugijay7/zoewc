@@ -11,7 +11,7 @@ export default function YouthPreview() {
         </h1>
 
         {/* 🕒 Subtitle */}
-        <h3 className="text-xl md:text-2xl font-semibold mb-6">
+        <h3 className="text-xl md:text-2xl font-medium mb-6">
           Every Sunday • 9:00 AM
         </h3>
 
@@ -25,7 +25,7 @@ export default function YouthPreview() {
         {/* 🎈 Button */}
         <Link
           to="/youth"
-          className="btn btn-primary font-semibold uppercase"
+          className="btn btn-primary font-medium uppercase"
         >
           Sunday at Zoe
         </Link>

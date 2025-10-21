@@ -41,7 +41,7 @@ function Sermons() {
     <div className="min-h-screen bg-base-200 py-20 px-4 sm:px-6 md:px-10 lg:px-16">
       {/* 🔹 Header */}
       <div className="max-w-4xl mx-auto text-center mb-12">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-3 text-primary uppercase">
+        <h1 className="text-4xl sm:text-5xl font-medium mb-3 text-primary uppercase">
           Sermons
         </h1>
         <p className="text-base sm:text-lg text-base-content/70">
@@ -76,7 +76,7 @@ function Sermons() {
 
               {/* 📜 Sermon Details */}
               <div className="w-full text-left space-y-2">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-base-content">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-base-content">
                   {sermon.title}
                 </h3>
                 <p className="text-xs sm:text-sm uppercase font-medium text-base-content/60">

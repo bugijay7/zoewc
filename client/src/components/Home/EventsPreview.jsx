@@ -21,7 +21,7 @@ export default function EventsPreview() {
 
         <Link
           to="/events"
-          className="btn btn-primary text-sm md:text-base font-semibold rounded-lg"
+          className="btn btn-primary text-sm md:text-base font-medium rounded-lg"
         >
           Browse Events
         </Link>

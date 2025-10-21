@@ -5,7 +5,7 @@ export default function NewMembers() {
     <div className="pt-30 max-w-[1400px] mx-auto bg-base-100 text-base-content px-6 md:px-20 py-16 leading-relaxed font-serif">
       {/* Title */}
       <div className="text-center mb-12">
-        <h1 className="text-3xl md:text-5xl font-bold uppercase tracking-wide text-primary">
+        <h1 className="text-3xl md:text-5xl font-medium uppercase tracking-wide text-primary">
           Zoe Visitors and Discipleship Manual
         </h1>
         <p className="text-lg italic text-secondary mt-2">
@@ -15,7 +15,7 @@ export default function NewMembers() {
 
       {/* Step 1 */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-primary mb-4">
+        <h2 className="text-2xl font-medium text-primary mb-4">
           Step 1: Know Our Guest
         </h2>
         <h3 className="text-lg font-medium mb-2">Welcoming Statement</h3>
@@ -37,7 +37,7 @@ export default function NewMembers() {
 
       {/* God Knows You */}
       <section className="mb-12 bg-base-200 shadow-md rounded-2xl p-6 md:p-10">
-        <h2 className="text-2xl font-semibold text-primary mb-4">
+        <h2 className="text-2xl font-medium text-primary mb-4">
           God Knows You
         </h2>
         <p className="mb-4">
@@ -55,7 +55,7 @@ export default function NewMembers() {
 
       {/* God Loves You */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-primary mb-4">
+        <h2 className="text-2xl font-medium text-primary mb-4">
           God Loves You
         </h2>
         <p className="mb-4">
@@ -81,7 +81,7 @@ export default function NewMembers() {
 
       {/* Know God */}
       <section className="mb-12 bg-base-200 shadow-md rounded-2xl p-6 md:p-10">
-        <h2 className="text-2xl font-semibold text-primary mb-4">Know God</h2>
+        <h2 className="text-2xl font-medium text-primary mb-4">Know God</h2>
         <p className="mb-4">
           Knowing God is not an event but a journey of revelation, intimacy, and
           faith. He reveals Himself through creation, His Word, and His Son
@@ -96,7 +96,7 @@ export default function NewMembers() {
 
       {/* Love God */}
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold text-primary mb-4">Love God</h2>
+        <h2 className="text-2xl font-medium text-primary mb-4">Love God</h2>
         <p className="mb-4">
           To love God is to live in obedience to His will and to extend His love
           to others.
@@ -110,7 +110,7 @@ export default function NewMembers() {
 
       {/* Serve God */}
       <section className="mb-12 bg-base-200 shadow-md rounded-2xl p-6 md:p-10">
-        <h2 className="text-2xl font-semibold text-primary mb-4">
+        <h2 className="text-2xl font-medium text-primary mb-4">
           Serve God and Enjoy Kingdom Benefits
         </h2>
         <p className="mb-4">

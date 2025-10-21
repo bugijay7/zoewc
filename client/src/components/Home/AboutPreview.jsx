@@ -18,7 +18,7 @@ export default function AboutPreview() {
         {/* 🔹 Button */}
         <Link
           to="/new"
-          className="btn btn-primary text-sm md:text-base font-semibold uppercase"
+          className="btn btn-primary text-sm md:text-base font-medium uppercase"
         >
           Start Here
         </Link>

@@ -33,7 +33,7 @@ function LiveStream() {
 
   return (
     <section className="min-h-screen flex flex-col items-center justify-center bg-base-100 text-base-content px-4 py-10">
-      <h1 className="text-4xl md:text-5xl font-bold mb-6 uppercase tracking-widest text-primary">
+      <h1 className="text-4xl md:text-5xl font-medium mb-6 uppercase tracking-widest text-primary">
         zoe worship centre Live
       </h1>
 

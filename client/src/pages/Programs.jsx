@@ -19,7 +19,7 @@ export default function Programs() {
   return (
     <div className="bg-gray-50 min-h-screen py-16 px-6 md:px-20 font-montserrat">
       <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-12 text-gray-800">
+        <h1 className="text-4xl md:text-5xl font-medium mb-12 text-gray-800">
           Our Programs
         </h1>
 
@@ -31,7 +31,7 @@ export default function Programs() {
               to={program.link}
               className="block bg-[#ffcfe7] shadow-lg rounded-xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:-translate-y-1 transform"
             >
-              <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+              <h2 className="text-2xl font-medium text-gray-800 mb-3">
                 {program.name}
               </h2>
               <p className="text-gray-500">

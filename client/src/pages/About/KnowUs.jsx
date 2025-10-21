@@ -50,7 +50,7 @@ export default function KnowUs() {
   ];
 
   return (
-    <div className="bg-base-200 text-base-content font-serif">
+    <div className="bg-base-200 text-base-content">
       {/* 🕊 Hero Section */}
       <div
         className="hero min-h-[90vh] flex items-center justify-start text-center px-6 md:px-24 relative overflow-hidden"
@@ -71,7 +71,7 @@ export default function KnowUs() {
           </p>
           <p className="text-lg text-base-100/90 max-w-[800px] mx-auto mt-6 italic">
             “I have come that they may have life, and have it more abundantly.” —{" "}
-            <span className="font-semibold text-primary">John 10:10</span>
+            <span className="font-medium text-primary">John 10:10</span>
           </p>
           <div>
             <Link to="/about/history">
@@ -83,50 +83,86 @@ export default function KnowUs() {
         </div>
       </div>
 
-      {/* 🌿 About Cards Section */}
-      <section className="py-20 px-6 md:px-12 bg-base-100">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
-          {aboutCards.map((card, index) => (
-            <div
-              key={index}
-              className="card lg:card-side bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300"
-            >
-              <figure className="lg:w-1/2">
-                <img
-                  src={card.img}
-                  alt={card.title}
-                  className="w-full h-full object-cover"
-                />
-              </figure>
-              <div className="card-body lg:w-1/2 flex flex-col justify-center">
-                <h2 className="card-title text-primary text-3xl font-bold">
-                  {card.title}
-                </h2>
-                <p className="text-base-content/80">{card.desc}</p>
-                <div className="card-actions justify-end mt-4">
-                  <Link to={card.link} className="btn btn-primary text-base-100">
-                    Learn More →
-                  </Link>
-                </div>
+  {/* 🌿 About Cards Section */}
+<section className="py-20 px-6 md:px-12 bg-base-100 overflow-hidden">
+  <div className="max-w-6xl mx-auto">
+    {/* Mobile: Carousel */}
+    <div className="carousel carousel-center rounded-box space-x-6 overflow-x-auto block md:hidden">
+      {aboutCards.map((card, index) => (
+        <div key={index} className="carousel-item w-80 flex-shrink-0">
+          <div className="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
+            <figure className="w-full h-48">
+              <img
+                src={card.img}
+                alt={card.title}
+                className="w-full h-full object-cover rounded-t-lg"
+              />
+            </figure>
+            <div className="card-body flex flex-col justify-center p-4">
+              <h2 className="card-title text-primary text-2xl font-medium">
+                {card.title}
+              </h2>
+              <p className="text-base-content/80 mt-2">{card.desc}</p>
+              <div className="card-actions justify-end mt-4">
+                <Link
+                  to={card.link}
+                  className="btn btn-primary text-base-100"
+                >
+                  Learn More →
+                </Link>
               </div>
             </div>
-          ))}
+          </div>
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* Desktop: Grid */}
+    <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {aboutCards.map((card, index) => (
+        <div key={index} className="card bg-base-200 shadow-md hover:shadow-xl transition-shadow duration-300">
+          <figure className="w-full h-48">
+            <img
+              src={card.img}
+              alt={card.title}
+              className="w-full h-full object-cover rounded-t-lg"
+            />
+          </figure>
+          <div className="card-body flex flex-col justify-center p-4">
+            <h2 className="card-title text-primary text-2xl font-medium">
+              {card.title}
+            </h2>
+            <p className="text-base-content/80 mt-2">{card.desc}</p>
+            <div className="card-actions justify-start mt-4">
+              <Link
+                to={card.link}
+                className="btn btn-primary text-base-100"
+              >
+                Learn More →
+              </Link>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+
 
       {/* ✨ Mission, Vision, and Core Values */}
       <section className="py-20 px-6 md:px-20 bg-base-200">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           {/* Left Column */}
           <div>
-            <h2 className="text-4xl font-bold text-primary mb-6 uppercase">
+            <h2 className="text-4xl font-medium text-primary mb-6 uppercase">
               Our Vision
             </h2>
             <p className="text-lg text-base-content mb-10 leading-relaxed">
               To win, train, and send to win.
             </p>
 
-            <h2 className="text-4xl font-bold text-primary mb-6 uppercase">
+            <h2 className="text-4xl font-medium text-primary mb-6 uppercase">
               Our Mission
             </h2>
             <p className="text-lg text-base-content leading-relaxed">
@@ -136,7 +172,7 @@ export default function KnowUs() {
 
           {/* Right Column */}
           <div>
-            <h2 className="text-4xl font-bold text-primary mb-6 uppercase">
+            <h2 className="text-4xl font-medium text-primary mb-6 uppercase">
               Our Core Values
             </h2>
             <ul className="space-y-3 text-lg text-base-content">
