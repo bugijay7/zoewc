@@ -19,31 +19,35 @@ export default function KnowUs() {
   ];
 
   return (
-    <section className="py-20 px-6 md:px-20 bg-base-100">
+    <section className="py-20 px-6 md:px-20 bg-base-100 font-montserrat">
       {/* Hero Section */}
       <div className="max-w-4xl mx-auto text-center mb-12 space-y-4">
-        <h1 className="text-5xl md:text-6xl font-bold text-primary">
+        <h1 className="text-xl md:text-6xl font-bold text-primary">
           Get to Know Us
         </h1>
-        <p className="text-base-content/70 text-lg md:text-xl leading-relaxed">
+        <p className="text-base-content/70 text-xs md:text-xl leading-relaxed max-w-[300px] mx-auto">
           Discover more about our history, culture, leadership, and values that guide Zoe Worship Centre.
         </p>
       </div>
 
       {/* About Cards as List */}
-      <ul className="max-w-2xl mx-auto  bg-secondary-content divide-y-8 divide-base-200">
+      <ul className="max-w-2xl mx-auto md:max-w-3xl divide-y-8 divide-base-200">
         {aboutCards.map((card, index) => (
-          <li key={index} className="list-row p-4 mt-2 flex flex-col md:flex-row items-center gap-4 md:gap-6">
-            <div className="flex-shrink-0 w-34 h-28 md:w-32 md:h-32 overflow-hidden rounded-box">
+          <li key={index} className="flex flex-row md:flex-row items-start gap-4 md:gap-6 py-4">
+            {/* Image on left */}
+            <div className="flex-shrink-0 w-20 h-20 md:w-52 md:h-32 overflow-hidden rounded-box">
               <img src={card.img} alt={card.title} className="object-cover w-full h-full" />
             </div>
-            <div className="flex-1">
-              <div className="text-lg font-medium underline">{card.title}</div>
-              <p className="text-xs md:text-sm opacity-70 mt-1">{card.desc}</p>
-            </div>
-            <div className="flex-shrink-0 mt-2 md:mt-0">
-              <Link to={card.link} className="btn btn-secondary btn-sm">
-                Learn More
+
+            {/* Text on right */}
+            <div className="flex-1 flex flex-col justify-center">
+              <div className="text-[8px] md:text-lg font-medium md:underline mb-1">{card.title}</div>
+              <p className="text-[7px] md:text-sm opacity-70 mb-2">{card.desc}</p>
+              <Link
+                to={card.link}
+                className="inline-block  text-primary text-[7px] md:text-sm"
+              >
+                For More Information Check Here
               </Link>
             </div>
           </li>
