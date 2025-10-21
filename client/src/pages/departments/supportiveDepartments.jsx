@@ -13,10 +13,10 @@ export default function SupportiveDepartments() {
   const departments = [
     { name: "Intercessory Department", link: "/departments/supportive/intercessory", image: intercessoryImg },
     { name: "Praise and Worship Department", link: "/departments/supportive/praiseAndWorship", image: worshipImg },
-    { name: "Anagkazo / Evangelism Department", link: "/departments/supportive/anagkazo", image: evangelismImg },
-    { name: "Media / Sound System Department", link: "/departments/supportive/media", image: mediaImg },
+    { name: "Anagkazo  Department", link: "/departments/supportive/anagkazo", image: evangelismImg },
+    { name: "Media Department", link: "/departments/supportive/media", image: mediaImg },
     { name: "Hospitality Department", link: "/departments/supportive/hospitality", image: hospitalityImg },
-    { name: "Ushering / Protocol Department", link: "/departments/supportive/ushering", image: usheringImg },
+    { name: "Ushering Protocol Department", link: "/departments/supportive/ushering", image: usheringImg },
   ];
 
   return (
@@ -32,16 +32,16 @@ export default function SupportiveDepartments() {
       </div>
 
       {/* Department List */}
-      <ul className="max-w-4xl mx-auto divide-y-8 divide-base-200">
+      <ul className="max-w-2xl  mx-auto divide-y-8 divide-base-200">
               {departments.map((dept, index) => (
                 <li key={index} className="flex flex-row md:flex-row items-start gap-4 md:gap-6 py-4">
                   {/* Image */}
-                  <div className="flex-shrink-0 w-40 h-20 md:w-32 md:h-32 overflow-hidden rounded-box">
+                  <div className="flex-shrink-0 w-40 h-20 md:w-52 md:h-32 overflow-hidden">
                     <img src={dept.image} alt={dept.name} className="object-cover w-full h-full" />
                   </div>
       
                   {/* Text */}
-                  <div className="flex-1">
+                  <div className="flex-1 md:max-w-[300px] mx-auto">
                     <div className="text-[8px] md:text-lg font-medium md:underline mb-1">{dept.name}</div>
                     <p className="text-[7px] md:text-sm opacity-70">
                       Explore the activities and impact of the {dept.name}. Engage, serve, and grow in your faith through our community-focused programs.

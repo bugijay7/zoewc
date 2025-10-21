@@ -29,16 +29,16 @@ export default function MainDepartments() {
       </div>
 
       {/* Department List */}
-      <ul className="max-w-4xl mx-auto divide-y-8 divide-base-200">
+      <ul className="max-w-2xl mx-auto divide-y-8 divide-base-200">
         {departments.map((dept, index) => (
           <li key={index} className="flex flex-row md:flex-row items-start gap-4 md:gap-6 py-4">
             {/* Image */}
-            <div className=" w-40 h-20 md:w-32 md:h-32 overflow-hidden rounded-box">
+            <div className=" w-40 h-20 md:w-52 md:h-32 overflow-hidden ">
               <img src={dept.image} alt={dept.name} className="object-cover w-full h-full" />
             </div>
 
             {/* Text */}
-            <div className="flex-1">
+            <div className="flex-1 md:max-w-300px] mx-auto">
               <div className="text-[8px] md:text-lg font-medium md:underline mb-1">{dept.name}</div>
               <p className="text-[7px] md:text-sm opacity-70">
                 Explore the activities and impact of the {dept.name}. Engage, serve, and grow in your faith through our community-focused programs.
@@ -46,7 +46,7 @@ export default function MainDepartments() {
               <div className="mt-2">
                 <Link
                   to={dept.link}
-                  className="inline-block underline text-base-100 bg-primary px-2 py-1 rounded-sm text-[7px] md:text-sm"
+                  className="inline-block underline text-primary px-2 py-1 rounded-sm text-[7px] md:text-sm"
                 >
                   Learn More
                 </Link>

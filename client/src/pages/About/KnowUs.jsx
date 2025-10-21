@@ -35,13 +35,13 @@ export default function KnowUs() {
         {aboutCards.map((card, index) => (
           <li key={index} className="flex flex-row md:flex-row items-start gap-4 md:gap-6 py-4">
             {/* Image on left */}
-            <div className="flex-shrink-0 w-20 h-20 md:w-52 md:h-32 overflow-hidden rounded-box">
+            <div className="flex-shrink-0 w-40 h-20 md:w-52 md:h-32 overflow-hidden">
               <img src={card.img} alt={card.title} className="object-cover w-full h-full" />
             </div>
 
             {/* Text on right */}
             <div className="flex-1 flex flex-col justify-center">
-              <div className="text-[8px] md:text-lg font-medium md:underline mb-1">{card.title}</div>
+              <div className="text-[8px] md:text-lg font-medium  mb-1">{card.title}</div>
               <p className="text-[7px] md:text-sm opacity-70 mb-2">{card.desc}</p>
               <Link
                 to={card.link}
