@@ -79,7 +79,7 @@ function Sermons() {
                 <h3 className="text-lg sm:text-xl md:text-2xl font-medium text-base-content">
                   {sermon.title}
                 </h3>
-                <p className="text-xs sm:text-sm uppercase font-medium text-base-content/60">
+                <p className="text-xs sm:text-sm uppercase font-medium text-primary">
                   {new Date(sermon.date).toLocaleDateString()}
                 </p>
                 <p className="text-sm sm:text-base text-base-content/80 leading-relaxed">

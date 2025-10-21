@@ -1,5 +1,11 @@
 import React from "react";
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaTiktok } from "react-icons/fa";
 import connectBg from "../../assets/about-hero.jpeg"; 
 
 function ConnectPreview() {
@@ -20,30 +26,10 @@ function ConnectPreview() {
         <div className="flex flex-col items-center text-center gap-6">
           <h2 className="text-4xl md:text-5xl font-medium text-primary">Connect With Us</h2>
           <p className="text-lg max-w-2xl text-primary-content font-medium">
-            We'd love to hear from you! Fill out the form below and we’ll get back to you soon.
+            We'd love to hear from you! Get in touch with us in any of the platforms below.
           </p>
 
-          {/* Form (in row layout) */}
-          <form className="flex flex-col md:flex-row gap-4 w-full max-w-3xl justify-center">
-           
-            <input
-              type="email"
-              placeholder="Your Phone Number"
-              className="input input-bordered w-full md:w-1/4"
-              required
-            />
-            <input
-              type="text"
-              placeholder="Your Message"
-              className="input input-bordered w-full md:w-1/2"
-              required
-            />
-            <button type="submit" className="btn btn-primary whitespace-nowrap">
-              Send Message
-            </button>
-          </form>
-        </div>
-
+          </div>
         {/* 🔹 Section 2: Contact Info */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-2 text-center text-base-content">
           <div className="flex items-center gap-3">
@@ -62,15 +48,38 @@ function ConnectPreview() {
 
         {/* 🔹 Section 3: Social Links */}
         <div className="flex justify-center gap-6">
-          <a href="#" className="text-secondary hover:text-primary transition text-3xl">
-            <FaFacebookF />
-          </a>
-          <a href="#" className="text-secondary hover:text-primary transition text-3xl">
-            <FaInstagram />
-          </a>
-          <a href="#" className="text-secondary hover:text-primary transition text-3xl">
-            <FaYoutube />
-          </a>
+          <a
+                            href="https://www.facebook.com/ZoeWorshipCentreYouths"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:text-primary text-xl transition"
+                          >
+                            <FaFacebookF />
+                          </a>
+                          <a
+                            href="https://www.instagram.com/zoewoshipcentrechurch"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:text-primary text-xl transition"
+                          >
+                            <FaInstagram />
+                          </a>
+                          <a
+                            href="https://www.tiktok.com/@zoeworshipcentrechurch?_t=ZM-90eMtbIA7fH&_r=1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:text-primary text-xl transition"
+                          >
+                            <FaTiktok />
+                          </a>
+                          <a
+                            href="https://www.youtube.com/@ZoeWorshipCentreKinoo"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:text-primary text-xl transition"
+                          >
+                            <FaYoutube />
+                          </a>
         </div>
       </div>
     </div>

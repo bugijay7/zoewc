@@ -53,7 +53,7 @@ export default function KnowUs() {
     <div className="bg-base-200 text-base-content">
       {/* 🕊 Hero Section */}
       <div
-        className="hero min-h-[90vh] flex items-center justify-start text-center px-6 md:px-24 relative overflow-hidden"
+        className="hero min-h-[80vh] flex items-center justify-start text-center px-6 md:px-24 relative overflow-hidden"
         style={{
           backgroundImage: `url(${heroImg})`,
           backgroundSize: "cover",

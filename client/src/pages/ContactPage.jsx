@@ -60,7 +60,7 @@ export default function ContactPage() {
                   href="https://www.facebook.com/ZoeWorshipCentreYouths"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base-content/60 hover:text-primary text-xl transition"
+                  className="text-primary hover:text-primary text-xl transition"
                 >
                   <FaFacebookF />
                 </a>
@@ -68,7 +68,7 @@ export default function ContactPage() {
                   href="https://www.instagram.com/zoewoshipcentrechurch"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base-content/60 hover:text-primary text-xl transition"
+                  className="text-primary hover:text-primary text-xl transition"
                 >
                   <FaInstagram />
                 </a>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                   href="https://www.tiktok.com/@zoeworshipcentrechurch?_t=ZM-90eMtbIA7fH&_r=1"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base-content/60 hover:text-primary text-xl transition"
+                  className="text-primary hover:text-primary text-xl transition"
                 >
                   <FaTiktok />
                 </a>
@@ -84,7 +84,7 @@ export default function ContactPage() {
                   href="https://www.youtube.com/@ZoeWorshipCentreKinoo"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-base-content/60 hover:text-primary text-xl transition"
+                  className="text-primary hover:text-primary text-xl transition"
                 >
                   <FaYoutube />
                 </a>
