@@ -3,24 +3,26 @@ import { Link } from "react-router-dom";
 
 export default function AboutPreview() {
   return (
-    <section className="py-14 px-6 md:px-12 font-montserrat text-center bg-base-100 text-base-content">
-      <div className="max-w-3xl mx-auto">
+    <section className="py-20 px-6 md:px-12 font-montserrat bg-base-100 text-base-content text center md:text-left">
+      <div className="max-w-4xl mx-auto">
         {/* 🔹 Title */}
-        <h1 className="text-4xl md:text-6xl font-extrabold uppercase mb-6">
-          I’m New
+        <h1 className="text-2xl md:text-6xl font-extrabold uppercase mb-6 tracking-tight">
+          The God Kind of Life
         </h1>
 
-        {/* 🔹 Subtitle */}
-        <p className="text-lg md:text-xl opacity-80 mb-10 leading-relaxed">
-          Everything you need to get started at zoe worship centre
+        {/* 🔹 Subtitle / Introduction */}
+        <p className="text-sm md:text-xl opacity-90 leading-relaxed mb-10">
+          Welcome to <span className="font-semibold text-primary">Zoe Worship Centre</span> — 
+          a place where lives are transformed, faith is strengthened, and purpose is discovered. 
+          Experience the abundant life of God through worship, the Word, and community.
         </p>
 
-        {/* 🔹 Button */}
+        {/* 🔹 Call to Action */}
         <Link
           to="/new"
-          className="btn btn-primary text-sm md:text-base font-medium uppercase"
+          className="btn btn-primary px-4 text-xs md:text-base font-semibold uppercase tracking-wide"
         >
-          Start Here
+          Discover More
         </Link>
       </div>
     </section>

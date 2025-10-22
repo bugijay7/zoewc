@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import hero1 from "../../assets/her01.jpg";
+import hero1 from "../../assets/hero33.jpg";
 import hero2 from "../../assets/hero02.jpg";
 import hero3 from "../../assets/hero3.jpg";
 
