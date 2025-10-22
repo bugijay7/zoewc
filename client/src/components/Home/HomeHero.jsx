@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-// Import your three hero images
 import hero1 from "../../assets/her01.jpg";
 import hero2 from "../../assets/hero02.jpg";
 import hero3 from "../../assets/mission-k.jpeg";
@@ -13,33 +12,21 @@ export default function HomeHero() {
       title: "Zoe Worship Centre",
       state: "Welcome to Zoe Worship Centre",
       subtitle: "Transforming lives by the life and love of Christ",
-      button: {
-        text: "Word of Welcome",
-        link: "/new",
-        type: "primary",
-      },
+      button: { text: "Word of Welcome", link: "/new", type: "primary" },
     },
     {
       image: hero2,
       title: "Zoe Worship Centre",
       state: "Join Our Supportive Ministries",
       subtitle: "Serve, grow, and impact lives through our ministries",
-      button: {
-        text: "Call to Serve",
-        link: "/departments/supportive",
-        type: "primary",
-      },
+      button: { text: "Call to Serve", link: "/departments/supportive", type: "primary" },
     },
     {
       image: hero3,
       title: "Zoe Worship Centre",
       state: "About Our Church",
       subtitle: "Learn about our vision, mission, and community",
-      button: {
-        text: "Learn More",
-        link: "/about/knowUs",
-        type: "secondary",
-      },
+      button: { text: "Learn More", link: "/about/knowUs", type: "secondary" },
     },
   ];
 
@@ -51,25 +38,37 @@ export default function HomeHero() {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [slides.length]);
+
+  // Preload the next image for smoother transitions
+  useEffect(() => {
+    const nextSlide = (currentSlide + 1) % slides.length;
+    const img = new Image();
+    img.src = slides[nextSlide].image;
+  }, [currentSlide]);
 
   const slide = slides[currentSlide];
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <img
-        src={slide.image}
-        alt={slide.state}
-        className="absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-1000"
-        key={slide.image}
-      />
+      {/* Background Images with Fade Transition */}
+      {slides.map((s, idx) => (
+        <img
+          key={idx}
+          src={s.image}
+          alt={s.state}
+          loading={idx === 0 ? "eager" : "lazy"} // only first loads instantly
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+            idx === currentSlide ? "opacity-100 scale-105" : "opacity-0"
+          }`}
+        />
+      ))}
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-1000"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 text-center text-base-100 transition-opacity duration-1000 flex flex-col justify-center h-full">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 text-center text-base-100 flex flex-col justify-center h-full transition-opacity duration-1000">
         <h2 className="mt-4 text-sm md:text-sm font-medium underline underline-offset-4 text-amber-600 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
           {slide.title}
         </h2>
@@ -96,13 +95,13 @@ export default function HomeHero() {
         </div>
       </div>
 
-      {/* Slide indicators */}
+      {/* Slide Indicators */}
       <div className="absolute bottom-6 flex justify-center gap-3 w-full">
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrentSlide(idx)}
-            className={`w-3 h-3 rounded-full ${
+            className={`w-3 h-3 rounded-full transition-colors ${
               idx === currentSlide ? "bg-primary" : "bg-base-content/50"
             }`}
           ></button>
