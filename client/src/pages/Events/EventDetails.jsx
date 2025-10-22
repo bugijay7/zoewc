@@ -48,36 +48,79 @@ export default function EventDetails() {
     );
   }
 
+  // 🗓️ Extract date parts
+  const eventDate = new Date(event.date);
+  const day = eventDate.getDate();
+  const month = eventDate.toLocaleString("default", { month: "short" });
+  const year = eventDate.getFullYear();
+
   return (
-    <div className="min-h-screen bg-base-200 pt-30  py-16 px-6 md:px-20 font-montserrat">
-      <div className="max-w-4xl mx-auto bg-base-100 shadow-xl rounded-2xl overflow-hidden">
-        {/* Image Section */}
-        <figure className="h-80 w-full overflow-hidden">
-          <img
-            src={`https://zoewc-1.onrender.com/${event.image}`}
-            alt={event.title}
-            className="object-cover w-full h-full"
-          />
-        </figure>
+    <div className="min-h-screen bg-base-200 pt-30 py-16 px-6 md:px-20 font-montserrat">
+      <div className="max-w-5xl mx-auto bg-base-100 shadow-xl rounded-2xl overflow-hidden">
+        {/* Desktop layout */}
+        <div className="hidden md:flex items-center justify-between p-8 md:p-10 gap-8">
+          {/* 🖼️ Image */}
+          <div className="flex-shrink-0 w-[300px] h-[300px] overflow-hidden rounded-xl shadow-md">
+            <img
+              src={`https://zoewc-1.onrender.com/${event.image}`}
+              alt={event.title}
+              className="object-cover w-full h-full"
+            />
+          </div>
 
-        {/* Content Section */}
-        <div className="p-8 md:p-10">
-          <h1 className="text-4xl font-medium text-primary mb-4 text-center">
-            {event.title}
-          </h1>
-          <p className="text-sm text-base-content/70 text-center mb-6">
-            📅 {new Date(event.date).toLocaleDateString()}
-          </p>
+          {/* 📅 Date */}
+          <div className="flex flex-col items-center justify-center text-center text-primary font-bold">
+            <span className="text-6xl leading-none">{day}</span>
+            <span className="text-2xl uppercase tracking-wide">{month}</span>
+            <span className="text-lg text-base-content/70">{year}</span>
+          </div>
 
-          <p className="text-base leading-relaxed text-base-content mb-8 text-center">
-            {event.description}
-          </p>
-
-          <div className="flex justify-center">
-            <Link to="/events/eventList" className="btn btn-outline btn-primary">
+          {/* 📰 Event Details */}
+          <div className="flex-1 text-left space-y-4">
+            <h1 className="text-3xl font-semibold text-primary">
+              {event.title}
+            </h1>
+            <p className="text-base text-base-content leading-relaxed">
+              {event.description}
+            </p>
+            <Link
+              to="/events/eventList"
+              className="btn btn-outline btn-primary mt-4"
+            >
               ← Back to All Events
             </Link>
           </div>
+        </div>
+
+        {/* Mobile layout (stacked) */}
+        <div className="md:hidden p-6 text-center">
+          <div className="w-full h-64 overflow-hidden rounded-xl mb-6">
+            <img
+              src={`https://zoewc-1.onrender.com/${event.image}`}
+              alt={event.title}
+              className="object-cover w-full h-full"
+            />
+          </div>
+
+          <div className="text-primary font-bold mb-4">
+            <div className="text-5xl leading-none">{day}</div>
+            <div className="text-xl uppercase tracking-wide">{month}</div>
+            <div className="text-sm text-base-content/70">{year}</div>
+          </div>
+
+          <h1 className="text-3xl font-semibold text-primary mb-3">
+            {event.title}
+          </h1>
+          <p className="text-base text-base-content leading-relaxed mb-6">
+            {event.description}
+          </p>
+
+          <Link
+            to="/events/eventList"
+            className="btn btn-outline btn-primary"
+          >
+            ← Back to All Events
+          </Link>
         </div>
       </div>
     </div>
