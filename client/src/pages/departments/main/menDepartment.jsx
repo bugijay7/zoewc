@@ -3,7 +3,7 @@ import menImg from "../../../assets/mens-conference.jpeg";
 
 export default function MensDepartment() {
   return (
-    <section className="w-full max-w-[1400px] pt-16 md:pt-40 mx-auto flex flex-col">
+    <section className="w-full max-w-[1400px] pt-16 md:pt-50 mx-auto flex flex-col">
       {/* Top Section - Image */}
       <div className="w-full h-auto md:h-[50vh] overflow-hidden">
         <img

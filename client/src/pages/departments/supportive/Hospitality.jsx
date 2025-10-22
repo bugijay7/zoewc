@@ -3,7 +3,7 @@ import hospitalityImg from "../../../assets/hospitality.jpeg";
 
 export default function HospitalityDept() {
   return (
-    <section className="w-full max-w-[1400px] pt-20 md:pt-40 mx-auto flex flex-col">
+    <section className="w-full max-w-[1400px] pt-20 md:pt-50 mx-auto flex flex-col">
       {/* Top Section - Image */}
       <div className="w-full h-auto md:h-[50vh] overflow-hidden">
         <img

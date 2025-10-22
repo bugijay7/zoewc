@@ -20,7 +20,7 @@ export default function SupportiveDepartments() {
   ];
 
   return (
-    <div className="bg-base-200 md:pt-40  pt-20 py-16 px-6 md:px-20 font-montserrat">
+    <div className="bg-base-200 md:pt-50  pt-20 py-16 px-6 md:px-20 font-montserrat">
       {/* Hero Section */}
       <div className="max-w-4xl mx-auto text-center mb-12 space-y-4">
         <h1 className="text-2xl md:text-6xl font-bold text-primary">

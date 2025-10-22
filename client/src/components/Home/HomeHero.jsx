@@ -3,29 +3,29 @@ import { Link } from "react-router-dom";
 
 import hero1 from "../../assets/her01.jpg";
 import hero2 from "../../assets/hero02.jpg";
-import hero3 from "../../assets/mission-k.jpeg";
+import hero3 from "../../assets/hero3.jpg";
 
 export default function HomeHero() {
   const slides = [
     {
       image: hero1,
-      title: "Zoe Worship Centre",
-      state: "Welcome to Zoe Worship Centre",
-      subtitle: "Transforming lives by the life and love of Christ",
+      title: "The Year Of",
+      state: "Expansion By Faith",
+      subtitle: "Isaiah 54:2",
       button: { text: "Word of Welcome", link: "/new", type: "primary" },
     },
     {
       image: hero2,
-      title: "Zoe Worship Centre",
-      state: "Join Our Supportive Ministries",
-      subtitle: "Serve, grow, and impact lives through our ministries",
+      title: "Welcome To Zoe",
+      state: "Our Supportive Ministries",
+       subtitle: "Isaiah 54:2",
       button: { text: "Call to Serve", link: "/departments/supportive", type: "primary" },
     },
     {
       image: hero3,
       title: "Zoe Worship Centre",
-      state: "About Our Church",
-      subtitle: "Learn about our vision, mission, and community",
+      state: "The God Kind of Life",
+       subtitle: "John 10:10",
       button: { text: "Learn More", link: "/about/knowUs", type: "secondary" },
     },
   ];
@@ -50,14 +50,14 @@ export default function HomeHero() {
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Images with Fade Transition */}
       {slides.map((s, idx) => (
         <img
           key={idx}
           src={s.image}
           alt={s.state}
-          loading={idx === 0 ? "eager" : "lazy"} // only first loads instantly
+          loading={idx === 0 ? "eager" : "lazy"} 
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
             idx === currentSlide ? "opacity-100 scale-105" : "opacity-0"
           }`}
@@ -65,19 +65,19 @@ export default function HomeHero() {
       ))}
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-xs transition-opacity duration-1000"></div>
+      <div className="absolute inset-0 bg-black/60  transition-opacity duration-1000"></div>
 
       {/* Content */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-12 text-center text-base-100 flex flex-col justify-center h-full transition-opacity duration-1000">
-        <h2 className="mt-4 text-sm md:text-sm font-medium underline underline-offset-4 text-amber-600 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+        <h2 className="mt-4 text-sm md:text-2xl font-medium  text-amber-600 drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
           {slide.title}
         </h2>
 
-        <h1 className="text-sm md:text-2xl py-4 tracking-tight text-primary-content drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
+        <h1 className="text-lg md:text-7xl font-semibold py-4 tracking-tight text-primary-content drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
           {slide.state}
         </h1>
 
-        <p className="mt-2 text-2xl md:text-5xl font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
+        <p className="mt-2 text-xs md:text-xl font-medium leading-relaxed max-w-2xl mx-auto drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]">
           {slide.subtitle}
         </p>
 

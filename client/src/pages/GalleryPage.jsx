@@ -31,7 +31,7 @@ function GalleryPage() {
   ];
 
   return (
-    <div className="max-w-[1400px] mx-auto px-4 py-22">
+    <div className="max-w-[1400px] mx-auto px-4 py-22 md:pt-40">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
         {images.map((img, i) => (
           <LazyLoadImage

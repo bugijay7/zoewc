@@ -3,7 +3,7 @@ import { FaPaypal, FaMobileAlt, FaUniversity, FaHeart } from "react-icons/fa";
 
 export default function DonationPage() {
   return (
-    <div className="bg-gray-50  pb-12 pt-30 md:pt-30 px-6 md:px-20 ">
+    <div className="bg-gray-50  pb-12 pt-30 md:pt-50 px-6 md:px-20 ">
       <div className="max-w-6xl mx-auto">
         {/* ❤️ Title Section */}
          <div className="text-center">

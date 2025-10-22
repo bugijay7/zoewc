@@ -19,7 +19,7 @@ export default function KnowUs() {
   ];
 
   return (
-    <section className="py-20 px-6 md:px-20 bg-base-100 font-montserrat">
+    <section className="py-20 px-6 md:px-20 bg-base-100 font-montserrat md:pt-30">
       {/* Hero Section */}
       <div className="max-w-4xl mx-auto text-center mb-12 space-y-4">
         <h1 className="text-xl md:text-6xl font-bold text-primary">
