@@ -20,7 +20,7 @@ import image15 from "../assets/evangelism.jpg";
 import image16 from "../assets/service-bg.jpg";
 
 const retroFilter =
-  "w-full h-full object-cover rounded-lg filter sepia-[0.4] contrast-[1.05] brightness-[0.9] saturate-[0.8] hue-rotate-[-10deg] transition-transform duration-300 hover:scale-[1.02]";
+  "w-full h-full object-cover transition-transform duration-300 hover:scale-[1.02]";
 
 function GalleryPage() {
   const images = [
