@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-function Login() {
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -18,15 +18,13 @@ function Login() {
         password,
       });
 
-      // Store token for later use
       localStorage.setItem("token", res.data.token);
-
       setMessage("✅ Login successful! Redirecting...");
       setTimeout(() => {
-        window.location.href = "/dashboard"; // redirect after login
+        window.location.href = "/dashboard";
       }, 1500);
     } catch (err) {
-      if (err.response && err.response.data.message) {
+      if (err.response?.data?.message) {
         setMessage(`❌ ${err.response.data.message}`);
       } else {
         setMessage("❌ Something went wrong. Try again.");
@@ -37,61 +35,59 @@ function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-black">
-      <div className="bg-amber-600 shadow-lg rounded-2xl p-8 w-full max-w-[500px]">
-        <h2 className="text-2xl font-medium text-center mb-6 text-amber-200">
-          zoe worship centre Admin Login
+    <div className="min-h-screen flex items-center justify-center bg-base-200">
+      <div className="w-full max-w-md bg-base-100 shadow-xl border border-base-300 p-10">
+        <h2 className="text-2xl font-semibold text-center mb-6 text-primary uppercase tracking-wide">
+          Zoe Worship Centre Admin Login
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Email */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-1">
-              Email
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text font-medium">Email</span>
             </label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="admin@zoeworship.org"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+              className="input input-bordered w-full"
               required
             />
           </div>
 
           {/* Password */}
-          <div>
-            <label className="block text-gray-700 font-medium mb-1">
-              Password
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text font-medium">Password</span>
             </label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter password"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"
+              className="input input-bordered w-full"
               required
             />
           </div>
 
-          {/* Submit Button */}
-          <button
-            type="submit"
-            disabled={loading}
-            className={`w-full bg-amber-500 text-white py-2 rounded-lg font-medium hover:bg-amber-600 transition ${
-              loading && "opacity-70 cursor-not-allowed"
-            }`}
-          >
-            {loading ? "Logging in..." : "Login"}
-          </button>
+          {/* Button */}
+          <div className="form-control mt-6">
+            <button
+              type="submit"
+              disabled={loading}
+              className={`btn btn-primary w-full ${loading ? "loading" : ""}`}
+            >
+              {loading ? "Logging in..." : "Login"}
+            </button>
+          </div>
 
           {/* Message */}
           {message && (
             <p
-              className={`text-center text-sm mt-3 ${
-                message.startsWith("✅")
-                  ? "text-green-600"
-                  : "text-red-600"
+              className={`text-center text-sm mt-4 ${
+                message.startsWith("✅") ? "text-success" : "text-error"
               }`}
             >
               {message}
@@ -102,5 +98,3 @@ function Login() {
     </div>
   );
 }
-
-export default Login;
