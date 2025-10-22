@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
         isTransparent
           ? "bg-base-200/10 backdrop-blur-sm shadow-md text-primary-content"
           : "bg-primary text-primary-content shadow-md"
@@ -66,11 +66,12 @@ export default function Navbar() {
           className="flex items-center gap-3 shrink-0 h-full"
         >
           <img src={Logo} alt="Zoe Worship Centre Logo" className="h-12 w-auto" />
-          <div className="flex flex-col justify-center h-full">
-            <span className="text-[10px] md:text-sm text-primary font-bold tracking-wide leading-tight">
+          <div   
+           className={` flex flex-col justify-center h-full w-full ${  isTransparent ? "text-primary-content " : "text-primary-content" }`}>
+            <span className="text-[10px] md:text-sm  font-bold tracking-wide leading-tight">
               Zoe Worship Centre Church
             </span>
-            <span className="text-[8px] text-primary leading-tight">
+            <span className="text-[8px] leading-tight">
               A god kind of life
             </span>
           </div>
@@ -104,7 +105,7 @@ export default function Navbar() {
             <div className="flex items-center cursor-pointer hover:underline transition">
               Ministries
             </div>
-            <ul className="absolute left-0 mt-2 bg-base-100 text-base-content uppercase shadow-lg py-2 w-60 z-50 border border-base-300 rounded-md 
+            <ul className="absolute left-0 mt-2 bg-base-100 text-base-content uppercase shadow-lg py-2 w-60 z-40 border border-base-300 rounded-md 
                  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
               <li>
                 <Link
@@ -130,7 +131,7 @@ export default function Navbar() {
             <div className="flex items-center cursor-pointer hover:underline transition">
               Connect
             </div>
-            <ul className="absolute left-0 mt-2 bg-base-100 text-base-content uppercase shadow-lg py-2 w-56 z-50 border border-base-300 rounded-md 
+            <ul className="absolute left-0 mt-2 bg-base-100 text-base-content uppercase shadow-lg py-2 w-56 z-40 border border-base-300 rounded-md 
                  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
               <li>
                 <Link
@@ -160,46 +161,59 @@ export default function Navbar() {
           </li>
         </ul>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          onClick={() => setOpenMenu(!openMenu)}
-          className="md:hidden focus:outline-none"
-        >
-          {openMenu ? <FaTimes size={24} /> : <FaBars size={22} />}
-        </button>
+        {/* 🔹 Mobile Menu Toggle */}
+<button
+  onClick={() => setOpenMenu(!openMenu)}
+  className="md:hidden focus:outline-none"
+>
+  {openMenu ? <FaTimes size={24} /> : <FaBars size={22} />}
+</button>
 
-        {/* Mobile Menu Overlay */}
-        {openMenu && (
-          <div className="fixed inset-0 bg-base-100/95 flex flex-col items-center justify-center space-y-6 text-lg uppercase font-semibold z-50">
-            <Link to="/about/knowUs" onClick={closeAllMenus} className="hover:underline">
-              Who we are
-            </Link>
-            <Link to="/services" onClick={closeAllMenus} className="hover:underline">
-              Sundays
-            </Link>
-            <Link to="/gallery" onClick={closeAllMenus} className="hover:underline">
-              Gallery
-            </Link>
-            <Link to="/sermons" onClick={closeAllMenus} className="hover:underline">
-              Sermons
-            </Link>
-            <Link to="/departments/main" onClick={closeAllMenus} className="hover:underline">
-              Main departments
-            </Link>
-            <Link to="/departments/supportive" onClick={closeAllMenus} className="hover:underline">
-              Supportive departments
-            </Link>
-            <Link to="/programs" onClick={closeAllMenus} className="hover:underline">
-              Programs
-            </Link>
-            <Link to="/events/eventList" onClick={closeAllMenus} className="hover:underline">
-              Events
-            </Link>
-            <Link to="/contact" onClick={closeAllMenus} className="hover:underline">
-              Contact
-            </Link>
-          </div>
-        )}
+{/* 🔹 Mobile Menu Overlay */}
+{openMenu && (
+  <div className="fixed inset-0 bg-primary text-primary-content z-[9999] flex flex-col p-8 space-y-6 text-base uppercase font-semibold">
+    {/* Close Icon (Top Right) */}
+    <button
+      onClick={() => setOpenMenu(false)}
+      className="absolute top-5 right-5 text-primary-content focus:outline-none"
+    >
+      <FaTimes size={24} />
+    </button>
+
+    {/* Menu Links */}
+    <nav className="flex flex-col mt-10 space-y-4">
+      <Link to="/about/knowUs" onClick={closeAllMenus} className="hover:underline">
+        Who we are
+      </Link>
+      <Link to="/services" onClick={closeAllMenus} className="hover:underline">
+        Sundays
+      </Link>
+      <Link to="/gallery" onClick={closeAllMenus} className="hover:underline">
+        Gallery
+      </Link>
+      <Link to="/sermons" onClick={closeAllMenus} className="hover:underline">
+        Sermons
+      </Link>
+      <Link to="/departments/main" onClick={closeAllMenus} className="hover:underline">
+        Main departments
+      </Link>
+      <Link to="/departments/supportive" onClick={closeAllMenus} className="hover:underline">
+        Supportive departments
+      </Link>
+      <Link to="/programs" onClick={closeAllMenus} className="hover:underline">
+        Programs
+      </Link>
+      <Link to="/events/eventList" onClick={closeAllMenus} className="hover:underline">
+        Events
+      </Link>
+      <Link to="/contact" onClick={closeAllMenus} className="hover:underline">
+        Contact
+      </Link>
+    </nav>
+  </div>
+)}
+
+      
       </div>
     </nav>
   );
