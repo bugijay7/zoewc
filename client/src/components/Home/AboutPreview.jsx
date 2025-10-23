@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function AboutPreview() {
   return (
-    <section className="py-20 px-6 md:px-12 font-montserrat bg-base-100 text-base-content text center md:text-left">
+    <section className="py-20 px-6 md:px-12 bg-base-100 text-base-content shadow-2xl relative text center md:text-left">
       <div className="max-w-4xl mx-auto">
         {/* 🔹 Title */}
         <h1 className="text-2xl md:text-6xl font-extrabold uppercase mb-6 tracking-tight">

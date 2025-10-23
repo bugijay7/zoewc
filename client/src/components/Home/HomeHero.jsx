@@ -50,7 +50,7 @@ export default function HomeHero() {
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[60vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Background Images with Fade Transition */}
       {slides.map((s, idx) => (
         <img

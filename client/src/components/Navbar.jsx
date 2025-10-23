@@ -6,11 +6,15 @@ import Logo from "../assets/logo2.png";
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null); // For mobile dropdowns
   const location = useLocation();
 
-  const closeAllMenus = () => setOpenMenu(false);
+  const closeAllMenus = () => {
+    setOpenMenu(false);
+    setOpenDropdown(null);
+  };
 
-  // ✅ Define pages that use the transparent style
+  // Pages with transparent background
   const transparentPages = ["/", "/services", "/liveStream"];
   const isTransparent = transparentPages.includes(location.pathname);
 
@@ -18,7 +22,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
         isTransparent
-          ? "bg-base-200/10 backdrop-blur-sm shadow-md text-primary-content"
+          ? "bg-base-200/10 backdrop-blur-sm text-primary-content"
           : "bg-primary text-primary-content shadow-md"
       }`}
     >
@@ -46,7 +50,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Right - Give button */}
+          {/* Right - Give Button */}
           <Link
             to="/donate"
             onClick={closeAllMenus}
@@ -57,164 +61,155 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 🔹 Main Navigation */}
+      {/* 🔹 Main Navbar */}
       <div className="max-w-[1400px] mx-auto px-6 md:px-16 py-2 flex items-center justify-between relative">
         {/* Logo */}
         <Link
           to="/"
           onClick={closeAllMenus}
-          className="flex items-center gap-3 shrink-0 h-full"
+          className="flex items-center gap-3 shrink-0"
         >
           <img src={Logo} alt="Zoe Worship Centre Logo" className="h-12 w-auto" />
-          <div   
-           className={` flex flex-col justify-center h-full w-full ${  isTransparent ? "text-primary-content " : "text-primary-content" }`}>
-            <span className="text-[10px] md:text-sm  font-bold tracking-wide leading-tight">
+          <div
+            className={`flex flex-col justify-center ${
+              isTransparent ? "text-primary-content" : "text-primary-content"
+            }`}
+          >
+            <span className="text-[10px] md:text-sm font-bold tracking-wide leading-tight">
               Zoe Worship Centre Church
             </span>
-            <span className="text-[8px] leading-tight">
-              A god kind of life
-            </span>
+            <span className="text-[8px] leading-tight">A God Kind of Life</span>
           </div>
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* 🔸 Desktop Menu */}
         <ul className="hidden md:flex items-center gap-6 text-xs md:text-sm uppercase font-semibold">
-          <li>
-            <Link to="/about/knowUs" className="hover:underline underline-offset-5 transition">
-              Who we are
-            </Link>
+          {/* Who We Are Dropdown */}
+          <li className="relative group">
+            <div className="cursor-pointer hover:underline transition">Who We Are</div>
+            <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-60  opacity-30 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <li><Link to="/about/KnowUs" className="block px-4 py-2 hover:bg-base-200/20">Mission & Vision</Link></li>
+              <li><Link to="/about/culture" className="block px-4 py-2 hover:bg-base-200/20">Our Culture</Link></li>
+              <li><Link to="/about/leadership" className="block px-4 py-2 hover:bg-base-200/20">Our Leadership</Link></li>
+              <li><Link to="/about/impact" className="block px-4 py-2 hover:bg-base-200/20">Making an Impact</Link></li>
+              <li><Link to="/about/faithStatement" className="block px-4 py-2 hover:bg-base-200/20">Faith Statement</Link></li>
+              <li><Link to="/about/history" className="block px-4 py-2 hover:bg-base-200/20">Our History</Link></li>
+            </ul>
           </li>
-          <li>
-            <Link to="/services" className="hover:underline underline-offset-5 transition">
-              Sundays
-            </Link>
-          </li>
-          <li>
-            <Link to="/gallery" className="hover:underline underline-offset-5 transition">
-              Gallery
-            </Link>
-          </li>
-          <li>
-            <Link to="/sermons" className="hover:underline underline-offset-5 transition">
-              Sermons
-            </Link>
-          </li>
+
+          <li><Link to="/services" className="hover:underline">Sundays</Link></li>
+          <li><Link to="/sermons" className="hover:underline">Sermons</Link></li>
 
           {/* Ministries Dropdown */}
           <li className="relative group">
-            <div className="flex items-center cursor-pointer hover:underline transition">
-              Ministries
-            </div>
-            <ul className="absolute left-0 mt-2 bg-base-100 text-base-content uppercase shadow-lg py-2 w-60 z-40 border border-base-300 rounded-md 
-                 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
-              <li>
-                <Link
-                  to="/departments/main"
-                  className="block px-4 py-2 hover:bg-base-200/20 transition"
-                >
-                  Main departments
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/departments/supportive"
-                  className="block px-4 py-2 hover:bg-base-200/20 transition"
-                >
-                  Supportive departments
-                </Link>
-              </li>
+            <div className="cursor-pointer hover:underline transition">Ministries</div>
+            <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-60  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <li><Link to="/departments/main" className="block px-4 py-2 hover:bg-base-200/20">Main Departments</Link></li>
+              <li><Link to="/departments/supportive" className="block px-4 py-2 hover:bg-base-200/20">Supportive Departments</Link></li>
             </ul>
           </li>
 
           {/* Connect Dropdown */}
           <li className="relative group">
-            <div className="flex items-center cursor-pointer hover:underline transition">
-              Connect
-            </div>
-            <ul className="absolute left-0 mt-2 bg-base-100 text-base-content uppercase shadow-lg py-2 w-56 z-40 border border-base-300 rounded-md 
-                 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
-              <li>
-                <Link
-                  to="/programs"
-                  className="block px-4 py-2 hover:bg-base-200/20 transition"
-                >
-                  Programs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/events/eventList"
-                  className="block px-4 py-2 hover:bg-base-200/20 transition"
-                >
-                  Events
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="block px-4 py-2 hover:bg-base-200/20 transition"
-                >
-                  Contact
-                </Link>
-              </li>
+            <div className="cursor-pointer hover:underline transition">Connect</div>
+            <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-56  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <li><Link to="/programs" className="block px-4 py-2 hover:bg-base-200/20">Programs</Link></li>
+              <li><Link to="/events/eventList" className="block px-4 py-2 hover:bg-base-200/20">Events</Link></li>
+              <li><Link to="/contact" className="block px-4 py-2 hover:bg-base-200/20">Contact</Link></li>
             </ul>
           </li>
         </ul>
 
-        {/* 🔹 Mobile Menu Toggle */}
-<button
-  onClick={() => setOpenMenu(!openMenu)}
-  className="md:hidden focus:outline-none"
->
-  {openMenu ? <FaTimes size={24} /> : <FaBars size={22} />}
-</button>
-
-{/* 🔹 Mobile Menu Overlay */}
-{openMenu && (
-  <div className="fixed inset-0 bg-primary text-primary-content z-[9999] flex flex-col p-8 space-y-6 text-base uppercase font-semibold">
-    {/* Close Icon (Top Right) */}
-    <button
-      onClick={() => setOpenMenu(false)}
-      className="absolute top-5 right-5 text-primary-content focus:outline-none"
-    >
-      <FaTimes size={24} />
-    </button>
-
-    {/* Menu Links */}
-    <nav className="flex flex-col mt-10 space-y-4">
-      <Link to="/about/knowUs" onClick={closeAllMenus} className="hover:underline">
-        Who we are
-      </Link>
-      <Link to="/services" onClick={closeAllMenus} className="hover:underline">
-        Sundays
-      </Link>
-      <Link to="/gallery" onClick={closeAllMenus} className="hover:underline">
-        Gallery
-      </Link>
-      <Link to="/sermons" onClick={closeAllMenus} className="hover:underline">
-        Sermons
-      </Link>
-      <Link to="/departments/main" onClick={closeAllMenus} className="hover:underline">
-        Main departments
-      </Link>
-      <Link to="/departments/supportive" onClick={closeAllMenus} className="hover:underline">
-        Supportive departments
-      </Link>
-      <Link to="/programs" onClick={closeAllMenus} className="hover:underline">
-        Programs
-      </Link>
-      <Link to="/events/eventList" onClick={closeAllMenus} className="hover:underline">
-        Events
-      </Link>
-      <Link to="/contact" onClick={closeAllMenus} className="hover:underline">
-        Contact
-      </Link>
-    </nav>
-  </div>
-)}
-
-      
+        {/* 🔸 Mobile Toggle */}
+        <button
+          onClick={() => setOpenMenu(!openMenu)}
+          className="md:hidden focus:outline-none"
+        >
+          {openMenu ? <FaTimes size={22} /> : <FaBars size={22} />}
+        </button>
       </div>
+
+      {/* 🔹 Mobile Menu */}
+      {openMenu && (
+        <div className="relative inset-0 bg-primary text-primary-content z-[9999] flex flex-col p-8 pt-16 space-y-4 text-base font-semibold overflow-y-auto">
+         
+          {/* Menu items */}
+          {[
+            {
+              label: "Who we are", to: "/about/knowUs"},
+            { label: "Sundays", to: "/services" },
+            { label: "Sermons", to: "/sermons" },
+            {
+              label: "Main Ministries",
+              items: [
+                { label: "Men's Ministry", to: "/departments/main/men" },
+                 { label: "Women's Ministry", to: "/departments/main/women" },
+                  { label: "Youth's Ministriy", to: "/departments/main/youth" },
+                   { label: "Sunday School Ministry", to: "/departments/main/sundaySchool" },
+                    { label: "Teen's Ministry", to: "/departments/main/teens" }
+              ],
+            },
+            {
+              label: "Supportive Ministries",
+              items: [
+                { label: "Anagkazo Ministry", to: "/departments/main/anagkazo" },
+                 { label: "Hospitality Ministry", to: "/departments/main/hospitality" },
+                  { label: "Intercessory Ministry", to: "/departments/main/intercessory" },
+                   { label: "Media Ministry", to: "/departments/main/media" },
+                    { label: "Praise & Worship Ministry", to: "/departments/main/praiseAndWorship" },
+                     { label: "Ushering Ministry", to: "/departments/main/ushering" }
+              ],
+            },
+            {
+              label: "Connect",
+              items: [
+                { label: "Programs", to: "/programs" },
+                { label: "Events", to: "/events/eventList" },
+                { label: "Contact", to: "/contact" },
+              ],
+            },
+               { label: "Give", to: "/donate" }
+          ].map((menu, idx) => (
+            <div key={idx}>
+              {menu.items ? (
+                <>
+                  <button
+                    onClick={() =>
+                      setOpenDropdown(openDropdown === idx ? null : idx)
+                    }
+                    className="flex justify-between w-full py-2 border-b border-base-100/20"
+                  >
+                    {menu.label}
+                    <span>{openDropdown === idx ? "−" : "+"}</span>
+                  </button>
+                  {openDropdown === idx && (
+                    <div className="flex flex-col pl-4 space-y-2 mt-2  border-b border-base-100/20">
+                      {menu.items.map((sub, subIdx) => (
+                        <Link
+                          key={subIdx}
+                          to={sub.to}
+                          onClick={closeAllMenus}
+                          className="hover:underline"
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <Link
+                  to={menu.to}
+                  onClick={closeAllMenus}
+                  className="block py-2 border-b border-base-100/20"
+                >
+                  {menu.label}
+                </Link>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }

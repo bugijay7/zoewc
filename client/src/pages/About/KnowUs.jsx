@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import heroImg from "../../assets/about-hero.jpeg"; // Hero background
 import historyImg from "../../assets/history.jpeg";
 import cultureImg from "../../assets/culture.jpeg";
 import impactImg from "../../assets/impact.jpeg";
@@ -10,49 +11,54 @@ import anthemImg from "../../assets/sunday-school.jpeg";
 
 export default function KnowUs() {
   const aboutCards = [
-    { title: "Our History", desc: "Discover our journey since 2008 and how faith shaped our path.", img: historyImg, link: "/about/history" },
-    { title: "Our Culture", desc: "Experience the heart of our worship, unity, and family culture.", img: cultureImg, link: "/about/culture" },
-    { title: "Make an Impact", desc: "See how Zoe Worship Centre impacts lives and communities.", img: impactImg, link: "/about/impact" },
-    { title: "Leadership", desc: "Meet the devoted pastors and leaders guiding our vision.", img: leadershipImg, link: "/about/leadership" },
-    { title: "Faith Statement", desc: "Explore the beliefs and principles that shape our ministry.", img: faithImg, link: "/about/faithStatement" },
-    { title: "Our Anthem", desc: "Learn the words that unite us as the Zoe family.", img: anthemImg, link: "/about/anthem" },
+    { title: "Our History", img: historyImg, link: "/about/history" },
+    { title: "Our Culture", img: cultureImg, link: "/about/culture" },
+    { title: "Make an Impact", img: impactImg, link: "/about/impact" },
+    { title: "Leadership", img: leadershipImg, link: "/about/leadership" },
+    { title: "Faith Statement", img: faithImg, link: "/about/faithStatement" },
+    { title: "Our Anthem", img: anthemImg, link: "/about/anthem" },
   ];
 
   return (
-    <section className="py-20 px-6 md:px-20 bg-base-100 font-montserrat md:pt-30">
+    <section className=" bg-primary-600">
       {/* Hero Section */}
-      <div className="max-w-4xl mx-auto text-center mb-12 space-y-4">
-        <h1 className="text-xl md:text-6xl font-bold text-primary">
-          Get to Know Us
+      <div
+        className="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white"
+        style={{
+          background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroImg}) center/cover no-repeat`,
+        }}
+      >
+        <h1 className="text-3xl md:text-6xl font-bold uppercase tracking-wide">
+          Who We Are
         </h1>
-        <p className="text-base-content/70 text-xs md:text-xl leading-relaxed max-w-[300px] mx-auto">
-          Discover more about our history, culture, leadership, and values that guide Zoe Worship Centre.
-        </p>
       </div>
 
-      {/* About Cards as List */}
-      <ul className="max-w-2xl mx-auto md:max-w-3xl divide-y-8 divide-base-200">
-        {aboutCards.map((card, index) => (
-          <li key={index} className="flex flex-row md:flex-row items-start gap-4 md:gap-6 py-4">
-            {/* Image on left */}
-            <div className="flex-shrink-0 w-40 h-20 md:w-52 md:h-32 overflow-hidden">
-              <img src={card.img} alt={card.title} className="object-cover w-full h-full" />
-            </div>
+      {/* About Grid */}
+      <div className="py-20 px-6 md:px-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 max-w-6xl mx-auto">
+          {aboutCards.map((card, index) => (
+            <Link
+              key={index}
+              to={card.link}
+              className="group block overflow-hidden  hover:shadow-xl transition duration-300"
+            >
+              {/* Image */}
+              <div className="overflow-hidden">
+                <img
+                  src={card.img}
+                  alt={card.title}
+                  className="object-cover w-full h-40 md:h-56 transform group-hover:scale-110 transition duration-500"
+                />
+              </div>
 
-            {/* Text on right */}
-            <div className="flex-1 flex flex-col justify-center">
-              <div className="text-[8px] md:text-lg font-medium  mb-1">{card.title}</div>
-              <p className="text-[7px] md:text-sm opacity-70 mb-2">{card.desc}</p>
-              <Link
-                to={card.link}
-                className="inline-block  text-primary text-[7px] md:text-sm"
-              >
-                For More Information Check Here
-              </Link>
-            </div>
-          </li>
-        ))}
-      </ul>
+              {/* Title below image */}
+              <h2 className="mt-3 text-left text-[10px] md:text-lg font-semibold text-primary group-hover:text-secondary transition duration-300">
+                {card.title}
+              </h2>
+            </Link>
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
