@@ -1,6 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaYoutube, FaInstagram, FaTwitter, FaHome, FaCalendarAlt, FaUsers, FaPhone } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaYoutube,
+  FaInstagram,
+  FaTwitter,
+  FaHome,
+  FaCalendarAlt,
+  FaUsers,
+  FaPhone,
+  FaUserShield, // ✅ New icon for Admin
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -95,7 +105,7 @@ export default function Footer() {
         </div>
       </footer>
 
-      {/* Mobile Bottom Dock */}
+      {/* ✅ Mobile Bottom Dock */}
       <nav className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-base-100 border-t border-base-200 shadow-inner">
         <ul className="flex justify-around items-center py-2 text-xs">
           <li>
@@ -120,6 +130,13 @@ export default function Footer() {
             <Link to="/contact" className="flex flex-col items-center text-primary">
               <FaPhone className="text-lg mb-1" />
               Contact
+            </Link>
+          </li>
+          {/* ✅ New Admin link */}
+          <li>
+            <Link to="/login" className="flex flex-col items-center text-primary">
+              <FaUserShield className="text-lg mb-1" />
+              Admin
             </Link>
           </li>
         </ul>
