@@ -18,7 +18,7 @@ export default function Login() {
         password,
       });
 
-      localStorage.setItem("token", res.data.token);
+      localStorage.setItem("authToken", res.data.token);
       setMessage("✅ Login successful! Redirecting...");
       setTimeout(() => {
         window.location.href = "/dashboard";
