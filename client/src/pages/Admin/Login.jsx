@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useAuth } from "../context/auth"; // ✅ Import your context hook
 
 export default function Login() {
+  const { login } = useAuth(); // ✅ Access login() from context
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -18,11 +20,11 @@ export default function Login() {
         password,
       });
 
-      localStorage.setItem("authToken", res.data.token);
+      login(res.data.token); // ✅ Update context + save token automatically
       setMessage("✅ Login successful! Redirecting...");
       setTimeout(() => {
         window.location.href = "/dashboard";
-      }, 1500);
+      }, 200);
     } catch (err) {
       if (err.response?.data?.message) {
         setMessage(`❌ ${err.response.data.message}`);
