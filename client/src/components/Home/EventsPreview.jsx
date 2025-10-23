@@ -20,7 +20,7 @@ export default function EventsPreview() {
         </p>
 
         <Link
-          to="/events"
+          to="/events/eventList"
           className="btn btn-primary text-sm md:text-base font-medium rounded-lg"
         >
           Browse Events

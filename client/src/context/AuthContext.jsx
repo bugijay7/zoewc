@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { AuthContext } from "./auth";
+import { AuthContext } from "./auth.jsx"; // import context
 
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  // On load, check if a token exists in localStorage
   useEffect(() => {
     const token = localStorage.getItem("authToken");
     if (token) setIsAuthenticated(true);

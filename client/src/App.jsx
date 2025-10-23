@@ -1,5 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { AuthProvider } from './context/AuthContext'
+import ProtectedRoute from './components/ProtectedRoute'
+
+
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import EventsPage from './pages/EventsPage'
@@ -76,6 +80,7 @@ import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
+    <AuthProvider>
     <Router>
       <ScrollToTop />
       <Navbar />
@@ -148,16 +153,20 @@ function App() {
         <Route path="/login" element={<Login />} />
 
         {/* 🔹 Admin Dashboard Routes (with AdminNavbar) */}
-        <Route element={<AdminLayout />}>
+
+
+          <Route element={<ProtectedRoute> <AdminLayout /> </ProtectedRoute>  }>
           <Route path="/dashboard" element={<AdminDashboard />} />
           <Route path="/dashboard/create-event" element={<CreateEvent />} />
           <Route path="/dashboard/manage-events" element={<ManageEvent />} />
           <Route path="/dashboard/create-sermon" element={<CreateSermons />} />
           <Route path="/dashboard/manage-sermons" element={<ManageSermons />} />
         </Route>
+
       </Routes>
       <Footer />
     </Router>
+    </AuthProvider>
   )
 }
 

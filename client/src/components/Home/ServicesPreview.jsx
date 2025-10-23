@@ -20,7 +20,7 @@ export default function ServicesPreview() {
   const renderServiceCard = (service, i) => (
     <div
       key={i}
-      className="flex flex-col items-center border p-4 md:p-6 rounded-md hover:bg-base-200 transition duration-300 min-w-[220px] md:min-w-[250px]"
+      className="flex flex-col items-center border p-4 md:p-6 rounded-md hover:bg-base-200 transition duration-300 w-full md:w-1/3"
     >
       <h3 className="text-md md:text-lg font-medium mb-2 text-center uppercase">
         {service.title}
@@ -37,15 +37,15 @@ export default function ServicesPreview() {
       <div className="px-4 md:px-6 text-center max-w-6xl mx-auto">
         {/* 🔹 Title */}
         <h1 className="text-xl md:text-4xl font-extrabold uppercase mb-8 md:mb-12 tracking-wide">
-          Services
+          main Services
         </h1>
 
         {/* 🔸 Main Services */}
         <div className="mb-8 md:mb-12">
-          <h2 className="text-xl md:text-2xl font-medium mb-6 md:mb-8 uppercase">
-            Main Services
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+          
+
+          {/* ✅ Row layout on md and up */}
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-4">
             {mainServices.map(renderServiceCard)}
           </div>
         </div>

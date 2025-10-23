@@ -27,7 +27,7 @@ app.use(cors({
 }));
 app.use(express.json());
 app.use("/uploads",cors({
-    origin: "https://zoewc.vercel.app", // ✅ your frontend
+    origin: "https://zoewc.vercel.app", 
     methods: ["GET"],
   }),
   express.static("uploads"));

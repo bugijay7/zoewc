@@ -24,7 +24,7 @@ export default function YouthPreview() {
 
         {/* 🎈 Button */}
         <Link
-          to="/youth"
+          to="/departments/main/youth"
           className="btn btn-primary font-medium uppercase"
         >
           Sunday at Zoe

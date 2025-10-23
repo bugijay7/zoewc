@@ -119,7 +119,7 @@ function Services() {
       {/* 🌅 Footer Accent */}
       <section className="bg-base-200 py-10 text-center">
         <h3 className="text-xl md:text-3xl font-medium text-primary mb-3">
-          “A God kind of Life.”
+          “The God kind of Life.”
         </h3>
         <p className="italic pb-20 text-secondary text-xs md:text-lg">
           Join us this week and experience the divine life in fellowship.

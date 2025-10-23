@@ -24,7 +24,7 @@ export default function SchoolPreview() {
 
         {/* 🎈 Button */}
         <Link
-          to="/services"
+          to="/departments/main/sundaySchool"
           className="btn btn-primary uppercase"
         >
           Sunday at Zoe
