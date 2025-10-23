@@ -6,8 +6,8 @@ dotenv.config();
 
 // You can store these credentials in MongoDB later if you want multiple admins.
 // For now, let’s keep one admin in environment variables (.env)
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "admin@zoe";
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "zoeAdmin123"; 
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL 
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD ; 
 
 // Hash the password once at startup
 const hashedPassword = bcrypt.hashSync(ADMIN_PASSWORD, 10);
