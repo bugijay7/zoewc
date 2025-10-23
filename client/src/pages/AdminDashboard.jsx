@@ -29,7 +29,7 @@ function AdminDashboard() {
   return (
     <div className="bg-base-200 flex flex-col min-h-[70vh]">
       {/* 🔹 Dashboard Title */}
-      <div className="text-center py-12">
+      <div className="text-center pt-20 md:pt:40 py-12">
         <h2 className="text-5xl font-extrabold mb-4 text-primary uppercase">
           Admin Dashboard
         </h2>
