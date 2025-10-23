@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useAuth } from "../context/auth"; // ✅ Import your context hook
+import { useAuth } from "../../context/auth.jsx"; 
 
 export default function Login() {
   const { login } = useAuth(); // ✅ Access login() from context
