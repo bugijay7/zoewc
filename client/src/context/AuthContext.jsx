@@ -10,12 +10,12 @@ export function AuthProvider({ children }) {
   }, []);
 
   const login = (token) => {
-    localStorage.setItem("authToken", token);
+    localStorage.setItem("token", token);
     setIsAuthenticated(true);
   };
 
   const logout = () => {
-    localStorage.removeItem("authToken");
+    localStorage.removeItem("token");
     setIsAuthenticated(false);
   };
 
