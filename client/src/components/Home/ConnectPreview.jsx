@@ -26,10 +26,10 @@ function ConnectPreview() {
         
         {/* 🔹 Title Section */}
         <div className="flex flex-col items-center gap-4">
-          <h2 className="text-4xl md:text-5xl font-semibold text-primary">
+          <h2 className="text-2xl md:text-7xl font-semibold text-primary">
             Connect With Us
           </h2>
-          <p className="text-lg md:text-xl max-w-2xl text-primary-content font-medium">
+          <p className="text-sm md:text-sm max-w-2xl text-primary-content font-medium">
             We'd love to hear from you! Reach us on any of the platforms below.
           </p>
         </div>

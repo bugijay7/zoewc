@@ -1,21 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import bgImage from "../../assets/hero.jpg"; 
+import bgImage from "../../assets/hero.jpg";
 
 export default function ProgrammsPreview() {
   return (
     <section
-      className="relative min-h-[50vh] flex flex-col items-center justify-center text-center bg-cover bg-center text-base-content"
+      className="py-20  bg-base-100 text-base-content text-center md:text-right relative overflow-hidden"
       style={{
-        backgroundImage: `url(${bgImage})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bgImage})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
-      <div className="max-w-4xl px-6">
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 uppercase">
+      <div className="max-w-4xl mx-auto  text-white">
+        <h1 className="text-2xl md:text-4xl font-extrabold mb-6 uppercase">
           Connect Programs
         </h1>
-        <p className="text-lg md:text-xl mb-10">
-          Find a community for you
+        <p className="text-xs md:text-sm opacity-90 leading-relaxed mb-10">
+          At Zoe Worship Centre, our programs are designed to help you grow in faith, build lasting relationships, and make a meaningful impact in your community. 
+          Whether you’re looking to serve, learn, or simply belong, there’s a place here for you to thrive spiritually and connect with others on the same journey.
         </p>
         <Link
           to="/programs"

@@ -98,7 +98,7 @@ export default function Navbar() {
           </li>
 
           <li><Link to="/services" className="hover:underline">Sundays</Link></li>
-          <li><Link to="/sermons" className="hover:underline">Sermons</Link></li>
+          <li><Link to="/resources" className="hover:underline">Resources</Link></li>
 
           {/* Ministries Dropdown */}
           <li className="relative group">
@@ -138,7 +138,7 @@ export default function Navbar() {
             {
               label: "Who we are", to: "/about/knowUs"},
             { label: "Sundays", to: "/services" },
-            { label: "Sermons", to: "/sermons" },
+            { label: "Resources", to: "/resources" },
             {
               label: "Main Ministries",
               items: [
@@ -152,12 +152,12 @@ export default function Navbar() {
             {
               label: "Supportive Ministries",
               items: [
-                { label: "Anagkazo Ministry", to: "/departments/main/anagkazo" },
-                 { label: "Hospitality Ministry", to: "/departments/main/hospitality" },
-                  { label: "Intercessory Ministry", to: "/departments/main/intercessory" },
-                   { label: "Media Ministry", to: "/departments/main/media" },
-                    { label: "Praise & Worship Ministry", to: "/departments/main/praiseAndWorship" },
-                     { label: "Ushering Ministry", to: "/departments/main/ushering" }
+                { label: "Anagkazo Ministry", to: "/departments/supportive/anagkazo" },
+                 { label: "Hospitality Ministry", to: "/departments/supportive/hospitality" },
+                  { label: "Intercessory Ministry", to: "/departments/supportive/intercessory" },
+                   { label: "Media Ministry", to: "/departments/supportive/media" },
+                    { label: "Praise & Worship Ministry", to: "/departments/supportive/praiseAndWorship" },
+                     { label: "Ushering Ministry", to: "/departments/supportive/ushering" }
               ],
             },
             {

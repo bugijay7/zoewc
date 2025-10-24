@@ -11,11 +11,11 @@ import Sermons from './pages/Sermons'
 import GalleryPage from './pages/GalleryPage'
 import ContactPage from './pages/ContactPage'
 import DonationPage from './pages/DonationPage' 
-import DepartmentsPage from './pages/DepartmentsPage'
 import Programs from './pages/Programs'
 import LiveStream from './pages/LiveStream'
 import NewMembers from './pages/NewMembers'
 import Services from './pages/Services'
+import Visitors from "./pages/Visitors"
 
 import TeenDepartments from './pages/departments/main/teensDepartment'
 import MenDepartment from "./pages/departments/main/menDepartment"
@@ -76,6 +76,7 @@ import CreateSermons from './pages/Admin/Dashboard/CreateSermons'
 
 import AdminLayout from './layout/AdminLayout'
 import ScrollToTop from './components/ScrollToTop'
+import Resources from './pages/Resources'
 
 
 function App() {
@@ -87,7 +88,6 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/departments" element={<DepartmentsPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/sermons" element={<Sermons />} />
         <Route path="/gallery" element={<GalleryPage />} />
@@ -96,6 +96,11 @@ function App() {
         <Route path="/programs" element={<Programs />} />
         <Route path="/live" element={<LiveStream />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/visitors" element={<Visitors />} />
+        <Route path="/resources" element={<Resources />} />
+
+        { /* departments Routes */ }
+        
 
         { /* departments Routes */ }
         <Route path="/departments/main" element={<MainDepartment />} />

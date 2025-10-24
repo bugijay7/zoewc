@@ -70,10 +70,10 @@ export default function Footer() {
                 <li><Link to="/new" className="link link-hover">Are You New?</Link></li>
                 <li>
                   <a
-                    href="mailto:info@zoeworshipcenter.org"
+                    href="mailto: zoeworshipcentrekinoo@gmail.com"
                     className="link link-hover"
                   >
-                    info@zoeworshipcenter.org
+                     zoeworshipcentrekinoo@gmail.com
                   </a>
                 </li>
               </ul>

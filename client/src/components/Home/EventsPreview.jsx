@@ -5,19 +5,20 @@ import bgImage from "../../assets/events.jpg"; // ✅ background image
 export default function EventsPreview() {
   return (
     <section 
-      className="relative w-full min-h-[50vh] flex flex-col items-center justify-center text-center bg-cover bg-center bg-no-repeat font-montserrat"
+      className="py-20  bg-base-100 text-base-content text-center md:text-right relative overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${bgImage})`,
       }}
     >
-      <div className="max-w-4xl px-6">
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 uppercase text-white">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-2xl md:text-4xl font-extrabold mb-6 uppercase text-white">
           Events
         </h1>
 
-        <p className="text-lg md:text-xl mb-10 text-white">
-          Find seminars, keshas, morning devotions, conferences, and more.
-        </p>
+        <p className="text-xs md:text-sm mb-10 text-white leading-relaxed opacity-90">
+  Discover meaningful opportunities to grow, connect, and serve within a vibrant community of believers. 
+  Our programs are designed to strengthen your faith, deepen relationships, and empower you to live out your God-given purpose in everyday life.
+</p>
 
         <Link
           to="/events/eventList"
