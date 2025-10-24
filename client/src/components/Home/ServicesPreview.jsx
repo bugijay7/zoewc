@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 export default function ServicesPreview() {
   const mainServices = [
     {
-      title: "zoe worship centre – Minister Service",
+      title: "Zoe Worship Centre – Minister Service",
       time: "FROM 8:00 AM TO 9:00 AM",
     },
     {
-      title: "zoe worship centre – First Service",
+      title: "Zoe Worship Centre – First Service",
       time: "FROM 9:05 AM TO 10:45 AM",
     },
     {
-      title: "zoe worship centre – Second Service",
+      title: "Zoe Worship Centre – Second Service",
       time: "FROM 10:50 AM TO 1:00 PM",
     },
   ];
@@ -20,40 +20,34 @@ export default function ServicesPreview() {
   const renderServiceCard = (service, i) => (
     <div
       key={i}
-      className="flex flex-col items-center border p-4 md:p-6 rounded-md hover:bg-base-200 transition duration-300 w-full md:w-1/3"
+      className="flex flex-col items-left md:items-center bg-base-200/60 p-6  hover:bg-base-200 transition duration-300 w-full md:w-1/3"
     >
-      <h3 className="text-md md:text-lg font-medium mb-2 text-center uppercase">
+      <h3 className="text-md md:text-lg font-semibold mb-2 text-center uppercase text-primary">
         {service.title}
       </h3>
-      <p className="text-xs md:text-sm opacity-80 mb-3 text-center">{service.time}</p>
-      <button className="btn btn-outline btn-primary text-xs md:text-sm font-medium">
-        Learn More
-      </button>
+      <p className="text-xs md:text-sm opacity-80 text-center">{service.time}</p>
     </div>
   );
 
   return (
-    <section className="py-10 md:py-14 bg-base-100 text-base-content">
+    <section className="py-10 md:py-14 bg-base-100 text-base-content mb-10">
       <div className="px-4 md:px-6 text-center max-w-6xl mx-auto">
         {/* 🔹 Title */}
         <h1 className="text-xl md:text-4xl font-extrabold uppercase mb-8 md:mb-12 tracking-wide">
-          main Services
+          Main Services
         </h1>
 
         {/* 🔸 Main Services */}
         <div className="mb-8 md:mb-12">
-          
-
-          {/* ✅ Row layout on md and up */}
-          <div className="flex flex-col md:flex-row justify-center items-stretch gap-4">
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-6">
             {mainServices.map(renderServiceCard)}
           </div>
         </div>
 
         {/* 🔹 Link to Full Schedule */}
         <div className="mt-6 md:mt-10">
-          <p className="text-sm md:text-lg">
-            For all our complete weekly and monthly services,&nbsp;
+          <p className="text-xs md:text-sm">
+            For our complete weekly and monthly service schedule,&nbsp;
             <Link
               to="/services"
               className="text-primary font-medium underline hover:text-secondary transition"

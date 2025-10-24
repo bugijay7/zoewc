@@ -5,7 +5,7 @@ import bgImage from "../../assets/events.jpg"; // ✅ background image
 export default function EventsPreview() {
   return (
     <section 
-      className="py-20  bg-base-100 text-base-content text-center md:text-right relative overflow-hidden"
+      className="py-20 px-6 md:px-12 bg-base-100 text-base-content text-left md:text-right relative overflow-hidden"
       style={{
         backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${bgImage})`,
       }}
@@ -22,9 +22,9 @@ export default function EventsPreview() {
 
         <Link
           to="/events/eventList"
-          className="btn btn-primary text-sm md:text-base font-medium rounded-lg"
+          className=" px-4 text-xs md:text-base text-primary font-semibold uppercase tracking-wide underline underline-offset-8"
         >
-          Browse Events
+          Browse Events →
         </Link>
       </div>
     </section>

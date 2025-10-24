@@ -25,9 +25,9 @@ export default function YouthPreview() {
         {/* 🎈 Button */}
         <Link
           to="/departments/main/youth"
-          className="btn btn-primary font-medium uppercase"
+          className="px-4 text-xs md:text-base text-primary font-semibold uppercase tracking-wide underline underline-offset-8"
         >
-          Sunday at Zoe
+          Sunday at Zoe →
         </Link>
       </div>
     </section>
