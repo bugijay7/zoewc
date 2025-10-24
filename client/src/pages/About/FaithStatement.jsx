@@ -18,7 +18,32 @@ export default function FaithStatement() {
         </h1>
       </section>
 
-    
+      {/* 🔗 Navigation Bar (Single Line Scrollable) */}
+      <div className="bg-base-200 py-6 px-4 overflow-x-auto">
+        <div className="flex justify-center gap-3 md:gap-4 min-w-max whitespace-nowrap">
+          <Link to="/about/knowUs" className="btn btn-outline btn-primary btn-sm md:btn-md">
+            About
+          </Link>
+          <Link to="/about/history" className="btn btn-outline btn-primary btn-sm md:btn-md">
+            History
+          </Link>
+          <Link to="/about/culture" className="btn btn-outline btn-primary btn-sm md:btn-md">
+            Culture
+          </Link>
+          <Link to="/about/impact" className="btn btn-outline btn-primary btn-sm md:btn-md">
+            Make an Impact
+          </Link>
+          <Link to="/about/leadership" className="btn btn-outline btn-primary btn-sm md:btn-md">
+            Leadership
+          </Link>
+          <Link to="/about/faithStatement" className="btn btn-primary btn-sm md:btn-md">
+            Faith Statement
+          </Link>
+          <Link to="/about/anthem" className="btn btn-outline btn-primary btn-sm md:btn-md">
+            Anthem
+          </Link>
+        </div>
+      </div>
 
       {/* 📖 Content Section */}
       <section className="px-6 md:px-20 py-16 bg-base-100">

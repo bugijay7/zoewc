@@ -7,7 +7,7 @@ export default function AboutPreview() {
       <div className="max-w-4xl mx-auto">
         {/* 🔹 Title */}
         <h1 className="text-2xl md:text-4xl font-extrabold uppercase mb-6 tracking-tight">
-          The God Kind of Life
+          Is this your first time here?
         </h1>
 
         {/* 🔹 Subtitle / Introduction */}

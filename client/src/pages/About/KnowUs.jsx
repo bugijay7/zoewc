@@ -20,7 +20,7 @@ export default function KnowUs() {
   ];
 
   return (
-    <section className=" bg-primary-600">
+    <section className="bg-primary-600">
       {/* Hero Section */}
       <div
         className="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white"

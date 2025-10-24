@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import heroImg from "../assets/about-hero.jpeg"; // 🖼️ Add your background image in assets
+import heroImg from "../assets/about-hero.jpeg"; // 🖼️ Background image
 
 export default function Visitors() {
   const steps = [
@@ -12,15 +12,15 @@ export default function Visitors() {
       btn: "Start Here",
     },
     {
-      title: "Join a Main Department",
-      desc: "After completing the Discipleship Classes, you’ll be guided to a main ministry department that aligns with your gifts and calling.",
+      title: " Main Departments",
+      desc: "Get involved in one of our main ministry departments where you can serve, connect with others, and use your unique gifts to make an impact in God’s Kingdom.",
       icon: "🤝",
       link: "/departments/main",
       btn: "Explore Departments",
     },
     {
-      title: "Join a Support Department",
-      desc: "Once you’re settled into your main department, you can also join a support department and help the ministry run smoothly.",
+      title: "Support Departments",
+      desc: "Be part of a team that helps the ministry thrive behind the scenes — from hospitality and media to administration and logistics. Every role makes a difference!",
       icon: "💪",
       link: "/departments/supportive",
       btn: "Get Involved",
@@ -66,11 +66,11 @@ export default function Visitors() {
       </div>
 
       {/* ✨ Steps Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20 pb-20 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20 pb-20 max-w-7xl mx-auto">
         {steps.map((step, index) => (
           <div
             key={index}
-            className="bg-base-200 rounded-2xl shadow-lg p-8 text-center hover:shadow-2xl transition"
+            className="bg-base-200 rounded-2xl shadow-lg p-8 text-left  hover:shadow-2xl transition"
           >
             <div className="text-5xl mb-4">{step.icon}</div>
             <h3 className="text-xl md:text-2xl font-bold text-primary mb-3">
