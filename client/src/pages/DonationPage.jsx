@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { FaPaypal, FaMobileAlt, FaUniversity, FaHeart } from "react-icons/fa";
+import { FaPaypal, FaMobileAlt, FaUniversity, FaHeart, FaPhoneAlt } from "react-icons/fa";
 
 export default function DonationPage() {
   const [phone, setPhone] = useState("");
@@ -39,8 +39,8 @@ export default function DonationPage() {
           </h1>
           <p className="text-primary py-6 text-sm md:text-base max-w-2xl mx-auto">
             Your generous giving helps us reach more souls, support the
-            community, and spread the gospel of Christ. Every contribution—
-            big or small—makes an eternal impact.
+            community, and spread the gospel of Christ. Every contribution—big or
+            small—makes an eternal impact.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export default function DonationPage() {
               Bank Transfer
             </h2>
             <p className="text-gray-700 mb-2">Account Name: Zoe Worship Centre</p>
-            <p className="text-gray-700 mb-2">Bank: XXXXX  Bank</p>
+            <p className="text-gray-700 mb-2">Bank: XXXXX Bank</p>
             <p className="text-gray-700 mb-2">Account Number: XXXXXXXXXXX</p>
             <p className="text-gray-700">Branch: XXXXX</p>
           </div>
@@ -64,7 +64,7 @@ export default function DonationPage() {
             <h2 className="text-xl font-medium text-gray-800 mb-3">
               M-Pesa Giving
             </h2>
-            <p className="text-gray-700 mb-2">Paybill: 247247</p>
+            <p className="text-gray-700 mb-2">Paybill: 202273</p>
             <p className="text-gray-700 mb-4">Account: Offering / Tithe</p>
 
             {/* 💰 Interactive STK Push Form */}
@@ -98,6 +98,23 @@ export default function DonationPage() {
               )}
             </div>
           </div>
+        </div>
+
+        {/* 🌍 Diaspora Giving & Helpline */}
+        <div className="mt-16 bg-primary text-white p-8 rounded-xl text-center shadow-lg">
+          <FaPhoneAlt className="text-3xl mx-auto mb-4" />
+          <h3 className="text-2xl font-semibold mb-3">Diaspora Giving & Helpline</h3>
+          <p className="text-sm md:text-base mb-2">
+            For those giving from outside Kenya or in need of assistance, you can
+            also send your contribution directly via M-Pesa to:
+          </p>
+          <p className="text-lg md:text-xl font-bold tracking-wide">
+            +254 722 908 733
+          </p>
+          <p className="text-sm mt-3 opacity-90">
+            Thank you for partnering with Zoe Worship Centre in advancing the
+            Kingdom of God!
+          </p>
         </div>
       </div>
     </div>
