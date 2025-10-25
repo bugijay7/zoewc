@@ -88,7 +88,7 @@ export default function Navbar() {
           <li className="relative group">
             <div className="cursor-pointer hover:underline transition">Who We Are</div>
             <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-60  opacity-30 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <li><Link to="/about/KnowUs" className="block px-4 py-2 hover:bg-base-200/20">Mission & Vision</Link></li>
+                <li><Link to="/about/KnowUs" className="block px-4 py-2 hover:bg-base-200/20">About Us</Link></li>
               <li><Link to="/about/culture" className="block px-4 py-2 hover:bg-base-200/20">Our Culture</Link></li>
               <li><Link to="/about/leadership" className="block px-4 py-2 hover:bg-base-200/20">Our Leadership</Link></li>
               <li><Link to="/about/impact" className="block px-4 py-2 hover:bg-base-200/20">Making an Impact</Link></li>
