@@ -37,16 +37,15 @@ function LiveStream() {
   }, [CHANNEL_ID, API_KEY]);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-amber-400 to-orange-600 text-base-content px-4 py-16">
-      <h1 className="text-3xl md:text-5xl font-bold uppercase tracking-widest text-white text-center drop-shadow-lg">
+    <section className="min-h-screen flex flex-col items-center justify-center bg-base-200 text-base-content px-4 py-16">
+      <h1 className="text-3xl md:text-5xl font-bold uppercase tracking-widest text-center">
         Zoe Worship Centre Live
       </h1>
 
       {loading ? (
-        <p className="mt-8 text-white text-lg animate-pulse text-center">
-  🔴 Checking live stream status...
-</p>
-
+        <p className="mt-8 text-lg animate-pulse text-center">
+          🔴 Checking live stream status...
+        </p>
       ) : isLive && videoId ? (
         <div className="w-full max-w-5xl aspect-video mt-8">
           <iframe
@@ -57,19 +56,21 @@ function LiveStream() {
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className="rounded-xl shadow-2xl"
+            className="rounded-xl shadow-xl"
           ></iframe>
         </div>
       ) : (
-        <div className="text-center mt-8">
-          <p className="text-white text-lg opacity-90 mb-3">
-            We’re not live right now. Check back soon or visit our YouTube channel below.
+        <div className="text-center mt-8 max-w-xl">
+          <p className="text-lg opacity-90 mb-4">
+            Looks like we’re off-air for now, but God’s work never stops. ❤️
+            Check back soon or visit our YouTube channel to stay connected!
           </p>
+
           <a
             href="https://www.youtube.com/@ZoeWorshipCentreKinoo"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-accent text-white"
+            className="btn btn-primary"
           >
             Visit Our YouTube Channel
           </a>
