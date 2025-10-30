@@ -21,10 +21,10 @@ export default function EventList() {
     <div className="min-h-screen bg-[#f8f5f0] pt-30 py-16 px-4 md:px-20 font-montserrat">
       {/* Header */}
       <div className="flex justify-between items-center max-w-6xl mx-auto mb-10">
-        <h1 className="text-lg uppercase tracking-wide text-gray-500">
+        <h1 className="text-base md:text-lg uppercase tracking-wide text-gray-500">
           Current Exhibitions
         </h1>
-        <p className="text-gray-400 text-sm">October 2025</p>
+        <p className="text-gray-400 text-xs md:text-sm">October 2025</p>
       </div>
 
       {/* Event List */}
@@ -41,49 +41,60 @@ export default function EventList() {
             return (
               <div
                 key={event._id}
-                className="flex flex-col md:flex-row bg-[#fffdf9] shadow-sm hover:shadow-md rounded-xl overflow-hidden border border-gray-200 transition-all duration-300"
+                className="flex flex-col md:flex-row bg-[#fffdf9] shadow-sm hover:shadow-md  overflow-hidden border border-gray-200 transition-all duration-300"
               >
                 {/* Image */}
-                <div className="md:w-[220px] md:h-[180px] w-full h-56 overflow-hidden">
+                <div className="relative md:w-[260px] w-full h-[240px] md:h-[220px] flex-shrink-0">
                   <img
-                    src={`https://zoewc-1.onrender.com/${event.image}`}
+                    src={
+                      event.image?.url
+                        ? event.image.url
+                        : `https://zoewc-1.onrender.com/${event.image}`
+                    }
                     alt={event.title}
-                    className="object-cover w-full h-full"
+                    className="object-cover md:object-center object-top w-full h-full rounded-t-xl md:rounded-l-xl md:rounded-tr-none"
                   />
                 </div>
 
-                {/* Date */}
-                <div className="flex flex-col items-center justify-center px-6 py-4 bg-white border-r border-gray-200">
-                  <span className="text-xs text-gray-500">{month}</span>
-                  <span className="text-3xl font-bold text-gray-800">{day}</span>
-                  <span className="text-xs text-gray-400">{year}</span>
-                </div>
-
                 {/* Event Info */}
-                <div className="flex-1 p-6 text-left">
-                  <h2 className="text-lg md:text-xl font-semibold text-gray-800 uppercase mb-2">
-                    {event.title}
-                  </h2>
-                  <p className="text-sm text-gray-600 mb-4 line-clamp-2">
-                    {event.description}
-                  </p>
-
-                  <div className="flex items-center text-sm text-gray-500 space-x-2">
-                    <span>📍 Zoe Worship Centre</span>
-                    <span className="text-gray-400">|</span>
-                    <span>
-                      {date.toLocaleDateString(undefined, {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
+                <div className="flex flex-col md:flex-row flex-1">
+                  {/* Date */}
+                  <div className="flex flex-row md:flex-col items-center justify-center px-4 py-2 md:px-6 md:py-4 bg-white border-b md:border-b-0 md:border-r border-gray-200">
+                    <span className="text-[10px] md:text-xs text-gray-500">
+                      {month}
+                    </span>
+                    <span className="text-xl md:text-3xl font-bold text-gray-800 mx-1 md:mx-0">
+                      {day}
+                    </span>
+                    <span className="text-[10px] md:text-xs text-gray-400">
+                      {year}
                     </span>
                   </div>
 
-                  <div className="mt-4">
+                  {/* Details */}
+                  <div className="flex-1 p-4 md:p-6 text-left">
+                    <h2 className="text-sm md:text-xl font-semibold text-gray-800 uppercase mb-2">
+                      {event.title}
+                    </h2>
+                    <p className="text-xs md:text-sm text-gray-600 mb-4 line-clamp-3">
+                      {event.description}
+                    </p>
+
+                    <div className="flex flex-wrap items-center text-[11px] md:text-sm text-gray-500 space-x-2 mb-2">
+                      <span>📍 Zoe Worship Centre</span>
+                      <span className="text-gray-400 hidden md:inline">|</span>
+                      <span>
+                        {date.toLocaleDateString(undefined, {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </span>
+                    </div>
+
                     <Link
                       to={`/events/eventDetails?id=${event._id}`}
-                      className="text-primary font-medium hover:underline text-sm"
+                      className="text-primary font-medium hover:underline text-xs md:text-sm"
                     >
                       View Details →
                     </Link>
@@ -93,7 +104,9 @@ export default function EventList() {
             );
           })
         ) : (
-          <p className="text-center text-gray-500">No events available.</p>
+          <p className="text-center text-gray-500 text-sm md:text-base">
+            No events available.
+          </p>
         )}
       </div>
     </div>
