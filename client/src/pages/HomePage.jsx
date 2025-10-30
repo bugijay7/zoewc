@@ -13,14 +13,13 @@ function HomePage() {
   return (
     <div>
       <HomeHero />
-      <AboutPreview />
-      <ProgrammsPreview />
-       <SchoolPreview />
-       <EventsPreview />
-       <YouthPreview />
-       <LatestSermon />
-        <ServicesPreview />
-        <ConnectPreview />
+      <section data-aos="fade-up"><AboutPreview /></section>
+      <section data-aos="zoom-in"><ProgrammsPreview /></section>
+      <section data-aos="fade-right"><SchoolPreview /></section>
+      <section data-aos="fade-left"><EventsPreview /></section>
+      <section data-aos="flip-up"><YouthPreview /></section>
+      <section data-aos="fade-up"><LatestSermon /></section>
+
     </div>
   )
 }
