@@ -4,7 +4,10 @@ const eventSchema = new mongoose.Schema({
   title: { type: String, required: true },
   date: { type: Date, required: true },
   description: { type: String, required: true },
-  image: { type: String, required: true }, // stores file path
+  image: {
+    url: { type: String, required: true },
+    public_id: { type: String, required: true },
+  },
 });
 
 export default mongoose.model('Event', eventSchema);

@@ -1,31 +1,24 @@
-import express from 'express';
-import multer from 'multer';
-import {
-  createEvent,
-  getEvents,
-  getEventById,
-  updateEvent,
-  deleteEvent,
-} from '../controllers/eventController.js';
+import multer from "multer";
+import { CloudinaryStorage } from "multer-storage-cloudinary";
+import { v2 as cloudinary } from "cloudinary";
+import dotenv from "dotenv";
 
-const router = express.Router();
+dotenv.config();
 
-// Multer setup for image uploads
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
-    cb(null, 'uploads/'); // create uploads folder in project root
-  },
-  filename: (req, file, cb) => {
-    cb(null, Date.now() + '-' + file.originalname);
+// Cloudinary configuration (reads CLOUDINARY_URL automatically)
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_URL.split("@")[1],
+});
+
+const storage = new CloudinaryStorage({
+  cloudinary,
+  params: {
+    folder: "zoe_events", // folder name in Cloudinary
+    allowed_formats: ["jpg", "jpeg", "png"],
+    transformation: [{ width: 1200, height: 800, crop: "limit" }], // optional resizing
   },
 });
+
 const upload = multer({ storage });
 
-// Routes
-router.post('/', upload.single('image'), createEvent);
-router.get('/', getEvents);
-router.get('/:id', getEventById);
-router.put('/:id', upload.single('image'), updateEvent);
-router.delete('/:id', deleteEvent);
-
-export default router;
+export default upload;
