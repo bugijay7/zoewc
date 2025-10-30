@@ -4,7 +4,7 @@ import { useAuth } from "../context/auth.jsx";
 
 export default function ProtectedRoute({ children }) {
   const { isAuthenticated } = useAuth();
-  const token = localStorage.getItem("authToken");
+  const token = localStorage.getItem("authtoken");
 
   if (!isAuthenticated && !token) {
     return <Navigate to="/login" replace />;
