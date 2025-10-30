@@ -5,17 +5,17 @@ export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    const token = localStorage.getItem("authtoken");
+    const token = localStorage.getItem("token");
     if (token) setIsAuthenticated(true);
   }, []);
 
   const login = (token) => {
-    localStorage.setItem("authtoken", token);
+    localStorage.setItem("token", token);
     setIsAuthenticated(true);
   };
 
   const logout = () => {
-    localStorage.removeItem("authtoken");
+    localStorage.removeItem("token");
     setIsAuthenticated(false);
   };
 
