@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// ✅ Import images
 import intercessoryImg from "../../assets/intercessory.jpg";
 import worshipImg from "../../assets/praise.jpg";
 import evangelismImg from "../../assets/anagkazo.jpeg";
@@ -13,51 +12,60 @@ export default function SupportiveDepartments() {
   const departments = [
     { name: "Intercessory Department", link: "/departments/supportive/intercessory", image: intercessoryImg },
     { name: "Praise and Worship Department", link: "/departments/supportive/praiseAndWorship", image: worshipImg },
-    { name: "Anagkazo  Department", link: "/departments/supportive/anagkazo", image: evangelismImg },
+    { name: "Anagkazo Department", link: "/departments/supportive/anagkazo", image: evangelismImg },
     { name: "Media Department", link: "/departments/supportive/media", image: mediaImg },
     { name: "Hospitality Department", link: "/departments/supportive/hospitality", image: hospitalityImg },
     { name: "Ushering Protocol Department", link: "/departments/supportive/ushering", image: usheringImg },
   ];
 
   return (
-    <div className="bg-base-200 md:pt-50  pt-40 py-16 px-6 md:px-20 font-montserrat">
-      {/* Hero Section */}
-      <div className="max-w-4xl mx-auto text-center mb-12 space-y-4">
-        <h1 className="text-2xl md:text-6xl font-bold text-primary">
+    <div className="bg-base-100 text-base-content font-montserrat pt-28 pb-20 px-6 md:px-20">
+      <div className="max-w-6xl mx-auto text-center">
+        {/* Header */}
+        <h1 className="text-3xl md:text-5xl font-bold mb-6 text-primary">
           Supportive Departments
         </h1>
-        <p className="text-base-content/70 text-[7px] md:text-xl leading-relaxed max-w-[400px] mx-auto">
-          Meet our supportive departments that help keep the ministry thriving and assist in every aspect of church life.
+        <p className="text-sm md:text-base text-base-content/70 max-w-2xl mx-auto mb-12">
+          Meet our supportive departments that help keep the ministry thriving
+          and assist in every aspect of church life.
         </p>
-      </div>
 
-      {/* Department List */}
-      <ul className="max-w-2xl  mx-auto divide-y-8 divide-base-200">
-              {departments.map((dept, index) => (
-                <li key={index} className="flex flex-row md:flex-row items-start gap-4 md:gap-6 py-4">
-                  {/* Image */}
-                  <div className="flex-shrink-0 w-40 h-20 md:w-52 md:h-32 overflow-hidden">
-                    <img src={dept.image} alt={dept.name} className="object-cover w-full h-full" />
-                  </div>
-      
-                  {/* Text */}
-                  <div className="flex-1 md:max-w-[300px] mx-auto">
-                    <div className="text-[8px] md:text-lg font-medium md:underline mb-1">{dept.name}</div>
-                    <p className="text-[7px] md:text-sm opacity-70">
-                      Explore the activities and impact of the {dept.name}. Engage, serve, and grow in your faith through our community-focused programs.
-                    </p>
-                    <div className="mt-2">
-                      <Link
-                        to={dept.link}
-                        className="inline-block underline text-primary md:text-primary  px-2 py-1 rounded-sm text-[7px] md:text-sm"
-                      >
-                        Learn More
-                      </Link>
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
+        {/* Department Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {departments.map((dept, index) => (
+            <div
+              key={index}
+              className="bg-base-200 p-4 md:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 flex flex-col items-center text-center"
+            >
+              {/* Image */}
+              <div className="w-full h-40 md:h-56 rounded-xl overflow-hidden mb-4">
+                <img
+                  src={dept.image}
+                  alt={dept.name}
+                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              {/* Text */}
+              <h2 className="text-base md:text-xl font-semibold text-gray-800 mb-2">
+                {dept.name}
+              </h2>
+              <p className="text-xs md:text-sm text-gray-600 mb-4 px-2">
+                Explore the activities and impact of the {dept.name}. Engage,
+                serve, and grow in your faith through our community-focused
+                programs.
+              </p>
+
+              <Link
+                to={dept.link}
+                className="btn btn-primary btn-sm text-xs md:text-sm"
+              >
+                Learn More
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
