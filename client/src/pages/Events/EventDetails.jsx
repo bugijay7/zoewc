@@ -60,7 +60,7 @@ export default function EventDetails() {
         {/* Desktop layout */}
         <div className="hidden md:flex items-center justify-between p-8 md:p-10 gap-8">
           {/* 🖼️ Image */}
-          <div className="flex-shrink-0 w-[300px] h-[300px] overflow-hidden rounded-xl shadow-md">
+          <div className="flex-shrink-0 w-[300px] h-auto overflow-hidden shadow-md">
             <img
               src={`https://zoewc-1.onrender.com/${event.image}`}
               alt={event.title}
@@ -94,7 +94,7 @@ export default function EventDetails() {
 
         {/* Mobile layout (stacked) */}
         <div className="md:hidden p-6 text-center">
-          <div className="w-full h-64 overflow-hidden rounded-xl mb-6">
+          <div className="w-full h-auto  mb-6">
             <img
               src={`https://zoewc-1.onrender.com/${event.image}`}
               alt={event.title}
@@ -108,10 +108,10 @@ export default function EventDetails() {
             <div className="text-sm text-base-content/70">{year}</div>
           </div>
 
-          <h1 className="text-3xl font-semibold text-primary mb-3">
+          <h1 className="md:text-3xl text-sm font-semibold text-primary mb-3">
             {event.title}
           </h1>
-          <p className="text-base text-base-content leading-relaxed mb-6">
+          <p className="md:text-xl text-xs text-base-content leading-relaxed mb-6">
             {event.description}
           </p>
 
