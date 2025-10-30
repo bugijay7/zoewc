@@ -21,8 +21,8 @@ export default function EventList() {
     <div className="min-h-screen bg-[#f8f5f0] pt-30 py-16 px-4 md:px-20 font-montserrat">
       {/* Header */}
       <div className="flex justify-between items-center max-w-6xl mx-auto mb-10">
-        <h1 className="text-base md:text-lg uppercase tracking-wide text-gray-500">
-          Current Exhibitions
+        <h1 className="text-base md:text-lg uppercase tracking-wide text-primary font-bold">
+        upcoming events
         </h1>
         <p className="text-gray-400 text-xs md:text-sm">October 2025</p>
       </div>
