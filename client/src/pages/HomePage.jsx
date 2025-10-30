@@ -7,6 +7,7 @@ import SchoolPreview from '../components/Home/SchoolPreview.jsx'
 import YouthPreview from '../components/Home/YouthPreview.jsx'
 import ServicesPreview from '../components/Home/ServicesPreview.jsx'
 import ConnectPreview from '../components/Home/ConnectPreview.jsx'
+import LatestSermon from '../components/Home/LatestSermon.jsx'
 
 function HomePage() {
   return (
@@ -15,10 +16,11 @@ function HomePage() {
       <AboutPreview />
       <ProgrammsPreview />
        <SchoolPreview />
-      <EventsPreview />
+       <EventsPreview />
        <YouthPreview />
-       <ConnectPreview />
-       <ServicesPreview />
+       <LatestSermon />
+        <ServicesPreview />
+        <ConnectPreview />
     </div>
   )
 }
