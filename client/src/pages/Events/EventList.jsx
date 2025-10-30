@@ -44,7 +44,7 @@ export default function EventList() {
                 className="flex flex-col md:flex-row bg-[#fffdf9] shadow-sm hover:shadow-md  overflow-hidden border border-gray-200 transition-all duration-300"
               >
                 {/* Image */}
-                <div className="relative md:w-[260px] w-full h-[240px] md:h-[220px] flex-shrink-0">
+                <div className="relative md:w-[260px] w-full h-auto md:h-auto flex-shrink-0">
                   <img
                     src={
                       event.image?.url
@@ -52,7 +52,7 @@ export default function EventList() {
                         : `https://zoewc-1.onrender.com/${event.image}`
                     }
                     alt={event.title}
-                    className="object-cover md:object-center object-top w-full h-full rounded-t-xl md:rounded-l-xl md:rounded-tr-none"
+                    className="object-cover md:object-center object-top w-full h-auto "
                   />
                 </div>
 
