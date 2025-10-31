@@ -50,7 +50,7 @@ export default function KnowUs() {
               <Link
                 key={index}
                 to={card.link}
-                className="bg-base-200 rounded-sm shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col items-center text-center group"
+                className=" rounded-sm shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col items-center text-center group"
               >
                 <div className="overflow-hidden w-full">
                   <img
@@ -60,10 +60,10 @@ export default function KnowUs() {
                   />
                 </div>
                 <div className="p-4 md:p-6 flex flex-col items-left text-left">
-                  <h3 className="text-sm md:text-lg font-semibold text-gray-800 mb-1 group-hover:text-primary transition duration-300">
+                  <h3 className="text-sm md:text-lg font-semibold text-gray-100 mb-1 group-hover:text-primary transition duration-300">
                     {card.title}
                   </h3>
-                  <p className="text-xs text-gray-500">
+                  <p className="text-xs text-gray-200">
                     Learn more about {card.title.toLowerCase()} and what it means to us.
                   </p>
                 </div>
