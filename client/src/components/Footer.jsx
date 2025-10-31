@@ -9,7 +9,7 @@ import {
   FaCalendarAlt,
   FaUsers,
   FaPhone,
-  FaUserShield, // ✅ New icon for Admin
+  FaUserPlus, // 👈 replaced FaUserShield with FaUserPlus for "New"
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -55,7 +55,7 @@ export default function Footer() {
                 <li><Link to="/events/eventList" className="link link-hover">Upcoming Events</Link></li>
                 <li><Link to="/live" className="link link-hover">Live Stream</Link></li>
                 <li><Link to="/sermons" className="link link-hover">Sermons</Link></li>
-                <li><Link to="/login" className="link link-hover">Admin</Link></li>
+                <li><Link to="/visitors" className="link link-hover">New Visitors</Link></li>
               </ul>
             </div>
 
@@ -73,7 +73,7 @@ export default function Footer() {
                     href="mailto: zoeworshipcentrekinoo@gmail.com"
                     className="link link-hover"
                   >
-                     zoeworshipcentrekinoo@gmail.com
+                    zoeworshipcentrekinoo@gmail.com
                   </a>
                 </li>
               </ul>
@@ -132,11 +132,11 @@ export default function Footer() {
               Contact
             </Link>
           </li>
-          {/* ✅ New Admin link */}
+          {/* 👇 Changed Admin → New */}
           <li>
-            <Link to="/login" className="flex flex-col items-center text-primary">
-              <FaUserShield className="text-lg mb-1" />
-              Admin
+            <Link to="/visitors" className="flex flex-col items-center text-primary">
+              <FaUserPlus className="text-lg mb-1" />
+              New
             </Link>
           </li>
         </ul>

@@ -12,7 +12,7 @@ export default function Visitors() {
       btn: "Start Here",
     },
     {
-      title: " Main Departments",
+      title: "Main Departments",
       desc: "Get involved in one of our main ministry departments where you can serve, connect with others, and use your unique gifts to make an impact in God’s Kingdom.",
       icon: "🤝",
       link: "/departments/main",
@@ -31,46 +31,37 @@ export default function Visitors() {
     <section className="font-montserrat bg-base-100 text-base-content">
       {/* 🕊️ Hero Section */}
       <div
-        className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-white"
+        className="relative h-[90vh] md:h-[80vh] flex flex-col items-center justify-center text-center text-white px-6"
         style={{
-          background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroImg}) center/cover no-repeat`,
+          background: `linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)), url(${heroImg}) center/cover no-repeat`,
         }}
       >
-        <h1 className="text-3xl md:text-6xl font-bold uppercase tracking-wide">
-          Welcome, New Visitors
+        <h1 className="text-xl md:text-6xl font-bold uppercase tracking-wide mb-4 text-primary">
+         Welcome to Zoe Worship Centre
         </h1>
-      </div>
-
-      {/* 💒 Welcome Text */}
-      <div className="max-w-4xl mx-auto text-center py-16 px-6 md:px-20 space-y-6">
-        <h2 className="text-2xl md:text-4xl font-semibold text-primary">
-          We’re Glad You’re Here!
-        </h2>
-        <p className="text-base md:text-lg opacity-90 leading-relaxed">
-          Whether you’re new to faith or simply visiting, we believe God has
-          brought you here for a reason. Zoe Worship Centre is a place of love,
-          growth, and transformation. Our community is dedicated to helping you
-          encounter God, build lasting friendships, and discover your divine
-          purpose.
+        <p className="max-w-3xl text-sm md:text-lg leading-relaxed opacity-95 mb-6 pt-10">
+          We’re so glad you’re here! Whether this is your first time at Zoe Worship
+          Centre or you’re returning after a while, know that you are deeply loved
+          and valued. Our doors — and our hearts — are open to you. Come experience
+          the joy, warmth, and presence of God with us.
         </p>
+        <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-xl max-w-xl italic">
+  <p className="text-sm md:text-base font-medium">
+    “Come to me with your ears wide open. Listen, and you will find life.”
+  </p>
+  <p className="text-xs md:text-sm font-semibold mt-1">— Isaiah 55:3 (NLT)</p>
+</div>
 
-        {/* 📖 Bible Verse */}
-        <div className="bg-base-200 rounded-xl shadow-md p-6 mt-10 italic text-primary">
-          <p className="text-lg md:text-xl">
-            “See, I am doing a new thing! Now it springs up; do you not
-            perceive it? I am making a way in the wilderness and streams in the
-            wasteland.”
-          </p>
-          <p className="mt-2 font-semibold text-primary">— Isaiah 43:19 (NIV)</p>
-        </div>
       </div>
+
+    
 
       {/* ✨ Steps Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20 pb-20 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20 pb-20 max-w-7xl mx-auto pt-20">
         {steps.map((step, index) => (
           <div
             key={index}
-            className="bg-base-200 rounded-2xl shadow-lg p-8 text-left  hover:shadow-2xl transition"
+            className="bg-base-200 rounded-2xl shadow-lg p-8 text-left hover:shadow-2xl transition"
           >
             <div className="text-5xl mb-4">{step.icon}</div>
             <h3 className="text-xl md:text-2xl font-bold text-primary mb-3">
