@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import heroImg from "../../assets/about-hero.jpeg"; // Hero background
+import heroImg from "../../assets/about-hero.jpeg";
 import historyImg from "../../assets/history.jpeg";
 import cultureImg from "../../assets/culture.jpeg";
 import impactImg from "../../assets/impact.jpeg";
@@ -20,43 +20,56 @@ export default function KnowUs() {
   ];
 
   return (
-    <section className="bg-primary-600">
+    <section className="bg-primary text-base-content font-montserrat">
       {/* Hero Section */}
       <div
-        className="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-center text-white"
+        className="relative h-[60vh] md:h-[80vh] flex flex-col items-center justify-center text-center text-white px-6"
         style={{
           background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroImg}) center/cover no-repeat`,
         }}
       >
-        <h1 className="text-3xl md:text-6xl font-bold uppercase tracking-wide">
+        <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-wide mb-4">
           Who We Are
         </h1>
+        <p className="max-w-[200px] mx-auto text-sm md:text-lg leading-relaxed text-gray-200">
+          At Zoe Worship Centre, we are a Christ-centered community dedicated to
+          transforming lives through worship, discipleship, and love. Discover our
+          story, our values, and how we’re growing together in faith and purpose.
+        </p>
       </div>
 
       {/* About Grid */}
       <div className="py-20 px-6 md:px-20">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 max-w-6xl mx-auto">
-          {aboutCards.map((card, index) => (
-            <Link
-              key={index}
-              to={card.link}
-              className="group block overflow-hidden  hover:shadow-xl transition duration-300"
-            >
-              {/* Image */}
-              <div className="overflow-hidden">
-                <img
-                  src={card.img}
-                  alt={card.title}
-                  className="object-cover w-full h-40 md:h-56 transform group-hover:scale-110 transition duration-500"
-                />
-              </div>
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-10 text-primary-content">
+            Explore Our Journey
+          </h2>
 
-              {/* Title below image */}
-              <h2 className="mt-3 text-left text-[10px] md:text-lg font-semibold text-primary group-hover:text-secondary transition duration-300">
-                {card.title}
-              </h2>
-            </Link>
-          ))}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
+            {aboutCards.map((card, index) => (
+              <Link
+                key={index}
+                to={card.link}
+                className="bg-base-200 rounded-sm shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col items-center text-center group"
+              >
+                <div className="overflow-hidden w-full">
+                  <img
+                    src={card.img}
+                    alt={card.title}
+                    className="object-cover w-full h-40 md:h-56 transform group-hover:scale-110 transition duration-500"
+                  />
+                </div>
+                <div className="p-4 md:p-6 flex flex-col items-left text-left">
+                  <h3 className="text-sm md:text-lg font-semibold text-gray-800 mb-1 group-hover:text-primary transition duration-300">
+                    {card.title}
+                  </h3>
+                  <p className="text-xs text-gray-500">
+                    Learn more about {card.title.toLowerCase()} and what it means to us.
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>
