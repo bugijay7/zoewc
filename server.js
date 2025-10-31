@@ -38,7 +38,12 @@ app.use(morgan("dev"));
 app.get("/ping", (req, res) => {
   res.send("pong");
 });
-
+console.log({
+  authRoutes: typeof authRoutes,
+  eventRoutes: typeof eventRoutes,
+  sermonRoutes: typeof sermonRoutes,
+});
+ 
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/events", eventRoutes);
