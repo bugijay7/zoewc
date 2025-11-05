@@ -89,7 +89,7 @@ export default function KnowUs() {
                 <Link
                   key={index}
                   to={card.link}
-                  className="flex-shrink-0 snap-center w-[80vw] h-[60vh] bg-base-200 p-4 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 flex flex-col items-center text-left"
+                  className="flex-shrink-0 snap-center w-[80vw] h-[60vh] bg-base-100 p-4 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 flex flex-col items-center text-left"
                 >
                   <img
                     src={card.img}
