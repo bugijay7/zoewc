@@ -51,77 +51,113 @@ export default function ContactPage() {
             </div>
 
             {/* 🌐 Social Links */}
-<div className="pt-6">
-  <h3 className="text-xs font-medium text-base-content mb-2 uppercase tracking-wide">
-    Follow Us
-  </h3>
+            <div className="pt-6">
+              <h3 className="text-xs font-medium text-base-content mb-2 uppercase tracking-wide">
+                Follow Us
+              </h3>
 
-  <div className="flex flex-col gap-3 text-sm md:text-base">
-    <a
-      href="https://www.facebook.com/ZoeWorshipCentreYouths"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
-    >
-      <FaFacebookF className="text-lg" />
-      <span>Follow Zoe on Facebook</span>
-    </a>
+              <div className="flex flex-col gap-3 text-sm md:text-base">
+                <a
+                  href="https://www.facebook.com/ZoeWorshipCentreYouths"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+                >
+                  <FaFacebookF className="text-lg" />
+                  <span>Follow Zoe on Facebook</span>
+                </a>
 
-    <a
-      href="https://www.instagram.com/zoewoshipcentrechurch"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
-    >
-      <FaInstagram className="text-lg" />
-      <span>Like Zoe on Instagram</span>
-    </a>
+                <a
+                  href="https://www.instagram.com/zoewoshipcentrechurch"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+                >
+                  <FaInstagram className="text-lg" />
+                  <span>Like Zoe on Instagram</span>
+                </a>
 
-    <a
-      href="https://www.tiktok.com/@zoeworshipcentrechurch?_t=ZM-90eMtbIA7fH&_r=1"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
-    >
-      <FaTiktok className="text-lg" />
-      <span>Join Zoe on TikTok</span>
-    </a>
+                <a
+                  href="https://www.tiktok.com/@zoeworshipcentrechurch?_t=ZM-90eMtbIA7fH&_r=1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+                >
+                  <FaTiktok className="text-lg" />
+                  <span>Join Zoe on TikTok</span>
+                </a>
 
-    <a
-      href="https://www.youtube.com/@ZoeWorshipCentreKinoo"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
-    >
-      <FaYoutube className="text-lg" />
-      <span>Subscribe to Zoe On Youtube</span>
-    </a>
-  </div>
-</div>
+                <a
+                  href="https://www.youtube.com/@ZoeWorshipCentreKinoo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+                >
+                  <FaYoutube className="text-lg" />
+                  <span>Subscribe to Zoe on YouTube</span>
+                </a>
+              </div>
+            </div>
           </div>
 
-
           {/* 📬 Contact Form */}
-          <form className="bg-base-100 shadow-xl rounded-xl p-8 space-y-6 border border-base-300">
+          <form
+            className="bg-base-100 shadow-xl rounded-xl p-8 space-y-6 border border-base-300"
+            onSubmit={async (e) => {
+              e.preventDefault();
+
+              const name = e.target.name.value.trim();
+              const phone = e.target.phone.value.trim();
+              const message = e.target.message.value.trim();
+
+              if (!name || !phone || !message) {
+                alert("Please fill out all fields.");
+                return;
+              }
+
+              try {
+                const res = await fetch("https://zoewc-1.onrender.com/api/messages", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ name, phone, message }),
+                });
+
+                const data = await res.json();
+                if (res.ok) {
+                  alert("Message sent successfully!");
+                  e.target.reset();
+                } else {
+                  alert(data.error || "Failed to send message.");
+                }
+              } catch (error) {
+                console.error("Error:", error);
+                alert("Something went wrong. Please try again later.");
+              }
+            }}
+          >
             <div>
               <label className="block text-base-content font-medium mb-2">
                 Full Name
               </label>
               <input
                 type="text"
+                name="name"
                 placeholder="Your Name"
                 className="input input-bordered w-full"
+                required
               />
             </div>
 
             <div>
               <label className="block text-base-content font-medium mb-2">
-                Email
+                Phone Number
               </label>
               <input
-                type="email"
-                placeholder="you@example.com"
+                type="tel"
+                name="phone"
+                placeholder="+254 700 000 000"
                 className="input input-bordered w-full"
+                required
               />
             </div>
 
@@ -130,9 +166,11 @@ export default function ContactPage() {
                 Message
               </label>
               <textarea
+                name="message"
                 placeholder="Write your message..."
                 rows="4"
                 className="textarea textarea-bordered w-full"
+                required
               ></textarea>
             </div>
 

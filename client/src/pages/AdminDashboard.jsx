@@ -1,6 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaPlusCircle, FaCalendarAlt, FaBookOpen, FaMicrophone } from "react-icons/fa";
+import {
+  FaPlusCircle,
+  FaCalendarAlt,
+  FaBookOpen,
+  FaMicrophone,
+  FaEnvelope,
+} from "react-icons/fa";
 
 function AdminDashboard() {
   const cards = [
@@ -24,23 +30,28 @@ function AdminDashboard() {
       icon: <FaBookOpen size={40} className="text-primary" />,
       link: "/dashboard/manage-sermons",
     },
+    {
+      name: "View Messages",
+      icon: <FaEnvelope size={40} className="text-primary" />,
+      link: "/dashboard/messages",
+    },
   ];
 
   return (
     <div className="bg-base-200 flex flex-col min-h-[70vh]">
       {/* 🔹 Dashboard Title */}
-      <div className="text-center pt-20 md:pt:40 py-12">
+      <div className="text-center pt-20 md:pt-40 py-12">
         <h2 className="text-5xl font-extrabold mb-4 text-primary uppercase">
           Admin Dashboard
         </h2>
         <p className="text-base-content/70">
-          Manage your events, sermons, and content easily.
+          Manage your events, sermons, and messages easily.
         </p>
       </div>
 
       {/* 🔹 Dashboard Cards */}
       <div className="flex-grow px-8 pb-16">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-items-center">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center">
           {cards.map((card, index) => (
             <Link
               to={card.link}

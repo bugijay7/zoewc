@@ -77,6 +77,7 @@ import CreateSermons from './pages/Admin/Dashboard/CreateSermons'
 import AdminLayout from './layout/AdminLayout'
 import ScrollToTop from './components/ScrollToTop'
 import Resources from './pages/Resources'
+import Messages from './pages/Admin/Dashboard/Messages'
 
 
 function App() {
@@ -166,6 +167,7 @@ function App() {
           <Route path="/dashboard/manage-events" element={<ManageEvent />} />
           <Route path="/dashboard/create-sermon" element={<CreateSermons />} />
           <Route path="/dashboard/manage-sermons" element={<ManageSermons />} />
+          <Route path="/dashboard/messages" element={<Messages />} />
         </Route>
 
       </Routes>

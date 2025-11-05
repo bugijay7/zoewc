@@ -11,6 +11,7 @@ import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import eventRoutes from "./routes/eventRoutes.js";
 import sermonRoutes from "./routes/sermonRoutes.js";
+import messageRoutes from "./routes/messageRoutes.js";
 
 dotenv.config();
 
@@ -48,6 +49,7 @@ console.log({
 app.use("/api/auth", authRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/sermons", sermonRoutes);
+app.use("/api/messages", messageRoutes);
 
 // Cron job to keep Render awake
 cron.schedule("*/5 * * * *", async () => {

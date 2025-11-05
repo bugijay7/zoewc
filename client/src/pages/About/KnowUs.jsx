@@ -31,7 +31,7 @@ export default function KnowUs() {
         <h1 className="text-4xl md:text-6xl font-bold uppercase tracking-wide mb-4">
           Who We Are
         </h1>
-        <p className="max-w-[200px] mx-auto text-sm md:text-lg leading-relaxed text-gray-200">
+        <p className="max-w-[200px] md:max-w-3xl mx-auto text-sm md:text-lg leading-relaxed text-gray-200">
           At Zoe Worship Centre, we are a Christ-centered community dedicated to
           transforming lives through worship, discipleship, and love. Discover our
           story, our values, and how we’re growing together in faith and purpose.
