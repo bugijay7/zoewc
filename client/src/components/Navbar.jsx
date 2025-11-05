@@ -50,19 +50,12 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Right - Give Button */}
-          <Link
-            to="/donate"
-            onClick={closeAllMenus}
-            className="bg-amber-500 text-white px-4 py-1 text-xs font-semibold hover:bg-amber-600 transition rounded-md"
-          >
-            Give
-          </Link>
+          
         </div>
       </div>
 
       {/* 🔹 Main Navbar */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-16 py-2 flex items-center justify-between relative">
+      <div className="md:max-w-[1400px] max-w-[300px] mx-auto px-6 md:px-16 py-2 flex items-center md:justify-between justify-around relative">
         {/* Logo */}
         <Link
           to="/"
@@ -75,7 +68,7 @@ export default function Navbar() {
               isTransparent ? "text-primary-content" : "text-primary-content"
             }`}
           >
-            <span className="text-[10px] md:text-sm font-bold tracking-wide leading-tight">
+            <span className="text-[10px] md:text-sm font-bold">
               Zoe Worship Centre Church
             </span>
             <span className="text-[8px] leading-tight">A God Kind of Life</span>

@@ -7,7 +7,7 @@ export default function RootApp() {
   useEffect(() => {
     AOS.init({
       duration: 2000,
-      once: true,
+      once: false,
       offset: 100,
     });
   }, []);
