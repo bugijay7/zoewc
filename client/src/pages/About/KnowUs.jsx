@@ -76,25 +76,25 @@ export default function KnowUs() {
       </div>
 
       {/* 🧭 About Section */}
-      <div className="py-16 px-6 md:px-20">
+      <div className="py-26 px-6 md:px-20">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-10 text-primary-content">
+          <h2 className="text-3xl md:text-5xl font-bold mb-5 text-primary-content">
             Explore Our Journey
           </h2>
 
           {/* 🌀 Mobile Carousel */}
           <div className="md:hidden relative">
-            <div className="flex overflow-x-auto snap-x snap-mandatory gap-2 pb-6 scroll-smooth no-scrollbar">
+            <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-6 scroll-smooth no-scrollbar">
               {aboutCards.map((card, index) => (
                 <Link
                   key={index}
                   to={card.link}
-                  className="flex-shrink-0 snap-center w-[80vw] h-[60vh] bg-base-100 shadow-lg overflow-hidden text-left"
+                  className="flex-shrink-0 snap-center w-[80vw] h-[60vh] bg-base-200 p-4 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 flex flex-col items-center text-left"
                 >
                   <img
                     src={card.img}
                     alt={card.title}
-                    className="object-cover w-full h-3/5"
+                    className="object-cover w-full h-3/5 rounded-2xl"
                   />
                   <div className="p-6 flex flex-col justify-between h-2/5">
                     <h3 className="text-sm font-semibold text-primary mb-2">
