@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
+      className={`max-w-[360px] mx-auto md:max-w-[1400px] fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
         isTransparent
           ? "bg-base-200/10 backdrop-blur-sm text-primary-content"
           : "bg-primary text-primary-content shadow-md"
@@ -50,12 +50,12 @@ export default function Navbar() {
             </div>
           </div>
 
-          
+         
         </div>
       </div>
 
       {/* 🔹 Main Navbar */}
-      <div className="md:max-w-[1400px] max-w-[300px] mx-auto px-6 md:px-16 py-2 flex items-center md:justify-between justify-around relative">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-16 py-2 flex items-center justify-between relative">
         {/* Logo */}
         <Link
           to="/"
@@ -68,7 +68,7 @@ export default function Navbar() {
               isTransparent ? "text-primary-content" : "text-primary-content"
             }`}
           >
-            <span className="text-[10px] md:text-sm font-bold">
+            <span className="text-[10px] md:text-sm font-bold tracking-wide leading-tight">
               Zoe Worship Centre Church
             </span>
             <span className="text-[8px] leading-tight">A God Kind of Life</span>
