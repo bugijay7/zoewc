@@ -11,6 +11,7 @@ import {
   FaPhone,
   FaUserPlus, // 👈 replaced FaUserShield with FaUserPlus for "New"
 } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -96,10 +97,45 @@ export default function Footer() {
 
             {/* SOCIAL ICONS */}
             <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 text-xl">
-              <a href="#" className="hover:text-primary"><FaFacebookF /></a>
-              <a href="#" className="hover:text-error"><FaYoutube /></a>
-              <a href="#" className="hover:text-secondary"><FaInstagram /></a>
-              <a href="#" className="hover:text-info"><FaTwitter /></a>
+              <a
+                                href="https://www.facebook.com/ZoeWorshipCentreYouths"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+                              >
+                                <FaFacebookF className="text-lg" />
+                                <span>Facebook</span>
+                              </a>
+              
+                              <a
+                                href="https://www.instagram.com/zoewoshipcentrechurch"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+                              >
+                                <FaInstagram className="text-lg" />
+                                <span>Instagram</span>
+                              </a>
+              
+                              <a
+                                href="https://www.tiktok.com/@zoeworshipcentrechurch?_t=ZM-90eMtbIA7fH&_r=1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+                              >
+                                <FaTiktok className="text-lg" />
+                                <span>TikTok</span>
+                              </a>
+              
+                              <a
+                                href="https://www.youtube.com/@ZoeWorshipCentreKinoo"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+                              >
+                                <FaYoutube className="text-lg" />
+                                <span>YouTube</span>
+                              </a>
             </div>
           </div>
         </div>
