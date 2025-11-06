@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={` mx-auto md:max-w-[1400px] fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
+      className={`mx-auto  fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
         isTransparent
           ? "bg-base-200/10 backdrop-blur-sm text-primary-content"
           : "bg-primary text-primary-content shadow-md"
