@@ -9,7 +9,7 @@ import {
   FaCalendarAlt,
   FaUsers,
   FaPhone,
-  FaUserPlus, // 👈 replaced FaUserShield with FaUserPlus for "New"
+  FaUserPlus,
 } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 
@@ -71,7 +71,7 @@ export default function Footer() {
                 <li><Link to="/new" className="link link-hover">Are You New?</Link></li>
                 <li>
                   <a
-                    href="mailto: zoeworshipcentrekinoo@gmail.com"
+                    href="mailto:zoeworshipcentrekinoo@gmail.com"
                     className="link link-hover"
                   >
                     zoeworshipcentrekinoo@gmail.com
@@ -84,7 +84,7 @@ export default function Footer() {
           {/* COPYRIGHT & SOCIALS */}
           <div className="px-4 py-6 bg-base-300 border-t border-base-200 md:flex md:items-center md:justify-between">
             <span className="text-sm sm:text-center">
-              © {new Date().getFullYear()} <strong>zoe worship centre – Kinoo</strong>. All rights reserved. | Designed by{" "}
+              © {new Date().getFullYear()} <strong>Zoe Worship Centre – Kinoo</strong>. All rights reserved. | Designed by{" "}
               <a
                 href="https://yohanlabs.dev"
                 target="_blank"
@@ -98,78 +98,79 @@ export default function Footer() {
             {/* SOCIAL ICONS */}
             <div className="flex mt-4 sm:justify-center md:mt-0 space-x-5 text-xl">
               <a
-                                href="https://www.facebook.com/ZoeWorshipCentreYouths"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
-                              >
-                                <FaFacebookF className="text-lg" />
-                                <span>Facebook</span>
-                              </a>
-              
-                              <a
-                                href="https://www.instagram.com/zoewoshipcentrechurch"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
-                              >
-                                <FaInstagram className="text-lg" />
-                                <span>Instagram</span>
-                              </a>
-              
-                              <a
-                                href="https://www.tiktok.com/@zoeworshipcentrechurch?_t=ZM-90eMtbIA7fH&_r=1"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
-                              >
-                                <FaTiktok className="text-lg" />
-                                <span>TikTok</span>
-                              </a>
-              
-                              <a
-                                href="https://www.youtube.com/@ZoeWorshipCentreKinoo"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
-                              >
-                                <FaYoutube className="text-lg" />
-                                <span>YouTube</span>
-                              </a>
+                href="https://www.facebook.com/ZoeWorshipCentreYouths"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+              >
+                <FaFacebookF className="text-lg" />
+                <span>Facebook</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/zoewoshipcentrechurch"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+              >
+                <FaInstagram className="text-lg" />
+                <span>Instagram</span>
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@zoeworshipcentrechurch?_t=ZM-90eMtbIA7fH&_r=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+              >
+                <FaTiktok className="text-lg" />
+                <span>TikTok</span>
+              </a>
+
+              <a
+                href="https://www.youtube.com/@ZoeWorshipCentreKinoo"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-primary hover:text-primary-focus transition"
+              >
+                <FaYoutube className="text-lg" />
+                <span>YouTube</span>
+              </a>
             </div>
           </div>
         </div>
       </footer>
 
       {/* ✅ Mobile Bottom Dock */}
-      <nav className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-base-100 border-t border-base-200 shadow-inner">
-        <ul className="flex justify-around items-center py-2 text-xs">
-          <li>
+      <nav
+        className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-base-100 border-t border-base-200 shadow-inner w-full max-w-full overflow-x-hidden overflow-y-visible"
+      >
+        <ul className="flex justify-between items-center px-1 py-2 text-[10px] sm:text-xs w-full">
+          <li className="flex-1 text-center">
             <Link to="/departments/supportive" className="flex flex-col items-center text-primary">
               <FaUsers className="text-lg mb-1" />
               Serve
             </Link>
           </li>
-          <li>
+          <li className="flex-1 text-center">
             <Link to="/events/eventList" className="flex flex-col items-center text-primary">
               <FaCalendarAlt className="text-lg mb-1" />
               Events
             </Link>
           </li>
-          <li>
+          <li className="flex-1 text-center">
             <Link to="/about/knowUs" className="flex flex-col items-center text-primary">
               <FaHome className="text-lg mb-1" />
               About
             </Link>
           </li>
-          <li>
+          <li className="flex-1 text-center">
             <Link to="/contact" className="flex flex-col items-center text-primary">
               <FaPhone className="text-lg mb-1" />
               Contact
             </Link>
           </li>
-          {/* 👇 Changed Admin → New */}
-          <li>
+          <li className="flex-1 text-center">
             <Link to="/visitors" className="flex flex-col items-center text-primary">
               <FaUserPlus className="text-lg mb-1" />
               New
