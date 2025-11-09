@@ -22,7 +22,7 @@ export default function Navbar() {
     <nav
       className={`mx-auto  fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
         isTransparent
-          ? "bg-base-200/10 backdrop-blur-sm text-primary-content"
+          ? "bg-black/40 backdrop-blur-sm text-primary-content"
           : "bg-primary text-primary-content shadow-md"
       }`}
     >

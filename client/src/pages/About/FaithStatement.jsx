@@ -1,60 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-import heroImg from "../../assets/faith.jpg"; // Hero background image
+import AboutNav from "../../components/AboutNav";
 
 export default function FaithStatement() {
   return (
-    <div className="font-serif bg-base-100 text-base-content">
-      {/* 🕊️ Hero Section */}
-      <section
-        className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-white"
-        style={{
-          background: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${heroImg}) center/cover no-repeat`,
-        }}
-      >
-        <h1 className="text-3xl md:text-6xl font-bold uppercase tracking-wide">
-          Our Faith Statement
-        </h1>
-      </section>
-
-      {/* 🔗 Navigation Bar (Single Line Scrollable) */}
-      <div className="bg-base-200 py-6 px-4 overflow-x-auto">
-        <div className="flex justify-center gap-3 md:gap-4 min-w-max whitespace-nowrap">
-          <Link to="/about/knowUs" className="btn btn-outline btn-primary btn-sm md:btn-md">
-            About
-          </Link>
-          <Link to="/about/history" className="btn btn-outline btn-primary btn-sm md:btn-md">
-            History
-          </Link>
-          <Link to="/about/culture" className="btn btn-outline btn-primary btn-sm md:btn-md">
-            Culture
-          </Link>
-          <Link to="/about/impact" className="btn btn-outline btn-primary btn-sm md:btn-md">
-            Make an Impact
-          </Link>
-          <Link to="/about/leadership" className="btn btn-outline btn-primary btn-sm md:btn-md">
-            Leadership
-          </Link>
-          <Link to="/about/faithStatement" className="btn btn-primary btn-sm md:btn-md">
-            Faith Statement
-          </Link>
-          <Link to="/about/anthem" className="btn btn-outline btn-primary btn-sm md:btn-md">
-            Anthem
-          </Link>
+    <div className="bg-base-200 text-base-content px-4 md:px-10 py-20 font-serif leading-relaxed max-w-7xl mx-auto">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+        {/* 🧭 Sidebar */}
+        <div className="md:w-1/4">
+          <AboutNav />
         </div>
-      </div>
 
-      {/* 📖 Content Section */}
-      <section className="px-6 md:px-20 py-16 bg-base-100">
-        <div className="max-w-5xl mx-auto bg-base-200 shadow-lg rounded-2xl p-8 md:p-12">
-          <div className="text-left mb-10">
+        {/* 📖 Content Section */}
+        <div className="flex-1 bg-base-100 shadow-lg rounded-2xl p-6 md:mt-15">
+          <div className="text-left">
             <h2 className="text-3xl md:text-5xl font-medium mb-8 border-b-4 border-primary inline-block pb-2">
-              Faith Statement
+              Our Faith Statement
             </h2>
           </div>
 
-          <p className="text-base md:text-lg leading-relaxed whitespace-pre-line">
+          <p className="text-xs md:text-xl leading-relaxed whitespace-pre-line">
             WE BELIEVE THE BIBLE — to be the inspired, authoritative Word of God.  
             (2 Peter 1:21; 2 Timothy 3:15–17)
 
@@ -97,7 +61,7 @@ export default function FaithStatement() {
             (John 5:28; Revelation 20:15)
           </p>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
