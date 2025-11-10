@@ -82,7 +82,7 @@ export default function KnowUs() {
                 <Link
                   key={index}
                   to={card.link}
-                  className="flex-shrink-0 snap-center w-[85vw] h-[60vh] max-w-sm"
+                  className="flex-shrink-0 snap-center w-[300px] h-[400px] max-w-sm mt-10 mb-10"
                 >
                   <div className="card bg-base-100 image-full shadow-sm hover:shadow-lg transition duration-300 h-full">
                     <figure className="h-full">
@@ -95,13 +95,13 @@ export default function KnowUs() {
 
                     <div className="card-body flex flex-col   justify-end items-start p-6 text-left">
                       <div>
-                        <h2 className="card-title text-lg font-semibold text-primary mb-2">
+                        <h2 className="card-title text-sm font-semibold text-primary mb-2">
                           {card.title}
                         </h2>
-                        <p className="text-sm text-gray-200">{card.desc}</p>
+                        <p className="text-xs text-gray-200">{card.desc}</p>
                       </div>
-                      <div className="card-actions justify-start mt-4">
-                        <button className="btn btn-sm btn-primary">
+                      <div className="card-actions justify-start mt-2">
+                        <button className="underline underline-offset-4 underline-white text-white hover:bg-secondary-focus text-xs">
                           Read More →
                         </button>
                       </div>
