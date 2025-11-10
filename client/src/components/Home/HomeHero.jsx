@@ -38,7 +38,7 @@ export default function HomeHero() {
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative min-h-[80vh] md:min-h-[80vh] flex items-center justify-center">
+    <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center">
       {/* 🔹 Fixed Background Image */}
       <img
         src={heroBg}
@@ -59,7 +59,7 @@ export default function HomeHero() {
             {slide.title}
           </h2>
 
-          <h1 className="text-lg md:text-7xl font-semibold py-4 tracking-tight text-primary-content drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
+          <h1 className="text-xl md:text-7xl font-semibold py-4 tracking-tight text-primary-content drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]">
             {slide.state}
           </h1>
 

@@ -32,7 +32,7 @@ export default function MainDepartments() {
           {departments.map((dept, index) => (
             <div
               key={index}
-              className="bg-base-200 p-4 md:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 flex flex-col items-center text-center"
+              className="bg-base-200 p-4 md:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 flex flex-col items-start text-left md:text-centre"
             >
               <div className="w-full h-40 md:h-56 rounded-xl overflow-hidden mb-4">
                 <img

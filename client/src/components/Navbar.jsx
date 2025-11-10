@@ -6,7 +6,7 @@ import Logo from "../assets/logo2.png";
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null); // For mobile dropdowns
+  const [openDropdown, setOpenDropdown] = useState(null);
   const location = useLocation();
 
   const closeAllMenus = () => {
@@ -14,13 +14,12 @@ export default function Navbar() {
     setOpenDropdown(null);
   };
 
-  // Pages with transparent background
   const transparentPages = ["/", "/services", "/liveStream"];
   const isTransparent = transparentPages.includes(location.pathname);
 
   return (
     <nav
-      className={`mx-auto  fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
+      className={`mx-auto fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
         isTransparent
           ? "bg-black/40 backdrop-blur-sm text-primary-content"
           : "bg-primary text-primary-content shadow-md"
@@ -33,7 +32,6 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-[1400px] mx-auto px-4 md:px-16 py-2 flex justify-between items-center text-[10px] md:text-xs">
-          {/* Left - Contact Info */}
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">
               <MdEmail className="text-primary text-xs" />
@@ -49,8 +47,6 @@ export default function Navbar() {
               <span>+254 722 908 733</span>
             </div>
           </div>
-
-         
         </div>
       </div>
 
@@ -80,8 +76,8 @@ export default function Navbar() {
           {/* Who We Are Dropdown */}
           <li className="relative group">
             <div className="cursor-pointer hover:underline transition">Who We Are</div>
-            <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-60  opacity-30 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <li><Link to="/about/KnowUs" className="block px-4 py-2 hover:bg-base-200/20">About Us</Link></li>
+            <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <li><Link to="/about/KnowUs" className="block px-4 py-2 hover:bg-base-200/20">About Us</Link></li>
               <li><Link to="/about/culture" className="block px-4 py-2 hover:bg-base-200/20">Our Culture</Link></li>
               <li><Link to="/about/leadership" className="block px-4 py-2 hover:bg-base-200/20">Our Leadership</Link></li>
               <li><Link to="/about/impact" className="block px-4 py-2 hover:bg-base-200/20">Making an Impact</Link></li>
@@ -96,7 +92,7 @@ export default function Navbar() {
           {/* Ministries Dropdown */}
           <li className="relative group">
             <div className="cursor-pointer hover:underline transition">Ministries</div>
-            <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-60  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <li><Link to="/departments/main" className="block px-4 py-2 hover:bg-base-200/20">Main Departments</Link></li>
               <li><Link to="/departments/supportive" className="block px-4 py-2 hover:bg-base-200/20">Supportive Departments</Link></li>
             </ul>
@@ -105,7 +101,7 @@ export default function Navbar() {
           {/* Connect Dropdown */}
           <li className="relative group">
             <div className="cursor-pointer hover:underline transition">Connect</div>
-            <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-56  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+            <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <li><Link to="/programs" className="block px-4 py-2 hover:bg-base-200/20">Programs</Link></li>
               <li><Link to="/events/eventList" className="block px-4 py-2 hover:bg-base-200/20">Events</Link></li>
               <li><Link to="/contact" className="block px-4 py-2 hover:bg-base-200/20">Contact</Link></li>
@@ -116,93 +112,92 @@ export default function Navbar() {
         {/* 🔸 Mobile Toggle */}
         <button
           onClick={() => setOpenMenu(!openMenu)}
-          className="md:hidden focus:outline-none"
+          className="md:hidden focus:outline-none z-[10001]"
         >
           {openMenu ? <FaTimes size={22} /> : <FaBars size={22} />}
         </button>
       </div>
 
-      {/* 🔹 Mobile Menu */}
-      {openMenu && (
-        <div className="relative inset-0 bg-primary text-primary-content z-[9999] flex flex-col p-8 pt-16 space-y-4 text-base font-semibold overflow-y-auto">
-         
-          {/* Menu items */}
-          {[
-            {
-              label: "Who we are", to: "/about/knowUs"},
-            { label: "Sundays", to: "/services" },
-            { label: "Resources", to: "/resources" },
-            {
-              label: "Main Ministries",
-              items: [
-                { label: "Men's Ministry", to: "/departments/main/men" },
-                 { label: "Women's Ministry", to: "/departments/main/women" },
-                  { label: "Youth's Ministriy", to: "/departments/main/youth" },
-                   { label: "Sunday School Ministry", to: "/departments/main/sundaySchool" },
-                    { label: "Teen's Ministry", to: "/departments/main/teens" }
-              ],
-            },
-            {
-              label: "Supportive Ministries",
-              items: [
-                { label: "Anagkazo Ministry", to: "/departments/supportive/anagkazo" },
-                 { label: "Hospitality Ministry", to: "/departments/supportive/hospitality" },
-                  { label: "Intercessory Ministry", to: "/departments/supportive/intercessory" },
-                   { label: "Media Ministry", to: "/departments/supportive/media" },
-                    { label: "Praise & Worship Ministry", to: "/departments/supportive/praiseAndWorship" },
-                     { label: "Ushering Ministry", to: "/departments/supportive/ushering" }
-              ],
-            },
-            {
-              label: "Connect",
-              items: [
-                { label: "Programs", to: "/programs" },
-                { label: "Events", to: "/events/eventList" },
-                { label: "Contact", to: "/contact" },
-              ],
-            },
-               { label: "Give", to: "/donate" }
-          ].map((menu, idx) => (
-            <div key={idx}>
-              {menu.items ? (
-                <>
-                  <button
-                    onClick={() =>
-                      setOpenDropdown(openDropdown === idx ? null : idx)
-                    }
-                    className="flex justify-between w-full py-2 border-b border-base-100/20"
-                  >
-                    {menu.label}
-                    <span>{openDropdown === idx ? "−" : "+"}</span>
-                  </button>
-                  {openDropdown === idx && (
-                    <div className="flex flex-col pl-4 space-y-2 mt-2  border-b border-base-100/20">
-                      {menu.items.map((sub, subIdx) => (
-                        <Link
-                          key={subIdx}
-                          to={sub.to}
-                          onClick={closeAllMenus}
-                          className="hover:underline"
-                        >
-                          {sub.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </>
-              ) : (
-                <Link
-                  to={menu.to}
-                  onClick={closeAllMenus}
-                  className="block py-2 border-b border-base-100/20"
+      {/* 🔹 Mobile Menu with Slide-in Animation */}
+      <div
+        className={`fixed top-0 right-0 h-[80vh] w-3/4 max-w-sm  bg-secondary text-primary-content z-[10000] flex flex-col p-8 pt-16 space-y-4 text-base font-semibold shadow-lg transform transition-transform duration-500 ease-in-out ${
+          openMenu ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {[
+          { label: "Who we are", to: "/about/knowUs" },
+          { label: "Sundays", to: "/services" },
+          { label: "Resources", to: "/resources" },
+          {
+            label: "Main Ministries",
+            items: [
+              { label: "Men's Ministry", to: "/departments/main/men" },
+              { label: "Women's Ministry", to: "/departments/main/women" },
+              { label: "Youth's Ministry", to: "/departments/main/youth" },
+              { label: "Sunday School Ministry", to: "/departments/main/sundaySchool" },
+              { label: "Teen's Ministry", to: "/departments/main/teens" },
+            ],
+          },
+          {
+            label: "Supportive Ministries",
+            items: [
+              { label: "Anagkazo Ministry", to: "/departments/supportive/anagkazo" },
+              { label: "Hospitality Ministry", to: "/departments/supportive/hospitality" },
+              { label: "Intercessory Ministry", to: "/departments/supportive/intercessory" },
+              { label: "Media Ministry", to: "/departments/supportive/media" },
+              { label: "Praise & Worship Ministry", to: "/departments/supportive/praiseAndWorship" },
+              { label: "Ushering Ministry", to: "/departments/supportive/ushering" },
+            ],
+          },
+          {
+            label: "Connect",
+            items: [
+              { label: "Programs", to: "/programs" },
+              { label: "Events", to: "/events/eventList" },
+              { label: "Contact", to: "/contact" },
+            ],
+          },
+          { label: "Give", to: "/donate" },
+        ].map((menu, idx) => (
+          <div key={idx}>
+            {menu.items ? (
+              <>
+                <button
+                  onClick={() =>
+                    setOpenDropdown(openDropdown === idx ? null : idx)
+                  }
+                  className="flex justify-between w-full py-2 border-b border-base-100/20"
                 >
                   {menu.label}
-                </Link>
-              )}
-            </div>
-          ))}
-        </div>
-      )}
+                  <span>{openDropdown === idx ? "−" : "+"}</span>
+                </button>
+                {openDropdown === idx && (
+                  <div className="flex flex-col pl-4 space-y-2 mt-2 border-b border-base-100/20">
+                    {menu.items.map((sub, subIdx) => (
+                      <Link
+                        key={subIdx}
+                        to={sub.to}
+                        onClick={closeAllMenus}
+                        className="hover:underline"
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </>
+            ) : (
+              <Link
+                to={menu.to}
+                onClick={closeAllMenus}
+                className="block py-2 border-b border-base-100/20"
+              >
+                {menu.label}
+              </Link>
+            )}
+          </div>
+        ))}
+      </div>
     </nav>
   );
 }

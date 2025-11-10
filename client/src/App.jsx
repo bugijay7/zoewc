@@ -78,6 +78,7 @@ import AdminLayout from './layout/AdminLayout'
 import ScrollToTop from './components/ScrollToTop'
 import Resources from './pages/Resources'
 import Messages from './pages/Admin/Dashboard/Messages'
+import Canada from './pages/About/Canada'
 
 
 function App() {
@@ -137,6 +138,7 @@ function App() {
       <Route path="/about/leadership" element={<Leadership />} />
       <Route path="/about/faithStatement" element={<FaithStatement />} />
       <Route path="/about/anthem" element={<Anthem />} />
+       <Route path="/about/canada" element={<Canada />} />
 
       { /* Programs Routes */}
       <Route path="/programs/breathOfWorship" element={<BreathOfWorship />} />
