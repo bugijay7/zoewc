@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import heroBg from "../../assets/hero02.jpg"; // ✅ Only one background image
+import heroBg from "../../assets/about-hero.jpeg"; // Desktop background image
+import heroVideo from "../../assets/hero1.mp4"; // Mobile background video
 
 export default function HomeHero() {
-  // Slides now only change text content
   const slides = [
     {
       title: "The Year Of",
@@ -26,6 +26,7 @@ export default function HomeHero() {
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
+   const videoRef = useRef(null);
 
   // Auto-slide every 5 seconds
   useEffect(() => {
@@ -35,16 +36,35 @@ export default function HomeHero() {
     return () => clearInterval(interval);
   }, [slides.length]);
 
+    useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.8; 
+    }
+  }, []);
+
   const slide = slides[currentSlide];
 
   return (
     <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center">
-      {/* 🔹 Fixed Background Image */}
+      {/* 🔹 Desktop Background Image */}
       <img
         src={heroBg}
         alt="Zoe Worship Centre Background"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="hidden md:block absolute inset-0 w-full h-full object-cover"
       />
+
+      {/* 🔹 Mobile Background Video */}
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="block md:hidden absolute inset-0 bg-black/20 w-full h-full object-cover"
+      >
+        <source src={heroVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
