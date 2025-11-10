@@ -64,7 +64,7 @@ export default function KnowUs() {
   };
 
   return (
-    <section className="relative bg-primary/30 text-base-content font-montserrat overflow-hidden md:py-16">
+    <section className="relative bg-gray-200 text-base-content font-montserrat overflow-hidden pb-16">
       {/* 🌸 Desktop Bokeh Background */}
       <div className="hidden md:block absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-pink-400/30 rounded-full blur-[120px]"></div>
@@ -78,38 +78,39 @@ export default function KnowUs() {
           {/* 🌀 Mobile Carousel */}
           <div className="md:hidden relative">
             <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 scroll-smooth no-scrollbar px-2">
-              {[...aboutCards, canadaCard].map((card, index) => (
-                <Link
-                  key={index}
-                  to={card.link}
-                  className="flex-shrink-0 snap-center w-[300px] h-[400px] max-w-sm mt-10 mb-10"
-                >
-                  <div className="card bg-base-100 image-full shadow-sm hover:shadow-lg transition duration-300 h-full">
-                    <figure className="h-full">
-                      <img
-                        src={card.img}
-                        alt={card.title}
-                        className="object-cover w-full h-full  transition duration-500"
-                      />
-                    </figure>
+    {[...aboutCards, canadaCard].map((card, index) => (
+      <Link
+        key={index}
+        to={card.link}
+        className="flex-shrink-0 snap-center w-[300px] h-[400px] max-w-sm mt-10 mb-10"
+      >
+        <div className="card image-full shadow-sm hover:shadow-lg transition duration-300 h-full">
+          <figure className="h-full">
+            <img
+              src={card.img}
+              alt={card.title}
+              className="object-cover w-full h-full transition duration-500"
+            />
+          </figure>
 
-                    <div className="card-body flex flex-col   justify-end items-start p-6 text-left">
-                      <div>
-                        <h2 className="card-title text-sm font-semibold text-primary mb-2">
-                          {card.title}
-                        </h2>
-                        <p className="text-xs text-gray-200">{card.desc}</p>
-                      </div>
-                      <div className="card-actions justify-start mt-2">
-                        <button className="underline underline-offset-4 underline-white text-white hover:bg-secondary-focus text-xs">
-                          Read More →
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              ))}
+          <div className="card-body flex flex-col justify-end items-start p-6 text-left">
+            <div>
+              <h2 className="card-title text-sm font-semibold text-primary mb-2">
+                {card.title}
+              </h2>
+              <p className="text-xs text-gray-200">{card.desc}</p>
             </div>
+            <div className="card-actions justify-start mt-2">
+              <button className="underline underline-offset-4 text-white hover:bg-secondary-focus text-xs">
+                Read More →
+              </button>
+            </div>
+          </div>
+        </div>
+      </Link>
+    ))}
+  </div>
+
 
             <p className="text-xs text-primary mt-2 italic text-center">
               Swipe to explore →

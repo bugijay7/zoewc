@@ -22,7 +22,7 @@ export default function Navbar() {
       className={`mx-auto fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
         isTransparent
           ? "bg-black/40 backdrop-blur-sm text-primary-content"
-          : "bg-primary text-primary-content shadow-md"
+          : "bg-black/80 backdrop-blur-sm text-primary-content shadow-md"
       }`}
     >
       {/* 🔹 Top Bar */}
@@ -51,7 +51,7 @@ export default function Navbar() {
       </div>
 
       {/* 🔹 Main Navbar */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-16 py-2 flex items-center justify-between relative">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-16 py-2 flex items-center justify-between relative">
         {/* Logo */}
         <Link
           to="/"
@@ -61,7 +61,7 @@ export default function Navbar() {
           <img src={Logo} alt="Zoe Worship Centre Logo" className="h-12 w-auto" />
           <div
             className={`flex flex-col justify-center ${
-              isTransparent ? "text-primary-content" : "text-primary-content"
+              isTransparent ? "text-primary-content" : "text-secondary"
             }`}
           >
             <span className="text-[10px] md:text-sm font-bold tracking-wide leading-tight">

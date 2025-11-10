@@ -9,13 +9,14 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-primary/80 text-base-content">
+    <footer className="bg-primary-content/80 text-base-content">
+      <hr className="border border-primary" />
       <div className="mx-auto w-full max-w-screen-xl px-6 py-10">
         {/* GRID SECTIONS */}
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
           {/* ABOUT */}
           <div>
-            <h2 className="mb-4 text-xs md:text-sm  font-semibold uppercase text-primary-content">
+            <h2 className="mb-4 text-xs md:text-sm  font-semibold uppercase text-primary">
               About
             </h2>
             <ul className="font-medium space-y-2 text-xs md:text-sm">
@@ -28,7 +29,7 @@ export default function Footer() {
 
           {/* DEPARTMENTS */}
           <div>
-            <h2 className="mb-4  text-xs md:text-sm font-semibold uppercase text-primary-content">
+            <h2 className="mb-4  text-xs md:text-sm font-semibold uppercase text-primary">
               Departments
             </h2>
             <ul className="font-medium space-y-2  text-xs md:text-sm">
@@ -41,7 +42,7 @@ export default function Footer() {
 
           {/* EVENTS & MEDIA */}
           <div>
-            <h2 className="mb-4  text-xs md:text-sm font-semibold uppercase text-primary-content">
+            <h2 className="mb-4  text-xs md:text-sm font-semibold uppercase text-primary">
               Events & Media
             </h2>
             <ul className="font-medium space-y-2  text-xs md:text-sm">
@@ -54,7 +55,7 @@ export default function Footer() {
 
           {/* CONTACT */}
           <div>
-            <h2 className="mb-4  text-xs md:text-sm font-semibold uppercase text-primary-content">
+            <h2 className="mb-4  text-xs md:text-sm font-semibold uppercase text-primary">
               Connect
             </h2>
             <ul className="font-medium space-y-2  text-xs md:text-sm">
