@@ -40,7 +40,7 @@ function Sermons() {
   return (
     <div className="min-h-screen bg-base-200 py-20 px-4 sm:px-6 md:px-10 lg:px-16">
       {/* 🔹 Header */}
-      <div className="max-w-4xl mx-auto text-center mb-12">
+      <div className="max-w-4xl mx-auto text-center mb-12 mt-30 md:mt-30">
         <h1 className="text-4xl sm:text-5xl font-medium mb-3 text-primary uppercase">
           Sermons
         </h1>
