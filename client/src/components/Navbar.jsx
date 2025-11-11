@@ -1,203 +1,364 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
+import { motion, AnimatePresence } from "framer-motion";
 import Logo from "../assets/logo2.png";
 
 export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const closeAllMenus = () => {
     setOpenMenu(false);
     setOpenDropdown(null);
   };
 
-  const transparentPages = ["/", "/services", "/liveStream"];
-  const isTransparent = transparentPages.includes(location.pathname);
-
   return (
-    <nav
-      className={`mx-auto fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
-        isTransparent
-          ? "bg-black/40 backdrop-blur-sm text-primary-content"
-          : "bg-black/80 backdrop-blur-sm text-primary-content shadow-md"
-      }`}
-    >
-      {/* 🔹 Top Bar */}
-      <div
-        className={`w-full ${
-          isTransparent ? "bg-base-100/10" : "bg-secondary-content/20"
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      {/* Top Bar */}
+      <motion.div
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className={`bg-primary text-white transition-all duration-300 ${
+          scrolled ? "py-1" : "py-2"
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-4 md:px-16 py-2 flex justify-between items-center text-[10px] md:text-xs">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-1">
-              <MdEmail className="text-primary text-xs" />
-              <a
-                href="mailto:zoeworshipcentrekinoo@gmail.com"
-                className="underline hover:text-secondary transition"
-              >
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-8 text-xs md:text-sm">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-2 hover:text-blue-200 transition-colors"
+            >
+              <MdEmail className="text-base" />
+              <a href="mailto:zoeworshipcentrekinoo@gmail.com" className="hover:underline">
                 zoeworshipcentrekinoo@gmail.com
               </a>
-            </div>
-            <div className="flex items-center gap-1">
-              <MdPhone className="text-primary text-xs" />
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-2 hover:text-blue-200 transition-colors"
+            >
+              <MdPhone className="text-base" />
               <span>+254 722 908 733</span>
-            </div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Main Navbar */}
+      <div
+        className={`backdrop-blur-md bg-white/95 shadow-lg transition-all duration-300 ${
+          scrolled ? "py-2" : "py-4"
+        }`}
+      >
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <Link to="/" onClick={closeAllMenus}>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-3 group"
+              >
+                <motion.img
+                  whileHover={{ rotate: [0, -5, 5, 0] }}
+                  transition={{ duration: 0.5 }}
+                  src={Logo}
+                  alt="Zoe Worship Centre Logo"
+                  className={`transition-all duration-300 ${
+                    scrolled ? "h-10 w-10" : "h-14 w-14"
+                  } object-contain`}
+                />
+                <div className="flex flex-col">
+                  <span className={`font-bold text-primary transition-all duration-300 ${
+                    scrolled ? "text-base" : "text-lg"
+                  } group-hover:text-blue-700`}>
+                    Zoe Worship Centre Church
+                  </span>
+                  <span className="text-xs text-primary italic group-hover:text-blue-500 transition-colors">
+                    A God Kind of Life
+                  </span>
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* Desktop Menu */}
+            <ul className="hidden lg:flex items-center gap-8">
+              {/* Who We Are Dropdown */}
+              <li className="relative group">
+                <motion.div
+                  whileHover={{ y: -2 }}
+                  className="text-primary font-semibold cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                >
+                  Who We Are
+                </motion.div>
+                <motion.ul
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  className="absolute left-0 top-full mt-2 bg-white rounded-lg shadow-2xl py-3 px-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100"
+                >
+                  {[
+                    { to: "/about/KnowUs", label: "About Us" },
+                    { to: "/about/culture", label: "Our Culture" },
+                    { to: "/about/leadership", label: "Our Leadership" },
+                    { to: "/about/impact", label: "Making an Impact" },
+                    { to: "/about/faithStatement", label: "Faith Statement" },
+                    { to: "/about/history", label: "Our History" },
+                  ].map((item, idx) => (
+                    <motion.li key={idx} whileHover={{ x: 5 }}>
+                      <Link
+                        to={item.to}
+                        className="block px-4 py-2 text-primary hover:text-primary hover:bg-blue-50 rounded-md transition-all duration-200"
+                      >
+                        {item.label}
+                      </Link>
+                    </motion.li>
+                  ))}
+                </motion.ul>
+              </li>
+
+              <motion.li whileHover={{ y: -2 }}>
+                <Link
+                  to="/services"
+                  className="text-primary font-semibold py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                >
+                  Sundays
+                </Link>
+              </motion.li>
+
+              <motion.li whileHover={{ y: -2 }}>
+                <Link
+                  to="/resources"
+                  className="text-primary font-semibold py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                >
+                  Resources
+                </Link>
+              </motion.li>
+
+              {/* Ministries Dropdown */}
+              <li className="relative group">
+                <motion.div
+                  whileHover={{ y: -2 }}
+                  className="text-primary font-semibold cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                >
+                  Ministries
+                </motion.div>
+                <motion.ul
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  className="absolute left-0 top-full mt-2 bg-white rounded-lg shadow-2xl py-3 px-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100"
+                >
+                  {[
+                    { to: "/departments/main", label: "Main Departments" },
+                    { to: "/departments/supportive", label: "Supportive Departments" },
+                  ].map((item, idx) => (
+                    <motion.li key={idx} whileHover={{ x: 5 }}>
+                      <Link
+                        to={item.to}
+                        className="block px-4 py-2 text-primary hover:text-primary hover:bg-blue-50 rounded-md transition-all duration-200"
+                      >
+                        {item.label}
+                      </Link>
+                    </motion.li>
+                  ))}
+                </motion.ul>
+              </li>
+
+              {/* Connect Dropdown */}
+              <li className="relative group">
+                <motion.div
+                  whileHover={{ y: -2 }}
+                  className="text-primary font-semibold cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                >
+                  Connect
+                </motion.div>
+                <motion.ul
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  className="absolute left-0 top-full mt-2 bg-white rounded-lg shadow-2xl py-3 px-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100"
+                >
+                  {[
+                    { to: "/programs", label: "Programs" },
+                    { to: "/events/eventList", label: "Events" },
+                    { to: "/contact", label: "Contact" },
+                  ].map((item, idx) => (
+                    <motion.li key={idx} whileHover={{ x: 5 }}>
+                      <Link
+                        to={item.to}
+                        className="block px-4 py-2 text-primary hover:text-primary hover:bg-blue-50 rounded-md transition-all duration-200"
+                      >
+                        {item.label}
+                      </Link>
+                    </motion.li>
+                  ))}
+                </motion.ul>
+              </li>
+            </ul>
+
+            {/* Mobile Toggle */}
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setOpenMenu(!openMenu)}
+              className="lg:hidden text-2xl text-primary hover:text-primary transition-colors p-2"
+              aria-label="Toggle menu"
+            >
+              <AnimatePresence mode="wait">
+                {openMenu ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <FaTimes />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <FaBars />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
           </div>
         </div>
       </div>
 
-      {/* 🔹 Main Navbar */}
-      <div className="max-w-[1200px] mx-auto px-6 md:px-16 py-2 flex items-center justify-between relative">
-        {/* Logo */}
-        <Link
-          to="/"
-          onClick={closeAllMenus}
-          className="flex items-center gap-3 shrink-0"
-        >
-          <img src={Logo} alt="Zoe Worship Centre Logo" className="h-12 w-auto" />
-          <div
-            className={`flex flex-col justify-center ${
-              isTransparent ? "text-primary-content" : "text-secondary"
-            }`}
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {openMenu && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-white/98 backdrop-blur-md shadow-2xl overflow-hidden"
           >
-            <span className="text-[10px] md:text-sm font-bold tracking-wide leading-tight">
-              Zoe Worship Centre Church
-            </span>
-            <span className="text-[8px] leading-tight">A God Kind of Life</span>
-          </div>
-        </Link>
-
-        {/* 🔸 Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-6 text-xs md:text-sm uppercase font-semibold">
-          {/* Who We Are Dropdown */}
-          <li className="relative group">
-            <div className="cursor-pointer hover:underline transition">Who We Are</div>
-            <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <li><Link to="/about/KnowUs" className="block px-4 py-2 hover:bg-base-200/20">About Us</Link></li>
-              <li><Link to="/about/culture" className="block px-4 py-2 hover:bg-base-200/20">Our Culture</Link></li>
-              <li><Link to="/about/leadership" className="block px-4 py-2 hover:bg-base-200/20">Our Leadership</Link></li>
-              <li><Link to="/about/impact" className="block px-4 py-2 hover:bg-base-200/20">Making an Impact</Link></li>
-              <li><Link to="/about/faithStatement" className="block px-4 py-2 hover:bg-base-200/20">Faith Statement</Link></li>
-              <li><Link to="/about/history" className="block px-4 py-2 hover:bg-base-200/20">Our History</Link></li>
-            </ul>
-          </li>
-
-          <li><Link to="/services" className="hover:underline">Sundays</Link></li>
-          <li><Link to="/resources" className="hover:underline">Resources</Link></li>
-
-          {/* Ministries Dropdown */}
-          <li className="relative group">
-            <div className="cursor-pointer hover:underline transition">Ministries</div>
-            <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-60 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <li><Link to="/departments/main" className="block px-4 py-2 hover:bg-base-200/20">Main Departments</Link></li>
-              <li><Link to="/departments/supportive" className="block px-4 py-2 hover:bg-base-200/20">Supportive Departments</Link></li>
-            </ul>
-          </li>
-
-          {/* Connect Dropdown */}
-          <li className="relative group">
-            <div className="cursor-pointer hover:underline transition">Connect</div>
-            <ul className="absolute left-0 mt-2 bg-primary/90 text-primary-content uppercase py-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-              <li><Link to="/programs" className="block px-4 py-2 hover:bg-base-200/20">Programs</Link></li>
-              <li><Link to="/events/eventList" className="block px-4 py-2 hover:bg-base-200/20">Events</Link></li>
-              <li><Link to="/contact" className="block px-4 py-2 hover:bg-base-200/20">Contact</Link></li>
-            </ul>
-          </li>
-        </ul>
-
-        {/* 🔸 Mobile Toggle */}
-        <button
-          onClick={() => setOpenMenu(!openMenu)}
-          className="md:hidden focus:outline-none z-[10001]"
-        >
-          {openMenu ? <FaTimes size={22} /> : <FaBars size={22} />}
-        </button>
-      </div>
-
-      {/* 🔹 Mobile Menu with Slide-in Animation */}
-      <div
-        className={`fixed top-0 right-0 h-[80vh] w-3/4 max-w-sm  bg-secondary text-primary-content z-[10000] flex flex-col p-8 pt-16 space-y-4 text-base font-semibold shadow-lg transform transition-transform duration-500 ease-in-out ${
-          openMenu ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        {[
-          { label: "Who we are", to: "/about/knowUs" },
-          { label: "Sundays", to: "/services" },
-          { label: "Resources", to: "/resources" },
-          {
-            label: "Main Ministries",
-            items: [
-              { label: "Men's Ministry", to: "/departments/main/men" },
-              { label: "Women's Ministry", to: "/departments/main/women" },
-              { label: "Youth's Ministry", to: "/departments/main/youth" },
-              { label: "Sunday School Ministry", to: "/departments/main/sundaySchool" },
-              { label: "Teen's Ministry", to: "/departments/main/teens" },
-            ],
-          },
-          {
-            label: "Supportive Ministries",
-            items: [
-              { label: "Anagkazo Ministry", to: "/departments/supportive/anagkazo" },
-              { label: "Hospitality Ministry", to: "/departments/supportive/hospitality" },
-              { label: "Intercessory Ministry", to: "/departments/supportive/intercessory" },
-              { label: "Media Ministry", to: "/departments/supportive/media" },
-              { label: "Praise & Worship Ministry", to: "/departments/supportive/praiseAndWorship" },
-              { label: "Ushering Ministry", to: "/departments/supportive/ushering" },
-            ],
-          },
-          {
-            label: "Connect",
-            items: [
-              { label: "Programs", to: "/programs" },
-              { label: "Events", to: "/events/eventList" },
-              { label: "Contact", to: "/contact" },
-            ],
-          },
-          { label: "Give", to: "/donate" },
-        ].map((menu, idx) => (
-          <div key={idx}>
-            {menu.items ? (
-              <>
-                <button
-                  onClick={() =>
-                    setOpenDropdown(openDropdown === idx ? null : idx)
-                  }
-                  className="flex justify-between w-full py-2 border-b border-base-100/20"
+            <div className="container mx-auto px-4 py-6 space-y-2 max-h-[70vh] overflow-y-auto">
+              {[
+                { label: "Who we are", to: "/about/knowUs" },
+                { label: "Sundays", to: "/services" },
+                { label: "Resources", to: "/resources" },
+                {
+                  label: "Main Ministries",
+                  items: [
+                    { label: "Men's Ministry", to: "/departments/main/men" },
+                    { label: "Women's Ministry", to: "/departments/main/women" },
+                    { label: "Youth's Ministry", to: "/departments/main/youth" },
+                    { label: "Sunday School Ministry", to: "/departments/main/sundaySchool" },
+                    { label: "Teen's Ministry", to: "/departments/main/teens" },
+                  ],
+                },
+                {
+                  label: "Supportive Ministries",
+                  items: [
+                    { label: "Anagkazo Ministry", to: "/departments/supportive/anagkazo" },
+                    { label: "Hospitality Ministry", to: "/departments/supportive/hospitality" },
+                    { label: "Intercessory Ministry", to: "/departments/supportive/intercessory" },
+                    { label: "Media Ministry", to: "/departments/supportive/media" },
+                    { label: "Praise & Worship Ministry", to: "/departments/supportive/praiseAndWorship" },
+                    { label: "Ushering Ministry", to: "/departments/supportive/ushering" },
+                  ],
+                },
+                {
+                  label: "Connect",
+                  items: [
+                    { label: "Programs", to: "/programs" },
+                    { label: "Events", to: "/events/eventList" },
+                    { label: "Contact", to: "/contact" },
+                  ],
+                },
+                { label: "Give", to: "/donate" },
+              ].map((menu, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: idx * 0.05 }}
+                  className="border-b border-gray-100 last:border-0"
                 >
-                  {menu.label}
-                  <span>{openDropdown === idx ? "−" : "+"}</span>
-                </button>
-                {openDropdown === idx && (
-                  <div className="flex flex-col pl-4 space-y-2 mt-2 border-b border-base-100/20">
-                    {menu.items.map((sub, subIdx) => (
-                      <Link
-                        key={subIdx}
-                        to={sub.to}
-                        onClick={closeAllMenus}
-                        className="hover:underline"
+                  {menu.items ? (
+                    <>
+                      <motion.button
+                        whileTap={{ scale: 0.98 }}
+                        onClick={() =>
+                          setOpenDropdown(openDropdown === idx ? null : idx)
+                        }
+                        className="w-full text-left px-4 py-3 font-semibold text-primary hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200 flex items-center justify-between"
                       >
-                        {sub.label}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </>
-            ) : (
-              <Link
-                to={menu.to}
-                onClick={closeAllMenus}
-                className="block py-2 border-b border-base-100/20"
-              >
-                {menu.label}
-              </Link>
-            )}
-          </div>
-        ))}
-      </div>
+                        {menu.label}
+                        <motion.span
+                          animate={{ rotate: openDropdown === idx ? 180 : 0 }}
+                          transition={{ duration: 0.3 }}
+                          className="text-sm"
+                        >
+                          ▼
+                        </motion.span>
+                      </motion.button>
+                      <AnimatePresence>
+                        {openDropdown === idx && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="pl-4 overflow-hidden"
+                          >
+                            {menu.items.map((sub, subIdx) => (
+                              <motion.div
+                                key={subIdx}
+                                initial={{ x: -10, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ delay: subIdx * 0.03 }}
+                              >
+                                <Link
+                                  to={sub.to}
+                                  onClick={closeAllMenus}
+                                  className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-blue-50 rounded-md transition-all duration-200"
+                                >
+                                  {sub.label}
+                                </Link>
+                              </motion.div>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
+                  ) : (
+                    <Link
+                      to={menu.to}
+                      onClick={closeAllMenus}
+                      className="block px-4 py-3 font-semibold text-primary hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200"
+                    >
+                      {menu.label}
+                    </Link>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

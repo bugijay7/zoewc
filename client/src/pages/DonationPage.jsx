@@ -32,10 +32,10 @@ export default function DonationPage() {
           <div className="bg-[#ffcfe7] p-8 rounded-xl shadow-lg border border-gray-100">
             <FaUniversity className="text-amber-600 text-3xl mb-4" />
             <h2 className="text-xl font-medium text-gray-800 mb-3">Bank Transfer</h2>
-            <p className="text-gray-700 mb-2">
+            <p className="text-primary mb-2">
               <span className="font-bold">Bank:</span> Equity Bank
             </p>
-            <p className="text-gray-700 mb-2 flex items-center gap-2">
+            <p className="text-primary mb-2 flex items-center gap-2">
               <span className="font-bold">Account Number:</span> 1290 2609 40849
               <FaCopy
                 onClick={() => handleCopy("1290260940849")}
@@ -46,7 +46,7 @@ export default function DonationPage() {
             {copiedText === "1290260940849" && (
               <p className="text-sm text-green-600">✅ Copied account number!</p>
             )}
-            <p className="text-gray-700">
+            <p className="text-primary">
               <span className="font-bold">Branch:</span> Kenyatta Avenue
             </p>
           </div>
@@ -56,7 +56,7 @@ export default function DonationPage() {
             <FaMobileAlt className="text-amber-600 text-3xl mb-4" />
             <h2 className="text-xl font-medium text-gray-800 mb-3">M-Pesa Giving</h2>
 
-            <p className="text-gray-700 mb-2 flex items-center gap-2">
+            <p className="text-primary mb-2 flex items-center gap-2">
               Paybill: <span className="font-bold">202273</span>
               <FaCopy
                 onClick={() => handleCopy("202273")}
@@ -68,7 +68,7 @@ export default function DonationPage() {
               <p className="text-sm text-green-600">✅ Copied Paybill!</p>
             )}
 
-            <p className="text-gray-700 flex items-center gap-2">
+            <p className="text-primary flex items-center gap-2">
               Account: <span className="font-bold">Offering / Tithe</span>
               <FaCopy
                 onClick={() => handleCopy("Offering / Tithe")}
