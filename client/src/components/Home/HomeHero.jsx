@@ -64,7 +64,7 @@ export default function HomeHero() {
   };
 
   return (
-    <div className="relative min-h-[80vh] md:min-h-[120vh] flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-[80vh] md:min-h-[120vh] flex items-center justify-center overflow-hidden w-full">
       {/* ✅ Background image */}
       <img
         src={heroBg}

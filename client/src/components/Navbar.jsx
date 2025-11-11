@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
@@ -9,7 +9,6 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +24,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 max-w-[100vw]">
       {/* Top Bar */}
       <motion.div
         initial={{ y: -50, opacity: 0 }}
@@ -35,7 +34,7 @@ export default function Navbar() {
           scrolled ? "py-1" : "py-2"
         }`}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-8 text-xs md:text-sm">
             <motion.div
               whileHover={{ scale: 1.05 }}

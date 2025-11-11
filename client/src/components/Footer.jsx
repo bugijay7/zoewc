@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer className="bg-primary-content/80 text-base-content">
       <hr className="border border-primary" />
-      <div className="mx-auto w-full max-w-screen-xl px-6 py-10">
+      <div className="mx-auto min-w-screen px-6 py-10">
         {/* GRID SECTIONS */}
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-4">
           {/* ABOUT */}
