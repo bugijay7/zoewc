@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion as Motion, AnimatePresence } from "framer-motion";
 import heroBg from "../../assets/about-hero.jpeg"; // ✅ Add your background image here
 
 export default function HomeHero() {
@@ -12,7 +12,7 @@ export default function HomeHero() {
     },
     {
       title: "Welcome To Zoe",
-      state: "Our Supportive Ministries",
+      state: "Supportive Ministries",
       subtitle: "1 Peter 4:10",
       button: { text: "Call to Serve", link: "/departments/supportive", type: "primary" },
     },
@@ -64,7 +64,7 @@ export default function HomeHero() {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-[80vh] md:min-h-[120vh] flex items-center justify-center overflow-hidden">
       {/* ✅ Background image */}
       <img
         src={heroBg}
@@ -76,12 +76,12 @@ export default function HomeHero() {
       <div className="absolute inset-0  bg-black/80 "></div>
 
       {/* Animated floating blobs (still visible above overlay) */}
-      <motion.div
+      <Motion.div
         className="absolute top-20 right-20 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
         animate={{ scale: [1, 1.2, 1], x: [0, 50, 0], y: [0, 30, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
-      <motion.div
+      <Motion.div
         className="absolute bottom-20 left-20 w-96 h-96 bg-rose-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
         animate={{ scale: [1, 1.3, 1], x: [0, -30, 0], y: [0, -50, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
@@ -90,35 +90,35 @@ export default function HomeHero() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-20 text-center">
         <AnimatePresence mode="wait">
-          <motion.div
+          <Motion.div
             key={currentSlide}
             variants={containerVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
           >
-            <motion.h2
+            <Motion.h2
               variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-4 tracking-wide"
+              className="text-2xl sm:text-4xl md:text-5xl font-light text-white mb-4 tracking-wide"
             >
               {slide.title}
-            </motion.h2>
+            </Motion.h2>
 
-            <motion.h1
+            <Motion.h1
               variants={itemVariants}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-pink-500 to-rose-500 mb-6 leading-tight"
+              className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-pink-500 to-rose-500 mb-6 leading-tight"
             >
               {slide.state}
-            </motion.h1>
+            </Motion.h1>
 
-            <motion.p
+            <Motion.p
               variants={itemVariants}
               className="text-xl sm:text-2xl md:text-3xl text-white font-light italic mb-12"
             >
               {slide.subtitle}
-            </motion.p>
+            </Motion.p>
 
-            <motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
                 href={slide.button.link}
                 className={`inline-block px-10 py-4 rounded-full text-lg font-medium transition-all duration-300 ${
@@ -129,8 +129,8 @@ export default function HomeHero() {
               >
                 {slide.button.text}
               </a>
-            </motion.div>
-          </motion.div>
+            </Motion.div>
+          </Motion.div>
         </AnimatePresence>
 
         {/* Slide Indicators */}
@@ -142,7 +142,7 @@ export default function HomeHero() {
               className="group relative focus:outline-none"
               aria-label={`Go to slide ${idx + 1}`}
             >
-              <motion.div
+              <Motion.div
                 className={`h-2 rounded-full transition-all duration-500 ${
                   currentSlide === idx
                     ? "w-12 bg-gradient-to-r from-rose-400 to-pink-500"
