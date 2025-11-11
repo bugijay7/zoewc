@@ -29,7 +29,7 @@ export default function HomeHero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 2000);
     return () => clearInterval(interval);
   }, [slides.length]);
 
@@ -47,7 +47,7 @@ export default function HomeHero() {
     },
     exit: {
       opacity: 0,
-      transition: { duration: 0.2, ease: "easeIn" },
+      transition: { duration: 0.5 },
     },
   };
 
@@ -57,7 +57,7 @@ export default function HomeHero() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.2,
+        duration: 0.7,
         ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
