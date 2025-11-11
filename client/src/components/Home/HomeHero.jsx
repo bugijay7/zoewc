@@ -40,14 +40,14 @@ export default function HomeHero() {
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.2,
         ease: "easeOut",
         staggerChildren: 0.2,
       },
     },
     exit: {
       opacity: 0,
-      transition: { duration: 0.5 },
+      transition: { duration: 0.2, ease: "easeIn" },
     },
   };
 
@@ -57,7 +57,7 @@ export default function HomeHero() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.7,
+        duration: 0.2,
         ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
