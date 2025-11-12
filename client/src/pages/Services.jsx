@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import worshipImg from "../assets/her01.jpg";
+import worshipImg from "../assets/service1.jpeg";
 
 function Services() {
   return (

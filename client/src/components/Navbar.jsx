@@ -24,7 +24,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 max-w-[100vw]">
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 min-w-screen">
       {/* Top Bar */}
       <motion.div
         initial={{ y: -50, opacity: 0 }}
@@ -83,12 +83,12 @@ export default function Navbar() {
                   } object-contain`}
                 />
                 <div className="flex flex-col">
-                  <span className={`font-bold text-primary transition-all duration-300 ${
+                  <span className={`font-bold text-secondary transition-all duration-300 ${
                     scrolled ? "text-base" : "text-lg"
                   } group-hover:text-blue-700`}>
                     Zoe Worship Centre Church
                   </span>
-                  <span className="text-xs text-primary italic group-hover:text-blue-500 transition-colors">
+                  <span className="text-xs text-secondary italic group-hover:text-blue-500 transition-colors">
                     A God Kind of Life
                   </span>
                 </div>
@@ -140,12 +140,7 @@ export default function Navbar() {
               </motion.li>
 
               <motion.li whileHover={{ y: -2 }}>
-                <Link
-                  to="/resources"
-                  className="text-primary font-semibold py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
-                >
-                  Resources
-                </Link>
+               
               </motion.li>
 
               {/* Ministries Dropdown */}
@@ -193,7 +188,7 @@ export default function Navbar() {
                   {[
                     { to: "/programs", label: "Programs" },
                     { to: "/events/eventList", label: "Events" },
-                    { to: "/contact", label: "Contact" },
+                    
                   ].map((item, idx) => (
                     <motion.li key={idx} whileHover={{ x: 5 }}>
                       <Link
@@ -206,6 +201,12 @@ export default function Navbar() {
                   ))}
                 </motion.ul>
               </li>
+               <Link
+                  to="/contact"
+                  className="text-primary font-semibold py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                >
+                  Contact
+                </Link>
             </ul>
 
             {/* Mobile Toggle */}

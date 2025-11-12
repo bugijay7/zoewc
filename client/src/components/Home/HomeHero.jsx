@@ -64,7 +64,7 @@ export default function HomeHero() {
   };
 
   return (
-    <div className="relative min-h-[80vh] md:min-h-[120vh] flex items-center justify-center overflow-hidden w-full">
+    <div className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
       {/* ✅ Background image */}
       <img
         src={heroBg}
@@ -99,14 +99,14 @@ export default function HomeHero() {
           >
             <Motion.h2
               variants={itemVariants}
-              className="text-2xl sm:text-4xl md:text-5xl font-light text-white mb-4 tracking-wide"
+              className="text-2xl sm:text-4xl md:text-xl font-light text-white mb-4 tracking-wide pt-10"
             >
               {slide.title}
             </Motion.h2>
 
             <Motion.h1
               variants={itemVariants}
-              className="text-3xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-pink-500 to-rose-500 mb-6 leading-tight"
+              className="text-3xl sm:text-3xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-pink-500 to-rose-500 mb-6 leading-tight"
             >
               {slide.state}
             </Motion.h1>
@@ -121,9 +121,9 @@ export default function HomeHero() {
             <Motion.div variants={itemVariants} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <a
                 href={slide.button.link}
-                className={`inline-block px-10 py-4 rounded-full text-lg font-medium transition-all duration-300 ${
+                className={`inline-block px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   slide.button.type === "primary"
-                    ? "bg-gradient-to-r from-rose-400 to-pink-500 text-white shadow-lg shadow-pink-300 hover:shadow-xl hover:shadow-pink-400"
+                    ? "bg-gradient-to-r from-rose-400 to-pink-500 text-white shadow-xs shadow-pink-300 hover:shadow-xs hover:shadow-pink-400"
                     : "bg-white text-rose-500 shadow-lg shadow-gray-200 hover:shadow-xl hover:bg-rose-50 border-2 border-rose-200"
                 }`}
               >
@@ -162,20 +162,19 @@ export default function HomeHero() {
       </div>
 
       {/* Decorative bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg
-          viewBox="0 0 1440 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full"
-        >
-          <path
-            d="M0 48L60 56C120 64 240 80 360 80C480 80 600 64 720 58.7C840 53 960 59 1080 64C1200 69 1320 75 1380 77.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V48Z"
-            fill="white"
-            fillOpacity="0.3"
-          />
-        </svg>
-      </div>
+     <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
+  <svg
+    viewBox="0 0 1440 120"
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-full block"
+  >
+    <path
+      d="M0 48L60 56C120 64 240 80 360 80C480 80 600 64 720 58.7C840 53 960 59 1080 64C1200 69 1320 75 1380 77.3L1440 80V130H0V48Z"
+      fill="white"
+    />
+  </svg>
+</div>
+
     </div>
   );
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import historyImg from "../../assets/history.jpeg";
-import cultureImg from "../../assets/culture.jpeg";
-import impactImg from "../../assets/impact.jpeg";
+import historyImg from "../../assets/history1.jpeg";
+import cultureImg from "../../assets/culture1.jpeg";
+import impactImg from "../../assets/impact1.jpeg";
 import leadershipImg from "../../assets/leadership.jpg";
-import faithImg from "../../assets/faith.jpg";
-import anthemImg from "../../assets/sunday-school.jpeg";
+import faithImg from "../../assets/faith1.jpeg";
+import anthemImg from "../../assets/anthem.jpeg";
 import canadaImg from "../../assets/canada.jpeg"; // ✅ Add image for Canada Assembly
 
 export default function KnowUs() {
