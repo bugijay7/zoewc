@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import departmentsBg from "../../assets/departments.jpeg";
+
 import intercessoryImg from "../../assets/intercessory.jpg";
 import worshipImg from "../../assets/praise.jpg";
 import evangelismImg from "../../assets/anagkazo.jpeg";
@@ -10,58 +12,88 @@ import usheringImg from "../../assets/ushering.jpeg";
 
 export default function SupportiveDepartments() {
   const departments = [
-    { name: "Intercessory Department", link: "/departments/supportive/intercessory", image: intercessoryImg },
-    { name: "Praise and Worship Department", link: "/departments/supportive/praiseAndWorship", image: worshipImg },
-    { name: "Anagkazo Department", link: "/departments/supportive/anagkazo", image: evangelismImg },
-    { name: "Media Department", link: "/departments/supportive/media", image: mediaImg },
-    { name: "Hospitality Department", link: "/departments/supportive/hospitality", image: hospitalityImg },
-    { name: "Ushering Protocol Department", link: "/departments/supportive/ushering", image: usheringImg },
+    { 
+      name: "Intercessory Department",
+      link: "/departments/supportive/intercessory",
+      image: intercessoryImg,
+      desc: "A dedicated team committed to prayer and spiritual support, interceding for the church, members, and community. Through continuous prayer meetings, counseling, and guidance, the Intercessory Department fosters a spiritually strong and united church body."
+    },
+    { 
+      name: "Praise and Worship Department",
+      link: "/departments/supportive/praiseAndWorship",
+      image: worshipImg,
+      desc: "Leading the church in heartfelt worship, this department creates an atmosphere of praise and adoration. Through music, song, and creative expression, they inspire the congregation to connect deeply with God and experience His presence in every service."
+    },
+    { 
+      name: "Anagkazo Department",
+      link: "/departments/supportive/anagkazo",
+      image: evangelismImg,
+      desc: "Focused on outreach and evangelism, the Anagkazo Department brings the message of Christ to the community. Through ministry programs, outreach events, and personal engagement, they equip members to share God’s love effectively."
+    },
+    { 
+      name: "Media Department",
+      link: "/departments/supportive/media",
+      image: mediaImg,
+      desc: "Responsible for capturing, streaming, and sharing church events, the Media Department ensures that the ministry’s message reaches both local and global audiences. They manage audio-visuals, live streaming, photography, and digital content production with excellence."
+    },
+    { 
+      name: "Hospitality Department",
+      link: "/departments/supportive/hospitality",
+      image: hospitalityImg,
+      desc: "A welcoming team dedicated to making every visitor and member feel at home. The Hospitality Department ensures smooth logistics, warm greetings, and attentive service during all church activities, creating a loving and inclusive atmosphere."
+    },
+    { 
+      name: "Ushering Protocol Department",
+      link: "/departments/supportive/ushering",
+      image: usheringImg,
+      desc: "Maintaining order, safety, and care during services, the Ushering Protocol Department guides members and guests with professionalism. They ensure that every service runs smoothly and that everyone experiences a respectful and organized environment."
+    },
   ];
 
   return (
-    <div className="bg-base-100 text-base-content font-montserrat pt-28 pb-20 px-6 md:px-20">
-      <div className="max-w-6xl mx-auto text-center">
+    <div
+      className="bg-base-100 text-base-content font-montserrat pt-28 pb-20 bg-cover bg-center relative"
+      style={{ backgroundImage: `url(${departmentsBg})` }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-white/40"></div>
+
+      <div className="relative max-w-[1200px] mx-auto text-left">
         {/* Header */}
-        <h1 className="text-3xl md:text-5xl font-bold mb-6 text-primary">
+        <h1 className="text-5xl md:text-9xl font-bold mb-6 text-primary pt-10 pl-10 md:pl-30 uppercase">
           Supportive Departments
         </h1>
-        <p className="text-sm md:text-base text-base-content/70 max-w-2xl mx-auto mb-12">
-          Meet our supportive departments that help keep the ministry thriving
-          and assist in every aspect of church life.
+        <p className="text-xs md:text-sm text-black font-bold mx-auto mb-12 pl-10 md:pl-30 ">
+          Meet our supportive departments that help keep the ministry thriving and assist in every aspect of church life.
         </p>
 
         {/* Department Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-1 gap-4 md:gap-8">
           {departments.map((dept, index) => (
             <div
               key={index}
-              className="bg-base-200 p-4 md:p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 flex flex-col items-center text-center"
+              className="max-w-[1200px] mx-auto transition duration-300 flex flex-col md:flex-row items-center text-left"
             >
               {/* Image */}
-              <div className="w-full h-40 md:h-56 rounded-xl overflow-hidden mb-4">
+              <div className="w-full md:w-[450px] h-[250px] flex justify-center mb-4 md:mb-0">
                 <img
                   src={dept.image}
                   alt={dept.name}
-                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
+                  className="w-[90%] md:w-[450px] h-full object-cover border border-primary hover:scale-105 transition-transform duration-300"
                 />
               </div>
 
               {/* Text */}
-              <h2 className="text-base md:text-xl font-semibold text-gray-800 mb-2">
-                {dept.name}
-              </h2>
-              <p className="text-xs md:text-sm text-gray-600 mb-4 px-2">
-                Explore the activities and impact of the {dept.name}. Engage,
-                serve, and grow in your faith through our community-focused
-                programs.
-              </p>
-
-              <Link
-                to={dept.link}
-                className="btn btn-primary btn-sm text-xs md:text-sm"
-              >
-                Learn More
-              </Link>
+              <div className="flex flex-col items-start justify-center text-left w-full md:w-[500px] p-4 md:p-5">
+                <h2 className="text-xl font-bold text-primary mb-2">{dept.name}</h2>
+                <p className="text-xs md:text-sm text-black md:font-semibold font-normal italic mb-4">{dept.desc}</p>
+                <Link
+                  to={dept.link}
+                  className="btn btn-primary btn-sm text-sm px-5"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
           ))}
         </div>
