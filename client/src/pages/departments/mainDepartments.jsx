@@ -56,22 +56,22 @@ export default function MainDepartments() {
 
       <div className="max-w-[1200px] mx-auto text-left">
         {/* Header */}
-        <h1 className="text-5xl md:text-9xl font-bold mb-6 text-primary pt-10  md:pt-10 uppercase md:pl-30 pl-10 ">
+        <h1 className="text-5xl md:text-9xl font-bold mb-6 text-primary pt-10  md:pt-10 uppercase pl-5 md:pl-30 ">
           The Main Departments
         </h1>
-        <p className="text-xs md:text-sm text-black font-bold mx-auto mb-12 pl-10  md:pl-30">
+        <p className="text-xs md:text-sm text-black font-bold mx-auto mb-12 pl-5  md:pl-30">
           Discover the heart of our ministry through the various departments serving our community in love, faith, and purpose.
         </p>
 
         {/* Department Grid */}
-      <div className="grid sm:grid-cols-2 md:grid-cols-1 gap-4 md:gap-8">
+      <div className="grid sm:grid-cols-2 md:grid-cols-1 gap-15 md:gap-8">
   {departments.map((dept, index) => (
     <div
       key={index}
       className="max-w-[1200px] mx-auto transition duration-300 flex flex-col md:flex-row items-center text-left"
     >
       {/* Image */}
-      <div className="w-full md:w-[450px] h-[250px] flex justify-center mb-4 md:mb-0">
+      <div className="w-full md:w-[450px] h-[250px] flex justify-center md:mb-0">
         <img
           src={dept.image}
           alt={dept.name}
@@ -85,7 +85,7 @@ export default function MainDepartments() {
         <p className="text-xs md:text-sm text-black md:font-semibold font-normal  italic mb-4">{dept.desc}</p>
         <Link
           to={dept.link}
-          className="btn btn-primary btn-sm text-sm px-5"
+          className="btn btn-primary btn-sm text-sm px-5 mb-12"
         >
           Learn More
         </Link>

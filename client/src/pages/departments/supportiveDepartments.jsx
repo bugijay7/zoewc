@@ -60,10 +60,10 @@ export default function SupportiveDepartments() {
 
       <div className="relative max-w-[1200px] mx-auto text-left">
         {/* Header */}
-        <h1 className="text-5xl md:text-9xl font-bold mb-6 text-primary pt-10 pl-10 md:pl-30 uppercase">
+        <h1 className="text-5xl md:text-9xl font-bold mb-6 text-primary pt-10 pl-5 md:pl-30 uppercase">
           Supportive Departments
         </h1>
-        <p className="text-xs md:text-sm text-black font-bold mx-auto mb-12 pl-10 md:pl-30 ">
+        <p className="text-xs md:text-sm text-black font-bold mx-auto mb-12 pl-5 md:pl-30 ">
           Meet our supportive departments that help keep the ministry thriving and assist in every aspect of church life.
         </p>
 
@@ -89,7 +89,7 @@ export default function SupportiveDepartments() {
                 <p className="text-xs md:text-sm text-black md:font-semibold font-normal italic mb-4">{dept.desc}</p>
                 <Link
                   to={dept.link}
-                  className="btn btn-primary btn-sm text-sm px-5"
+                  className="btn btn-primary btn-sm text-sm px-5 mb-12"
                 >
                   Learn More
                 </Link>

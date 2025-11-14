@@ -101,7 +101,7 @@ export default function Navbar() {
               <li className="relative group">
                 <motion.div
                   whileHover={{ y: -2 }}
-                  className="text-primary font-semibold cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                  className="text-primary font-semibold cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
                 >
                   Who We Are
                 </motion.div>
@@ -133,7 +133,7 @@ export default function Navbar() {
               <motion.li whileHover={{ y: -2 }}>
                 <Link
                   to="/services"
-                  className="text-primary font-semibold py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                  className="text-primary font-semibold py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
                 >
                   Sundays
                 </Link>
@@ -147,7 +147,7 @@ export default function Navbar() {
               <li className="relative group">
                 <motion.div
                   whileHover={{ y: -2 }}
-                  className="text-primary font-semibold cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                  className="text-primary font-semibold cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
                 >
                   Ministries
                 </motion.div>
@@ -176,7 +176,7 @@ export default function Navbar() {
               <li className="relative group">
                 <motion.div
                   whileHover={{ y: -2 }}
-                  className="text-primary font-semibold cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                  className="text-primary font-semibold cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
                 >
                   Connect
                 </motion.div>
@@ -260,24 +260,11 @@ export default function Navbar() {
                 { label: "Sundays", to: "/services" },
                 { label: "Resources", to: "/resources" },
                 {
-                  label: "Main Ministries",
+                  label: " Ministries",
                   items: [
-                    { label: "Men's Ministry", to: "/departments/main/men" },
-                    { label: "Women's Ministry", to: "/departments/main/women" },
-                    { label: "Youth's Ministry", to: "/departments/main/youth" },
-                    { label: "Sunday School Ministry", to: "/departments/main/sundaySchool" },
-                    { label: "Teen's Ministry", to: "/departments/main/teens" },
-                  ],
-                },
-                {
-                  label: "Supportive Ministries",
-                  items: [
-                    { label: "Anagkazo Ministry", to: "/departments/supportive/anagkazo" },
-                    { label: "Hospitality Ministry", to: "/departments/supportive/hospitality" },
-                    { label: "Intercessory Ministry", to: "/departments/supportive/intercessory" },
-                    { label: "Media Ministry", to: "/departments/supportive/media" },
-                    { label: "Praise & Worship Ministry", to: "/departments/supportive/praiseAndWorship" },
-                    { label: "Ushering Ministry", to: "/departments/supportive/ushering" },
+                    { label: "Main Ministry", to: "/departments/main" },
+                    { label: "Supportive Ministry", to: "/departments/supportive" },
+                   
                   ],
                 },
                 {
@@ -288,7 +275,27 @@ export default function Navbar() {
                     { label: "Contact", to: "/contact" },
                   ],
                 },
-                { label: "Give", to: "/donate" },
+               {   label: "Social Media",
+                     items: [
+                       {
+                         label: "Facebook",
+                         href: "https://www.facebook.com/ZoeWorshipCentreYouths",
+                       },
+                       {
+                         label: "Instagram",
+                         href: "https://www.instagram.com/zoewoshipcentrechurch",
+                       },
+                       {
+                         label: "TikTok",
+                         href: "https://www.tiktok.com/@zoeworshipcentrechurch?_t=ZM-90eMtbIA7fH&_r=1",
+                       },
+                       {
+                         label: "YouTube",
+                         href: "https://www.youtube.com/@ZoeWorshipCentreKinoo",
+                       },
+                     ],
+                    },
+                       { label: "Give", to: "/donate" },
               ].map((menu, idx) => (
                 <motion.div
                   key={idx}
