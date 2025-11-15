@@ -4,8 +4,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 // Load admin credentials from environment
-const ADMIN_EMAIL = process.env.ADMIN_EMAIL || "admin@zoeworship.org";
-const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "zoeAdmin123";
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL ;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD ;
 
 // Hash the password when the server starts
 const hashedPassword = bcrypt.hashSync(ADMIN_PASSWORD, 10);
