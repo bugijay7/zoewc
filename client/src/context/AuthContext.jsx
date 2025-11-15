@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AuthContext } from "./auth.js";
+import { AuthContext } from "./auth.jsx";
 
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
