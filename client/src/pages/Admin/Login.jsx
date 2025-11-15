@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import axios from "axios";
-import { useAuth } from "../../context/AuthContext.jsx"; 
+import { AuthContext } from "../../context/auth.jsx"; // ✅ import the context directly
 
 export default function Login() {
-  const { login } = useAuth(); // ✅ Access login() from context
+  const { login } = useContext(AuthContext); // ✅ useContext instead of useAuth
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -15,12 +15,12 @@ export default function Login() {
     setMessage("");
 
     try {
-      const res = await axios.post("https://zoewc-1.onrender.com/api/auth/login", {
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://zoewc-1.onrender.com/api/auth/login",
+        { email, password }
+      );
 
-      login(res.data.token); // ✅ Update context + save token automatically
+      login(res.data.token);
       setMessage("✅ Login successful! Redirecting...");
       setTimeout(() => {
         window.location.href = "/dashboard";
@@ -44,7 +44,6 @@ export default function Login() {
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Email */}
           <div className="form-control">
             <label className="label">
               <span className="label-text font-medium">Email</span>
@@ -59,7 +58,6 @@ export default function Login() {
             />
           </div>
 
-          {/* Password */}
           <div className="form-control">
             <label className="label">
               <span className="label-text font-medium">Password</span>
@@ -74,7 +72,6 @@ export default function Login() {
             />
           </div>
 
-          {/* Button */}
           <div className="form-control mt-6">
             <button
               type="submit"
@@ -85,7 +82,6 @@ export default function Login() {
             </button>
           </div>
 
-          {/* Message */}
           {message && (
             <p
               className={`text-center text-sm mt-4 ${
