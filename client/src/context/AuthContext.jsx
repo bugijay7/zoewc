@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { AuthContext } from "./auth.jsx"; // import context
+import { AuthContext } from "./auth.js"; // fixed path
 
 export function AuthProvider({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) setIsAuthenticated(true);
+    setLoading(false);
   }, []);
 
   const login = (token) => {
@@ -20,7 +22,7 @@ export function AuthProvider({ children }) {
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, login, logout, loading }}>
       {children}
     </AuthContext.Provider>
   );
