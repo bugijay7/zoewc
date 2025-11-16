@@ -169,9 +169,10 @@ export default function HomeHero() {
     className="w-full block"
   >
     <path
-      d="M0 48L60 56C120 64 240 80 360 80C480 80 600 64 720 58.7C840 53 960 59 1080 64C1200 69 1320 75 1380 77.3L1440 80V130H0V48Z"
-      fill="white"
-    />
+  d="M0 48L60 56C120 64 240 80 360 80C480 80 600 64 720 58.7C840 53 960 59 1080 64C1200 69 1320 75 1380 77.3L1440 80V130H0V48Z"
+  className="fill-white"
+/>
+
   </svg>
 </div>
 

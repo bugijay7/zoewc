@@ -1,11 +1,11 @@
 import React from 'react'
 import HomeHero from '../components/Home/HomeHero'
-import EventsPreview from '../components/Home/EventsPreview'
 import LatestSermon from '../components/Home/LatestSermon.jsx'
 import AboutConnectSection from '../components/Home/AboutConnectionSection.jsx'
 import SchoolYouthSection from '../components/Home/SchoolYouthSection.jsx'
 import EventsProgrammsPreview from '../components/Home/EventsProgrammsPreview.jsx'
 import MissionVisionPreview from '../components/Home/MissionVisionPreview.jsx'
+import ConnectPreview from '../components/Home/ConnectPreview.jsx'
 
 function HomePage() {
   return (
@@ -16,6 +16,7 @@ function HomePage() {
       <section data-aos="zoom-in"><EventsProgrammsPreview /></section>
       <section data-aos="fade-right"><SchoolYouthSection /></section>
       <section data-aos="fade-up"><LatestSermon /></section>
+       <section data-aos="fade-up"><ConnectPreview /></section>
 
     </div>
   )

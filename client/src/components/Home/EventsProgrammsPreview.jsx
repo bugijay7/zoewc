@@ -8,7 +8,7 @@ export default function EventsProgramsSection() {
       
       {/* 🔹 Programs Section (with blurred dark bg) */}
       <div
-        className="w-full md:w-1/2 relative overflow-hidden flex flex-col justify-center py-20 px-6 md:px-12 text-left md:text-right"
+        className="w-full md:w-1/2 relative overflow-hidden flex flex-col justify-center py-20 px-6 md:px-12 text-left md:text-right "
       >
         {/* Background Image with Dark Overlay */}
         <div
@@ -42,7 +42,7 @@ export default function EventsProgramsSection() {
       </div>
 
       {/* 🔹 Events Section (solid bg-secondary) */}
-      <div className="w-full md:w-1/2 bg-secondary text-base-content flex flex-col justify-center py-20 px-6 md:px-12 text-left md:text-right">
+      <div className="w-full md:w-1/2 bg-primary  flex flex-col justify-center py-20 px-6 md:px-12 text-left md:text-right text-white ">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-2xl md:text-4xl font-extrabold mb-6 uppercase">
             Events
@@ -54,7 +54,7 @@ export default function EventsProgramsSection() {
           </p>
           <Link
             to="/events/eventList"
-            className="px-4 text-xs md:text-base text-primary font-semibold uppercase tracking-wide underline underline-offset-8"
+            className="px-4 text-xs md:text-base text-secondary font-semibold uppercase tracking-wide underline underline-offset-8"
           >
             Browse Events →
           </Link>

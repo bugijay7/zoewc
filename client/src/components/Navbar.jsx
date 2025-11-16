@@ -83,12 +83,12 @@ export default function Navbar() {
                   } object-contain`}
                 />
                 <div className="flex flex-col">
-                  <span className={`font-bold text-secondary transition-all duration-300 ${
+                  <span className={`font-bold text-black transition-all duration-300 ${
                     scrolled ? "text-base" : "text-lg"
-                  } group-hover:text-blue-700`}>
+                  } group-hover:text-black`}>
                     Zoe Worship Centre Church
                   </span>
-                  <span className="text-xs text-secondary italic group-hover:text-blue-500 transition-colors">
+                  <span className="text-xs text-black italic group-hover:text-blue-500 transition-colors">
                     A God Kind of Life
                   </span>
                 </div>

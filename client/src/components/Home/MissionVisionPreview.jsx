@@ -3,7 +3,7 @@ import { FaChurch, FaBullseye, FaEye } from "react-icons/fa";
 
 export default function MissionVisionPreview() {
   return (
-    <section className="md:py-8  py-5 px-6 md:px-12 bg-base-100 text-base-content text-center max-w-[1400px] mx-auto">
+    <section className="md:py-8  py-5 px-6 md:px-12  text-base-content text-center max-w-[1400px] mx-auto">
       <div className="max-w-5xl mx-auto">
         {/* 🔹 Intro */}
         <div className="flex flex-col items-center mb-6">

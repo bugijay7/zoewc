@@ -7,7 +7,7 @@ export default function SchoolYouthSection() {
     <section className="flex flex-col md:flex-row items-stretch max-w-[1400px] mx-auto bg-base-100 text-base-content overflow-hidden">
       
       {/* 🔹 Sunday School Section */}
-      <div className="w-full md:w-1/2 bg-secondary py-20 px-6 md:px-12 flex flex-col justify-center text-center md:text-left">
+      <div className="w-full md:w-1/2 bg-primary py-20 px-6 md:px-12 flex flex-col justify-center text-center md:text-left text-white">
         <h1 className="text-2xl md:text-4xl font-extrabold uppercase mb-3">
           Zoe Sunday School
         </h1>
@@ -24,7 +24,7 @@ export default function SchoolYouthSection() {
 
         <Link
           to="/departments/main/sundaySchool"
-          className="px-4 text-xs md:text-base text-primary font-semibold uppercase tracking-wide underline underline-offset-8"
+          className="px-4 text-xs md:text-base text-secondary font-semibold uppercase tracking-wide underline underline-offset-8"
         >
           Sunday School at Zoe →
         </Link>
