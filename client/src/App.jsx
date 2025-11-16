@@ -163,7 +163,12 @@ function App() {
         {/* 🔹 Admin Dashboard Routes (with AdminNavbar) */}
 
 
-          <Route element={<ProtectedRoute> <AdminLayout /> </ProtectedRoute>  }>
+          <Route element={
+  <ProtectedRoute>
+    <AdminLayout />
+  </ProtectedRoute>
+}>
+
           <Route path="/dashboard" element={<AdminDashboard />} />
           <Route path="/dashboard/create-event" element={<CreateEvent />} />
           <Route path="/dashboard/manage-events" element={<ManageEvent />} />

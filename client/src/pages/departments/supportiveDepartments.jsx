@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 import departmentsBg from "../../assets/departments.jpeg";
 
-import intercessoryImg from "../../assets/intercessory.jpg";
+import intercessoryImg from "../../assets/intercessory.jpeg";
 import worshipImg from "../../assets/praise.jpg";
 import evangelismImg from "../../assets/anagkazo.jpeg";
-import mediaImg from "../../assets/media.jpg";
+import mediaImg from "../../assets/media.jpeg";
 import hospitalityImg from "../../assets/hospitality.jpeg";
-import usheringImg from "../../assets/ushering.jpeg";
+import usheringImg from "../../assets/usher1.jpg";
 
 export default function SupportiveDepartments() {
   const departments = [

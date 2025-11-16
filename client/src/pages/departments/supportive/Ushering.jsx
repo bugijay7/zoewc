@@ -1,5 +1,5 @@
 import React from "react";
-import usheringImg from "../../../assets/ushering.jpeg";
+import usheringImg from "../../../assets/usher1.jpg";
 
 export default function Ushering() {
   return (

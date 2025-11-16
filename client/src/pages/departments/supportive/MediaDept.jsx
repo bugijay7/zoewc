@@ -1,5 +1,5 @@
 import React from "react";
-import mediaImg from "../../../assets/medias.jpg";
+import mediaImg from "../../../assets/media.jpeg";
 
 export default function MediaDept() {
   return (

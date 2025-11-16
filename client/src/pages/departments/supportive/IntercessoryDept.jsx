@@ -1,5 +1,5 @@
 import React from "react";
-import intercessoryImg from "../../../assets/hero.jpg";
+import intercessoryImg from "../../../assets/intercessory.jpeg";
 
 export default function IntercessoryDept() {
   return (
