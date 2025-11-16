@@ -1,11 +1,11 @@
 import React from "react";
-import usheringImg from "../../../assets/usher1.jpg";
+import usheringImg from "../../../assets/usher1.jpeg";
 
 export default function Ushering() {
   return (
     <section className="w-full max-w-[1400px] pt-20 md:pt-50 mx-auto flex flex-col">
       {/* Top Section - Image */}
-      <div className="w-full h-auto md:h-[50vh] overflow-hidden">
+      <div className="w-full h-auto md:h-[60vh] overflow-hidden">
         <img
           src={usheringImg}
           alt="Ushering & Protocol Department"
