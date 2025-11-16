@@ -31,7 +31,7 @@ export default function AboutConnectSection() {
 
      {/* 🔹 About Section with Image Background */}
       <div
-        className="w-full md:w-1/2 bg-cover bg-center relative flex items-center justify-end px-6 md:px-12"
+        className="w-full md:w-1/2 bg-cover bg-center relative py-20 flex items-center justify-end px-6 md:px-12"
         style={{ backgroundImage: `url(${connectBg})` }}
       >
         <div className="absolute inset-0 bg-black/40"></div>
