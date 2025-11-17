@@ -1,6 +1,7 @@
 import express from "express";
 import upload from "../middlewares/upload.js";
 import Event from "../models/eventModel.js";
+import { v2 as cloudinary } from "cloudinary";
 
 const router = express.Router();
 
@@ -13,10 +14,9 @@ router.post("/", upload.single("image"), async (req, res) => {
       return res.status(400).json({ message: "Image is required" });
     }
 
-    // Cloudinary upload response is stored in req.file
     const imageData = {
-      url: req.file.path,       // Cloudinary image URL
-      public_id: req.file.filename, // Cloudinary public ID
+      url: req.file.path,
+      public_id: req.file.filename,
     };
 
     const event = new Event({
@@ -46,6 +46,30 @@ router.get("/", async (req, res) => {
     res.json(events);
   } catch (error) {
     console.error("Error fetching events:", error);
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
+// DELETE EVENT
+router.delete("/:id", async (req, res) => {
+  try {
+    const event = await Event.findById(req.params.id);
+
+    if (!event) {
+      return res.status(404).json({ message: "Event not found" });
+    }
+
+    // Delete image from Cloudinary
+    if (event.image?.public_id) {
+      await cloudinary.uploader.destroy(event.image.public_id);
+    }
+
+    await Event.findByIdAndDelete(req.params.id);
+
+    res.json({ message: "Event deleted successfully" });
+
+  } catch (error) {
+    console.error("Error deleting event:", error);
     res.status(500).json({ message: "Server error" });
   }
 });
