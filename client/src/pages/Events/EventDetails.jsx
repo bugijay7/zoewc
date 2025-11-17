@@ -65,10 +65,14 @@ export default function EventDetails() {
           {/* 🖼️ Image */}
           <div className="flex-shrink-0 w-[300px] h-auto overflow-hidden shadow-md">
             <img
-              src={imageUrl}
-              alt={event.title}
-              className="object-cover w-full h-full"
-            />
+                    src={
+                      event.image?.url
+                        ? event.image.url
+                        : `https://zoewc-1.onrender.com/${event.image}`
+                    }
+                    alt={event.title}
+                    className="object-cover md:object-center object-top w-full h-auto "
+                  />
           </div>
 
           {/* 📅 Date */}
