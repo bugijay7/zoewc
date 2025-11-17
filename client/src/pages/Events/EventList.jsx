@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 export default function EventList() {
   const [events, setEvents] = useState([]);
@@ -92,12 +91,7 @@ export default function EventList() {
                       </span>
                     </div>
 
-                    <Link
-                      to={`/events/eventDetails?id=${event._id}`}
-                      className="text-primary font-medium hover:underline text-xs md:text-sm"
-                    >
-                      View Details →
-                    </Link>
+                    
                   </div>
                 </div>
               </div>
