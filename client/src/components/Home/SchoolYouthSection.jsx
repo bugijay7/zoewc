@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import youthBg from "../../assets/youth.jpeg"; // ✅ add your youth image here
 
 export default function SchoolYouthSection() {
+
+  
   return (
     <section className="flex flex-col md:flex-row items-stretch max-w-[1400px] mx-auto bg-base-100 text-base-content overflow-hidden">
       
