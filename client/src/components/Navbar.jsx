@@ -30,9 +30,8 @@ export default function Navbar() {
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className={`bg-primary text-white transition-all duration-300 ${
-          scrolled ? "py-1" : "py-2"
-        }`}
+        className="bg-primary text-white transition-all duration-300 py-2"
+          
       >
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-8 text-xs md:text-sm">
@@ -58,9 +57,7 @@ export default function Navbar() {
 
       {/* Main Navbar */}
       <div
-        className={`backdrop-blur-md bg-white/95 shadow-lg transition-all duration-300 ${
-          scrolled ? "py-2" : "py-4"
-        }`}
+        className="backdrop-blur-md bg-white/95 shadow-lg transition-all duration-300 py-4"
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
@@ -83,7 +80,7 @@ export default function Navbar() {
                   } object-contain`}
                 />
                 <div className="flex flex-col">
-                  <span className={`font-bold text-black transition-all duration-300 ${
+                  <span className={`font-bold text-primary transition-all duration-300 ${
                     scrolled ? "text-base" : "text-lg"
                   } group-hover:text-black`}>
                     Zoe Worship Centre Church
@@ -96,14 +93,14 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Menu */}
-            <ul className="hidden lg:flex items-center gap-8">
+            <ul className="hidden lg:flex items-center gap-5">
               {/* Who We Are Dropdown */}
               <li className="relative group">
                 <motion.div
                   whileHover={{ y: -2 }}
-                  className="text-primary font-semibold cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                  className="cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
                 >
-                  Who We Are
+                About
                 </motion.div>
                 <motion.ul
                   initial={{ opacity: 0, y: 10 }}
@@ -121,7 +118,7 @@ export default function Navbar() {
                     <motion.li key={idx} whileHover={{ x: 5 }}>
                       <Link
                         to={item.to}
-                        className="block px-4 py-2 text-primary hover:text-primary hover:bg-blue-50 rounded-md transition-all duration-200"
+                        className="block px-4 py-2  hover:bg-blue-50 rounded-md transition-all duration-200"
                       >
                         {item.label}
                       </Link>
@@ -133,7 +130,7 @@ export default function Navbar() {
               <motion.li whileHover={{ y: -2 }}>
                 <Link
                   to="/services"
-                  className="text-primary font-semibold py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                  className=" py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
                 >
                   Sundays
                 </Link>
@@ -147,7 +144,7 @@ export default function Navbar() {
               <li className="relative group">
                 <motion.div
                   whileHover={{ y: -2 }}
-                  className="text-primary font-semibold cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                  className="cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
                 >
                   Ministries
                 </motion.div>
@@ -176,7 +173,7 @@ export default function Navbar() {
               <li className="relative group">
                 <motion.div
                   whileHover={{ y: -2 }}
-                  className="text-primary font-semibold cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                  className="cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
                 >
                   Connect
                 </motion.div>
@@ -201,13 +198,24 @@ export default function Navbar() {
                   ))}
                 </motion.ul>
               </li>
-               <Link
+               
+            </ul>
+            
+
+            <button className="bg-primary py-2 px-4 rounded-sm">
+            <Link
                   to="/contact"
-                  className="text-primary font-semibold py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
+                  className=" py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
                 >
                   Contact
                 </Link>
-            </ul>
+                </button>
+
+
+
+
+
+
 
             {/* Mobile Toggle */}
             <motion.button
@@ -243,6 +251,12 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+
+
+
+
+
+
 
       {/* Mobile Menu */}
       <AnimatePresence>
