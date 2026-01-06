@@ -15,52 +15,64 @@ export default function AboutNav() {
   ];
 
   return (
-    <>
-      {/* Mobile: Grid-style buttons for better UI/UX */}
-<nav className="md:hidden bg-base-200 rounded-lg p-4 mt-10">
-  <div className="grid grid-cols-2 gap-2">
-    {links.map((link, i) => {
-      const isActive = location.pathname === link.to;
-      return (
-        <Link
-          key={i}
-          to={link.to}
-          className={`w-full text-center px-3 py-2 rounded-md text-sm font-medium transition duration-200 border ${
-            isActive
-              ? "bg-primary text-primary-content border-primary shadow-md"
-              : "bg-base-100 text-base-content border-base-300 hover:bg-base-300"
-          }`}
-        >
-          {link.label}
-        </Link>
-      );
-    })}
-  </div>
-</nav>
+    <aside className="w-full lg:w-72 lg:h-fit lg:sticky lg:top-24 mb-12 lg:mb-0 pt-20">
+      <div className="bg-white border border-zinc-100 p-2 lg:p-6 shadow-sm">
+        {/* Navigation Header - Subtle Hierarchy */}
+        <div className="hidden lg:block mb-8 px-4">
+          <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400 mb-2">
+            Section
+          </h3>
+          <p className="text-xl font-black uppercase tracking-tighter text-black">
+            Our <span className="text-pink-600">Story</span>
+          </p>
+          <div className="w-8 h-1 bg-amber-500 mt-2"></div>
+        </div>
 
-
-      {/* Desktop: Sidebar */}
-      <aside className="hidden md:flex flex-col bg-base-200 p-6 min-h-screen w-64 border-r border-base-300">
-        <h2 className="text-lg font-bold mb-6 text-primary">About Us</h2>
-        <nav className="flex flex-col gap-2">
+        {/* Links Container */}
+        <nav className="flex flex-row lg:flex-col overflow-x-auto lg:overflow-visible no-scrollbar">
           {links.map((link, i) => {
             const isActive = location.pathname === link.to;
+
             return (
               <Link
                 key={i}
                 to={link.to}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition duration-200 ${
-                  isActive
-                    ? "bg-primary text-primary-content shadow-md"
-                    : "hover:bg-base-300 text-base-content/80"
-                }`}
+                className={`
+                  relative flex items-center shrink-0 lg:shrink-1 px-6 py-4 lg:px-4 lg:py-5
+                  text-[11px] font-black uppercase tracking-[0.2em] transition-all duration-300
+                  ${
+                    isActive
+                      ? "text-black lg:bg-zinc-50"
+                      : "text-zinc-400 hover:text-black hover:bg-zinc-50/50"
+                  }
+                `}
               >
-                {link.label}
+                {/* Active Indicator Bar (Desktop: Left, Mobile: Bottom) */}
+                {isActive && (
+                  <>
+                    <span className="absolute left-0 top-0 lg:top-auto h-[2px] w-full lg:h-full lg:w-1 bg-pink-600 animate-pulse"></span>
+                    <span className="hidden lg:inline-block absolute right-4 text-amber-500 text-[8px]">
+                      ●
+                    </span>
+                  </>
+                )}
+
+                <span className="relative z-10">
+                  {link.label}
+                </span>
               </Link>
             );
           })}
         </nav>
-      </aside>
-    </>
+
+        {/* Decorative Divider for Desktop */}
+        <div className="hidden lg:block mt-8 px-4">
+          <div className="h-[1px] w-full bg-zinc-100 mb-6"></div>
+          <p className="text-[9px] text-zinc-400 italic font-serif leading-relaxed">
+            Discover the God kind of life through our journey.
+          </p>
+        </div>
+      </div>
+    </aside>
   );
 }

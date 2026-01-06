@@ -59,7 +59,7 @@ export default function Messages() {
         <div className="text-center text-gray-500">No messages yet.</div>
       ) : (
         <div className="overflow-x-auto">
-          <table className="table w-full bg-gray-200 shadow-md rounded-lg">
+          <table className="table w-full bg-white shadow-md rounded-lg">
             <thead className="bg-base-300 text-base font-semibold">
               <tr>
                 <th>Name</th>

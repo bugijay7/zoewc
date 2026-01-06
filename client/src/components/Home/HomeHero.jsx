@@ -35,7 +35,49 @@ export default function HomeHero() {
     },
   ];
 
-  
+   const [sermons, setSermons] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const fetchLatestSermons = async () => {
+      try {
+        const response = await axios.get("https://zoewc-1.onrender.com/api/sermons");
+        const sorted = response.data.sort(
+          (a, b) => new Date(b.date) - new Date(a.date)
+        );
+        setSermons(sorted.slice(0, 3)); // ✅ show 3 latest sermons
+      } catch (err) {
+        console.error("Error fetching sermons:", err);
+        setError("Failed to load sermons. Please try again later.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchLatestSermons();
+  }, []);
+
+  if (loading)
+    return (
+      <div className="flex justify-center items-center min-h-[50vh] bg-base-200">
+        <p className="text-base-content">Loading sermons...</p>
+      </div>
+    );
+
+  if (error)
+    return (
+      <div className="flex justify-center items-center min-h-[50vh] bg-base-200 text-error">
+        <p>{error}</p>
+      </div>
+    );
+
+  if (sermons.length === 0)
+    return (
+      <div className="flex justify-center items-center min-h-[50vh] bg-base-200 text-base-content">
+        <p>No sermons available yet.</p>
+      </div>
+    );
 
 
 
@@ -85,7 +127,7 @@ export default function HomeHero() {
       <div className="absolute bottom-6 left-6 z-20">
         <Link
           to="/events/eventList"
-          className="btn btn-outline btn-secondary text-white border-white hover:bg-gray-200 hover:text-black transition-all"
+          className="btn btn-outline btn-secondary text-white border-white hover:bg-white hover:text-black transition-all"
         >
           View Events
         </Link>

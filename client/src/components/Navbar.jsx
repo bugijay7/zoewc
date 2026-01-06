@@ -53,7 +53,7 @@ export default function Navbar() {
       </motion.div>
 
       {/* Main Navbar */}
-      <div className={`transition-all duration-300 ${scrolled ? "bg-gray-200/95 backdrop-blur-md py-3" : "bg-gray-200 py-5"}`}>
+      <div className={`transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur-md py-3" : "bg-white py-5"}`}>
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex justify-between items-center">
             {/* Logo */}
@@ -91,7 +91,7 @@ export default function Navbar() {
                 <motion.ul
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="absolute top-full left-0 mt-4 w-56 bg-gray-200 shadow-2xl border border-zinc-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]"
+                  className="absolute top-full left-0 mt-4 w-56 bg-white shadow-2xl border border-zinc-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]"
                 >
                   {[
                     { to: "/about/KnowUs", label: "About Us" },
@@ -121,7 +121,7 @@ export default function Navbar() {
                 <motion.ul
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="absolute top-full left-0 mt-4 w-64 bg-gray-200 shadow-2xl border border-zinc-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]"
+                  className="absolute top-full left-0 mt-4 w-64 bg-white shadow-2xl border border-zinc-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]"
                 >
                   {[
                     { to: "/departments/main", label: "Main Departments" },
@@ -143,7 +143,7 @@ export default function Navbar() {
                 <motion.ul
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="absolute top-full left-0 mt-4 w-48 bg-gray-200 shadow-2xl border border-zinc-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]"
+                  className="absolute top-full left-0 mt-4 w-48 bg-white shadow-2xl border border-zinc-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]"
                 >
                   {[
                     { to: "/programs", label: "Programs" },
@@ -168,7 +168,7 @@ export default function Navbar() {
               whileTap={{ scale: 0.9 }}
               onClick={() => setOpenMenu(!openMenu)}
               aria-label="Toggle menu"
-              className="lg:hidden text-2xl text-black p-2 bg-gray-200"
+              className="lg:hidden text-2xl text-black p-2 bg-zinc-50"
             >
               <AnimatePresence mode="wait">
                 {openMenu ? (
@@ -203,7 +203,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "100vh" }}
             exit={{ opacity: 0, height: 0 }}
-            className="fixed inset-0 top-[70px] bg-gray-200 z-40 lg:hidden overflow-y-auto"
+            className="fixed inset-0 top-[70px] bg-white z-40 lg:hidden overflow-y-auto"
           >
             <div className="flex flex-col p-8 gap-6 h-full pb-20">
               {[

@@ -3,57 +3,97 @@ import AboutNav from "../../components/AboutNav";
 
 function Anthem() {
   return (
-    <div className="bg-base-200 text-base-content px-4 sm:px-6 md:px-10 py-10 md:py-12 font-serif leading-relaxed">
-      <div className="flex flex-col md:flex-row gap-6 md:gap-12 max-w-7xl mx-auto">
-        {/* 🧭 Sidebar */}
-        <div className="w-full md:w-1/4">
-          <AboutNav />
+    <div className="bg-white min-h-screen">
+      {/* HEADER SECTION */}
+      <div className="bg-black py-20 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col items-center">
+          <div className="inline-block px-4 py-1 bg-zinc-900 border-l-4 border-pink-600 mb-6">
+            <span className="text-pink-600 text-xs font-black uppercase tracking-[0.4em]">Our Declaration</span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-black text-white uppercase tracking-tighter text-center">
+            The Zoe <span className="text-amber-500">Anthem</span>
+          </h1>
         </div>
+      </div>
 
-        {/* 📖 Main Content */}
-        <div className="flex-1 bg-base-100 shadow-lg rounded-2xl p-4 sm:p-6 md:mt-15">
-          {/* 🕊️ Title */}
-          <div className="text-left md:text-left mb-6 md:mb-10">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-medium border-b-4 border-primary inline-block pb-2">
-              Our Anthem
-            </h1>
+      <div className="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+        <div className="flex flex-col lg:flex-row gap-16">
+          
+          {/* SIDEBAR NAVIGATION */}
+          <div className="lg:w-1/4">
+            <AboutNav />
           </div>
 
-          {/* 🎶 Content */}
-          <div className="space-y-4 sm:space-y-5 md:space-y-6 text-left text-sm sm:text-base md:text-lg">
-            <p>
-              <span className="font-medium">We are Zoe family and one in Christ;</span>
-              <br />
-              We live in the realm of the Divine Book: <em>The Bible</em>;
-              <br />
-              Yes, it is the realm of the Higher Life,
-              <br />
-              Walking from verse to verse, from chapter to chapter;
-              <br />
-              From book to book, and from testament to testament.
-            </p>
+          {/* MAIN CONTENT AREA */}
+          <div className="lg:w-3/4 space-y-20">
+            
+            {/* ANTHEM POETRY SECTION */}
+            <section className="relative p-8 md:p-16 bg-zinc-50 border border-zinc-100 rounded-sm overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-10">
+                <span className="text-9xl font-black italic select-none">“</span>
+              </div>
+              
+              <div className="relative z-10 text-center space-y-6">
+                <p className="text-xl md:text-2xl leading-relaxed text-black font-light italic font-serif">
+                  <strong className="text-pink-600 font-bold not-italic">We are Zoe family and one in Christ;</strong>
+                  <br />
+                  We live in the realm of the Divine Book: <em className="text-amber-600">The Bible</em>;
+                  <br />
+                  Yes, it is the realm of the Higher Life,
+                  <br />
+                  Walking from verse to verse, from chapter to chapter;
+                  <br />
+                  From book to book, and from testament to testament.
+                </p>
+                <div className="w-16 h-1 bg-pink-600 mx-auto mt-8"></div>
+              </div>
+            </section>
 
-            <h2 className="text-base sm:text-lg md:text-2xl font-medium mb-1 text-primary">Our Vision</h2>
-            <p>We have a Christ-like vision — we win, train, and send to win.</p>
+            {/* VISION & MISSION GRID */}
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="card bg-white border border-zinc-100 shadow-sm p-8 rounded-none group hover:border-amber-500 transition-colors duration-500">
+                <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400 mb-4">Our Vision</h2>
+                <p className="text-xl font-bold text-black uppercase tracking-tight">
+                  We have a Christ-like vision — we win, train, and send to win.
+                </p>
+              </div>
 
-            <h2 className="text-base sm:text-lg md:text-2xl font-medium mb-1 text-primary">Our Mission</h2>
-            <p>To transform lives by the life and the love of Christ.</p>
-
-            <h2 className="text-base sm:text-lg md:text-2xl font-medium mb-1 text-primary">Our Core Values</h2>
-            <p>
-              Represented by <strong>FLOWERS</strong> — 
-              <span className="italic">
-                <br />
-                Faith, Love, Obedience, Wisdom, Enthusiasm, Relevance, and Service.
-              </span>
-            </p>
-
-            <div className="mt-6 md:mt-10">
-              <h2 className="text-base sm:text-lg md:text-2xl font-medium text-primary">Our Motto</h2>
-              <p className="text-sm sm:text-base md:text-xl font-medium mt-1 italic">
-                “Christ is the reason for Life.”
-              </p>
+              <div className="card bg-white border border-zinc-100 shadow-sm p-8 rounded-none group hover:border-pink-600 transition-colors duration-500">
+                <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400 mb-4">Our Mission</h2>
+                <p className="text-xl font-bold text-black uppercase tracking-tight">
+                  To transform lives by the life and the love of Christ.
+                </p>
+              </div>
             </div>
+
+            {/* CORE VALUES - FLOWERS */}
+            <section className="bg-black text-white p-10 md:p-16 rounded-none">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
+                <h2 className="text-3xl font-black uppercase tracking-tighter">Our Core <span className="text-pink-600">Values</span></h2>
+                <span className="px-4 py-1 bg-amber-500 text-black text-[10px] font-black uppercase tracking-widest">F.L.O.W.E.R.S</span>
+              </div>
+              
+              <p className="text-2xl md:text-4xl font-light leading-snug tracking-tight text-zinc-300">
+                { "Faith, Love, Obedience, Wisdom, Enthusiasm, Relevance, and Service."
+                  .split(', ')
+                  .map((value, i, arr) => (
+                    <span key={value} className="inline-block">
+                      <span className="text-white font-bold">{value[0]}</span>
+                      {value.slice(1)}{i !== arr.length - 1 && <span className="text-zinc-700 mx-3">•</span>}
+                    </span>
+                  ))
+                }
+              </p>
+            </section>
+
+            {/* MOTTO CTA */}
+            <div className="text-center py-10">
+              <div className="divider before:bg-zinc-100 after:bg-zinc-100 uppercase text-[10px] font-black tracking-[0.4em] text-zinc-400 mb-10">Our Motto</div>
+              <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-black">
+                “Christ is the reason for <span className="text-amber-500 underline decoration-pink-600 underline-offset-8">Life</span>.”
+              </h2>
+            </div>
+
           </div>
         </div>
       </div>
