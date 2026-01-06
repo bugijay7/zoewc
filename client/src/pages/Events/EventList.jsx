@@ -17,91 +17,137 @@ export default function EventList() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#f8f5f0] pt-30 py-16 px-4 md:px-20 font-montserrat">
-      {/* Header */}
-      <div className="flex justify-between items-center max-w-6xl mx-auto mb-10">
-        <h1 className="text-base md:text-lg uppercase tracking-wide text-primary font-bold">
-        upcoming events
-        </h1>
-        <p className="text-gray-400 text-xs md:text-sm">October 2025</p>
-      </div>
+    <div className="bg-white min-h-screen font-sans antialiased">
+      {/* --- HEADER SECTION --- */}
+      <header className="pt-24 pb-16 px-6 max-w-7xl mx-auto border-b border-zinc-100">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div data-aos="fade-right">
+            <span className="text-pink-600 text-[10px] font-black uppercase tracking-[0.5em] mb-4 block">
+              Zoe Calendar
+            </span>
+            <h1 className="text-5xl md:text-7xl font-black text-black uppercase tracking-tighter leading-none">
+              Upcoming <br /> <span className="text-zinc-200">Events</span>
+            </h1>
+          </div>
+          <div data-aos="fade-left" className="text-right">
+            <p className="text-sm font-black uppercase tracking-widest text-zinc-400">
+              Season of <span className="text-amber-500">Manifestation</span>
+            </p>
+            <p className="text-xs text-zinc-300 tracking-tighter uppercase font-medium">October 2025</p>
+          </div>
+        </div>
+      </header>
 
-      {/* Event List */}
-      <div className="max-w-6xl mx-auto space-y-10">
-        {events.length > 0 ? (
-          events.map((event) => {
-            const date = new Date(event.date);
-            const day = date.getDate().toString().padStart(2, "0");
-            const month = date
-              .toLocaleString("default", { month: "short" })
-              .toUpperCase();
-            const year = date.getFullYear();
+      {/* --- EVENT LISTING --- */}
+      <main className="max-w-7xl mx-auto px-6 py-20">
+        <div className="grid grid-cols-1 gap-24">
+          {events.length > 0 ? (
+            events.map((event) => {
+              const date = new Date(event.date);
+              const day = date.getDate().toString().padStart(2, "0");
+              const month = date
+                .toLocaleString("default", { month: "short" })
+                .toUpperCase();
+              const year = date.getFullYear();
 
-            return (
-              <div
-                key={event._id}
-                className="flex flex-col md:flex-row bg-[#fffdf9] shadow-sm hover:shadow-md  overflow-hidden border border-gray-200 transition-all duration-300"
-              >
-                {/* Image */}
-                <div className="relative md:w-[260px] w-full h-auto md:h-auto flex-shrink-0">
-                  <img
-                    src={
-                      event.image?.url
-                        ? event.image.url
-                        : `https://zoewc-1.onrender.com/${event.image}`
-                    }
-                    alt={event.title}
-                    className="object-cover md:object-center object-top w-full h-auto "
-                  />
-                </div>
-
-                {/* Event Info */}
-                <div className="flex flex-col md:flex-row flex-1">
-                  {/* Date */}
-                  <div className="flex flex-row md:flex-col items-center justify-center px-4 py-2 md:px-6 md:py-4 bg-white border-b md:border-b-0 md:border-r border-gray-200">
-                    <span className="text-[10px] md:text-xs text-gray-500">
-                      {month}
-                    </span>
-                    <span className="text-xl md:text-3xl font-bold text-gray-800 mx-1 md:mx-0">
-                      {day}
-                    </span>
-                    <span className="text-[10px] md:text-xs text-gray-400">
-                      {year}
-                    </span>
+              return (
+                <div 
+                  key={event._id} 
+                  data-aos="fade-up"
+                  className="group grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center"
+                >
+                  {/* Image Column */}
+                  <div className="lg:col-span-5 relative overflow-hidden shadow-2xl">
+                    <div className="aspect-[4/3] w-full bg-zinc-100 relative">
+                      <img
+                        src={
+                          event.image?.url
+                            ? event.image.url
+                            : `https://zoewc-1.onrender.com/${event.image}`
+                        }
+                        alt={event.title}
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                      />
+                      {/* Decorative Label on Image */}
+                      <div className="absolute top-0 left-0 bg-black text-white p-3 text-[10px] font-black uppercase tracking-widest">
+                        ZWC Event
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Details */}
-                  <div className="flex-1 p-4 md:p-6 text-left">
-                    <h2 className="text-sm md:text-xl font-semibold text-gray-800 uppercase mb-2">
-                      {event.title}
-                    </h2>
-                    <p className="text-xs md:text-sm text-gray-600 mb-4 line-clamp-3">
-                      {event.description}
-                    </p>
-
-                    <div className="flex flex-wrap items-center text-[11px] md:text-sm text-gray-500 space-x-2 mb-2">
-                      <span>📍 Zoe Worship Centre</span>
-                      <span className="text-gray-400 hidden md:inline">|</span>
-                      <span>
-                        {date.toLocaleDateString(undefined, {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </span>
+                  {/* Event Info Column */}
+                  <div className="lg:col-span-7 flex flex-col md:flex-row gap-8 items-start">
+                    
+                    {/* Date Badge (Editorial Style) */}
+                    <div className="flex flex-col items-center min-w-[80px] border-l-2 border-amber-500 pl-6">
+                      <span className="text-zinc-400 text-xs font-black uppercase tracking-[0.2em]">{month}</span>
+                      <span className="text-5xl font-black text-black leading-none my-1">{day}</span>
+                      <span className="text-zinc-300 text-[10px] font-bold tracking-widest">{year}</span>
                     </div>
 
-                    
+                    {/* Details Container */}
+                    <div className="flex-1 space-y-6">
+                      <div className="space-y-2">
+                        <h2 className="text-3xl md:text-4xl font-black text-black uppercase tracking-tighter leading-tight group-hover:text-pink-600 transition-colors">
+                          {event.title}
+                        </h2>
+                        <div className="flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-zinc-400">
+                          <span className="flex items-center gap-1">
+                            <span className="text-amber-500">📍</span> Zoe Worship Centre
+                          </span>
+                          <span className="text-zinc-200">|</span>
+                          <span>
+                            {date.toLocaleDateString(undefined, {
+                              month: "long",
+                              day: "numeric",
+                              year: "numeric",
+                            })}
+                          </span>
+                        </div>
+                      </div>
+
+                      <p className="text-zinc-500 text-lg font-light leading-relaxed italic max-w-xl">
+                        {event.description}
+                      </p>
+
+                      <div className="pt-4">
+                        <button className="bg-black text-white px-8 py-3 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-pink-600 transition-all duration-300">
+                          Register Interest
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })
-        ) : (
-          <p className="text-center text-gray-500 text-sm md:text-base">
-            No events available.
-          </p>
-        )}
+              );
+            })
+          ) : (
+            /* --- EMPTY / LOADING STATE --- */
+            <div className="text-center py-40 border-2 border-dashed border-zinc-100">
+              <div className="inline-block w-12 h-12 border-4 border-zinc-100 border-t-amber-500 rounded-full animate-spin mb-6"></div>
+              <p className="text-zinc-300 text-[10px] font-black uppercase tracking-[0.5em]">
+                Seeking the next movement...
+              </p>
+            </div>
+          )}
+        </div>
+      </main>
+
+      {/* --- DECORATIVE MOTIF --- */}
+      <footer className="pb-20 px-6">
+        <div className="max-w-7xl mx-auto flex items-center justify-between opacity-20">
+          <div className="h-px flex-1 bg-zinc-300"></div>
+          <div className="px-10 text-[10px] font-black uppercase tracking-[0.6em] text-zinc-400 whitespace-nowrap">
+            Faith / Impact / Fellowship
+          </div>
+          <div className="h-px flex-1 bg-zinc-300"></div>
+        </div>
+      </footer >
+
+      {/* FOOTER MULTI-BAR */}
+      <div className="h-2 w-full flex">
+        <div className="flex-1 bg-amber-500"></div>
+        <div className="flex-[4] bg-black"></div>
+        <div className="flex-1 bg-pink-600"></div>
       </div>
     </div>
   );
