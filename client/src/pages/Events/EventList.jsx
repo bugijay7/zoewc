@@ -66,7 +66,7 @@ export default function EventList() {
                             : `https://zoewc-1.onrender.com/${event.image}`
                         }
                         alt={event.title}
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-1000"
+                        className="w-full h-full object-cover  duration-1000"
                       />
                       {/* Decorative Label on Image */}
                       <div className="absolute top-0 left-0 bg-black text-white p-3 text-[10px] font-black uppercase tracking-widest">
@@ -110,11 +110,7 @@ export default function EventList() {
                         {event.description}
                       </p>
 
-                      <div className="pt-4">
-                        <button className="bg-black text-white px-8 py-3 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-pink-600 transition-all duration-300">
-                          Register Interest
-                        </button>
-                      </div>
+                     
                     </div>
                   </div>
                 </div>
