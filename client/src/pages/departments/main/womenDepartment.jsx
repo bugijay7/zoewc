@@ -33,7 +33,7 @@ export default function WomenDepartment() {
               Women's <br />
               <span className="text-pink-600">Ministry</span>
             </h1>
-            <h2 className="text-xl font-bold uppercase tracking-tight text-zinc-400 mb-8 leading-tight">
+            <h2 className="text-xl font-bold uppercase tracking-tight text-zinc-900 mb-8 leading-tight">
               Empowering Women in <br /> Faith and Leadership
             </h2>
             <div className="w-24 h-2 bg-pink-600"></div>
@@ -79,9 +79,9 @@ export default function WomenDepartment() {
 
       {/* --- DECORATIVE MOTIF --- */}
       <section className="py-20 px-6 border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto flex justify-between items-center opacity-30">
+        <div className="max-w-7xl mx-auto flex justify-between items-center opacity-80">
             <div className="h-px flex-1 bg-zinc-200"></div>
-            <div className="px-10 text-[10px] font-black uppercase tracking-[0.8em] text-zinc-400 whitespace-nowrap">
+            <div className="px-10 text-[10px] font-black uppercase tracking-[0.8em] text-pink-900 whitespace-nowrap">
                 Virtue & Strength
             </div>
             <div className="h-px flex-1 bg-zinc-200"></div>

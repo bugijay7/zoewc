@@ -44,7 +44,7 @@ export default function TeensDepartment() {
             </div>
             
             <div className="mt-12 space-y-4">
-              <h2 className="text-xl font-bold uppercase tracking-tight text-zinc-400 leading-tight">
+              <h2 className="text-xl font-bold uppercase tracking-tight text-zinc-900 leading-tight">
                 Guiding Teens to Grow in <br /> Faith and Character
               </h2>
               <div className="h-1.5 w-32 bg-gradient-to-r from-black via-pink-600 to-amber-500"></div>
@@ -77,7 +77,7 @@ export default function TeensDepartment() {
                     <h4 className="text-xs font-black uppercase tracking-[0.2em] text-black mb-1">
                       {item.title}
                     </h4>
-                    <p className="text-[11px] text-zinc-400 uppercase tracking-wider font-medium">{item.desc}</p>
+                    <p className="text-[11px] text-zinc-900 uppercase tracking-wider font-medium">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -96,10 +96,10 @@ export default function TeensDepartment() {
 
       {/* --- MINIMALIST FOOTER DECOR --- */}
       <section className="pb-20 px-6">
-        <div className="max-w-7xl mx-auto flex justify-center opacity-20">
+        <div className="max-w-7xl mx-auto flex justify-center opacity-80">
             <div className="flex gap-12 items-center">
               <div className="w-12 h-px bg-zinc-400"></div>
-              <div className="text-[10px] font-black uppercase tracking-[0.5em] text-zinc-400">Faith / Wisdom / Confidence</div>
+              <div className="text-[10px] font-black uppercase tracking-[0.5em] text-zinc-900">Faith / Wisdom / Confidence</div>
               <div className="w-12 h-px bg-zinc-400"></div>
             </div>
         </div>

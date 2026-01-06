@@ -113,11 +113,11 @@ function HomePage() {
           </div>
           <div className="flex items-center gap-6 lg:w-1/3 group border-l border-zinc-800 lg:pl-12">
             <div className="p-3 rounded-full bg-zinc-900 group-hover:bg-amber-500 transition-all"><FaBullseye className="text-amber-500 text-xl group-hover:text-black" /></div>
-            <div><h3 className="text-zinc-400 text-[10px] font-black uppercase tracking-widest">Our Mission</h3><p className="text-white text-sm font-medium">We win, train, and send to win.</p></div>
+            <div><h3 className="text-zinc-900 text-[10px] font-black uppercase tracking-widest">Our Mission</h3><p className="text-white text-sm font-medium">We win, train, and send to win.</p></div>
           </div>
           <div className="flex items-center gap-6 lg:w-1/3 group border-l border-zinc-800 lg:pl-12">
             <div className="p-3 rounded-full bg-zinc-900 group-hover:bg-pink-600 transition-all"><FaEye className="text-pink-600 text-xl group-hover:text-black" /></div>
-            <div><h3 className="text-zinc-400 text-[10px] font-black uppercase tracking-widest">Our Vision</h3><p className="text-white text-sm font-medium">Transforming lives by Christ's love.</p></div>
+            <div><h3 className="text-zinc-900 text-[10px] font-black uppercase tracking-widest">Our Vision</h3><p className="text-white text-sm font-medium">Transforming lives by Christ's love.</p></div>
           </div>
         </div>
       </section>
@@ -146,13 +146,13 @@ function HomePage() {
             <div className="flex flex-col items-center space-y-6">
               <div className="w-12 h-1 bg-amber-500"></div>
               <h2 className="text-5xl font-black uppercase tracking-tighter">Zoe Sunday <span className="text-amber-500">School</span></h2>
-              <p className="text-zinc-400 font-bold uppercase tracking-[0.2em] text-xs">Every Sunday • 9:00 AM</p>
+              <p className="text-zinc-900 font-bold uppercase tracking-[0.2em] text-xs">Every Sunday • 9:00 AM</p>
               <Link to="/departments/main/sundaySchool" className="btn btn-md bg-transparent border-white text-white hover:bg-amber-500 hover:border-amber-500 rounded-none px-10 transition-all uppercase text-xs tracking-widest font-bold">Sunday School</Link>
             </div>
             <div className="flex flex-col items-center space-y-6">
               <div className="w-12 h-1 bg-pink-600"></div>
               <h2 className="text-5xl font-black uppercase tracking-tighter">Zoe Sunday <span className="text-pink-600">Youths</span></h2>
-              <p className="text-zinc-400 font-bold uppercase tracking-[0.2em] text-xs">Every Sunday • 9:00 AM</p>
+              <p className="text-zinc-900 font-bold uppercase tracking-[0.2em] text-xs">Every Sunday • 9:00 AM</p>
               <Link to="/departments/main/youth" className="btn btn-md bg-transparent border-white text-white hover:bg-pink-600 hover:border-pink-600 rounded-none px-10 transition-all uppercase text-xs tracking-widest font-bold">Sunday Youth</Link>
             </div>
           </div>
@@ -260,7 +260,7 @@ function HomePage() {
              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
                 {[ {Icon: FaFacebookF, label: 'Facebook', color: 'bg-pink-600'}, {Icon: FaInstagram, label: 'Instagram', color: 'bg-amber-500'}, {Icon: FaTiktok, label: 'TikTok', color: 'bg-pink-600'}, {Icon: FaYoutube, label: 'YouTube', color: 'bg-amber-500'} ].map((social, i) => (
                   <a key={i} href="#" className="flex flex-col items-center gap-3 group text-center">
-                    <div className={`p-4 rounded-full border border-zinc-100 group-hover:border-transparent group-hover:${social.color} group-hover:text-white transition-all text-zinc-400`}><social.Icon /></div>
+                    <div className={`p-4 rounded-full border border-zinc-100 group-hover:border-transparent group-hover:${social.color} group-hover:text-white transition-all text-zinc-900`}><social.Icon /></div>
                     <span className="text-[10px] font-bold uppercase tracking-widest">{social.label}</span>
                   </a>
                 ))}

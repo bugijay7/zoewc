@@ -128,7 +128,7 @@ export default function KnowUs() {
                 <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none">
                   Canada <br /> <span className="text-amber-500">Assembly</span>
                 </h2>
-                <p className="text-zinc-400 text-lg font-light leading-relaxed">
+                <p className="text-zinc-900 text-lg font-light leading-relaxed">
                   {canadaCard.desc}
                 </p>
                 <button className="btn btn-outline border-white text-white rounded-none hover:bg-white hover:text-black px-10 transition-all uppercase tracking-widest text-xs font-bold">
@@ -143,7 +143,7 @@ export default function KnowUs() {
       {/* --- FOOTER DECORATION --- */}
       <div className="py-20 text-center border-t border-zinc-100">
         <div className="max-w-2xl mx-auto px-6">
-          <p className="italic text-zinc-400 font-serif text-xl">
+          <p className="italic text-zinc-900 font-serif text-xl">
             "We are Zoe family and one in Christ; We live in the realm of the Divine Book: The Bible."
           </p>
         </div>

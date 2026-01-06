@@ -125,7 +125,7 @@ export default function FaithStatement() {
                     </p>
                     
                     {item.refs && (
-                      <p className="text-xs font-black italic font-serif text-zinc-400 tracking-wider">
+                      <p className="text-xs font-black italic font-serif text-zinc-900 tracking-wider">
                         {item.refs}
                       </p>
                     )}
@@ -136,7 +136,7 @@ export default function FaithStatement() {
 
             {/* CLOSING DECORATION */}
             <div className="mt-24 p-10 bg-zinc-50 border border-zinc-100 text-center">
-              <p className="text-zinc-400 italic font-serif text-lg">
+              <p className="text-zinc-900 italic font-serif text-lg">
                 "Rooted in the Word, Living the God Kind of Life."
               </p>
               <div className="mt-6 flex justify-center gap-2">

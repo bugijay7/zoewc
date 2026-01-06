@@ -47,7 +47,7 @@ export default function YouthDepartment() {
                 <span className="text-amber-500">Ministry</span>
               </h1>
             </div>
-            <h2 className="text-xl font-bold uppercase tracking-tight text-zinc-400 mb-8 max-w-sm leading-tight">
+            <h2 className="text-xl font-bold uppercase tracking-tight text-zinc-900 mb-8 max-w-sm leading-tight">
               Empowering Young Adults in Faith and Leadership
             </h2>
             <div className="flex gap-2">
@@ -80,7 +80,7 @@ export default function YouthDepartment() {
                   <h4 className="text-[10px] font-black uppercase tracking-widest text-black mb-1">
                     {item.title}
                   </h4>
-                  <p className="text-[10px] text-zinc-400 uppercase tracking-tighter">{item.desc}</p>
+                  <p className="text-[10px] text-zinc-900 uppercase tracking-tighter">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -96,8 +96,8 @@ export default function YouthDepartment() {
 
       {/* --- DECORATIVE MOTIF --- */}
       <section className="pb-20 px-6">
-        <div className="max-w-7xl mx-auto flex items-center gap-8 opacity-20">
-            <div className="text-[10px] font-black uppercase tracking-[1em] text-zinc-400 whitespace-nowrap">Passion / Purpose</div>
+        <div className="max-w-7xl mx-auto flex items-center gap-8 opacity-80">
+            <div className="text-[10px] font-black uppercase tracking-[1em] text-pink-900 whitespace-nowrap">Passion / Purpose</div>
             <div className="h-[1px] flex-1 bg-gradient-to-r from-zinc-300 to-transparent"></div>
         </div>
       </section>

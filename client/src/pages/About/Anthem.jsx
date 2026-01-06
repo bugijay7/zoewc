@@ -52,14 +52,14 @@ function Anthem() {
             {/* VISION & MISSION GRID */}
             <div className="grid md:grid-cols-2 gap-8">
               <div className="card bg-white border border-zinc-100 shadow-sm p-8 rounded-none group hover:border-amber-500 transition-colors duration-500">
-                <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400 mb-4">Our Vision</h2>
+                <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-900 mb-4">Our Vision</h2>
                 <p className="text-xl font-bold text-black uppercase tracking-tight">
                   We have a Christ-like vision — we win, train, and send to win.
                 </p>
               </div>
 
               <div className="card bg-white border border-zinc-100 shadow-sm p-8 rounded-none group hover:border-pink-600 transition-colors duration-500">
-                <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400 mb-4">Our Mission</h2>
+                <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-900 mb-4">Our Mission</h2>
                 <p className="text-xl font-bold text-black uppercase tracking-tight">
                   To transform lives by the life and the love of Christ.
                 </p>
@@ -88,7 +88,7 @@ function Anthem() {
 
             {/* MOTTO CTA */}
             <div className="text-center py-10">
-              <div className="divider before:bg-zinc-100 after:bg-zinc-100 uppercase text-[10px] font-black tracking-[0.4em] text-zinc-400 mb-10">Our Motto</div>
+              <div className="divider before:bg-zinc-100 after:bg-zinc-100 uppercase text-[10px] font-black tracking-[0.4em] text-zinc-900 mb-10">Our Motto</div>
               <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-black">
                 “Christ is the reason for <span className="text-amber-500 underline decoration-pink-600 underline-offset-8">Life</span>.”
               </h2>

@@ -45,7 +45,7 @@ function Culture() {
             
             {/* APEX PRINCIPLES SECTION */}
             <section className="mb-20" data-aos="fade-up">
-              <h2 className="text-xs font-black uppercase tracking-[0.3em] text-zinc-400 mb-8 flex items-center gap-4">
+              <h2 className="text-xs font-black uppercase tracking-[0.3em] text-zinc-900 mb-8 flex items-center gap-4">
                 The Apex Foundation <span className="h-px w-20 bg-zinc-100"></span>
               </h2>
               <p className="text-2xl md:text-3xl font-black uppercase tracking-tight leading-tight text-black mb-10">

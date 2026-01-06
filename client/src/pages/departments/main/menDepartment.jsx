@@ -3,7 +3,7 @@ import menImg from "../../../assets/mens-conference.jpeg";
 
 export default function MensDepartment() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-white min-h-screen pt-10">
       {/* --- HERO SECTION --- */}
       <section className="relative px-6 pt-12 lg:pt-20">
         <div className="max-w-7xl mx-auto overflow-hidden relative">
@@ -31,7 +31,7 @@ export default function MensDepartment() {
               Men's <br />
               <span className="text-amber-500">Ministry</span>
             </h1>
-            <h2 className="text-xl font-bold uppercase tracking-tight text-zinc-400 mb-8 leading-tight">
+            <h2 className="text-xl font-bold uppercase tracking-tight text-zinc-900 mb-8 leading-tight">
               Strengthening Men in <br /> Faith and Purpose
             </h2>
             <div className="w-24 h-2 bg-black"></div>
@@ -66,7 +66,7 @@ export default function MensDepartment() {
               ))}
             </div>
 
-            <p className="text-zinc-400 italic text-sm border-l-2 border-zinc-100 pl-6 py-2">
+            <p className="text-zinc-900 italic text-sm border-l-2 border-zinc-100 pl-6 py-2">
               Focusing on regular meetings, conferences, and outreach programs.
             </p>
           </div>
@@ -75,10 +75,10 @@ export default function MensDepartment() {
 
       {/* --- DECORATIVE SECTION --- */}
       <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 opacity-20">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 opacity-80">
             <div className="h-px bg-zinc-300 self-center"></div>
-            <div className="text-center font-black uppercase text-xs tracking-[0.5em] text-zinc-400">Iron Sharpens Iron</div>
-            <div className="text-center font-black uppercase text-xs tracking-[0.5em] text-zinc-400">Strength in Unity</div>
+            <div className="text-center font-black uppercase text-xs tracking-[0.5em] text-pink-900">Iron Sharpens Iron</div>
+            <div className="text-center font-black uppercase text-xs tracking-[0.5em] text-pink-900">Strength in Unity</div>
             <div className="h-px bg-zinc-300 self-center"></div>
         </div>
       </section>

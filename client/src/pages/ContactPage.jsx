@@ -96,7 +96,7 @@ export default function ContactPage() {
           {/* RIGHT COLUMN: THE FORM */}
           <div className="w-full lg:w-1/2 bg-white p-8 md:p-16">
             <div className="max-w-md mx-auto h-full flex flex-col justify-center" data-aos="fade-left">
-              <h3 className="text-xs font-black uppercase tracking-[0.3em] text-zinc-400 mb-8">
+              <h3 className="text-xs font-black uppercase tracking-[0.3em] text-zinc-900 mb-8">
                 Send a Message
               </h3>
               
@@ -108,7 +108,7 @@ export default function ContactPage() {
                 }}
               >
                 <div className="group relative border-b-2 border-zinc-100 focus-within:border-pink-600 transition-all duration-300 py-2">
-                  <label className="text-[10px] uppercase font-black text-zinc-400 block mb-1">Full Name</label>
+                  <label className="text-[10px] uppercase font-black text-zinc-900 block mb-1">Full Name</label>
                   <input 
                     type="text" 
                     name="name" 
@@ -119,7 +119,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="group relative border-b-2 border-zinc-100 focus-within:border-pink-600 transition-all duration-300 py-2">
-                  <label className="text-[10px] uppercase font-black text-zinc-400 block mb-1">Phone Number</label>
+                  <label className="text-[10px] uppercase font-black text-zinc-900 block mb-1">Phone Number</label>
                   <input 
                     type="tel" 
                     name="phone" 
@@ -130,7 +130,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="group relative border-b-2 border-zinc-100 focus-within:border-pink-600 transition-all duration-300 py-2">
-                  <label className="text-[10px] uppercase font-black text-zinc-400 block mb-1">Your Message</label>
+                  <label className="text-[10px] uppercase font-black text-zinc-900 block mb-1">Your Message</label>
                   <textarea
                     name="message"
                     placeholder="Tell us something..."

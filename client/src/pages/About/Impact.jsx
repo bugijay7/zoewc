@@ -69,7 +69,7 @@ export default function Impact() {
                   “And now, brethren, I commend you to God and to the Word of His grace,
                   which is able to build you up and give you an inheritance among all
                   those who are sanctified.” <br/>
-                  <span className="text-xs font-black uppercase tracking-widest not-italic text-zinc-400">— Acts 20:32</span>
+                  <span className="text-xs font-black uppercase tracking-widest not-italic text-zinc-900">— Acts 20:32</span>
                 </p>
 
                 <div className="p-8 bg-black text-white">
@@ -100,7 +100,7 @@ export default function Impact() {
               <p className="text-xl font-bold text-black uppercase tracking-tight max-w-md">
                 You are inspired to do the work of the Great Commission.
               </p>
-              <span className="badge badge-outline rounded-none p-4 font-black text-[10px] tracking-widest text-zinc-400">MATTHEW 28:19–20</span>
+              <span className="badge badge-outline rounded-none p-4 font-black text-[10px] tracking-widest text-zinc-900">MATTHEW 28:19–20</span>
             </div>
           </div>
         </div>

@@ -128,7 +128,7 @@ export default function Footer() {
               href="https://www.facebook.com/ZoeWorshipCentreYouths" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-zinc-200 text-zinc-400 hover:bg-black hover:text-white hover:border-black transition-all"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-zinc-200 text-zinc-900 hover:bg-black hover:text-white hover:border-black transition-all"
             >
               <FaFacebookF size={14} />
             </a>
@@ -136,7 +136,7 @@ export default function Footer() {
               href="https://www.instagram.com/zoewoshipcentrechurch" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-zinc-200 text-zinc-400 hover:bg-black hover:text-white hover:border-black transition-all"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-zinc-200 text-zinc-900 hover:bg-black hover:text-white hover:border-black transition-all"
             >
               <FaInstagram size={14} />
             </a>
@@ -144,7 +144,7 @@ export default function Footer() {
               href="https://www.tiktok.com/@zoeworshipcentrechurch" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-zinc-200 text-zinc-400 hover:bg-black hover:text-white hover:border-black transition-all"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-zinc-200 text-zinc-900 hover:bg-black hover:text-white hover:border-black transition-all"
             >
               <FaTiktok size={14} />
             </a>
@@ -152,7 +152,7 @@ export default function Footer() {
               href="https://www.youtube.com/@ZoeWorshipCentreKinoo" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="w-10 h-10 flex items-center justify-center rounded-full border border-zinc-200 text-zinc-400 hover:bg-black hover:text-white hover:border-black transition-all"
+              className="w-10 h-10 flex items-center justify-center rounded-full border border-zinc-200 text-zinc-900 hover:bg-black hover:text-white hover:border-black transition-all"
             >
               <FaYoutube size={14} />
             </a>

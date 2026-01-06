@@ -104,7 +104,7 @@ export default function History() {
             <div className="mt-32 p-12 bg-zinc-50 text-center border border-zinc-100 relative overflow-hidden" data-aos="zoom-in">
                 <div className="relative z-10">
                     <h2 className="text-4xl font-black uppercase tracking-tighter text-black mb-4">Ebenezer</h2>
-                    <p className="text-zinc-400 font-bold uppercase tracking-[0.4em] text-xs">"Thus far the Lord has helped us"</p>
+                    <p className="text-zinc-900 font-bold uppercase tracking-[0.4em] text-xs">"Thus far the Lord has helped us"</p>
                 </div>
                 {/* Visual Accent */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-12 bg-pink-600"></div>

@@ -146,7 +146,7 @@ export default function SupportiveDepartments() {
           <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-white mb-6 leading-none">
             Join a <span className="text-pink-600 underline decoration-white/20 underline-offset-8">Department</span> Today
           </h2>
-          <p className="text-zinc-400 text-lg font-light mb-10 max-w-xl mx-auto">
+          <p className="text-zinc-900 text-lg font-light mb-10 max-w-xl mx-auto">
             Discover your calling and serve alongside fellow believers. Every gift and talent has a place in God's kingdom.
           </p>
           

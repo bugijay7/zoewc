@@ -51,7 +51,7 @@ export default function Leadership() {
             {/* CHARACTERISTICS SECTION */}
             <div className="space-y-12">
               <div className="flex items-end justify-between border-b border-zinc-100 pb-4">
-                <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400">
+                <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-900">
                   The Five Pillars of Leadership
                 </h3>
               </div>
@@ -88,7 +88,7 @@ export default function Leadership() {
 
             {/* CLOSING TAGLINE */}
             <div className="mt-20 py-16 border-t border-zinc-100 text-center space-y-4">
-              <p className="text-zinc-400 text-xs font-black uppercase tracking-[0.5em]">
+              <p className="text-zinc-900 text-xs font-black uppercase tracking-[0.5em]">
                 Leading by Example
               </p>
               <h2 className="text-4xl font-black uppercase tracking-tighter">

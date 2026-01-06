@@ -85,12 +85,12 @@ export default function Services() {
                 className="flex items-center gap-6 p-6 border-b border-zinc-100 hover:bg-zinc-50 transition-all group"
                 data-aos="fade-up"
               >
-                <div className="w-12 h-12 shrink-0 flex items-center justify-center bg-zinc-100 text-zinc-400 group-hover:bg-amber-500 group-hover:text-white transition-all">
+                <div className="w-12 h-12 shrink-0 flex items-center justify-center bg-zinc-100 text-zinc-900 group-hover:bg-amber-500 group-hover:text-white transition-all">
                   {item.icon}
                 </div>
                 <div>
                   <h4 className="font-black uppercase tracking-tight text-sm text-black">{item.title}</h4>
-                  <p className="text-[10px] font-bold text-zinc-400 uppercase tracking-widest mt-1">{item.time}</p>
+                  <p className="text-[10px] font-bold text-zinc-900 uppercase tracking-widest mt-1">{item.time}</p>
                 </div>
               </div>
             ))}
@@ -109,7 +109,7 @@ export default function Services() {
           <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-white mb-6">
             Stay Connected <span className="text-pink-600">With Us</span>
           </h3>
-          <p className="text-zinc-400 text-lg mb-12 font-light max-w-2xl mx-auto">
+          <p className="text-zinc-900 text-lg mb-12 font-light max-w-2xl mx-auto">
             Join our services, follow our livestream, or reach out for prayer or support. 
             We’d love to walk with you on your spiritual journey.
           </p>

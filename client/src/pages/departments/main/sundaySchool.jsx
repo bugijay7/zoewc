@@ -57,7 +57,7 @@ export default function SundaySchoolSection() {
             </div>
             
             <div className="mt-12 space-y-4">
-              <h2 className="text-xl font-bold uppercase tracking-tight text-zinc-400 leading-tight">
+              <h2 className="text-xl font-bold uppercase tracking-tight text-zinc-900 leading-tight">
                 Building a Foundation of <br /> Faith and Abundant Life
               </h2>
               <div className="flex gap-1">
@@ -91,7 +91,7 @@ export default function SundaySchoolSection() {
                   <h4 className="text-[10px] font-black uppercase tracking-widest text-black mb-1">
                     {item.title}
                   </h4>
-                  <p className="text-[10px] text-zinc-400 uppercase tracking-tighter">{item.desc}</p>
+                  <p className="text-[10px] text-zinc-900 uppercase tracking-tighter">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -108,9 +108,9 @@ export default function SundaySchoolSection() {
 
       {/* --- DECORATIVE MOTIF --- */}
       <section className="pb-20 px-6">
-        <div className="max-w-7xl mx-auto flex items-center justify-between opacity-20">
+        <div className="max-w-7xl mx-auto flex items-center justify-between opacity-80">
             <div className="h-px flex-1 bg-zinc-300"></div>
-            <div className="px-10 text-[10px] font-black uppercase tracking-[0.6em] text-zinc-400 whitespace-nowrap">Grow / Love / Serve</div>
+            <div className="px-10 text-[10px] font-black uppercase tracking-[0.6em] text-pink-900 whitespace-nowrap">Grow / Love / Serve</div>
             <div className="h-px flex-1 bg-zinc-300"></div>
         </div>
       </section>

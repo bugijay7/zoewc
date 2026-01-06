@@ -122,7 +122,7 @@ export default function MainDepartments() {
      {/* --- FOOTER CTA --- */}
       <section className="bg-zinc-50 py-24 px-6 text-center border-t border-zinc-100">
         <div data-aos="fade-up" className="max-w-2xl mx-auto">
-          <h3 className="text-xs font-black uppercase tracking-[0.5em] text-zinc-400 mb-8 underline decoration-amber-500 underline-offset-8">Get Involved</h3>
+          <h3 className="text-xs font-black uppercase tracking-[0.5em] text-zinc-900 mb-8 underline decoration-amber-500 underline-offset-8">Get Involved</h3>
           <p className="text-3xl font-black text-black uppercase tracking-tighter mb-10">
             Find your place in the <span className="text-pink-600">Zoe family</span> today.
           </p>

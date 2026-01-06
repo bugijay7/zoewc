@@ -19,7 +19,7 @@ export default function AboutNav() {
       <div className="bg-white border border-zinc-100 p-2 lg:p-6 shadow-sm">
         {/* Navigation Header - Subtle Hierarchy */}
         <div className="hidden lg:block mb-8 px-4">
-          <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400 mb-2">
+          <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-900 mb-2">
             Section
           </h3>
           <p className="text-xl font-black uppercase tracking-tighter text-black">
@@ -43,7 +43,7 @@ export default function AboutNav() {
                   ${
                     isActive
                       ? "text-black lg:bg-zinc-50"
-                      : "text-zinc-400 hover:text-black hover:bg-zinc-50/50"
+                      : "text-zinc-900 hover:text-black hover:bg-zinc-50/50"
                   }
                 `}
               >
@@ -68,7 +68,7 @@ export default function AboutNav() {
         {/* Decorative Divider for Desktop */}
         <div className="hidden lg:block mt-8 px-4">
           <div className="h-[1px] w-full bg-zinc-100 mb-6"></div>
-          <p className="text-[9px] text-zinc-400 italic font-serif leading-relaxed">
+          <p className="text-[9px] text-zinc-900 italic font-serif leading-relaxed">
             Discover the God kind of life through our journey.
           </p>
         </div>
