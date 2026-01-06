@@ -45,7 +45,7 @@ export default function Visitors() {
           and valued. Our doors — and our hearts — are open to you. Come experience
           the joy, warmth, and presence of God with us.
         </p>
-        <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-xl max-w-xl italic">
+        <div className="bg-gray-200/20 backdrop-blur-sm px-6 py-3 rounded-xl max-w-xl italic">
   <p className="text-sm md:text-base font-medium">
     “Come to me with your ears wide open. Listen, and you will find life.”
   </p>

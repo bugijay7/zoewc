@@ -58,7 +58,7 @@ export default function EventList() {
                 {/* Event Info */}
                 <div className="flex flex-col md:flex-row flex-1">
                   {/* Date */}
-                  <div className="flex flex-row md:flex-col items-center justify-center px-4 py-2 md:px-6 md:py-4 bg-white border-b md:border-b-0 md:border-r border-gray-200">
+                  <div className="flex flex-row md:flex-col items-center justify-center px-4 py-2 md:px-6 md:py-4 bg-gray-200 border-b md:border-b-0 md:border-r border-gray-200">
                     <span className="text-[10px] md:text-xs text-gray-500">
                       {month}
                     </span>

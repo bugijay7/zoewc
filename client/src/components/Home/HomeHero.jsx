@@ -10,7 +10,7 @@ export default function HomeHero() {
     { id: 1,
       image: hero1,
       title: "The Year Of",
-      state: "Expansion By Faith",
+      state: "Burning and Shining Light",
       subtitle: "Isaiah 54:2",
       button: "Word of Welcome",
       link: "/new",
@@ -85,7 +85,7 @@ export default function HomeHero() {
       <div className="absolute bottom-6 left-6 z-20">
         <Link
           to="/events/eventList"
-          className="btn btn-outline btn-secondary text-white border-white hover:bg-white hover:text-black transition-all"
+          className="btn btn-outline btn-secondary text-white border-white hover:bg-gray-200 hover:text-black transition-all"
         >
           View Events
         </Link>

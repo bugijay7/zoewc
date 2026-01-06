@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
-import { motion, AnimatePresence } from "framer-motion"; // eslint-disable-line no-unused-vars
+import { motion, AnimatePresence } from "framer-motion";
 import Logo from "../assets/logo2.png";
 
 export default function Navbar() {
@@ -24,88 +24,74 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 min-w-screen">
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? "shadow-xl" : ""}`}>
       {/* Top Bar */}
       <motion.div
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-primary text-white transition-all duration-300 py-2"
-          
+        className="bg-black text-white py-2 px-6 md:px-12 border-b border-zinc-800 hidden sm:block"
       >
-        <div className="container mx-auto">
-          <div className="flex flex-wrap justify-center md:justify-end items-center gap-4 md:gap-8 text-xs md:text-sm">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-2 hover:text-blue-200 transition-colors"
-            >
-              <MdEmail className="text-base" />
-              <a href="mailto:zoeworshipcentrekinoo@gmail.com" className="hover:underline">
+        <div className="max-w-7xl mx-auto flex justify-between items-center text-[10px] md:text-xs tracking-[0.2em] uppercase font-medium">
+          <div className="flex gap-8">
+            <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2 group cursor-pointer">
+              <MdEmail className="text-amber-500 text-sm transition-colors group-hover:text-pink-600" />
+              <a href="mailto:zoeworshipcentrekinoo@gmail.com" className="hover:text-amber-500 transition-colors">
                 zoeworshipcentrekinoo@gmail.com
               </a>
             </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-2 hover:text-blue-200 transition-colors"
-            >
-              <MdPhone className="text-base" />
-              <span>+254 722 908 733</span>
+
+            <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-2 group">
+              <MdPhone className="text-amber-500 text-sm transition-colors group-hover:text-pink-600" />
+              <span className="group-hover:text-amber-500 transition-colors">+254 722 908 733</span>
             </motion.div>
+          </div>
+          <div className="hidden lg:block text-zinc-500 italic lowercase tracking-widest font-serif">
+            "A God Kind of Life"
           </div>
         </div>
       </motion.div>
 
       {/* Main Navbar */}
-      <div
-        className="backdrop-blur-md bg-white/95 shadow-lg transition-all duration-300 py-4"
-      >
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
+      <div className={`transition-all duration-300 ${scrolled ? "bg-gray-200/95 backdrop-blur-md py-3" : "bg-gray-200 py-5"}`}>
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="flex justify-between items-center">
             {/* Logo */}
-            <Link to="/" onClick={closeAllMenus}>
+            <Link to="/" onClick={closeAllMenus} className="flex-shrink-0">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
-                whileHover={{ scale: 1.05 }}
-                className="flex items-center gap-3 group"
+                whileHover={{ scale: 1.02 }}
+                className="flex items-center gap-4"
               >
                 <motion.img
                   whileHover={{ rotate: [0, -5, 5, 0] }}
                   transition={{ duration: 0.5 }}
                   src={Logo}
                   alt="Zoe Worship Centre Logo"
-                  className={`transition-all duration-300 ${
-                    scrolled ? "h-10 w-10" : "h-14 w-14"
-                  } object-contain`}
+                  className="h-12 md:h-14 w-auto object-contain"
                 />
-                <div className="flex flex-col">
-                  <span className={`font-bold text-primary transition-all duration-300 ${
-                    scrolled ? "text-base" : "text-lg"
-                  } group-hover:text-black`}>
-                    Zoe Worship Centre Church
-                  </span>
-                  <span className="text-xs text-black italic group-hover:text-blue-500 transition-colors">
-                    A God Kind of Life
-                  </span>
+
+                <div className="flex flex-col leading-tight">
+                  <span className="text-black font-bold text-lg md:text-xl tracking-tighter uppercase">Zoe Worship Centre</span>
+                  <span className="text-amber-600 text-[10px] uppercase tracking-[0.3em] font-semibold">A God Kind of Life</span>
                 </div>
               </motion.div>
             </Link>
 
             {/* Desktop Menu */}
-            <ul className="hidden lg:flex items-center gap-5">
-              {/* Who We Are Dropdown */}
-              <li className="relative group">
-                <motion.div
-                  whileHover={{ y: -2 }}
-                  className="cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
-                >
-                About
+            <ul className="hidden lg:flex items-center gap-10 text-[13px] font-bold uppercase tracking-widest text-black/70">
+              {/* About */}
+              <li className="relative group cursor-pointer">
+                <motion.div whileHover={{ y: -2 }} className="flex items-center gap-1 group-hover:text-black transition-colors">
+                  About <FaChevronDown className="text-[10px] text-amber-500" />
                 </motion.div>
+
                 <motion.ul
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="absolute left-0 top-full mt-2 bg-white rounded-lg shadow-2xl py-3 px-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100"
+                  className="absolute top-full left-0 mt-4 w-56 bg-gray-200 shadow-2xl border border-zinc-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]"
                 >
                   {[
                     { to: "/about/KnowUs", label: "About Us" },
@@ -115,114 +101,74 @@ export default function Navbar() {
                     { to: "/about/faithStatement", label: "Faith Statement" },
                     { to: "/about/history", label: "Our History" },
                   ].map((item, idx) => (
-                    <motion.li key={idx} whileHover={{ x: 5 }}>
-                      <Link
-                        to={item.to}
-                        className="block px-4 py-2  hover:bg-blue-50 rounded-md transition-all duration-200"
-                      >
-                        {item.label}
-                      </Link>
+                    <motion.li key={idx} whileHover={{ x: 5 }} className="py-2 border-b border-zinc-50 last:border-0">
+                      <Link to={item.to} className="hover:text-pink-600 transition-colors block text-[11px] tracking-widest">{item.label}</Link>
                     </motion.li>
                   ))}
                 </motion.ul>
               </li>
 
               <motion.li whileHover={{ y: -2 }}>
-                <Link
-                  to="/services"
-                  className=" py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
-                >
-                  Sundays
-                </Link>
+                <Link to="/services" className="hover:text-black transition-colors">Sundays</Link>
               </motion.li>
 
-              <motion.li whileHover={{ y: -2 }}>
-               
-              </motion.li>
-
-              {/* Ministries Dropdown */}
-              <li className="relative group">
-                <motion.div
-                  whileHover={{ y: -2 }}
-                  className="cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
-                >
-                  Ministries
+              {/* Ministries */}
+              <li className="relative group cursor-pointer">
+                <motion.div whileHover={{ y: -2 }} className="flex items-center gap-1 group-hover:text-black transition-colors">
+                  Ministries <FaChevronDown className="text-[10px] text-amber-500" />
                 </motion.div>
+
                 <motion.ul
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="absolute left-0 top-full mt-2 bg-white rounded-lg shadow-2xl py-3 px-2 min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100"
+                  className="absolute top-full left-0 mt-4 w-64 bg-gray-200 shadow-2xl border border-zinc-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]"
                 >
                   {[
                     { to: "/departments/main", label: "Main Departments" },
                     { to: "/departments/supportive", label: "Supportive Departments" },
                   ].map((item, idx) => (
-                    <motion.li key={idx} whileHover={{ x: 5 }}>
-                      <Link
-                        to={item.to}
-                        className="block px-4 py-2 text-primary hover:text-primary hover:bg-blue-50 rounded-md transition-all duration-200"
-                      >
-                        {item.label}
-                      </Link>
+                    <motion.li key={idx} whileHover={{ x: 5 }} className="py-2 border-b border-zinc-50 last:border-0">
+                      <Link to={item.to} className="hover:text-pink-600 transition-colors block text-[11px] tracking-widest">{item.label}</Link>
                     </motion.li>
                   ))}
                 </motion.ul>
               </li>
 
-              {/* Connect Dropdown */}
-              <li className="relative group">
-                <motion.div
-                  whileHover={{ y: -2 }}
-                  className="cursor-pointer py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-pink-600 after:to-pink-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
-                >
-                  Connect
+              {/* Connect */}
+              <li className="relative group cursor-pointer">
+                <motion.div whileHover={{ y: -2 }} className="flex items-center gap-1 group-hover:text-black transition-colors">
+                  Connect <FaChevronDown className="text-[10px] text-amber-500" />
                 </motion.div>
+
                 <motion.ul
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="absolute left-0 top-full mt-2 bg-white rounded-lg shadow-2xl py-3 px-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border border-gray-100"
+                  className="absolute top-full left-0 mt-4 w-48 bg-gray-200 shadow-2xl border border-zinc-100 p-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[60]"
                 >
                   {[
                     { to: "/programs", label: "Programs" },
                     { to: "/events/eventList", label: "Events" },
-                    
                   ].map((item, idx) => (
-                    <motion.li key={idx} whileHover={{ x: 5 }}>
-                      <Link
-                        to={item.to}
-                        className="block px-4 py-2 text-primary hover:text-primary hover:bg-blue-50 rounded-md transition-all duration-200"
-                      >
-                        {item.label}
-                      </Link>
+                    <motion.li key={idx} whileHover={{ x: 5 }} className="py-2 border-b border-zinc-50 last:border-0">
+                      <Link to={item.to} className="hover:text-pink-600 transition-colors block text-[11px] tracking-widest">{item.label}</Link>
                     </motion.li>
                   ))}
                 </motion.ul>
               </li>
-               
             </ul>
-            
 
-            <button className="bg-primary py-2 px-4 rounded-sm">
-            <Link
-                  to="/contact"
-                  className=" py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400 after:transition-all after:duration-300 hover:after:w-full hover:text-primary"
-                >
-                  Contact
-                </Link>
-                </button>
-
-
-
-
-
-
+            <div className="hidden lg:flex items-center gap-6">
+              <Link to="/contact" className="btn btn-md bg-black text-white hover:bg-amber-600 border-none rounded-none px-8 text-[12px] tracking-widest transition-all duration-300 shadow-lg hover:shadow-amber-500/20">
+                Contact
+              </Link>
+            </div>
 
             {/* Mobile Toggle */}
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setOpenMenu(!openMenu)}
-              className="lg:hidden text-2xl text-primary hover:text-primary transition-colors p-2"
               aria-label="Toggle menu"
+              className="lg:hidden text-2xl text-black p-2 bg-gray-200"
             >
               <AnimatePresence mode="wait">
                 {openMenu ? (
@@ -231,7 +177,6 @@ export default function Navbar() {
                     initial={{ rotate: -90, opacity: 0 }}
                     animate={{ rotate: 0, opacity: 1 }}
                     exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
                   >
                     <FaTimes />
                   </motion.div>
@@ -241,7 +186,6 @@ export default function Navbar() {
                     initial={{ rotate: 90, opacity: 0 }}
                     animate={{ rotate: 0, opacity: 1 }}
                     exit={{ rotate: -90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
                   >
                     <FaBars />
                   </motion.div>
@@ -252,33 +196,25 @@ export default function Navbar() {
         </div>
       </div>
 
-
-
-
-
-
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {openMenu && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
+            animate={{ opacity: 1, height: "100vh" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white/98 backdrop-blur-md shadow-2xl overflow-hidden"
+            className="fixed inset-0 top-[70px] bg-gray-200 z-40 lg:hidden overflow-y-auto"
           >
-            <div className="container mx-auto px-4 py-6 space-y-2 max-h-[70vh] overflow-y-auto">
+            <div className="flex flex-col p-8 gap-6 h-full pb-20">
               {[
                 { label: "Who we are", to: "/about/knowUs" },
                 { label: "Sundays", to: "/services" },
                 { label: "Resources", to: "/resources" },
                 {
-                  label: " Ministries",
+                  label: "Ministries",
                   items: [
                     { label: "Main Ministry", to: "/departments/main" },
                     { label: "Supportive Ministry", to: "/departments/supportive" },
-                   
                   ],
                 },
                 {
@@ -289,87 +225,67 @@ export default function Navbar() {
                     { label: "Contact", to: "/contact" },
                   ],
                 },
-               {   label: "Social Media",
-                     items: [
-                       {
-                         label: "Facebook",
-                         href: "https://www.facebook.com/ZoeWorshipCentreYouths",
-                       },
-                       {
-                         label: "Instagram",
-                         href: "https://www.instagram.com/zoewoshipcentrechurch",
-                       },
-                       {
-                         label: "TikTok",
-                         href: "https://www.tiktok.com/@zoeworshipcentrechurch?_t=ZM-90eMtbIA7fH&_r=1",
-                       },
-                       {
-                         label: "YouTube",
-                         href: "https://www.youtube.com/@ZoeWorshipCentreKinoo",
-                       },
-                     ],
-                    },
-                       { label: "Give", to: "/donate" },
+                {
+                  label: "Social Media",
+                  items: [
+                    { label: "Facebook", href: "https://www.facebook.com/ZoeWorshipCentreYouths" },
+                    { label: "Instagram", href: "https://www.instagram.com/zoewoshipcentrechurch" },
+                    { label: "TikTok", href: "https://www.tiktok.com/@zoeworshipcentrechurch" },
+                    { label: "YouTube", href: "https://www.youtube.com/@ZoeWorshipCentreKinoo" },
+                  ],
+                },
+                { label: "Give", to: "/donate" },
               ].map((menu, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ x: -20, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: idx * 0.05 }}
-                  className="border-b border-gray-100 last:border-0"
-                >
+                <motion.div key={idx} className="border-b border-zinc-100 pb-4">
                   {menu.items ? (
                     <>
                       <motion.button
-                        whileTap={{ scale: 0.98 }}
-                        onClick={() =>
-                          setOpenDropdown(openDropdown === idx ? null : idx)
-                        }
-                        className="w-full text-left px-4 py-3 font-semibold text-primary hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200 flex items-center justify-between"
+                        className="w-full flex justify-between items-center text-left text-lg font-bold uppercase tracking-widest text-black"
+                        onClick={() => setOpenDropdown(openDropdown === idx ? null : idx)}
                       >
                         {menu.label}
-                        <motion.span
-                          animate={{ rotate: openDropdown === idx ? 180 : 0 }}
-                          transition={{ duration: 0.3 }}
-                          className="text-sm"
-                        >
-                          ▼
-                        </motion.span>
+                        <FaChevronDown className={`text-sm transition-transform ${openDropdown === idx ? "rotate-180 text-pink-600" : "text-amber-500"}`} />
                       </motion.button>
+
                       <AnimatePresence>
                         {openDropdown === idx && (
                           <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="pl-4 overflow-hidden"
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            className="overflow-hidden flex flex-col gap-4 mt-4 pl-4 border-l-2 border-amber-500"
                           >
                             {menu.items.map((sub, subIdx) => (
-                              <motion.div
-                                key={subIdx}
-                                initial={{ x: -10, opacity: 0 }}
-                                animate={{ x: 0, opacity: 1 }}
-                                transition={{ delay: subIdx * 0.03 }}
-                              >
+                              sub.to ? (
                                 <Link
+                                  key={subIdx}
                                   to={sub.to}
                                   onClick={closeAllMenus}
-                                  className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-blue-50 rounded-md transition-all duration-200"
+                                  className="text-zinc-500 font-medium uppercase text-sm tracking-widest hover:text-pink-600 transition-colors"
                                 >
                                   {sub.label}
                                 </Link>
-                              </motion.div>
+                              ) : (
+                                <a
+                                  key={subIdx}
+                                  href={sub.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-zinc-500 font-medium uppercase text-sm tracking-widest hover:text-pink-600 transition-colors"
+                                >
+                                  {sub.label}
+                                </a>
+                              )
                             ))}
                           </motion.div>
                         )}
                       </AnimatePresence>
                     </>
                   ) : (
-                    <Link
-                      to={menu.to}
+                    <Link 
+                      to={menu.to} 
                       onClick={closeAllMenus}
-                      className="block px-4 py-3 font-semibold text-primary hover:text-primary hover:bg-blue-50 rounded-lg transition-all duration-200"
+                      className="text-lg font-bold uppercase tracking-widest text-black hover:text-amber-600 transition-colors block"
                     >
                       {menu.label}
                     </Link>

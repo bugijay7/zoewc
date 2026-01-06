@@ -34,7 +34,7 @@ export default function Services() {
               Sunday Services
             </li>
 
-            <li className="list-row items-center gap-4 p-4 hover:bg-white/10 transition-colors rounded-md">
+            <li className="list-row items-center gap-4 p-4 hover:bg-gray-200/10 transition-colors rounded-md">
               <div className="text-4xl font-thin tabular-nums">01</div>
               <div><Church className="w-10 h-10 text-secondary" /></div>
               <div className="list-col-grow">
@@ -45,7 +45,7 @@ export default function Services() {
               </div>
             </li>
 
-            <li className="list-row items-center gap-4 p-4 hover:bg-white/10 transition-colors rounded-md">
+            <li className="list-row items-center gap-4 p-4 hover:bg-gray-200/10 transition-colors rounded-md">
               <div className="text-4xl font-thin tabular-nums">02</div>
               <div><Church className="w-10 h-10 text-secondary" /></div>
               <div className="list-col-grow">
@@ -56,7 +56,7 @@ export default function Services() {
               </div>
             </li>
 
-            <li className="list-row items-center gap-4 p-4 hover:bg-white/10 transition-colors rounded-md">
+            <li className="list-row items-center gap-4 p-4 hover:bg-gray-200/10 transition-colors rounded-md">
               <div className="text-4xl font-thin tabular-nums">03</div>
               <div><Church className="w-10 h-10 text-secondary" /></div>
               <div className="list-col-grow">
@@ -74,7 +74,7 @@ export default function Services() {
               Weekly & Departmental Fellowships
             </li>
 
-            <li className="list-row items-center gap-4 p-4 hover:bg-white/10 transition-colors rounded-md">
+            <li className="list-row items-center gap-4 p-4 hover:bg-gray-200/10 transition-colors rounded-md">
               <div className="text-4xl font-thin tabular-nums">01</div>
               <div><Book className="w-10 h-10 text-secondary" /></div>
               <div className="list-col-grow">
@@ -85,7 +85,7 @@ export default function Services() {
               </div>
             </li>
 
-            <li className="list-row items-center gap-4 p-4 hover:bg-white/10 transition-colors rounded-md">
+            <li className="list-row items-center gap-4 p-4 hover:bg-gray-200/10 transition-colors rounded-md">
               <div className="text-4xl font-thin tabular-nums">02</div>
               <div><Users className="w-10 h-10 text-secondary" /></div>
               <div className="list-col-grow">
@@ -96,7 +96,7 @@ export default function Services() {
               </div>
             </li>
 
-            <li className="list-row items-center gap-4 p-4 hover:bg-white/10 transition-colors rounded-md">
+            <li className="list-row items-center gap-4 p-4 hover:bg-gray-200/10 transition-colors rounded-md">
               <div className="text-4xl font-thin tabular-nums">03</div>
               <div><Users className="w-10 h-10 text-secondary" /></div>
               <div className="list-col-grow">
@@ -107,7 +107,7 @@ export default function Services() {
               </div>
             </li>
 
-            <li className="list-row items-center gap-4 p-4 hover:bg-white/10 transition-colors rounded-md">
+            <li className="list-row items-center gap-4 p-4 hover:bg-gray-200/10 transition-colors rounded-md">
               <div className="text-4xl font-thin tabular-nums">04</div>
               <div><Church className="w-10 h-10 text-secondary" /></div>
               <div className="list-col-grow">
@@ -118,7 +118,7 @@ export default function Services() {
               </div>
             </li>
 
-            <li className="list-row items-center gap-4 p-4 hover:bg-white/10 transition-colors rounded-md">
+            <li className="list-row items-center gap-4 p-4 hover:bg-gray-200/10 transition-colors rounded-md">
               <div className="text-4xl font-thin tabular-nums">05</div>
               <div><Users className="w-10 h-10 text-secondary" /></div>
               <div className="list-col-grow">

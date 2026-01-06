@@ -52,7 +52,7 @@ export default function MainDepartments() {
   style={{ backgroundImage: `url(${departmentsBg})` }}
 
 >
-   <div className="absolute  bg-white/40"></div> {/* dark overlay */}
+   <div className="absolute  bg-gray-200/40"></div> {/* dark overlay */}
 
       <div className="max-w-[1200px] mx-auto text-left">
         {/* Header */}

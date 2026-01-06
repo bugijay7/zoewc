@@ -6,7 +6,7 @@ export default function SchoolYouthSection() {
 
   
   return (
-    <section className="flex flex-col md:flex-row items-stretch max-w-[1400px] mx-auto bg-base-100 text-base-content overflow-hidden">
+    <section className="flex flex-col md:flex-row items-stretch max-w-[1400px] mx-auto bg-pink-600 text-base-content overflow-hidden">
       
       {/* 🔹 Sunday School Section */}
       <div className="w-full md:w-1/2 bg-primary py-20 px-6 md:px-12 flex flex-col justify-center text-center md:text-left text-white">

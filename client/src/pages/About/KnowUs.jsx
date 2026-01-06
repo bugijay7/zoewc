@@ -69,7 +69,7 @@ export default function KnowUs() {
       <div className="hidden md:block absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-pink-400/30 rounded-full blur-[120px]"></div>
         <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-yellow-300/20 rounded-full blur-[100px]"></div>
-        <div className="absolute top-1/3 right-1/4 w-[350px] h-[350px] bg-white/10 rounded-full blur-[120px]"></div>
+        <div className="absolute top-1/3 right-1/4 w-[350px] h-[350px] bg-gray-200/10 rounded-full blur-[120px]"></div>
         <div className="absolute bottom-0 left-1/3 w-[300px] h-[300px] bg-pink-300/20 rounded-full blur-[100px]"></div>
       </div>
 
@@ -123,7 +123,7 @@ export default function KnowUs() {
               <Link
                 key={index}
                 to={card.link}
-                className="rounded-sm shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col items-center text-center group bg-white/90 backdrop-blur-sm"
+                className="rounded-sm shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col items-center text-center group bg-gray-200/90 backdrop-blur-sm"
               >
                 <div className="overflow-hidden w-full">
                   <img
@@ -144,7 +144,7 @@ export default function KnowUs() {
             {/* 🇨🇦 Canada Assembly Card — spans all 3 columns */}
             <Link
               to={canadaCard.link}
-              className="md:col-span-3 rounded-sm shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col md:flex-row items-center text-left group bg-white/90 backdrop-blur-sm"
+              className="md:col-span-3 rounded-sm shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden flex flex-col md:flex-row items-center text-left group bg-gray-200/90 backdrop-blur-sm"
             >
               <div className="md:w-1/2 overflow-hidden">
                 <img
