@@ -64,7 +64,7 @@ function LatestSermon() {
         {sermons.map((sermon) => (
           <div
             key={sermon._id}
-            className="bg-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col"
+            className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col"
           >
             {/* Video */}
             <div className="aspect-video w-full overflow-hidden">
