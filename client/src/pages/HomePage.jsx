@@ -129,25 +129,44 @@ function HomePage() {
       </section>
 
       {/* 3. HORIZONTAL MISSION & VISION BAR */}
-      <section className="bg-black py-12 px-6 border-y border-zinc-900">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
-          <div className="flex items-center gap-6 lg:w-1/3">
-            <FaChurch className="text-pink-600 text-3xl shrink-0" />
-            <div className="space-y-1">
-              <h2 className="text-white text-sm font-black uppercase tracking-widest">Zoe Worship Centre</h2>
-              <p className="text-pink-600 text-xs italic">"One family in Christ, living by the Word."</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-6 lg:w-1/3 group border-l border-zinc-800 lg:pl-12">
-            <div className="p-3 rounded-full bg-zinc-900 group-hover:bg-amber-500 transition-all"><FaBullseye className="text-amber-500 text-xl group-hover:text-black" /></div>
-            <div><h3 className="text-amber-500 text-[10px] font-black uppercase tracking-widest">Our Mission</h3><p className="text-white text-sm font-medium">We win, train, and send to win.</p></div>
-          </div>
-          <div className="flex items-center gap-6 lg:w-1/3 group border-l border-zinc-800 lg:pl-12">
-            <div className="p-3 rounded-full bg-zinc-900 group-hover:bg-pink-600 transition-all"><FaEye className="text-pink-600 text-xl group-hover:text-black" /></div>
-            <div><h3 className="text-pink-600 text-[10px] font-black uppercase tracking-widest">Our Vision</h3><p className="text-white text-sm font-medium">Transforming lives by Christ's love.</p></div>
+     <section className="bg-black py-16 px-6 border-y border-zinc-900">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-8">
+        
+        {/* BRAND BLOCK */}
+        <div className="flex flex-col items-center lg:flex-row lg:items-center gap-6 lg:w-1/3 text-center lg:text-left">
+          <FaChurch className="text-pink-600 text-4xl lg:text-3xl shrink-0" />
+          <div className="space-y-1">
+            <h2 className="text-white text-sm font-black uppercase tracking-[0.3em]">Zoe Worship Centre</h2>
+            <p className="text-pink-600 text-xs italic tracking-wide">"One family in Christ, living by the Word."</p>
           </div>
         </div>
-      </section>
+
+        {/* MISSION BLOCK */}
+        <div className="flex flex-col items-center lg:flex-row lg:items-center gap-6 lg:w-1/3 group 
+                        border-t border-zinc-800 pt-12 lg:pt-0 lg:border-t-0 lg:border-l lg:pl-12 w-full lg:w-auto">
+          <div className="p-4 rounded-full bg-zinc-900 group-hover:bg-amber-500 transition-all duration-500 shadow-xl group-hover:shadow-amber-500/20">
+            <FaBullseye className="text-amber-500 text-2xl lg:text-xl group-hover:text-black transition-colors" />
+          </div>
+          <div className="text-center lg:text-left">
+            <h3 className="text-amber-500 text-[10px] font-black uppercase tracking-[0.4em] mb-2 lg:mb-1">Our Mission</h3>
+            <p className="text-white text-sm font-medium tracking-tight">We win, train, and send to win.</p>
+          </div>
+        </div>
+
+        {/* VISION BLOCK */}
+        <div className="flex flex-col items-center lg:flex-row lg:items-center gap-6 lg:w-1/3 group 
+                        border-t border-zinc-800 pt-12 lg:pt-0 lg:border-t-0 lg:border-l lg:pl-12 w-full lg:w-auto">
+          <div className="p-4 rounded-full bg-zinc-900 group-hover:bg-pink-600 transition-all duration-500 shadow-xl group-hover:shadow-pink-600/20">
+            <FaEye className="text-pink-600 text-2xl lg:text-xl group-hover:text-black transition-colors" />
+          </div>
+          <div className="text-center lg:text-left">
+            <h3 className="text-pink-600 text-[10px] font-black uppercase tracking-[0.4em] mb-2 lg:mb-1">Our Vision</h3>
+            <p className="text-white text-sm font-medium tracking-tight">Transforming lives by Christ's love.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
       {/* 4. PROGRAMS GRID */}
       <section className="py-20 bg-zinc-50 px-6">
@@ -337,7 +356,7 @@ function HomePage() {
           </div>
           
           <div className="mt-12 pt-8 border-t border-zinc-50 text-center">
-            <p className="text-[10px] text-zinc-400 font-medium uppercase tracking-widest leading-loose">
+            <p className="text-[10px] text-zinc-900 font-medium uppercase tracking-widest leading-loose">
               Join our global family <br /> and stay inspired daily.
             </p>
           </div>
