@@ -52,7 +52,7 @@ function HomePage() {
     <div className="bg-white text-black font-sans selection:bg-pink-200">
       
       {/* 1. HERO SLIDER */}
-      <section className="relative w-full h-screen overflow-hidden bg-black">
+      <section className="relative w-full h-screen overflow-hidden bg-pink-400">
         <div className="carousel w-full h-full">
           {slides.map((slide) => (
             <div key={slide.id} id={`slide${slide.id}`} className="carousel-item relative w-full h-full flex items-center justify-center">

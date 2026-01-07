@@ -5,7 +5,7 @@ import worshipImg from "../assets/anagkazo.jpeg";
 
 export default function Services() {
   return (
-    <div className="bg-white min-h-screen font-sans">
+    <div className="bg-amber-900 min-h-screen font-sans">
       {/* --- HERO SECTION --- */}
       <section className="relative h-[60vh] flex items-center justify-center bg-black overflow-hidden">
         <img 
@@ -13,15 +13,15 @@ export default function Services() {
           className="absolute inset-0 w-full h-full object-cover opacity-50 grayscale hover:grayscale-0 transition-all duration-1000" 
           alt="Worship Background"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-amber-900"></div>
         <div className="relative z-10 text-center px-6" data-aos="fade-up">
           <span className="text-amber-500 uppercase tracking-[0.4em] text-xs font-bold mb-4 block">Fellowship & Word</span>
           <h1 className="text-5xl md:text-7xl font-black text-black uppercase tracking-tighter mb-4">
             Service <span className="text-pink-600">Times</span>
           </h1>
           <div className="w-24 h-1.5 bg-black mx-auto mb-8"></div>
-          <p className="max-w-2xl mx-auto text-zinc-600 text-lg md:text-xl font-light leading-relaxed">
-            At <strong className="text-black">Zoe Worship Centre</strong>, 
+          <p className="max-w-2xl mx-auto text-gray-200 text-lg md:text-xl font-light leading-relaxed">
+            At <strong className="text-pink-500">Zoe Worship Centre</strong>, 
             our services are designed to inspire transformation, ignite spiritual growth, 
             and bring believers together in fellowship, worship, and the Word.
           </p>
@@ -51,7 +51,7 @@ export default function Services() {
                 data-aos-delay={i * 100}
               >
                 <div className="flex justify-between items-start mb-8">
-                  <span className="text-4xl font-black text-zinc-200 group-hover:text-zinc-800 transition-colors">{service.num}</span>
+                  <span className="text-4xl font-black text-zinc-900 group-hover:text-zinc-800 transition-colors">{service.num}</span>
                   <Church className="text-pink-600 w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-black uppercase tracking-tight text-black group-hover:text-white mb-2 transition-colors">
@@ -90,7 +90,7 @@ export default function Services() {
                 </div>
                 <div>
                   <h4 className="font-black uppercase tracking-tight text-sm text-black">{item.title}</h4>
-                  <p className="text-[10px] font-bold text-zinc-900 uppercase tracking-widest mt-1">{item.time}</p>
+                  <p className="text-[10px] font-bold text-gray-200 uppercase tracking-widest mt-1">{item.time}</p>
                 </div>
               </div>
             ))}
@@ -109,18 +109,13 @@ export default function Services() {
           <h3 className="text-3xl md:text-5xl font-black uppercase tracking-tighter text-white mb-6">
             Stay Connected <span className="text-pink-600">With Us</span>
           </h3>
-          <p className="text-zinc-900 text-lg mb-12 font-light max-w-2xl mx-auto">
-            Join our services, follow our livestream, or reach out for prayer or support. 
+          <p className="text-gray-200 text-lg mb-12 font-light max-w-2xl mx-auto">
+            Join our services, follow our livestream on our social media, or reach out for prayer or support. 
             We’d love to walk with you on your spiritual journey.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="/live" 
-              className="btn btn-lg rounded-none bg-pink-600 border-none text-white hover:bg-white hover:text-black px-10 transition-all uppercase tracking-widest text-xs font-bold"
-            >
-              Watch Livestream
-            </a>
+           
             <a 
               href="/contact" 
               className="btn btn-lg rounded-none bg-transparent border-white text-white hover:bg-white hover:text-black px-10 transition-all uppercase tracking-widest text-xs font-bold"
@@ -131,12 +126,7 @@ export default function Services() {
         </div>
       </section>
       
-      {/* FINAL DECOR */}
-      <div className="h-1 w-full flex">
-        <div className="flex-1 bg-amber-500"></div>
-        <div className="flex-1 bg-pink-600"></div>
-        <div className="flex-1 bg-black"></div>
-      </div>
+     
     </div>
   );
 }
