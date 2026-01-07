@@ -12,9 +12,9 @@ import contactBg from "../assets/contact-bg.jpeg";
 
 export default function ContactPage() {
   return (
-    <div className="bg-white min-h-screen">
+    <div className="bg-zinc-200 min-h-screen">
       {/* --- HERO SECTION --- */}
-      <section className="relative h-[40vh] flex items-center justify-center overflow-hidden bg-black">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-black">
         <img
           src={contactBg}
           alt="Contact Zoe"
@@ -31,7 +31,7 @@ export default function ContactPage() {
       </section>
 
       {/* --- BALANCED CONTACT SECTION --- */}
-      <section className="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+      <section className="max-w-7xl mx-auto px-6 py-16 lg:py-24 bg-zink-200">
         {/* Main Flex Container for Symmetry */}
         <div className="flex flex-col lg:flex-row items-stretch gap-0 border border-zinc-100 shadow-2xl">
           
@@ -153,8 +153,8 @@ export default function ContactPage() {
       </section>
 
       {/* --- FULL WIDTH MAP --- */}
-      <section className="bg-zinc-50 pt-0 pb-16 px-6">
-         <div className="max-w-7xl mx-auto h-[400px] bg-zinc-200 grayscale contrast-125">
+      <section className="bg-zinc-200 pt-0 pb-16 px-6">
+         <div className="max-w-7xl mx-auto h-[400px] bg-zinc-200  contrast-125">
             <iframe
               title="Zoe Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.027768285977!2d36.696!3d-1.25435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f192ce507bf1f%3A0xfa7385e3b9c92e6a!2sZoe%20Worship%20Center%20Kinoo!5e0!3m2!1sen!2ske!4v1695744000000!5m2!1sen!2ske"
