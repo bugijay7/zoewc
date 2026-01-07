@@ -1,5 +1,5 @@
 import React from "react";
-import menImg from "../../../assets/mens-conference.jpeg";
+import menImg from "../../../assets/men.jfif";
 
 export default function MensDepartment() {
   return (

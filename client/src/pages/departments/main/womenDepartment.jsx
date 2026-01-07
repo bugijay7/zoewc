@@ -1,5 +1,5 @@
 import React from "react";
-import womenImg from "../../../assets/women.jpeg";
+import womenImg from "../../../assets/women1.jpg";
 
 export default function WomenDepartment() {
   return (

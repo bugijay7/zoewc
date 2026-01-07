@@ -1,5 +1,5 @@
 import React from "react";
-import teenImg from "../../../assets/teen.jpeg";
+import teenImg from "../../../assets/teen.jfif";
 
 export default function TeensDepartment() {
   return (

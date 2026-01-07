@@ -1,5 +1,5 @@
 import React from "react";
-import youthImg from "../../../assets/youths.jpeg";
+import youthImg from "../../../assets/youth.jfif";
 
 export default function YouthDepartment() {
   return (

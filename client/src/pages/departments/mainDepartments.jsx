@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import departmentsBg from "../../assets/departments.jpeg";
-import menImg from "../../assets/mens-conference.jpeg";
-import womenImg from "../../assets/women.jpeg";
-import youthImg from "../../assets/youths.jpeg";
-import teenImg from "../../assets/teen.jpeg";
-import sundaySchoolImg from "../../assets/sunday-school.jpeg";
+import menImg from "../../assets/men.jfif";
+import womenImg from "../../assets/women1.jpg";
+import youthImg from "../../assets/youth.jfif";
+import teenImg from "../../assets/teen.jfif";
+import sundaySchoolImg from "../../assets/sunday-school.jfif";
 
 export default function MainDepartments() {
   const departments = [
@@ -51,7 +51,7 @@ export default function MainDepartments() {
           alt="Departments Header" 
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-amber-500/80 via-black/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-black/20 to-transparent"></div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl" data-aos="zoom-out">
           <div className="inline-block px-4 py-1 border border-amber-500/30 bg-amber-500/10 mb-6">
@@ -102,7 +102,7 @@ export default function MainDepartments() {
                   {dept.name.split(' ')[0]} <span className="text-pink-600 italic font-serif lowercase tracking-normal font-normal">{dept.name.split(' ')[1]}</span>
                 </h2>
                 
-                <p className="text-zinc-500 text-lg leading-relaxed font-light mb-10">
+                <p className="text-zinc-900 text-lg leading-relaxed font-light mb-10">
                   {dept.desc}
                 </p>
 

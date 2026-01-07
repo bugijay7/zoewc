@@ -1,5 +1,5 @@
 import React from "react";
-import sundaySchoolImg from "../../../assets/sunday-school.jpeg";
+import sundaySchoolImg from "../../../assets/sunday-school.jfif";
 
 export default function SundaySchoolSection() {
   return (
