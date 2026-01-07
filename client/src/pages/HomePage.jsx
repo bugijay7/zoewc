@@ -33,6 +33,33 @@ function HomePage() {
     { title: "Zoe Worship Centre – Second Service", time: "10:50 AM - 1:00 PM" },
   ];
 
+  const socialLinks = [
+    { 
+      Icon: FaFacebookF, 
+      label: 'Facebook', 
+      url: "https://www.facebook.com/ZoeWorshipCentreYouths",
+      color: 'group-hover:bg-pink-600' 
+    },
+    { 
+      Icon: FaInstagram, 
+      label: 'Instagram', 
+      url: "https://www.instagram.com/zoewoshipcentrechurch",
+      color: 'group-hover:bg-amber-500' 
+    },
+    { 
+      Icon: FaTiktok, 
+      label: 'TikTok', 
+      url: "https://www.tiktok.com/@zoeworshipcentrechurch",
+      color: 'group-hover:bg-pink-600' 
+    },
+    { 
+      Icon: FaYoutube, 
+      label: 'YouTube', 
+      url: "https://www.youtube.com/@ZoeWorshipCentreKinoo",
+      color: 'group-hover:bg-amber-500' 
+    },
+  ];
+
   useEffect(() => {
     const fetchLatestSermons = async () => {
       try {
@@ -52,15 +79,15 @@ function HomePage() {
     <div className="bg-white text-black font-sans selection:bg-pink-200">
       
       {/* 1. HERO SLIDER */}
-      <section className="relative w-full h-screen overflow-hidden bg-pink-400">
+      <section className="relative w-full h-screen overflow-hidden bg-white">
         <div className="carousel w-full h-full">
           {slides.map((slide) => (
             <div key={slide.id} id={`slide${slide.id}`} className="carousel-item relative w-full h-full flex items-center justify-center">
-              <img src={slide.image} className="absolute inset-0 w-full h-full object-cover opacity-50" alt="Hero" />
+              <img src={slide.image} className="absolute inset-0 w-full h-full object-cover opacity-80" alt="Hero" />
               <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black"></div>
               <div className="relative z-10 text-center px-4 max-w-4xl">
                 <span className="text-amber-500 uppercase tracking-[0.4em] text-sm font-bold mb-6 block">{slide.title}</span>
-                <h1 className="text-6xl md:text-8xl font-black text-white mb-6 tracking-tighter uppercase leading-none">{slide.state}</h1>
+                <h1 className="text-6xl md:text-8xl font-black text-gray-300 tracking-tightermb-6 tracking-tighter uppercase leading-none">{slide.state}</h1>
                 <p className="italic text-gray-300 text-xl md:text-2xl mb-10 font-serif">{slide.subtitle}</p>
                 <div className="flex flex-col sm:flex-row gap-5 justify-center">
                   <Link to={slide.link} className="btn btn-lg bg-white border-none text-black hover:bg-amber-500 hover:text-white rounded-none px-12 uppercase tracking-widest text-xs font-bold transition-all">
@@ -83,7 +110,7 @@ function HomePage() {
       {/* 2. ABOUT SECTION */}
       <section className="py-32 px-6 md:px-12 lg:px-24 grid lg:grid-cols-2 gap-20 items-center max-w-7xl mx-auto">
         <div className="space-y-8">
-          <div className="inline-block px-4 py-1 bg-zinc-100 border-l-4 border-pink-600">
+          <div className="inline-block px-4 py-1 bg-gray-200 border-l-4 border-pink-600">
             <span className="text-pink-600 text-xs font-bold tracking-widest uppercase">Our Identity</span>
           </div>
           <h2 className="text-5xl md:text-6xl font-black tracking-tighter text-black uppercase leading-tight">A God kind <br/> <span className="text-amber-500">of life</span></h2>
@@ -247,27 +274,76 @@ function HomePage() {
 
       {/* 8. CONNECT SECTION */}
       <section className="py-32 px-6 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
-          <div>
-            <h2 className="text-6xl font-black mb-12 uppercase tracking-tighter leading-none">Connect <br/><span className="text-pink-600">With Us</span></h2>
-            <div className="space-y-8">
-              <div className="flex items-center gap-6 group"><FaMapMarkerAlt className="text-amber-500 text-2xl group-hover:scale-110 transition-transform" /><p className="text-lg font-bold">Waiyaki Way, Kinoo, Kenya</p></div>
-              <div className="flex items-center gap-6 group"><FaPhoneAlt className="text-pink-600 text-2xl group-hover:scale-110 transition-transform" /><p className="text-lg font-bold">+254 722 908 733</p></div>
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 items-center">
+        
+        {/* Left Column: Physical Presence */}
+        <div data-aos="fade-right">
+          <h2 className="text-6xl font-black mb-12 uppercase tracking-tighter leading-none">
+            Connect <br/>
+            <span className="text-pink-600">With Us</span>
+          </h2>
+          <div className="space-y-8">
+            <div className="flex items-center gap-6 group cursor-default">
+              <div className="w-12 h-12 flex items-center justify-center bg-zinc-50 rounded-full group-hover:bg-amber-500 transition-colors duration-500">
+                <FaMapMarkerAlt className="text-amber-500 text-xl group-hover:text-black transition-colors" />
+              </div>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-zinc-400 block">Location</span>
+                <p className="text-lg font-bold">Waiyaki Way, Kinoo, Kenya</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-6 group cursor-default">
+              <div className="w-12 h-12 flex items-center justify-center bg-zinc-50 rounded-full group-hover:bg-pink-600 transition-colors duration-500">
+                <FaPhoneAlt className="text-pink-600 text-xl group-hover:text-white transition-colors" />
+              </div>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-zinc-400 block">Helpline</span>
+                <p className="text-lg font-bold">+254 722 908 733</p>
+              </div>
             </div>
           </div>
-          <div className="bg-white p-12 border border-zinc-100 shadow-2xl flex flex-col justify-center">
-             <h4 className="text-amber-500 uppercase tracking-widest font-black text-center mb-10 text-xs">Digital Community</h4>
-             <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
-                {[ {Icon: FaFacebookF, label: 'Facebook', color: 'bg-pink-600'}, {Icon: FaInstagram, label: 'Instagram', color: 'bg-amber-500'}, {Icon: FaTiktok, label: 'TikTok', color: 'bg-pink-600'}, {Icon: FaYoutube, label: 'YouTube', color: 'bg-amber-500'} ].map((social, i) => (
-                  <a key={i} href="#" className="flex flex-col items-center gap-3 group text-center">
-                    <div className={`p-4 rounded-full border border-zinc-100 group-hover:border-transparent group-hover:${social.color} group-hover:text-white transition-all text-zinc-900`}><social.Icon /></div>
-                    <span className="text-[10px] font-bold uppercase tracking-widest">{social.label}</span>
-                  </a>
-                ))}
-             </div>
+        </div>
+
+        {/* Right Column: Digital Hub Card */}
+        <div 
+          data-aos="fade-left"
+          className="bg-white p-8 md:p-16 border border-zinc-100 shadow-[0_32px_64px_-15px_rgba(0,0,0,0.1)] flex flex-col justify-center relative"
+        >
+          {/* Decorative Corner Accent */}
+          <div className="absolute top-0 right-0 w-16 h-16 bg-zinc-50 flex items-center justify-center italic font-black text-zinc-200 text-2xl">Z</div>
+          
+          <h4 className="text-amber-500 uppercase tracking-[0.4em] font-black text-center mb-12 text-[10px]">
+            Digital Community
+          </h4>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+            {socialLinks.map((social, i) => (
+              <a 
+                key={i} 
+                href={social.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex flex-col items-center gap-4 group text-center"
+              >
+                <div className={`w-14 h-14 flex items-center justify-center rounded-full border border-zinc-100 transition-all duration-500 text-zinc-900 ${social.color} group-hover:text-white group-hover:border-transparent group-hover:shadow-xl`}>
+                  <social.Icon className="text-lg" />
+                </div>
+                <span className="text-[9px] font-black uppercase tracking-[0.2em] group-hover:text-black transition-colors">
+                  {social.label}
+                </span>
+              </a>
+            ))}
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-zinc-50 text-center">
+            <p className="text-[10px] text-zinc-400 font-medium uppercase tracking-widest leading-loose">
+              Join our global family <br /> and stay inspired daily.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
     </div>
   );
