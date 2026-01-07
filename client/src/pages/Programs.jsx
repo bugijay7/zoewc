@@ -104,20 +104,14 @@ export default function Programs() {
 
       {/* --- DECORATIVE FOOTER DIVIDER --- */}
       <section className="pb-24 px-6 overflow-hidden">
-        <div className="max-w-7xl mx-auto flex items-center gap-6 opacity-10">
+        <div className="max-w-7xl mx-auto flex items-center gap-6 opacity-90">
             <div className="h-px flex-1 bg-black"></div>
             <div className="text-[10px] font-black uppercase tracking-[1em] text-black whitespace-nowrap">Passion / Purpose / Impact</div>
             <div className="h-px flex-1 bg-black"></div>
         </div>
       </section>
 
-      {/* MULTI-BAR FOOTER ACCENT */}
-      <div className="h-3 w-full flex">
-        <div className="flex-1 bg-black"></div>
-        <div className="flex-1 bg-pink-600"></div>
-        <div className="flex-1 bg-amber-500"></div>
-        <div className="flex-[4] bg-zinc-50"></div>
-      </div>
+     
     </div>
   );
 }

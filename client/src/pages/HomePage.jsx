@@ -135,16 +135,16 @@ function HomePage() {
             <FaChurch className="text-pink-600 text-3xl shrink-0" />
             <div className="space-y-1">
               <h2 className="text-white text-sm font-black uppercase tracking-widest">Zoe Worship Centre</h2>
-              <p className="text-zinc-500 text-xs italic">"One family in Christ, living by the Word."</p>
+              <p className="text-pink-600 text-xs italic">"One family in Christ, living by the Word."</p>
             </div>
           </div>
           <div className="flex items-center gap-6 lg:w-1/3 group border-l border-zinc-800 lg:pl-12">
             <div className="p-3 rounded-full bg-zinc-900 group-hover:bg-amber-500 transition-all"><FaBullseye className="text-amber-500 text-xl group-hover:text-black" /></div>
-            <div><h3 className="text-zinc-900 text-[10px] font-black uppercase tracking-widest">Our Mission</h3><p className="text-white text-sm font-medium">We win, train, and send to win.</p></div>
+            <div><h3 className="text-amber-500 text-[10px] font-black uppercase tracking-widest">Our Mission</h3><p className="text-white text-sm font-medium">We win, train, and send to win.</p></div>
           </div>
           <div className="flex items-center gap-6 lg:w-1/3 group border-l border-zinc-800 lg:pl-12">
             <div className="p-3 rounded-full bg-zinc-900 group-hover:bg-pink-600 transition-all"><FaEye className="text-pink-600 text-xl group-hover:text-black" /></div>
-            <div><h3 className="text-zinc-900 text-[10px] font-black uppercase tracking-widest">Our Vision</h3><p className="text-white text-sm font-medium">Transforming lives by Christ's love.</p></div>
+            <div><h3 className="text-pink-600 text-[10px] font-black uppercase tracking-widest">Our Vision</h3><p className="text-white text-sm font-medium">Transforming lives by Christ's love.</p></div>
           </div>
         </div>
       </section>
