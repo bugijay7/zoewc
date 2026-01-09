@@ -31,9 +31,8 @@ export default function EventList() {
           </div>
           <div data-aos="fade-left" className="text-right">
             <p className="text-sm font-black uppercase tracking-widest text-zinc-400">
-              Season of <span className="text-amber-500">Manifestation</span>
+              Burning and  <span className="text-amber-500">Shining light</span>
             </p>
-            <p className="text-xs text-zinc-300 tracking-tighter uppercase font-medium">October 2025</p>
           </div>
         </div>
       </header>
