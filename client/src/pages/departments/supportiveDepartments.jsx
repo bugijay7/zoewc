@@ -92,7 +92,7 @@ export default function SupportiveDepartments() {
                   <h2 className="text-2xl font-black uppercase tracking-tighter mb-6 group-hover:text-pink-600 transition-colors">
                     {dept.name}
                   </h2>
-                  <p className="text-zinc-100 text-sm leading-relaxed font-light mb-8">
+                  <p className="text-zinc-100 group-hover:text-zinc-600 text-sm leading-relaxed font-light mb-8">
                     {dept.desc}
                   </p>
                 </div>
