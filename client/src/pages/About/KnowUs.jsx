@@ -124,11 +124,11 @@ export default function KnowUs() {
                 />
               </div>
               <div className="p-10 lg:p-20 text-white space-y-6">
-                <span className="text-pink-600 text-xs font-black uppercase tracking-[0.3em]">International Assembly</span>
+                <span className="text-pink-600 text-xs font-black uppercase tracking-[0.3em]">International Zoe Worship Centre</span>
                 <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none">
                   Canada <br /> <span className="text-amber-500">Assembly</span>
                 </h2>
-                <p className="text-zinc-900 text-lg font-light leading-relaxed">
+                <p className="text-zinc-100 text-lg font-light leading-relaxed">
                   {canadaCard.desc}
                 </p>
                 <button className="btn btn-outline border-white text-white rounded-none hover:bg-white hover:text-black px-10 transition-all uppercase tracking-widest text-xs font-bold">

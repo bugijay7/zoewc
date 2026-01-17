@@ -22,7 +22,7 @@ function HomePage() {
   const [error, setError] = useState("");
 
   const slides = [
-    { id: 1, image: hero1, title: "The Year Of", state: "Burning and Shining Light", subtitle: "Isaiah 54:2", button: "Word of Welcome", link: "/new", prev: 3, next: 2 },
+    { id: 1, image: hero1, title: "The Year Of", state: "Burning and Shining Light", subtitle: "John 5:35", button: "Word of Welcome", link: "/new", prev: 3, next: 2 },
     { id: 2, image: hero2, title: "Welcome To Zoe", state: "Supportive Ministries", subtitle: "1 Peter 4:10", button: "Call to Serve", link: "/departments/supportive", prev: 1, next: 3 },
     { id: 3, image: hero3, title: "Zoe Worship Centre", state: "The God Kind of Life", subtitle: "John 10:10", button: "Learn More", link: "/about/knowUs", prev: 2, next: 1 },
   ];

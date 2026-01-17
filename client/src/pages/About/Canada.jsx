@@ -45,7 +45,7 @@ export default function Canada() {
             <div className="space-y-12" data-aos="fade-up">
               {/* Intro Statement */}
               <p className="text-2xl md:text-3xl font-black uppercase tracking-tight leading-tight text-black border-l-8 border-pink-600 pl-8 py-2">
-                The <span className="text-pink-600">Canada Assembly</span> stands as a vibrant extension of
+                The <span className="text-pink-600">Canada branch</span> stands as a vibrant extension of
                 the Zoe Worship Center family.
               </p>
 

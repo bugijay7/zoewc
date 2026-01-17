@@ -74,7 +74,7 @@ function Anthem() {
               </div>
               
               <p className="text-2xl md:text-4xl font-light leading-snug tracking-tight text-zinc-300">
-                { "Faith, Love, Obedience, Wisdom, Enthusiasm, Relevance, and Service."
+                { "Faith, Love, Obedience, Wisdom, Enthusiasm, Relevance, Service."
                   .split(', ')
                   .map((value, i, arr) => (
                     <span key={value} className="inline-block">
