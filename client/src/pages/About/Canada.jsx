@@ -54,7 +54,7 @@ export default function Canada() {
                 <p>
                   A fellowship devoted to nurturing faith, unity,
                   and spiritual growth among believers in Canada and beyond. As part of the 
-                  broader <strong className="text-black font-bold">Zoe Worship Center Assemblies</strong>,
+                  broader <strong className="text-black font-bold">Zoe Worship Center Family</strong>,
                   this congregation continues the mission of spreading the gospel.
                 </p>
 
