@@ -93,8 +93,8 @@ function HomePage() {
                   <Link to={slide.link} className="btn btn-lg bg-white border-none text-black hover:bg-amber-500 hover:text-white rounded-none px-12 uppercase tracking-widest text-xs font-bold transition-all">
                     {slide.button}
                   </Link>
-                  <Link to="/events/eventList" className="btn btn-lg btn-outline text-white border-white hover:bg-white hover:text-black rounded-none px-12 uppercase tracking-widest text-xs font-bold">
-                    View Events
+                  <Link to="/about/KnowUs" className="btn btn-lg btn-outline text-white border-white hover:bg-white hover:text-black rounded-none px-12 uppercase tracking-widest text-xs font-bold">
+                    Who We Are
                   </Link>
                 </div>
               </div>
