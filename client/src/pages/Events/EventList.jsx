@@ -6,7 +6,7 @@ export default function EventList() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("https://zoewc-omsu.onrender.com");
+        const res = await fetch("https://zoewc-omsu.onrender.com/api/events");
         const data = await res.json();
         setEvents(data);
       } catch (error) {
@@ -62,7 +62,7 @@ export default function EventList() {
                         src={
                           event.image?.url
                             ? event.image.url
-                            : `https://zoewc-1.onrender.com/${event.image}`
+                            : `https://zoewc-omsu.onrender.com/api/events${event.image}`
                         }
                         alt={event.title}
                         className="w-full h-full object-cover  duration-1000"

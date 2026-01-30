@@ -4,7 +4,7 @@ export default function Messages() {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const API_URL = "https://zoewc-1.onrender.com/api/messages";
+  const API_URL = "https://zoewc-omsu.onrender.com/api/messages";
 
   // ✅ Fetch messages from backend
   const fetchMessages = async () => {

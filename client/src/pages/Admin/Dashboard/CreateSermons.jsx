@@ -56,7 +56,7 @@ function CreateSermons() {
         youtubeLink: convertToEmbedLink(sermonData.youtubeLink),
       };
 
-      await axios.post("https://zoewc-1.onrender.com/api/sermons", formattedData, {
+      await axios.post("https://zoewc-omsu.onrender.com/api/sermons", formattedData, {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,

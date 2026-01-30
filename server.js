@@ -54,7 +54,7 @@ app.use("/api/messages", messageRoutes);
 // Cron job to keep Render awake
 cron.schedule("*/5 * * * *", async () => {
   try {
-    const url = "https://zoewc-1.onrender.com/ping"; // your backend URL
+    const url = "https://zoewc-omsu.onrender.com/ping"; // your backend URL
     await axios.get(url);
     console.log(`Pinged server at ${new Date().toLocaleTimeString()}`);
   } catch (error) {

@@ -49,7 +49,7 @@ function ManageEvent() {
           >
             <div className="flex items-center gap-4">
               <img
-                src={`https://zoewc-1.onrender.com/${event.image}`}
+                src={`https://zoewc-omsu.onrender.com/${event.image}`}
                 alt={event.title}
                 className="w-28 h-20 object-cover rounded-md"
               />

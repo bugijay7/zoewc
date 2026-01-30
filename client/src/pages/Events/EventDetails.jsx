@@ -54,8 +54,8 @@ export default function EventDetails() {
 
   // ✅ Determine image URL safely
   const imageUrl = event.image?.url
-    ? `https://zoewc-1.onrender.com/${event.image.url}`
-    : `https://zoewc-1.onrender.com/${event.image}`;
+    ? `https://zoewc-omsu.onrender.com/${event.image.url}`
+    : `https://zoewc-omsu.onrender.com/${event.image}`;
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-base-200 px-4 md:px-20 font-montserrat">
@@ -68,7 +68,7 @@ export default function EventDetails() {
                     src={
                       event.image?.url
                         ? event.image.url
-                        : `https://zoewc-1.onrender.com/${event.image}`
+                        : `https://zoewc-omsu.onrender.com/${event.image}`
                     }
                     alt={event.title}
                     className="object-cover md:object-center object-top w-full h-auto "

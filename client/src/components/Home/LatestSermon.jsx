@@ -10,7 +10,7 @@ function LatestSermon() {
   useEffect(() => {
     const fetchLatestSermons = async () => {
       try {
-        const response = await axios.get("https://zoewc-1.onrender.com/api/sermons");
+        const response = await axios.get("https://zoewc-omsu.onrender.com/api/sermons");
         const sorted = response.data.sort(
           (a, b) => new Date(b.date) - new Date(a.date)
         );
