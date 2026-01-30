@@ -10,7 +10,7 @@ function ManageEvent() {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("https://zoewc-1.onrender.com/api/events");
+      const res = await axios.get("https://zoewc-omsu.onrender.com");
       setEvents(res.data);
     } catch (err) {
       console.error("Error fetching events:", err);
@@ -20,7 +20,7 @@ function ManageEvent() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this event?")) {
       try {
-        await axios.delete(`https://zoewc-1.onrender.com/api/events/${id}`);
+        await axios.delete(`https://zoewc-omsu.onrender.com/${id}`);
         setEvents(events.filter((event) => event._id !== id));
       } catch (err) {
         console.error("Error deleting event:", err);

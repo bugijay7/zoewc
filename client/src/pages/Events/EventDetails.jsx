@@ -13,7 +13,7 @@ export default function EventDetails() {
   useEffect(() => {
     const fetchEvent = async () => {
       try {
-        const res = await fetch(`https://zoewc-1.onrender.com/api/events/${eventId}`);
+        const res = await fetch(`https://zoewc-omsu.onrender.com/${eventId}`);
         if (!res.ok) throw new Error("Failed to fetch event details.");
         const data = await res.json();
         setEvent(data);

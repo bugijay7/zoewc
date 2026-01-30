@@ -6,7 +6,7 @@ export default function EventList() {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch("https://zoewc-1.onrender.com/api/events");
+        const res = await fetch("https://zoewc-omsu.onrender.com");
         const data = await res.json();
         setEvents(data);
       } catch (error) {

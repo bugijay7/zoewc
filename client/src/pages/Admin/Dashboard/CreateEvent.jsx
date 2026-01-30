@@ -43,7 +43,7 @@ function CreateEvent() {
       formData.append("description", eventData.description);
       formData.append("image", image);
 
-      await axios.post("https://zoewc-1.onrender.com/api/events", formData, {
+      await axios.post("https://zoewc-omsu.onrender.com", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,
