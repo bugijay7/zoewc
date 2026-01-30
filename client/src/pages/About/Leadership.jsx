@@ -1,5 +1,7 @@
 import React from "react";
 import AboutNav from "../../components/AboutNav";
+// Import your image here
+import PastorImage from "../../assets/pastor-image.jpg"; 
 
 export default function Leadership() {
   const characteristics = [
@@ -34,6 +36,20 @@ export default function Leadership() {
 
           {/* MAIN CONTENT AREA */}
           <div className="lg:w-3/4">
+            
+            {/* ADDED IMAGE SECTION */}
+            <div className="mb-12 flex justify-start" data-aos="fade-up">
+              <div className="relative p-1 rounded-full bg-gradient-to-tr from-pink-600 to-amber-500">
+                <div className="w-40 h-40 md:w-56 md:h-56 rounded-full border-4 border-white overflow-hidden shadow-2xl">
+                  <img 
+                    src={PastorImage} 
+                    alt="Leadership" 
+                    className="w-full h-full object-cover  hover:grayscale-0 transition-all duration-700"
+                  />
+                </div>
+              </div>
+            </div>
+
             {/* INTRO TEXT SECTION */}
             <div className="mb-20 space-y-8" data-aos="fade-up">
               <h2 className="text-3xl font-black uppercase tracking-tighter text-black leading-none">
