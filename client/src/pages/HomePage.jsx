@@ -149,7 +149,7 @@ function HomePage() {
           </div>
           <div className="text-center lg:text-left">
             <h3 className="text-amber-500 text-[10px] font-black uppercase tracking-[0.4em] mb-2 lg:mb-1">Our Mission</h3>
-            <p className="text-white text-sm font-medium tracking-tight">We win, train, and send to win.</p>
+            <p className="text-white text-sm font-medium tracking-tight">Transforming lives by the life and the love of Christ</p>
           </div>
         </div>
 
@@ -161,7 +161,7 @@ function HomePage() {
           </div>
           <div className="text-center lg:text-left">
             <h3 className="text-pink-600 text-[10px] font-black uppercase tracking-[0.4em] mb-2 lg:mb-1">Our Vision</h3>
-            <p className="text-white text-sm font-medium tracking-tight">Transforming lives by Christ's love.</p>
+            <p className="text-white text-sm font-medium tracking-tight">Inspire to win, train and send to win.</p>
           </div>
         </div>
 
