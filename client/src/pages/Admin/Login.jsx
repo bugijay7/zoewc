@@ -52,7 +52,7 @@ export default function Login() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="admin@zoe"
+              placeholder="admin@zoeworship.org"
               className="input input-bordered w-full"
               required
             />
