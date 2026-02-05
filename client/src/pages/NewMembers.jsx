@@ -23,43 +23,35 @@ export default function NewMembers() {
       <main className="max-w-7xl mx-auto px-6 py-20 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
           
-          {/* --- LEFT COL: STEP 1 (KNOW OUR GUEST) --- */}
-          <section className="lg:col-span-5" data-aos="fade-right">
-            <div className="sticky top-10">
-              <div className="flex items-center gap-4 mb-8">
-                <span className="text-6xl font-black text-zinc-100 italic">01</span>
-                <h2 className="text-3xl font-black uppercase tracking-tighter border-b-4 border-amber-500 pb-2">
-                  Know Our Guest
-                </h2>
-              </div>
-              
-              <div className="bg-zinc-50 p-8 border-l-4 border-black">
-                <h3 className="text-[10px] font-black uppercase tracking-widest text-pink-600 mb-4">Welcoming Statement</h3>
-                <p className="text-zinc-600 font-light leading-relaxed mb-8 italic">
-                  Minister's brief introduction and connection with new visitors.
-                </p>
-                
-                <ul className="space-y-4">
-                  {[
-                    "Which is your previous church?",
-                    "Do you have any introduction letter?",
-                    "When and where were you born again?",
-                    "Who led you to salvation?",
-                    "Share your salvation experience.",
-                    "What is your status? (Single/Married)",
-                    "How did you join Zoe?",
-                    "Previous discipleship experience?",
-                    "Previous leadership or ministry roles?"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3 group">
-                      <div className="w-1.5 h-1.5 bg-amber-500 mt-2 transition-all group-hover:w-4"></div>
-                      <span className="text-sm font-medium text-zinc-700 uppercase tracking-tight">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </section>
+{/* --- LEFT COL: STEP 1 (KNOW OUR GUEST) --- */}
+<section className="lg:col-span-5" data-aos="fade-right">
+  <div className="sticky top-10">
+    <div className="flex items-center gap-4 mb-8">
+      <span className="text-6xl font-black text-zinc-100 italic">01</span>
+      <h2 className="text-3xl font-black uppercase tracking-tighter border-b-4 border-amber-500 pb-2">
+        Know Our Guest
+      </h2>
+    </div>
+
+    <div className="bg-zinc-50 p-8 border-l-4 border-black">
+      <h3 className="text-[10px] font-black uppercase tracking-widest text-pink-600 mb-4">
+        Visitor Registration
+      </h3>
+
+      {/* ✅ Google Form Embed */}
+      <div className="w-full h-[800px]">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf82ZjxDl2DVc67MHi0cciGhuy809wDczLzmb3qvC2TMnF1XA/viewform?usp=publish-editor"
+       width="340"
+        height="441" 
+        frameborder="0" 
+        marginheight="0"
+         marginwidth="0">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
           {/* --- RIGHT COL: THE SPIRITUAL JOURNEY --- */}
           <div className="lg:col-span-7 space-y-32">

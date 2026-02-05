@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main Pages -->
+  <url><loc>https://zoeworshipcentre.org/</loc></url>
+  <url><loc>https://zoeworshipcentre.org/about</loc></url>
+  <url><loc>https://zoeworshipcentre.org/events</loc></url>
+  <url><loc>https://zoeworshipcentre.org/sermons</loc></url>
+  <url><loc>https://zoeworshipcentre.org/gallery</loc></url>
+  <url><loc>https://zoeworshipcentre.org/contact</loc></url>
+  <url><loc>https://zoeworshipcentre.org/donation</loc></url>
+  <url><loc>https://zoeworshipcentre.org/programs</loc></url>
+  <url><loc>https://zoeworshipcentre.org/live</loc></url>
+  <url><loc>https://zoeworshipcentre.org/new-members</loc></url>
+  <url><loc>https://zoeworshipcentre.org/services</loc></url>
+  <url><loc>https://zoeworshipcentre.org/visitors</loc></url>
+
+  <!-- About Subpages -->
+  <url><loc>https://zoeworshipcentre.org/about/know-us</loc></url>
+  <url><loc>https://zoeworshipcentre.org/about/history</loc></url>
+  <url><loc>https://zoeworshipcentre.org/about/culture</loc></url>
+  <url><loc>https://zoeworshipcentre.org/about/impact</loc></url>
+  <url><loc>https://zoeworshipcentre.org/about/leadership</loc></url>
+  <url><loc>https://zoeworshipcentre.org/about/faith-statement</loc></url>
+  <url><loc>https://zoeworshipcentre.org/about/anthem</loc></url>
+
+  <!-- Departments Main -->
+  <url><loc>https://zoeworshipcentre.org/departments</loc></url>
+  <url><loc>https://zoeworshipcentre.org/departments/teens</loc></url>
+  <url><loc>https://zoeworshipcentre.org/departments/men</loc></url>
+  <url><loc>https://zoeworshipcentre.org/departments/women</loc></url>
+  <url><loc>https://zoeworshipcentre.org/departments/youth</loc></url>
+  <url><loc>https://zoeworshipcentre.org/departments/sunday-school</loc></url>
+
+  <!-- Supportive Departments -->
+  <url><loc>https://zoeworshipcentre.org/departments/supportive</loc></url>
+  <url><loc>https://zoeworshipcentre.org/departments/anagkazo</loc></url>
+  <url><loc>https://zoeworshipcentre.org/departments/hospitality</loc></url>
+  <url><loc>https://zoeworshipcentre.org/departments/intercessory</loc></url>
+  <url><loc>https://zoeworshipcentre.org/departments/media</loc></url>
+  <url><loc>https://zoeworshipcentre.org/departments/praise-worship</loc></url>
+  <url><loc>https://zoeworshipcentre.org/departments/ushering</loc></url>
+
+  <!-- Events -->
+  <url><loc>https://zoeworshipcentre.org/events/main</loc></url>
+  <url><loc>https://zoeworshipcentre.org/events/list</loc></url>
+
+</urlset>
