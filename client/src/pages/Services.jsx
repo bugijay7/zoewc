@@ -74,7 +74,7 @@ export default function Services() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { num: "01", icon: <Book />, title: "Morning Devotions", time: "5:30 AM – 7:50 AM" },
+              { num: "01", icon: <Book />, title: "Morning Devotions", time: "6:00 AM – 7:00 AM" },
               { num: "02", icon: <Users />, title: "Tuesday Fellowship", time: "6:30 PM – 7:30 PM" },
               { num: "03", icon: <Users />, title: "Thursday Bodaboda Outreach", time: "3:00 PM – 4:00 PM" },
               { num: "04", icon: <Church />, title: "Friday Mini-Vigil", time: "9:00 PM – Midnight" },
