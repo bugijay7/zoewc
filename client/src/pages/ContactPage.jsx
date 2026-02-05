@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -11,6 +11,45 @@ import { FaTiktok } from "react-icons/fa6";
 import contactBg from "../assets/contact-bg.jpeg";
 
 export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("");
+
+    try {
+      const res = await fetch("https://zoewc-omsu.onrender.com/api/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setStatus(data.error || "Failed to send message");
+        return;
+      }
+
+      setStatus("Message sent successfully!");
+      setFormData({ name: "", phone: "", message: "" });
+    } catch (error) {
+      console.error(error);
+      setStatus("Server error. Try again later.");
+    }
+  };
+
   return (
     <div className="bg-zinc-200 min-h-screen">
       {/* --- HERO SECTION --- */}
@@ -32,7 +71,6 @@ export default function ContactPage() {
 
       {/* --- BALANCED CONTACT SECTION --- */}
       <section className="max-w-7xl mx-auto px-6 py-16 lg:py-24 bg-zink-200">
-        {/* Main Flex Container for Symmetry */}
         <div className="flex flex-col lg:flex-row items-stretch gap-0 border border-zinc-100 shadow-2xl">
           
           {/* LEFT COLUMN: INFO & SOCIALS */}
@@ -71,15 +109,15 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Social Grid - Fills the bottom for symmetry */}
+            {/* Social Grid */}
             <div className="mt-16 pt-10 border-t border-zinc-800" data-aos="fade-up">
               <p className="text-[10px] uppercase tracking-[0.4em] text-zinc-500 font-black mb-6">Digital Campus</p>
               <div className="grid grid-cols-4 gap-4">
                 {[
-                  { icon: <FaFacebookF />, link: "https://facebook.com/..." },
-                  { icon: <FaInstagram />, link: "https://instagram.com/..." },
-                  { icon: <FaTiktok />, link: "https://tiktok.com/..." },
-                  { icon: <FaYoutube />, link: "https://youtube.com/..." }
+                  { icon: <FaFacebookF />, url: "https://www.facebook.com/ZoeWorshipCentreYouths" },
+                  { icon: <FaInstagram />, url: "https://www.instagram.com/zoewoshipcentrechurch" },
+                  { icon: <FaTiktok />, url: "https://www.tiktok.com/@zoeworshipcentrechurch" },
+                  { icon: <FaYoutube />, url: "https://www.youtube.com/@ZoeWorshipCentreKinoo" },
                 ].map((social, i) => (
                   <a 
                     key={i}
@@ -102,10 +140,7 @@ export default function ContactPage() {
               
               <form
                 className="space-y-6"
-                onSubmit={async (e) => {
-                  e.preventDefault();
-                  // ... logic remains same
-                }}
+                onSubmit={handleSubmit}
               >
                 <div className="group relative border-b-2 border-zinc-100 focus-within:border-pink-600 transition-all duration-300 py-2">
                   <label className="text-[10px] uppercase font-black text-zinc-900 block mb-1">Full Name</label>
@@ -113,6 +148,8 @@ export default function ContactPage() {
                     type="text" 
                     name="name" 
                     placeholder="Type your name..." 
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full bg-transparent outline-none text-black font-medium placeholder:text-gray-400" 
                     required 
                   />
@@ -124,6 +161,8 @@ export default function ContactPage() {
                     type="tel" 
                     name="phone" 
                     placeholder="+254..." 
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="w-full bg-transparent outline-none text-black font-medium placeholder:text-gray-400" 
                     required 
                   />
@@ -134,6 +173,8 @@ export default function ContactPage() {
                   <textarea
                     name="message"
                     placeholder="Tell us something..."
+                    value={formData.message}
+                    onChange={handleChange}
                     rows="4"
                     className="w-full bg-transparent outline-none text-black font-medium placeholder:text-gray-400 resize-none"
                     required
@@ -146,6 +187,8 @@ export default function ContactPage() {
                 >
                   Send Message
                 </button>
+
+                {status && <p>{status}</p>}
               </form>
             </div>
           </div>
