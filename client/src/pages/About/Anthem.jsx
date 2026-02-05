@@ -54,14 +54,14 @@ function Anthem() {
               <div className="card bg-white border border-zinc-100 shadow-sm p-8 rounded-none group hover:border-amber-500 transition-colors duration-500">
                 <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-900 mb-4">Our Vision</h2>
                 <p className="text-xl font-bold text-black uppercase tracking-tight">
-                  We have a Christ-like vision — we win, train, and send to win.
+                  Inspired to win, train and send to win.
                 </p>
               </div>
 
               <div className="card bg-white border border-zinc-100 shadow-sm p-8 rounded-none group hover:border-pink-600 transition-colors duration-500">
                 <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-900 mb-4">Our Mission</h2>
                 <p className="text-xl font-bold text-black uppercase tracking-tight">
-                  To transform lives by the life and the love of Christ.
+                  Transforming lives by the life and the love of christ.
                 </p>
               </div>
             </div>
@@ -74,7 +74,7 @@ function Anthem() {
               </div>
               
               <p className="text-2xl md:text-4xl font-light leading-snug tracking-tight text-zinc-300">
-                { "Faith, Love, Obedience, Wisdom, Enthusiasm, Relevance, Service."
+                { "Faith, Love, Obedience, Wisdom, Energy, Relevance, Service."
                   .split(', ')
                   .map((value, i, arr) => (
                     <span key={value} className="inline-block">
