@@ -132,7 +132,7 @@ export default function Footer() {
           {/* Copyright & Credits */}
           <div className="text-center md:text-left order-2 md:order-1">
             <p className="text-[10px] font-medium text-zinc-200 uppercase tracking-widest leading-loose">
-              © {currentYear} <span className="text-white font-black">Zoe Worship Centre – Kinoo</span>. All rights reserved.
+              © {currentYear} <span className="text-white font-black">Zoe Worship Centre church – Kenya</span>. All rights reserved.
             </p>
             <p className="text-[9px] text-zinc-200 uppercase tracking-[0.3em] mt-1">
               Architecture by{" "}

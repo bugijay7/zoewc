@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import { FaArrowLeft, FaImage, FaCalendarDay, FaPen } from "react-icons/fa";
 
 function CreateEvent() {
   const [eventData, setEventData] = useState({
@@ -62,96 +64,114 @@ function CreateEvent() {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-[70vh] bg-base-200 p-6">
-      <div className="bg-base-100 shadow-xl rounded-2xl p-8 w-full max-w-lg">
-        <h2 className="text-2xl font-medium text-center mb-6 text-primary">
-          Create New Event
-        </h2>
+    <div className="min-h-screen bg-gray-50 p-6 flex flex-col items-center">
+      {/* Navigation Header */}
+      <div className="w-full max-w-2xl flex items-center justify-between mb-8">
+        <Link to="/dashboard" className="flex items-center text-blue-600 hover:text-blue-800 transition-colors">
+          <FaArrowLeft className="mr-2" /> Back to Dashboard
+        </Link>
+      </div>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Event Title */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text font-medium">Event Title</span>
+      <div className="w-full max-w-2xl bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold text-gray-800">Create New Event</h2>
+          <p className="text-gray-500">Fill in the details below to announce a new church event.</p>
+        </div>
+
+        <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Title Input */}
+          <div className="space-y-2">
+            <label className="flex items-center text-sm font-semibold text-gray-700">
+              <FaPen className="mr-2 text-gray-400" /> Event Title
             </label>
             <input
               type="text"
               name="title"
               value={eventData.title}
               onChange={handleChange}
-              placeholder="Enter event title"
-              className="input input-bordered w-full"
+              placeholder="e.g. Sunday Youth Conference"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
               required
             />
           </div>
 
-          {/* Event Date */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text font-medium">Event Date</span>
+          {/* Date Input */}
+          <div className="space-y-2">
+            <label className="flex items-center text-sm font-semibold text-gray-700">
+              <FaCalendarDay className="mr-2 text-gray-400" /> Event Date
             </label>
             <input
               type="date"
               name="date"
               value={eventData.date}
               onChange={handleChange}
-              className="input input-bordered w-full"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
               required
             />
           </div>
 
-          {/* Event Description */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text font-medium">Description</span>
+          {/* Description Input */}
+          <div className="space-y-2">
+            <label className="flex items-center text-sm font-semibold text-gray-700">
+              Description
             </label>
             <textarea
               name="description"
               value={eventData.description}
               onChange={handleChange}
-              placeholder="Enter a short event description"
+              placeholder="Provide more details about the event..."
               rows="4"
-              className="textarea textarea-bordered w-full"
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
               required
             ></textarea>
           </div>
 
-          {/* Event Image */}
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text font-medium">Event Image</span>
+          {/* File Upload */}
+          <div className="space-y-2">
+            <label className="flex items-center text-sm font-semibold text-gray-700">
+              <FaImage className="mr-2 text-gray-400" /> Event Poster / Image
             </label>
-            <input
-              type="file"
-              accept="image/*"
-              onChange={handleImageChange}
-              className="file-input file-input-bordered w-full"
-              required
-            />
+            <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg hover:border-blue-400 transition-colors bg-gray-50">
+              <div className="space-y-1 text-center">
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageChange}
+                  className="cursor-pointer"
+                  required
+                />
+                <p className="text-xs text-gray-500 mt-2 italic">PNG, JPG, GIF up to 10MB</p>
+              </div>
+            </div>
           </div>
 
           {/* Submit Button */}
           <button
             type="submit"
             disabled={loading}
-            className={`btn btn-primary w-full ${loading ? "btn-disabled" : ""}`}
+            className={`w-full py-4 rounded-xl font-bold text-white transition-all transform active:scale-95 ${
+              loading 
+              ? "bg-gray-400 cursor-not-allowed" 
+              : "bg-blue-600 hover:bg-blue-700 hover:shadow-lg"
+            }`}
           >
-            {loading ? "Uploading..." : "Create Event"}
+            {loading ? (
+              <span className="flex items-center justify-center">
+                <svg className="animate-spin h-5 w-5 mr-3 border-2 border-white border-t-transparent rounded-full" viewBox="0 0 24 24"></svg>
+                Uploading...
+              </span>
+            ) : (
+              "Create Event"
+            )}
           </button>
 
-          {/* Message */}
+          {/* Feedback Message */}
           {message && (
-            <p
-              className={`text-center text-sm mt-3 ${
-                message.startsWith("✅")
-                  ? "text-success"
-                  : message.startsWith("⚠️")
-                  ? "text-warning"
-                  : "text-error"
-              }`}
-            >
+            <div className={`p-4 rounded-lg text-center font-medium ${
+              message.includes("✅") ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
+            }`}>
               {message}
-            </p>
+            </div>
           )}
         </form>
       </div>

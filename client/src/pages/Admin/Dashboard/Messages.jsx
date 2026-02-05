@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { FaTrash, FaArrowLeft, FaEnvelopeOpenText, FaCheckCircle, FaRegCircle } from "react-icons/fa";
 
 export default function Messages() {
   const [messages, setMessages] = useState([]);
@@ -6,7 +8,6 @@ export default function Messages() {
 
   const API_URL = "https://zoewc-omsu.onrender.com/api/messages";
 
-  // ✅ Fetch messages from backend
   const fetchMessages = async () => {
     try {
       const res = await fetch(API_URL);
@@ -19,7 +20,6 @@ export default function Messages() {
     }
   };
 
-  // ✅ Delete message
   const deleteMessage = async (id) => {
     if (!window.confirm("Are you sure you want to delete this message?")) return;
     try {
@@ -30,7 +30,6 @@ export default function Messages() {
     }
   };
 
-  // ✅ Toggle “Replied” status (locally)
   const toggleReplied = (id) => {
     setMessages((prev) =>
       prev.map((msg) =>
@@ -45,63 +44,91 @@ export default function Messages() {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center min-h-screen text-lg">
-        Loading messages...
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-base-200 py-10 px-6 md:px-20 font-medium">
-      <h1 className="text-3xl font-bold mb-6 text-center">📩 Messages</h1>
-
-      {messages.length === 0 ? (
-        <div className="text-center text-gray-500">No messages yet.</div>
-      ) : (
-        <div className="overflow-x-auto">
-          <table className="table w-full bg-white shadow-md rounded-lg">
-            <thead className="bg-base-300 text-base font-semibold">
-              <tr>
-                <th>Name</th>
-                <th>Phone</th>
-                <th>Message</th>
-                <th>Date</th>
-                <th>Replied</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {messages.map((msg) => (
-                <tr
-                  key={msg._id}
-                  className="hover:bg-base-200 transition duration-150"
-                >
-                  <td>{msg.name}</td>
-                  <td>{msg.phone}</td>
-                  <td className="max-w-xs truncate">{msg.message}</td>
-                  <td>{new Date(msg.createdAt).toLocaleString()}</td>
-                  <td className="text-center">
-                    <input
-                      type="checkbox"
-                      className="checkbox checkbox-success"
-                      checked={!!msg.replied}
-                      onChange={() => toggleReplied(msg._id)}
-                    />
-                  </td>
-                  <td className="text-center">
-                    <button
-                      onClick={() => deleteMessage(msg._id)}
-                      className="btn btn-error btn-sm"
-                    >
-                      Delete
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+    <div className="min-h-screen bg-gray-50 p-6 md:p-12">
+      {/* Header Area */}
+      <div className="max-w-7xl mx-auto mb-8">
+        <Link to="/dashboard" className="flex items-center text-blue-600 hover:text-blue-800 transition-colors mb-4">
+          <FaArrowLeft className="mr-2" /> Back to Dashboard
+        </Link>
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-800 flex items-center">
+              <FaEnvelopeOpenText className="mr-3 text-rose-500" /> Messages
+            </h1>
+            <p className="text-gray-500 mt-1">Manage inquiries and contact form submissions.</p>
+          </div>
+          <div className="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200">
+            <span className="text-sm font-medium text-gray-600">Total: {messages.length}</span>
+          </div>
         </div>
-      )}
+      </div>
+
+      {/* Messages Table Card */}
+      <div className="max-w-7xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        {messages.length === 0 ? (
+          <div className="text-center py-20">
+            <p className="text-gray-400 text-lg">No messages found in the inbox.</p>
+          </div>
+        ) : (
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-gray-50 border-b border-gray-100">
+                  <th className="px-6 py-4 text-xs font-bold uppercase text-gray-500 tracking-wider">Sender</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase text-gray-500 tracking-wider">Contact Info</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase text-gray-500 tracking-wider w-1/3">Message Content</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase text-gray-500 tracking-wider">Date</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase text-gray-500 tracking-wider text-center">Replied</th>
+                  <th className="px-6 py-4 text-xs font-bold uppercase text-gray-500 tracking-wider text-center">Actions</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                {messages.map((msg) => (
+                  <tr key={msg._id} className={`hover:bg-gray-50 transition-colors ${msg.replied ? 'opacity-75' : 'opacity-100'}`}>
+                    <td className="px-6 py-4">
+                      <div className="font-semibold text-gray-800">{msg.name}</div>
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-600">
+                      {msg.phone}
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-600 leading-relaxed">
+                      {msg.message}
+                    </td>
+                    <td className="px-6 py-4 text-xs text-gray-400 whitespace-nowrap">
+                      {new Date(msg.createdAt).toLocaleDateString()}<br/>
+                      {new Date(msg.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                    </td>
+                    <td className="px-6 py-4 text-center">
+                      <button 
+                        onClick={() => toggleReplied(msg._id)}
+                        className={`text-2xl transition-colors ${msg.replied ? 'text-green-500' : 'text-gray-300 hover:text-gray-400'}`}
+                      >
+                        {msg.replied ? <FaCheckCircle /> : <FaRegCircle />}
+                      </button>
+                    </td>
+                    <td className="px-6 py-4 text-center">
+                      <button 
+                        onClick={() => deleteMessage(msg._id)}
+                        className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
+                        title="Delete Message"
+                      >
+                        <FaTrash />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

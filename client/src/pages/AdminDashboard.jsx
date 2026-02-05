@@ -12,59 +12,62 @@ function AdminDashboard() {
   const cards = [
     {
       name: "Create Event",
-      icon: <FaPlusCircle size={40} className="text-primary" />,
+      icon: <FaPlusCircle />,
       link: "/dashboard/create-event",
+      color: "bg-blue-500",
     },
     {
       name: "Manage Events",
-      icon: <FaCalendarAlt size={40} className="text-primary" />,
+      icon: <FaCalendarAlt />,
       link: "/dashboard/manage-events",
+      color: "bg-emerald-500",
     },
     {
       name: "Create Sermon",
-      icon: <FaMicrophone size={40} className="text-primary" />,
+      icon: <FaMicrophone />,
       link: "/dashboard/create-sermon",
+      color: "bg-purple-500",
     },
     {
       name: "Manage Sermons",
-      icon: <FaBookOpen size={40} className="text-primary" />,
+      icon: <FaBookOpen />,
       link: "/dashboard/manage-sermons",
+      color: "bg-amber-500",
     },
     {
       name: "View Messages",
-      icon: <FaEnvelope size={40} className="text-primary" />,
+      icon: <FaEnvelope />,
       link: "/dashboard/messages",
+      color: "bg-rose-500",
     },
   ];
 
   return (
-    <div className="bg-base-200 flex flex-col min-h-[70vh]">
-      {/* 🔹 Dashboard Title */}
-      <div className="text-center pt-20 md:pt-40 py-12">
-        <h2 className="text-5xl font-extrabold mb-4 text-primary uppercase">
-          Admin Dashboard
-        </h2>
-        <p className="text-base-content/70">
-          Manage your events, sermons, and messages easily.
+    <div className="min-h-screen bg-gray-50 p-6 md:p-12">
+      {/* Header Section */}
+      <div className="mb-10 border-b pb-6">
+        <h2 className="text-3xl font-bold text-gray-800">Admin Dashboard</h2>
+        <p className="text-gray-600 mt-2">
+          Welcome back! Manage your events, sermons, and messages easily.
         </p>
       </div>
 
-      {/* 🔹 Dashboard Cards */}
-      <div className="flex-grow px-8 pb-16">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-items-center">
-          {cards.map((card, index) => (
-            <Link
-              to={card.link}
-              key={index}
-              className="bg-base-100 w-52 h-44 shadow-md rounded-2xl flex flex-col items-center justify-center hover:shadow-lg transition transform hover:-translate-y-1"
-            >
-              {card.icon}
-              <p className="mt-3 text-lg font-medium text-base-content">
-                {card.name}
-              </p>
-            </Link>
-          ))}
-        </div>
+      {/* Cards Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        {cards.map((card, index) => (
+          <Link
+            to={card.link}
+            key={index}
+            className="group flex flex-col items-center justify-center p-8 bg-white rounded-xl shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:border-transparent"
+          >
+            <div className={`p-4 rounded-full text-white mb-4 shadow-md ${card.color} group-hover:scale-110 transition-transform`}>
+              {React.cloneElement(card.icon, { size: 32 })}
+            </div>
+            <p className="text-lg font-semibold text-gray-700 group-hover:text-gray-900">
+              {card.name}
+            </p>
+          </Link>
+        ))}
       </div>
     </div>
   );
