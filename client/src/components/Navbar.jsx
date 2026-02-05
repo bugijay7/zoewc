@@ -226,7 +226,7 @@ export default function Navbar() {
                   ],
                 },
                 {
-                  label: "Social Media",
+                  label: "Digital Campus",
                   items: [
                     { label: "Facebook", href: "https://www.facebook.com/ZoeWorshipCentreYouths" },
                     { label: "Instagram", href: "https://www.instagram.com/zoewoshipcentrechurch" },
@@ -234,7 +234,7 @@ export default function Navbar() {
                     { label: "YouTube", href: "https://www.youtube.com/@ZoeWorshipCentreKinoo" },
                   ],
                 },
-                { label: "Give", to: "/donate" },
+                { label: "Partner with us", to: "/donate" },
               ].map((menu, idx) => (
                 <motion.div key={idx} className="border-b border-zinc-100 pb-4">
                   {menu.items ? (
