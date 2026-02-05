@@ -12,7 +12,8 @@ function ManageEvent() {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("https://zoewc-omsu.onrender.com/api/events"); // Added /api/events assuming standard routing
+      // Note: Ensure this endpoint matches your backend route
+      const res = await axios.get("https://zoewc-omsu.onrender.com/api/events"); 
       setEvents(res.data);
     } catch (err) {
       console.error("Error fetching events:", err);

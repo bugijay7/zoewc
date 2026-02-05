@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { FaTrash, FaArrowLeft, FaEnvelopeOpenText, FaCheckCircle, FaRegCircle } from "react-icons/fa";
+import { FaTrash, FaCheckCircle, FaRegCircle, FaUser, FaPhoneAlt, FaEnvelopeOpenText, FaClock } from "react-icons/fa";
 
 export default function Messages() {
   const [messages, setMessages] = useState([]);
@@ -21,7 +20,7 @@ export default function Messages() {
   };
 
   const deleteMessage = async (id) => {
-    if (!window.confirm("Are you sure you want to delete this message?")) return;
+    if (!window.confirm("Archive this message permanently?")) return;
     try {
       await fetch(`${API_URL}/${id}`, { method: "DELETE" });
       setMessages((prev) => prev.filter((msg) => msg._id !== id));
@@ -36,6 +35,7 @@ export default function Messages() {
         msg._id === id ? { ...msg, replied: !msg.replied } : msg
       )
     );
+    // Note: You might want to add a PATCH request here later to persist this in the DB
   };
 
   useEffect(() => {
@@ -44,90 +44,111 @@ export default function Messages() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600"></div>
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="text-[10px] font-black uppercase tracking-[0.5em] animate-pulse text-zinc-400">
+          Syncing Inbox...
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6 md:p-12">
-      {/* Header Area */}
-      <div className="max-w-7xl mx-auto mb-8">
-        <Link to="/dashboard" className="flex items-center text-blue-600 hover:text-blue-800 transition-colors mb-4">
-          <FaArrowLeft className="mr-2" /> Back to Dashboard
-        </Link>
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-800 flex items-center">
-              <FaEnvelopeOpenText className="mr-3 text-rose-500" /> Messages
-            </h1>
-            <p className="text-gray-500 mt-1">Manage inquiries and contact form submissions.</p>
+    <div className="min-h-screen bg-white p-6 md:p-12 font-sans">
+      <div className="max-w-6xl mx-auto">
+        
+        {/* Header */}
+        <header className="mb-16">
+          <div className="flex items-center gap-4 mb-4">
+            <span className="h-[2px] w-10 bg-amber-500"></span>
+            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400">Communication Hub</span>
           </div>
-          <div className="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200">
-            <span className="text-sm font-medium text-gray-600">Total: {messages.length}</span>
-          </div>
-        </div>
-      </div>
+          <h1 className="text-6xl font-black uppercase tracking-tighter text-black">
+            Inbox <span className="text-pink-600">({messages.length})</span>
+          </h1>
+        </header>
 
-      {/* Messages Table Card */}
-      <div className="max-w-7xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
         {messages.length === 0 ? (
-          <div className="text-center py-20">
-            <p className="text-gray-400 text-lg">No messages found in the inbox.</p>
+          <div className="py-32 border-2 border-dashed border-zinc-100 flex flex-col items-center justify-center">
+            <FaEnvelopeOpenText className="text-5xl text-zinc-100 mb-4" />
+            <p className="text-[10px] font-black uppercase tracking-widest text-zinc-300">Your inbox is currently clear</p>
           </div>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="bg-gray-50 border-b border-gray-100">
-                  <th className="px-6 py-4 text-xs font-bold uppercase text-gray-500 tracking-wider">Sender</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase text-gray-500 tracking-wider">Contact Info</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase text-gray-500 tracking-wider w-1/3">Message Content</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase text-gray-500 tracking-wider">Date</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase text-gray-500 tracking-wider text-center">Replied</th>
-                  <th className="px-6 py-4 text-xs font-bold uppercase text-gray-500 tracking-wider text-center">Actions</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100">
-                {messages.map((msg) => (
-                  <tr key={msg._id} className={`hover:bg-gray-50 transition-colors ${msg.replied ? 'opacity-75' : 'opacity-100'}`}>
-                    <td className="px-6 py-4">
-                      <div className="font-semibold text-gray-800">{msg.name}</div>
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-600">
-                      {msg.phone}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-600 leading-relaxed">
-                      {msg.message}
-                    </td>
-                    <td className="px-6 py-4 text-xs text-gray-400 whitespace-nowrap">
-                      {new Date(msg.createdAt).toLocaleDateString()}<br/>
-                      {new Date(msg.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                    </td>
-                    <td className="px-6 py-4 text-center">
-                      <button 
-                        onClick={() => toggleReplied(msg._id)}
-                        className={`text-2xl transition-colors ${msg.replied ? 'text-green-500' : 'text-gray-300 hover:text-gray-400'}`}
-                      >
-                        {msg.replied ? <FaCheckCircle /> : <FaRegCircle />}
-                      </button>
-                    </td>
-                    <td className="px-6 py-4 text-center">
-                      <button 
-                        onClick={() => deleteMessage(msg._id)}
-                        className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors"
-                        title="Delete Message"
-                      >
-                        <FaTrash />
-                      </button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="space-y-4">
+            {/* Desktop Header Hidden on Mobile */}
+            <div className="hidden md:grid grid-cols-12 gap-4 px-8 mb-4 text-[10px] font-black uppercase tracking-widest text-zinc-400">
+              <div className="col-span-3">Sender</div>
+              <div className="col-span-5">Message</div>
+              <div className="col-span-2">Received</div>
+              <div className="col-span-1 text-center">Status</div>
+              <div className="col-span-1 text-right">Action</div>
+            </div>
+
+            {messages.map((msg) => (
+              <div 
+                key={msg._id} 
+                className={`grid grid-cols-1 md:grid-cols-12 gap-4 items-center p-8 border transition-all duration-300 ${
+                  msg.replied ? 'bg-zinc-50 border-zinc-100 opacity-60' : 'bg-white border-zinc-200 shadow-sm hover:border-black'
+                }`}
+              >
+                {/* User Info */}
+                <div className="col-span-3 space-y-1">
+                  <div className="flex items-center gap-2 font-black uppercase tracking-tighter text-lg text-black">
+                    <FaUser className="text-xs text-pink-600" />
+                    {msg.name}
+                  </div>
+                  <div className="flex items-center gap-2 text-zinc-400 text-xs font-bold">
+                    <FaPhoneAlt className="text-[10px]" />
+                    {msg.phone}
+                  </div>
+                </div>
+
+                {/* Message Content */}
+                <div className="col-span-5 py-2 md:py-0">
+                  <p className="text-zinc-600 text-sm leading-relaxed italic">
+                    "{msg.message}"
+                  </p>
+                </div>
+
+                {/* Date */}
+                <div className="col-span-2 flex items-center gap-2 text-[10px] font-black text-zinc-400 uppercase">
+                  <FaClock />
+                  {new Date(msg.createdAt).toLocaleDateString()}
+                </div>
+
+                {/* Replied Toggle */}
+                <div className="col-span-1 flex justify-center">
+                  <button 
+                    onClick={() => toggleReplied(msg._id)}
+                    className={`text-2xl transition-colors ${msg.replied ? 'text-green-500' : 'text-zinc-200 hover:text-pink-600'}`}
+                  >
+                    {msg.replied ? <FaCheckCircle /> : <FaRegCircle />}
+                  </button>
+                </div>
+
+                {/* Delete Action */}
+                <div className="col-span-1 text-right">
+                  <button 
+                    onClick={() => deleteMessage(msg._id)}
+                    className="p-3 text-zinc-300 hover:text-red-600 hover:bg-red-50 rounded-full transition-all"
+                    title="Delete Message"
+                  >
+                    <FaTrash />
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         )}
+
+        {/* Legend */}
+        <div className="mt-12 flex items-center gap-6 text-[9px] font-black uppercase tracking-widest text-zinc-400 border-t border-zinc-100 pt-8">
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 bg-white border border-zinc-200"></span> New Message
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="w-3 h-3 bg-zinc-100"></span> Replied / Handled
+          </div>
+        </div>
       </div>
     </div>
   );
