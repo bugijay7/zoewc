@@ -137,7 +137,7 @@ export default function Footer() {
             <p className="text-[9px] text-zinc-200 uppercase tracking-[0.3em] mt-1">
               Architecture by{" "}
               <a
-                href="https://yohanlabs.dev"
+                href="https://yohanlabs.online"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-amber-500 transition-colors"

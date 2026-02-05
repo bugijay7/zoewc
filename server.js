@@ -22,7 +22,10 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'https://zoewc.vercel.app',
+  origin:[ 'https://zoewc.vercel.app',
+           'https://zoewc-omsu.onrender.com',
+           'https://www.zoeworshipcentre.org',
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
