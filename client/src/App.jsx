@@ -16,6 +16,7 @@ import LiveStream from './pages/LiveStream'
 import NewMembers from './pages/NewMembers'
 import Services from './pages/Services'
 import Visitors from "./pages/Visitors"
+import MinistryRegistration from './pages/MinistryRegistration.jsx'
 
 import TeenDepartments from './pages/departments/main/teensDepartment'
 import MenDepartment from "./pages/departments/main/menDepartment"
@@ -100,6 +101,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/visitors" element={<Visitors />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/ministryregistration" element={<MinistryRegistration /> } />
 
         { /* departments Routes */ }
         

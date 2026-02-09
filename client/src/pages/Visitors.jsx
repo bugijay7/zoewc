@@ -12,6 +12,15 @@ export default function Visitors() {
       btn: "Start Here",
       accent: "border-amber-500"
     },
+
+    {
+    title: "Ministry Registration",
+    desc: "Ready to volunteer and serve? Fill out the ministry registration form to join a department and start making an impact with your gifts and talents.",
+    icon: "📝",
+    link: "/ministryregistration",
+    btn: "Volunteer to Serve",
+    accent: "border-amber-500"
+  },
     {
       title: "Main Departments",
       desc: "Get involved in one of our main ministry departments where you can serve, connect with others, and use your unique gifts to make an impact in God’s Kingdom.",
@@ -81,7 +90,7 @@ export default function Visitors() {
       {/* --- STEPS SECTION --- */}
       <section className="bg-pink-900 py-24 px-6 text-white">
         <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                 {steps.map((step, index) => (
                     <div 
                         key={index} 
