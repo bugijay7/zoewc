@@ -209,7 +209,7 @@ export default function Navbar() {
               {[
                 { label: "Who we are", to: "/about/knowUs" },
                 { label: "Sundays", to: "/services" },
-                { label: "Resources", to: "/resources" },
+                { label: "First Time Visitor", to: "/visitors" },
                 {
                   label: "Ministries",
                   items: [
@@ -234,6 +234,7 @@ export default function Navbar() {
                     { label: "YouTube", href: "https://www.youtube.com/@ZoeWorshipCentreKinoo" },
                   ],
                 },
+                 { label: "Volunteer to server", to: "/ministryregistration" },
                 { label: "Partner with us", to: "/donate" },
               ].map((menu, idx) => (
                 <motion.div key={idx} className="border-b border-zinc-100 pb-4">
