@@ -121,7 +121,7 @@ export default function ContactPage() {
                 ].map((social, i) => (
                   <a 
                     key={i}
-                    href={social.link} 
+                    href={social.url} 
                     className="aspect-square flex items-center justify-center border border-zinc-800 hover:bg-white hover:text-black transition-all duration-300"
                   >
                     {social.icon}
