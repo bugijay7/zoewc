@@ -213,7 +213,7 @@ function HomePage() {
               <div className="inline-block px-4 py-1 bg-zinc-100 border-l-4 border-amber-500">
                 <span className="text-amber-500 text-xs font-bold tracking-widest uppercase">The Word</span>
               </div>
-              <h2 className="text-6xl font-black tracking-tighter text-black uppercase leading-tight">Sermon Highlight <span className="text-pink-600">Sermons</span></h2>
+              <h2 className="text-6xl font-black tracking-tighter text-black uppercase leading-tight">Highlighted <span className="text-pink-600">Sermons</span></h2>
             </div>
             <Link to="/sermons" className="group flex items-center gap-4 text-black font-bold uppercase tracking-widest text-sm"><span className="border-b-2 border-black pb-1 group-hover:border-pink-600 transition-colors">View All</span><span className="bg-black text-white p-2 group-hover:bg-pink-600 transition-all">→</span></Link>
           </div>
